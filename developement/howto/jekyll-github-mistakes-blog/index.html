@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.57.2" />
+    <meta name="description" content="hahafam blog">
+<meta name="author" content="hahafamilia">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그 :: Hi Hugo</title>
+
+    
+    <link href="/css/nucleus.css?1568714108" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1568714108" rel="stylesheet">
+    <link href="/css/hybrid.css?1568714108" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1568714108" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1568714108" rel="stylesheet">
+    <link href="/css/auto-complete.css?1568714108" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1568714108" rel="stylesheet">
+    <link href="/css/theme.css?1568714108" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1568714108" rel="stylesheet">
+    
+      <link href="/css/theme-green.css?1568714108" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1568714108"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+<link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+
+
+<style type="css">
+@font-face {
+    font-family: 'Inconsolata';
+    src: url("https://fonts.googleapis.com/css?family=Inconsolata");
+    font-style: normal;
+    font-weight: 200;
+}
+</style>
+  </head>
+  <body class="" data-url="/developement/howto/jekyll-github-mistakes-blog/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="http://hahafamilia.github.io/">
+  <svg id="grav-logo" style="width:100%; height:100%;" viewBox="0 0 504 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <path d="M235.832,71.564l-7.98,-0.001c-1.213,0.001 -2.197,0.987 -2.197,2.204l0,15.327l-0.158,0.132c-4.696,3.962 -10.634,6.14 -16.719,6.14c-14.356,0 -26.034,-11.68 -26.034,-26.037c0,-14.358 11.678,-26.035 26.034,-26.035c5.582,0 10.919,1.767 15.437,5.113c0.877,0.649 2.093,0.56 2.866,-0.211l5.69,-5.69c0.444,-0.442 0.675,-1.055 0.639,-1.681c-0.034,-0.627 -0.336,-1.206 -0.828,-1.597c-6.76,-5.363 -15.214,-8.314 -23.805,-8.314c-21.18,0 -38.414,17.233 -38.414,38.415c0,21.183 17.234,38.415 38.414,38.415c10.937,0 21.397,-4.705 28.698,-12.914c0.358,-0.403 0.556,-0.921 0.556,-1.46l0,-19.603c0,-1.217 -0.985,-2.203 -2.2,-2.203"
+      style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M502.794,34.445c-0.408,-0.616 -1.1,-0.989 -1.838,-0.989l-8.684,0c-0.879,0 -1.673,0.522 -2.022,1.329l-24.483,56.839l-24.92,-56.852c-0.352,-0.799 -1.142,-1.316 -2.012,-1.316l-8.713,0c-0.744,0 -1.44,0.373 -1.843,0.995c-0.408,0.623 -0.476,1.408 -0.174,2.09l30.186,68.858c0.352,0.799 1.143,1.317 2.017,1.317l10.992,0c0.879,0 1.673,-0.527 2.021,-1.329l29.655,-68.861c0.289,-0.68 0.222,-1.461 -0.182,-2.081"
+      style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M388.683,34.772c-0.353,-0.798 -1.142,-1.316 -2.017,-1.316l-10.988,0c-0.879,0 -1.673,0.522 -2.021,1.329l-29.655,68.861c-0.294,0.675 -0.226,1.46 0.182,2.077c0.407,0.619 1.096,0.993 1.838,0.993l8.684,0c0.879,0 1.673,-0.526 2.022,-1.329l24.478,-56.842l24.92,56.854c0.353,0.798 1.143,1.317 2.013,1.317l8.717,0c0.744,0 1.44,-0.374 1.843,-0.993c0.408,-0.624 0.471,-1.41 0.174,-2.094l-30.19,-68.857Z"
+      style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M309.196,81.525l0.476,-0.229c8.675,-4.191 14.279,-13.087 14.279,-22.667c0,-13.881 -11.295,-25.174 -25.176,-25.174l-31.863,0c-1.214,0 -2.199,0.988 -2.199,2.202l0,68.855c0,1.219 0.985,2.204 2.199,2.204l7.979,0c1.214,0 2.2,-0.985 2.2,-2.204l0,-58.679l21.684,0c7.059,0 12.799,5.739 12.799,12.796c0,5.885 -3.996,10.989 -9.728,12.408c-1.032,0.261 -2.064,0.393 -3.071,0.393l-7.977,0c-0.829,0 -1.585,0.467 -1.959,1.205c-0.378,0.74 -0.305,1.625 0.187,2.296l22.62,30.884c0.412,0.566 1.07,0.901 1.771,0.901l9.915,0c0.827,0 1.587,-0.467 1.96,-1.207c0.378,-0.742 0.302,-1.629 -0.186,-2.296l-15.91,-21.688Z"
+      style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M107.191,80.969c-7.255,-4.794 -11.4,-8.845 -15.011,-16.109c-2.47,4.977 -8.236,12.376 -17.962,18.198c-4.856,15.106 -27.954,44.015 -35.43,39.916c-2.213,-1.212 -2.633,-2.808 -2.133,-4.456c0.536,-4.129 9.078,-13.62 9.078,-13.62c0,0 0.18,1.992 2.913,6.187c-3.609,-11.205 5.965,-25.031 8.5,-29.738c3.985,-1.269 4.274,-6.387 4.274,-6.387c0.255,-7.909 -3.278,-13.635 -6.701,-17.059c2.459,3.002 3.255,7.539 3.372,11.694l0,0.023c0.012,0.469 0.012,0.93 0.011,1.39c-0.117,3.439 -1.157,8.19 -3.383,8.19l0.006,0.03c-2.289,-0.098 -5.115,0.391 -7.639,1.18l-5.582,1.334c0,0 2.977,-0.136 4.584,1.252c-1.79,2.915 -5.769,6.533 -10.206,8.588c-6.457,2.995 -8.312,-2.964 -5.034,-6.838c0.805,-0.946 1.618,-1.745 2.387,-2.399c-0.495,-0.513 -0.807,-1.198 -0.889,-2.068c-0.001,-0.005 -0.004,-0.009 -0.005,-0.013c-0.45,-1.977 -0.202,-4.543 2.596,-8.623c0.551,-0.863 1.214,-1.748 2.007,-2.647c0.025,-0.031 0.046,-0.059 0.072,-0.089c0.034,-0.042 0.072,-0.08 0.108,-0.121c0.02,-0.023 0.039,-0.045 0.059,-0.068c0.2,-0.228 0.413,-0.45 0.639,-0.663c3.334,-3.414 8.599,-6.966 16.897,-10.152c9.675,-14.223 13.219,-16.89 13.219,-16.89c1.071,-1.096 2.943,-2.458 3.632,-2.805c-5.053,-8.781 -6.074,-21.158 -4.75,-24.493c-0.107,0.18 -0.206,0.365 -0.287,0.556c0.49,-1.143 0.819,-1.509 1.328,-2.111c1.381,-1.632 6.058,-2.488 7.737,0.971c0.895,1.844 1.063,4.232 1.034,6.023c-3.704,-0.193 -7.063,4.036 -7.063,4.036c0,0 3.067,-1.448 6.879,-1.473c0,0 1.015,0.883 2.283,2.542c-1.712,3.213 -4.524,10.021 -2.488,17.168c0.338,1.408 0.849,2.619 1.483,3.648c0.024,0.045 0.044,0.089 0.069,0.135c0.051,0.066 0.096,0.122 0.144,0.183c3.368,5.072 9.542,5.665 9.542,5.665c-2.906,-1.45 -5.274,-3.76 -6.816,-6.56c-0.8,-1.498 -1.291,-2.762 -1.592,-3.761c-1.636,-6.313 0.771,-9.999 2.149,-12.471c3.17,-4.917 8.944,-7.893 15.151,-7.185c8.712,0.995 14.968,8.862 13.973,17.571c-0.608,5.321 -3.781,9.723 -8.142,12.117c1.049,2.839 -0.073,6.28 -0.073,6.28c2.642,3.323 2.758,5.238 2.667,7.017c-3.357,-0.565 -6.618,1.701 -6.618,1.701c0,0 6.476,-1.546 10.238,1.81c2.446,2.631 4.078,5.009 5.051,6.766c1.393,2.505 7.859,2.683 7.123,7.188c-0.737,4.499 -5.669,4.542 -13.401,-0.56M69.571,0c-38.424,0 -69.571,31.148 -69.571,69.567c0,38.422 31.147,69.573 69.571,69.573c38.42,0 69.568,-31.151 69.568,-69.573c0,-38.42 -31.148,-69.567 -69.568,-69.567"
+      style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M73.796,51.693c0.813,-0.814 0.813,-2.134 0,-2.947c-0.815,-0.814 -2.133,-0.814 -2.947,0c-0.815,0.813 -0.815,2.133 0,2.947c0.814,0.813 2.132,0.813 2.947,0" style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M66.445,53.149c-0.814,0.813 -0.814,2.133 0,2.947c0.813,0.814 2.133,0.814 2.947,0c0.813,-0.814 0.813,-2.134 0,-2.947c-0.814,-0.813 -2.134,-0.813 -2.947,0" style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M79.231,54.233c-1.274,-1.274 -3.339,-1.272 -4.611,0l-2.713,2.712c-1.274,1.275 -1.274,3.339 0,4.612l2.978,2.978c1.274,1.275 3.338,1.274 4.611,0l2.712,-2.712c1.274,-1.274 1.274,-3.339 0,-4.612l-2.977,-2.978Z" style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M95.759,41.445c-2.151,-2.578 1.869,-7.257 4.391,-4.463c4.645,5.148 -2.237,7.041 -4.391,4.463M105.004,44.132c3.442,-6.553 -1.427,-10.381 -4.773,-13.523c-5.36,-5.039 -10.706,-7.217 -16.811,-0.241c-6.102,6.977 -2.226,15.068 3.356,19.061c5.584,3.994 14.782,1.255 18.228,-5.297"
+      style="fill:#000;fill-rule:nonzero;"></path>
+  </svg>
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1568714108"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1568714108"></script>
+<script type="text/javascript">
+    
+        var baseurl = "http:\/\/hahafamilia.github.io\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1568714108"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/developement/" title="Developement" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/developement/">
+          <i class='fas fa-angle-right'></i> Developement
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/developement/bigdata/" title="Bigdata" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/developement/bigdata/">
+          <i class='fas fa-angle-right'></i> Bigdata
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/developement/python/" title="Python" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/developement/python/">
+          <i class='fas fa-angle-right'></i> Python
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/developement/book/" title="Book" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/developement/book/">
+          <i class='fas fa-angle-right'></i> Book
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/developement/howto/" title="HowTo" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/developement/howto/">
+          <i class='fas fa-angle-right'></i> HowTo
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/life/" title="Life" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/life/">
+          <i class='fas fa-angle-right'></i> Life
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/hahafamilia"><i class='fab fa-github'></i> Github</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="http://hahafamilia.github.io/about"><i class='fas fa-address-card'></i> About</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://tjstory.tistory.com"><i class='fas fa-blog'></i> 이전 블로그</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="http://hahafamilia.github.io/tags"><i class='fas fa-tags'></i> Tags</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://learn.netlify.com/en/">Learn Theme</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Content</a> > <a href='/developement/'>Developement</a> > <a href='/developement/howto/'>HowTo</a> > Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그
+          
+         
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#git">Git</a></li>
+<li><a href="#github-io">Github.io</a></li>
+<li><a href="#theme-설치">theme 설치</a></li>
+<li><a href="#first-post">First Post</a></li>
+<li><a href="#config-yml">_config.yml</a></li>
+<li><a href="#category-tags">Category, Tags</a></li>
+<li><a href="#stylesheet">Stylesheet</a>
+<ul>
+<li><a href="#font">Font</a></li>
+<li><a href="#font-size">Font Size</a></li>
+<li><a href="#title-link-style">Title Link Style</a></li>
+</ul></li>
+<li><a href="#댓글-disqus-방문자통계-google-analystics">댓글(Disqus), 방문자통계(Google Analystics)</a></li>
+<li><a href="#목차-toc-한글-링크-이동하지-않는-버그">목차(toc), 한글 링크 이동하지 않는 버그</a></li>
+</ul></li>
+<li><a href="#마치며">마치며</a></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+<div class="tags">
+
+  <a class="tag-link" href="/tags/jekyll">jekyll</a>
+
+  <a class="tag-link" href="/tags/github.io">github.io</a>
+
+</div>
+
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그
+            </h1>
+          
+
+        
+
+
+
+
+
+<p>개발자 초창기에는 블로그(<a href="https://tjstory.tistory.com/">이전의 블로그</a>) 활동도 열심히 했었는데&hellip; 너무 잊고 살았었네요.
+새롭게 블로그를 시작 할 생각에 Jekyll, Github.io 로 블로그를 구성하게 되었어요.</p>
+
+<p>간단히 Jekyll 은 정적파일 생성기, Github.io 는 호스팅, Minimal mistakes 는 수많은 Jekyll 테마중의 하나예요.</p>
+
+<p>선택의 기준은 markdown 에디터 때문이에요. 개발자는 에디터 툴을 가장 많이 다루는데요.
+아무래도 markdown 으로 글을 작성하고 Git 으로 Push 하여 포스팅을 하는 구조라면 블로그 활동량이 많아지지 않을까 합니다.</p>
+
+<p>그럼 Github.io, Jekyll, Minimal mistakes theme 를 이용해 블로그를 만들어 봐요.
+쭉~ 진행해본후 복기하여 글을 작성해서 순서가 바뀐부분이 있음을 감안해주세요.</p>
+
+<h2 id="git">Git</h2>
+
+<p>Git 은 형상관리 솔루션의 발전딘 형태로, 형상관리 외에도 많은 걸 해주고 있어요.
+혹시 글을 읽으시는 분께서 Git을 모르시는&hellip; 비 개발자라면 GitHub 사이트에서 파일을 생성/편집을 진행하셔도 되요.
+그렇게 진행하시다 Git에 대해서 알아가셔도 됩니다.</p>
+
+<h2 id="github-io">Github.io</h2>
+
+<p>GitHub 에 새로운 저장소를 생성해요. 저장소의 이름은 <code>&lt;github username&gt;.github.io</code> 로 생성하고 저장소의 이름이 도메인이 되요.
+맘에 드는 <a href="https://github.com/topics/jekyll-theme">Jekyll 테마</a> 테마를 선택하시면되요. 저는 <code>Minimal mistakes</code> 를 선택했어요.</p>
+
+<h2 id="theme-설치">theme 설치</h2>
+
+<p>Minimal mistakes 의 가이드를 참고하면서 구성했어요.
+<a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">minimal-mistakes Quick Start</a>
+두가지 방법이 있어요.
+* 테마를 설치하는 방법 : local 에서 페이지 결과를 확인해 볼 수 있어요.
+* 테마를 원격으로 사용하는 방법 : 설치 과정이 없어요.</p>
+
+<p>저 같은 경우는 markdown 이니 preview 는 에디터 에서 가능하고, 초기 셋팅이 끝나면 설정하는 작업이 드물것이라 생각해서 원격 테마를 사용하는 방식으로 구성했어요. 하지만 조금 다른 방법으로 구성해 볼게요.</p>
+
+<p>Quick Start 에는 <a href="https://github.com/mmistakes/minimal-mistakes/fork">Minimal mistakes Github Project</a> <code>fork</code> 하여 <code>hahafamilia.github.io</code> 로 이름 변경하라고 되어있어요.</p>
+
+<p>우선 mistakes 저장소를 이름 그대로 포크 합니다. 그림과 같이 Github에 2개의 Repository 가 있게 되요.
+<img src="/assets/images/2019/2019-08-03-00-45-31.png" alt="repositories" /></p>
+
+<p>Quick Start 불필요한 파일들을 삭제하라고 되어있어요. 삭제 하셔도 되고 안하셔도 됩니다.</p>
+
+<pre><code>remove the unnecessary
+.editorconfig
+.gitattributes
+.github
+/docs
+/test
+CHANGELOG.md
+minimal-mistakes-jekyll.gemspec
+README.md
+screenshot-layouts.png
+screenshot.png
+</code></pre>
+
+<p>mmistakes Repository 에서 <code>_config.yml</code> 파일을 <code>.github.io</code> Repository 로 복사하고 <code>remote_theme</code> 항목을 수정해요.</p>
+
+<pre><code class="language-yml">#_config.yml
+remote_theme             : hahafamilia/minimal-mistakes
+</code></pre>
+
+<p><a href="https://hahafamilia.github.io">Hello world! 블로그</a> 이렇게 연동 작업이 끝났어요.
+Git <code>commit</code>, <code>push</code> 하시면 블로그 주소에 접속하시면 기본 화면을 보실 수 있어요.</p>
+
+<p><code>_config.yml</code>  에서 블로그에 관한 몇가지 정보들을 수정해 볼게요.</p>
+
+<pre><code class="language-yml">#_config.yml
+title                    : &quot;HaHa Familia&quot;
+title_separator          : &quot;-&quot;
+name                     : &quot;HaHaFam&quot;
+description              : &quot;HaHaFam Blog&quot;
+url                      : &quot;https://hahafamilia.github.io&quot;  
+repository               : &quot;hahafamilia/hahafamilia.github.io&quot;
+logo                     : &quot;/assets/images/logo.jpg&quot;
+
+# Site Author
+author:
+  name             : &quot;HaHaFam&quot;
+  avatar           : &quot;/assets/images/author.png&quot; # path of avatar image, e.g. &quot;/assets/images/bio-photo.jpg&quot;
+  bio              : &quot;Github.io Blog&quot;
+  location         : &quot;Seoul, Korea&quot;
+</code></pre>
+
+<h2 id="first-post">First Post</h2>
+
+<p>첫번째 글을 작성해 보도록 해요. <code>github.io</code> Repository 에 <code>_drafts</code>, <code>_posts</code> 두 개의 디렉토리를 생성해주세요.
+<code>_posts</code> 디렉토리에 <code>년-월-일-글제목.md</code> 형식으로 글을 작성하고 Git <code>commit</code>, <code>push</code> 하시면 블로그에 글이 게시 되요.
+<code>_drafts</code> 디렉토리는 작성중인 임시 글들을 저장하는 곳이라고 생각하시면 되요.</p>
+
+<p><code>_posts</code> 디렉토리에 <code>2019-01-25-first-post.md</code> 라는 파일을 생성해 줍니다.
+글을 작성하는 방법은 <code>Front Matter</code> 를 최상단에 작성하고, 이후 Markdown 형식으로 써내려 가면되요.
+<code>Front Matter</code> 는 일종의 설정값이라고 생각하면되요.</p>
+
+<pre><code class="language-yaml"># Front Matter
+---
+date: 2019-01-25
+title: &quot;Jekyll 첫번째 글&quot;
+categories: blog
+tags: jekyll
+# 목차
+toc: true  
+toc_sticky: true 
+---
+
+</code></pre>
+
+<p>글 내용으로 이미지를 첨부 하고 싶다면 <code>github.io</code> Repository <code>aassets/images</code> 라는 디렉토리에 보관해주세요.</p>
+
+<h2 id="config-yml">_config.yml</h2>
+
+<p><code>_config.yml</code> 에 몇가지 설정을 추가해 볼게요.</p>
+
+<p>검색은 <code>google</code> 검색을 비롯해 다양한 연동 설정을 제공하고 있는데요. 우선은 기본만 설정하고 추후에 다루도록 할게요.</p>
+
+<p><code>author</code>, <code>footer</code> 의 <code>links</code> 설정에 블로그 주인장의 email, twitter, git, facebook 등의 링크들을 설정할 수 있어요.</p>
+
+<p><code>defaults</code> 는 글에 대한 기본 설정값이예요. 동일하게 글의 <code>Front Matter</code> 에서 개별적으로 설정이 가능해요.</p>
+
+<pre><code class="language-yaml">locale                   : &quot;ko-KR&quot;
+search                   : true # true, false (default)
+# Site Author
+author:
+  links:
+# Site Footer
+footer:
+  links:
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: &quot;&quot;
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+</code></pre>
+
+<h2 id="category-tags">Category, Tags</h2>
+
+<p>블로그 활동이 왕성해지만 글들도 많아지게 되고, 글들에 대한 분류 작업이 필요해져요.
+그래서 블로그에 카테고리와 테그, 연도 아카이브로 분류하는 설정을 해 줄게요.</p>
+
+<p>우선 <code>github.io</code> Repository 에 <code>_pages</code> 디렉토리를 생성하고, <code>category-archive.md</code>, <code>year-archive.md</code>, <code>tag-archive.md</code> 파일을 생성해주세요.
+각각의 파일에 작성해야할 내용 이예요. 이렇게 되면 작성한 글의 <code>Front Matter</code> 설정값을 토대로 분류되요.</p>
+
+<pre><code class="language-yaml"># category-archive.md
+---
+title: &quot;Posts by Category&quot;
+layout: categories
+permalink: /categories/
+author_profile: true
+---
+# year-archive.md
+---
+title: &quot;Posts by Year&quot;
+permalink: /year-archive/
+layout: posts
+author_profile: true
+---
+# tag-archive.md
+---
+title: &quot;Posts by Tag&quot;
+permalink: /tags/
+layout: tags
+author_profile: true
+---
+</code></pre>
+
+<p>fork 해온 minimal mistakes Repository 에서 <code>_data/navigation.yml</code> 파일을 복사해서 동일한 디렉토리를 생성하고 저장해주세요.
+이 설정은 블로그의 상단 메뉴에 관한 설정이예요. 카테고리, 테그, 연도 아카이브 메뉴를 생성해 주세요.
+예를 들어 카테고리라면..</p>
+
+<pre><code class="language-yaml">  - title: &quot;Categories&quot;
+    url: /categories/
+</code></pre>
+
+<h2 id="stylesheet">Stylesheet</h2>
+
+<p>minimal mistakes repository 에서 <code>assets/css/main.scss</code> 파일을 복사해서 동일한 경로의 디렉토리를 생성하고 저장해주세요.
+대부분의 Style 수정은 <code>main.scss</code>  에서 이루어져요.</p>
+
+<h3 id="font">Font</h3>
+
+<p><code>main.scss</code> 파일을 수정하여 변경할 웹폰트를 import 합니다.</p>
+
+<pre><code class="language-css">@charset &quot;utf-8&quot;;
+
+@import &quot;minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}&quot;; // skin
+@import &quot;minimal-mistakes&quot;; // main p
+
+// Font 변경
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+</code></pre>
+
+<p>전 <code>Inconsolata</code> 를 선택했습니다. Inconsolata 프로그래머들이 사용하는 Font 랭크 ( <a href="https://www.slant.co/topics/67/~best-programming-fonts">Best Programming fonts</a>)
+순위권 안에 드는 고정폭 폰트 입니다.</p>
+
+<p>그리고 import 다음 라인으로 폰트 변수에 폰트를 할당해 줍니다.</p>
+
+<pre><code class="language-css">$serif              : &quot;Inconsolata&quot;, monospace, &quot;PT Serif&quot;, Georgia, Times, serif;
+$sans-serif-narrow  : &quot;Inconsolata&quot;, monospace, &quot;PT Sans Narrow&quot;, -apple-system, BlinkMacSystemFont, &quot;Roboto&quot;, &quot;Segoe UI&quot;, &quot;Helvetica Neue&quot;, &quot;Lucida Grande&quot;, Arial, sans-serif;
+
+$global-font-family : $serif;
+$header-font-family : $sans-serif-narrow;
+$caption-font-family: $serif !default;
+</code></pre>
+
+<blockquote>
+<p>css 변수에 대한 기본값은 minimal mistakes repository 의 <code>_sass/minimal-mitakes/_variables.scss</code> 에서 확인 가능해요.</p>
+</blockquote>
+
+<h3 id="font-size">Font Size</h3>
+
+<p><code>main.scss</code> 파일을 수정하여 폰트의 크기를 조정해요. 이렇게 설정할경우 블로그의 전체 폰트 크기가 일정한 폭으로 변경됩니다.</p>
+
+<pre><code class="language-css">html {
+    font-size: 12px; // originally 16px
+    @include breakpoint($medium) {
+        font-size: 14px; // originally 18px
+    }
+
+    @include breakpoint($large) {
+        font-size: 16px; // originally 20px
+    }
+
+    @include breakpoint($x-large) {
+        font-size: 18px; // originally 22px
+    }
+}
+</code></pre>
+
+<h3 id="title-link-style">Title Link Style</h3>
+
+<p>포스트의 목록에서 타이틀의 언더라인이 깔끔해 보이지 않네요. <code>main.scss</code> 파일을 수정합니다.</p>
+
+<pre><code class="language-css">// list title link remove underline
+.archive a {
+    color: inherit;
+    text-decoration: none;
+}
+</code></pre>
+
+<h2 id="댓글-disqus-방문자통계-google-analystics">댓글(Disqus), 방문자통계(Google Analystics)</h2>
+
+<p>Disqus, Google Analystics 계정이 있다면 설정은 간단하게 이루어 저요.</p>
+
+<p>Google Analystics 는 트래킹 코드가 필요합니다.
+Disqus 댓글 설정시에는 <code>shortname</code> 필요합니다. shortname 은 Disqus 에서 사이트 생성시 할당되는 이름이예요.
+저 같은 경우 <code>hahafamilia.disqus.com</code> 의 <code>hahafamilia</code> 가 shorname 이 됩니다.</p>
+
+<pre><code class="language-yaml"># _config.yml
+comments:
+  provider               : &quot;disqus&quot; # false (default), &quot;disqus&quot;, &quot;discourse&quot;, &quot;facebook&quot;, &quot;google-plus&quot;, &quot;staticman&quot;, &quot;staticman_v2&quot;, &quot;utterances&quot;, &quot;custom&quot;
+  disqus:
+    shortname            : &quot;hahafamilia&quot; # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+</code></pre>
+
+<pre><code class="language-yaml"># _config.yml
+analytics:
+  provider               : &quot;google&quot; # false (default), &quot;google&quot;, &quot;google-universal&quot;, &quot;custom&quot;
+  google:
+    tracking_id          : &quot;UA-145448356-1&quot;
+</code></pre>
+
+<blockquote>
+<p>Disqus 는 Git push 하고 반영 되는데 꽤 오랜 시간이 걸리네요.</p>
+</blockquote>
+
+<h2 id="목차-toc-한글-링크-이동하지-않는-버그">목차(toc), 한글 링크 이동하지 않는 버그</h2>
+
+<p>Front Matter <code>toc: true</code> 를 설정하게 되면 친절하게 markdown 헤더들로 목차를 만들어 줘요. 그런데 목차를 한글로 입력하니 클릭 해도 링크로 이동하질 않는 버그가 있어요.</p>
+
+<p>해결책 찾는 과정에서 해결해서 프로젝트 기여하신 분이 계시네요. 이전 버전 사용하시는 분은 <a href="https://aliwo.github.io/swblog/minimal-mistake/mmistake-contributor/#">Bugfix</a> 수정해서 사용하시면 되겠어요.</p>
+
+<h1 id="마치며">마치며</h1>
+
+<p>여기까지 Jekyll, Github.io, Minimal mistakes 를 이용해서 블로그 만드는 방법에 대해 알아 봤습니다.
+블로그 활동량이 많아져 그들이 많아지게 되면, 추가적인 구성들을 더 해볼 생각입니다.
+먼저, 글을 꾸준히 올리는 습관을 들여야겠네요.</p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1568714108"></script>
+    <script src="/js/perfect-scrollbar.min.js?1568714108"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1568714108"></script>
+    <script src="/js/jquery.sticky.js?1568714108"></script>
+    <script src="/js/featherlight.min.js?1568714108"></script>
+    <script src="/js/highlight.pack.js?1568714108"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1568714108"></script>
+    <script src="/js/learn.js?1568714108"></script>
+    <script src="/js/hugo-learn.js?1568714108"></script>
+
+    <link href="/mermaid/mermaid.css?1568714108" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1568714108"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

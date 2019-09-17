@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bigdata on Hi Hugo</title>
+    <link>http://hahafamilia.github.io/developement/bigdata/</link>
+    <description>Recent content in Bigdata on Hi Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 Sep 2019 16:32:12 +0900</lastBuildDate>
+    
+	<atom:link href="http://hahafamilia.github.io/developement/bigdata/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>빅데이터 시각화, Zeppelin Interpreter, Hive, Impala</title>
+      <link>http://hahafamilia.github.io/developement/bigdata/zeppelin-interpreter/</link>
+      <pubDate>Thu, 29 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://hahafamilia.github.io/developement/bigdata/zeppelin-interpreter/</guid>
+      <description>Apache Zeppelin 과 Cloudera CDH 의 Hive, Impala 를 연동하는 방법을 알아볼게요.
+Environment  Oracle JDK 1.8 CentOS 7 Zepplin 0.8.1 Cloudera CDH 6.1.1 Hive 2.1.1 Impala 3.1.0 Impala JDBC Driver 2.6.12  Hive Zeppelin Hive Interpreter Document 문서를 보면 Jdbc Interpreter 를 사용하라고 되어있네요. 기본으로 PostgreSQL Connector 지원하고 그외는 Connector 는 추가를 해줘야 해요.
+Maven Repository Zeppelin 콘솔에서 우측 상단의 메뉴에서 interpreter 메뉴를 클릭하여 Interpreter 설정 화면으로 이동해요. Repository 버튼을 클릭하면 등록되어져 있는 Repository 를 확인 할 수 있어요.</description>
+    </item>
+    
+    <item>
+      <title>빅데이터 시각화 Zeppelin Usage</title>
+      <link>http://hahafamilia.github.io/developement/bigdata/zeppelin-usage/</link>
+      <pubDate>Wed, 28 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://hahafamilia.github.io/developement/bigdata/zeppelin-usage/</guid>
+      <description>Apache Zeppelin 은 노트북 방식의 시각화 툴이예요.
+Environment  Oracle JDK 1.8 CentOS 7 Zepplin 0.8.1  Dynamic Form Zeppelin 에서는 Dynamic Form 을 제공하고 있어서 Form 을 통해 입력받은 값으로 조건을 주는 형태로 사용 가능해요. Dynamic Form 은 Paragraph scope 와 Note scope 에서 사용 문법의 차이가 있고, 또한 Programmatically 하게 추가하실 수 있어요. 예제에서는 text, select, checkbox 를 소개하고 있네요.
+Paragraph scope Text input form ${formName=defaultValue} 의 형태예요.</description>
+    </item>
+    
+    <item>
+      <title>빅데이터 시각화 Zeppelin 설치, QuickStart</title>
+      <link>http://hahafamilia.github.io/developement/bigdata/zeppelin-quickstart/</link>
+      <pubDate>Wed, 21 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://hahafamilia.github.io/developement/bigdata/zeppelin-quickstart/</guid>
+      <description>Apache Zeppelin 은 노트북 방식의 시각화 툴이예요. 다양한 시각화 툴이 존재하지만 &amp;lsquo;가장 좋은 것&amp;rsquo;이 아니라 &amp;lsquo;나에게 맞는 것&amp;rsquo; 을 선택했어요. 제가 Zeppelin을 선택한 이유는 아래와 같아요.
+ 설치와 사용법이 쉬워야 한다. 요구사항을 유연하게 처리 할 수 있어야 한다. BI 웹 어드민을 개발 하지 않아도 되도록 정적 HTML 을 제공해야 한다.  화# Environment * Oracle JDK 1.8 * CentOS 7 * Zepplin 0.8.1
+Zeppelin 와우! Zeppelin~ 아파치 오픈 소스 프로젝트에 채택된 국내 프로젝트네요.</description>
+    </item>
+    
+    <item>
+      <title>Oozie Workflow Email 알림 설정</title>
+      <link>http://hahafamilia.github.io/developement/bigdata/oozie-workflow-email/</link>
+      <pubDate>Wed, 14 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://hahafamilia.github.io/developement/bigdata/oozie-workflow-email/</guid>
+      <description>Oozie 에서 Workflow 의 결과에 따른 Email 알림을 받는 방법에 대해서 알아볼게요.
+Workflow 를 1회성으로 실행시키는 경우와 Schedule 로 등록하여 주기적으로 실행하는 경우가 있을 수 있을텐데요. 1회성으로 Workflow 만 실행할때는 성공/실패에 대한 처리 결과를 받도록 하고, Schedule 로 등록하여 주기적으로 실행하는 경우에는 실패에 대한 알림 만을 받도록 합니다.
+Version  Cloudera 6.1.1 Oozie 5.0.0 Hue 4.3.0  Oozie SMTP 설정 Cloudera Manager &amp;gt; Oozie &amp;gt; 구성 탭 에서 mail 을 검색해서, oozie.</description>
+    </item>
+    
+    <item>
+      <title>AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집</title>
+      <link>http://hahafamilia.github.io/developement/bigdata/spring-kafka-flume/</link>
+      <pubDate>Tue, 13 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://hahafamilia.github.io/developement/bigdata/spring-kafka-flume/</guid>
+      <description>다음과 같은 데이터 파이프 라인을 가정해 볼게요.
+ 사용자의 Activity 이벤트가 발생 API 서버를 통해 Kafka 에 Produce Flume 을 통해 Kafka 의 메시지를 HDFS 로 적재 HDFS 에는 일자 별로 생성된 디렉토리에 저장  Flume 을 퉁한 데이터 수집시에 Hdfs Sink 는 useLocalTimestamp 설정은 제공 해요. 하지만 이 설정은 이벤트의 수집 시각을 기준으로 해요.
+예제 그림에서 API 에서 시작된 데이터는 파이프라인을 거쳐 HDFS 에 도달하기까지 2초의 시간이 소요된다고 가정하면, 2019-08-01 23:59:59 시각에 발생한 이벤트는 useLocalTimestamp 설정에 의해 2019-08-02 00:00:01 의 시각으로 2019-08-02 디렉토리에 적재됩니다.</description>
+    </item>
+    
+    <item>
+      <title>Cloudera Manager 알람 설정, Gmail SMPT 서버 사용</title>
+      <link>http://hahafamilia.github.io/developement/bigdata/cloudera-alert-email/</link>
+      <pubDate>Tue, 13 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://hahafamilia.github.io/developement/bigdata/cloudera-alert-email/</guid>
+      <description>Cloudera Manager 알림을 보내는 방법은 SMTP, SNMP, Custom Script 세가지를 제공하고 있어요. 여기서 SNMP, Custom Script 는 Enterprise 버전에서만 지원해요. 별도의 SMTP 서버를 운영하고 있지 않다면 Gmail 을 이용할 수 있어요.
+Cloudera Version Cloudera 6.1
+Gmail 설정 우선 Gmail 설정에서 IMAP 사용이 허용되어야 해요. 그리고 Google 계정 설정 &amp;gt; 보안 &amp;gt; 보안 수준이 낮은 앱의 액세스 가 허용되어야 합니다.
+ 이 방법은 보안상 권장하지 않는 방법 이예요. 하지만 제가 근무하는 회사의 G Suite 에서는 액세스키에 의한 접근 기능이 제공되고 있지 안아서 이 방법을 사용하고 있어요.</description>
+    </item>
+    
+    <item>
+      <title>Hive Java UDF, 유니코드</title>
+      <link>http://hahafamilia.github.io/developement/bigdata/hive-java-udf/</link>
+      <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://hahafamilia.github.io/developement/bigdata/hive-java-udf/</guid>
+      <description>개요 Cloudera Document 6.1 Hive UDF 문서를 참고하여 Cloudera CDH 플랫폼에서 HIVE UDF 를 작성하는 방법을 알아봅니다.
+또한 MySQL의 Collate 와 문자열 유니코드에 대해서도 간단히 알아보겠습니다.
+저의 이번 경우는 HIVE로 집계된 데이터를 SQOOP으로 export 시에 오류가 발생하였습니다.
+기존에 설계된 MySQL 디비의 테이블 칼럼 Collate 속성이 utf8-general-ci 로 설계되어 있어 Key 칼럼에 Accent 문자열을 포함하는 문자열 데이터 자정시에 상황에 따라 키중복이 발생했던 것이었습니다.
+칼럼의 Collate 속성이 utf8-general-ci 일경우 아래와 같은 경우 ã 문자열은 저장이 되겠지만 a 문자열 저장시 Key 중복 오류가 발생합니다.</description>
+    </item>
+    
+    <item>
+      <title>Kafka Broker 디스크 증설, RAID구성, OS 재설치</title>
+      <link>http://hahafamilia.github.io/developement/bigdata/kafka-broker-reinstall/</link>
+      <pubDate>Tue, 25 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://hahafamilia.github.io/developement/bigdata/kafka-broker-reinstall/</guid>
+      <description>Kafka Broker 재설치 Kafka Broker 서버의 디스크 용량을 증설하는 작업을 진행 하게 되었습니다. RAID 10으로 디스크 구성을 변경하다보니 불가피하게 OS를 재설치 합니다. Kafka는 Broker 서버의 장애 상황에서도 서비스를 유지 할 수 있도록 설계되어 있어요. Broker 서버를 1대씩 순차적으로 RAID 구성 및 OS 재설치 진행후에 Partition을 Reassign 할 계획입니다.
+Environment  CentOS 7.6 Cloudera CDH 6.1.1 Cloudera Manager Kafka 2.0.0-cdh6.1.1 Kafka Manager Kafka Broker 3대 Replication fector 3  HowTo Cloudera Manager 에서 작업대상 Broker 서버를 서비스에서 제거해요.</description>
+    </item>
+    
+  </channel>
+</rss>

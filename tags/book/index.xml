@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>book on Hi Hugo</title>
+    <link>http://hahafamilia.github.io/tags/book/</link>
+    <description>Recent content in book on Hi Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 26 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://hahafamilia.github.io/tags/book/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>모든 주식을 소유하라</title>
+      <link>http://hahafamilia.github.io/developement/book/%EB%AA%A8%EB%93%A0%EC%A3%BC%EC%8B%9D%EC%9D%84%EC%86%8C%EC%9C%A0%ED%95%98%EB%9D%BC/</link>
+      <pubDate>Sat, 26 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://hahafamilia.github.io/developement/book/%EB%AA%A8%EB%93%A0%EC%A3%BC%EC%8B%9D%EC%9D%84%EC%86%8C%EC%9C%A0%ED%95%98%EB%9D%BC/</guid>
+      <description>Description 세계 4대 투자의 거장, 존 보글의 투자 법칙.
+2015년 워렌 버핏이 주주들에게 주천한 책!
+교보문고
+우화, 고트락스 가문 고트락스라는 부자 가문이 여러 대에 걸쳐 번창하여 형제, 자매, 삼촌, 사촌이 수천명이나 되었고, 미국의 모든 주식을 100% 소유하게 되었다. 얼마 후 브로커가 나타나서 다른 친척들보다 돈을 더 많이 벌 수 있는 방법이 있다고 속삭였다. 브로커들은 친척에게 보유 주식을 사고 팔게 했다. 브로커들은 대가로 수수료를 받고, 가문 사람들은 주식을 거래하는데 발생하는 자본이득에 대해서도 세금을 내야 했다.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on Hi Hugo</title>
+    <link>http://hahafamilia.github.io/tags/python/</link>
+    <description>Recent content in python on Hi Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 09 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://hahafamilia.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python 개발환경, Pyenv, Anaconda3</title>
+      <link>http://hahafamilia.github.io/developement/python/python-pyenv-anaconda-mac/</link>
+      <pubDate>Fri, 09 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://hahafamilia.github.io/developement/python/python-pyenv-anaconda-mac/</guid>
+      <description>Mac 에서 Homebrew 통해서 Python 가상화 환경을 구성하려고 합니다. 우선 Mac 버전이 모하비라면 모하비 brew error 글을 한번 읽어보세요.
+Python 가상환경 구성방법은 여러가지가 있지만, pyenv/virtualenv 를 사용할거예요. 대략적인 과정은 pyenv 설치, anaconda3 설치, 가상환경 구성의 순서예요. pyenv 는 가상화 관리를 위해서 pyenv-virtual 패키지를 사용하는데, anaconda3 정도만 사요할 예정이면 설치 하지 않아요 되요.
+pyenv brew help brew update brew install pyenv pyenv -v pyenv 1.2.13 pyenv install -list | grep anaconda .</description>
+    </item>
+    
+  </channel>
+</rss>

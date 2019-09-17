@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cloudera-manager-alert on Hi Hugo</title>
+    <link>http://hahafamilia.github.io/tags/cloudera-manager-alert/</link>
+    <description>Recent content in cloudera-manager-alert on Hi Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 13 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://hahafamilia.github.io/tags/cloudera-manager-alert/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cloudera Manager 알람 설정, Gmail SMPT 서버 사용</title>
+      <link>http://hahafamilia.github.io/developement/bigdata/cloudera-alert-email/</link>
+      <pubDate>Tue, 13 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://hahafamilia.github.io/developement/bigdata/cloudera-alert-email/</guid>
+      <description>Cloudera Manager 알림을 보내는 방법은 SMTP, SNMP, Custom Script 세가지를 제공하고 있어요. 여기서 SNMP, Custom Script 는 Enterprise 버전에서만 지원해요. 별도의 SMTP 서버를 운영하고 있지 않다면 Gmail 을 이용할 수 있어요.
+Cloudera Version Cloudera 6.1
+Gmail 설정 우선 Gmail 설정에서 IMAP 사용이 허용되어야 해요. 그리고 Google 계정 설정 &amp;gt; 보안 &amp;gt; 보안 수준이 낮은 앱의 액세스 가 허용되어야 합니다.
+ 이 방법은 보안상 권장하지 않는 방법 이예요. 하지만 제가 근무하는 회사의 G Suite 에서는 액세스키에 의한 접근 기능이 제공되고 있지 안아서 이 방법을 사용하고 있어요.</description>
+    </item>
+    
+  </channel>
+</rss>

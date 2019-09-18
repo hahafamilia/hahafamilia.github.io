@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>kafka on Hi Hugo</title>
+    <title>kafka on hahafamilia</title>
     <link>http://hahafamilia.github.io/tags/kafka/</link>
-    <description>Recent content in kafka on Hi Hugo</description>
+    <description>Recent content in kafka on hahafamilia</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>ko-kr</language>
     <lastBuildDate>Tue, 25 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://hahafamilia.github.io/tags/kafka/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +13,10 @@
     
     <item>
       <title>Kafka Broker 디스크 증설, RAID구성, OS 재설치</title>
-      <link>http://hahafamilia.github.io/developement/bigdata/kafka-broker-reinstall/</link>
+      <link>http://hahafamilia.github.io/bigdata/kafka-broker-reinstall/</link>
       <pubDate>Tue, 25 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://hahafamilia.github.io/developement/bigdata/kafka-broker-reinstall/</guid>
+      <guid>http://hahafamilia.github.io/bigdata/kafka-broker-reinstall/</guid>
       <description>Kafka Broker 재설치 Kafka Broker 서버의 디스크 용량을 증설하는 작업을 진행 하게 되었습니다. RAID 10으로 디스크 구성을 변경하다보니 불가피하게 OS를 재설치 합니다. Kafka는 Broker 서버의 장애 상황에서도 서비스를 유지 할 수 있도록 설계되어 있어요. Broker 서버를 1대씩 순차적으로 RAID 구성 및 OS 재설치 진행후에 Partition을 Reassign 할 계획입니다.
 Environment  CentOS 7.6 Cloudera CDH 6.1.1 Cloudera Manager Kafka 2.0.0-cdh6.1.1 Kafka Manager Kafka Broker 3대 Replication fector 3  HowTo Cloudera Manager 에서 작업대상 Broker 서버를 서비스에서 제거해요.</description>
     </item>

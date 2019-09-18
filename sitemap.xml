@@ -3,217 +3,217 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://hahafamilia.github.io/bigdata/</loc>
+    <loc>/bigdata/</loc>
     <lastmod>2019-09-16T16:32:12+09:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/python/</loc>
+    <loc>/python/</loc>
     <lastmod>2019-09-17T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/howto/</loc>
+    <loc>/howto/</loc>
     <lastmod>2019-09-16T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/book/</loc>
+    <loc>/book/</loc>
     <lastmod>2019-09-16T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/life/</loc>
+    <loc>/life/</loc>
     <lastmod>2019-09-16T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/about/</loc>
+    <loc>/about/</loc>
     <lastmod>2019-09-16T15:26:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/</loc>
+    <loc>/</loc>
     <lastmod>2019-09-16T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/tags/</loc>
+    <loc>/tags/</loc>
     <lastmod>2019-08-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/tags/zeppelin/</loc>
+    <loc>/tags/zeppelin/</loc>
     <lastmod>2019-08-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/bigdata/zeppelin-interpreter/</loc>
+    <loc>/bigdata/zeppelin-interpreter/</loc>
     <lastmod>2019-08-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/bigdata/zeppelin-usage/</loc>
+    <loc>/bigdata/zeppelin-usage/</loc>
     <lastmod>2019-08-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/bigdata/zeppelin-quickstart/</loc>
+    <loc>/bigdata/zeppelin-quickstart/</loc>
     <lastmod>2019-08-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/tags/hue/</loc>
+    <loc>/tags/hue/</loc>
     <lastmod>2019-08-14T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/tags/monitoring/</loc>
+    <loc>/tags/monitoring/</loc>
     <lastmod>2019-08-14T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/tags/oozie/</loc>
+    <loc>/tags/oozie/</loc>
     <lastmod>2019-08-14T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/bigdata/oozie-workflow-email/</loc>
+    <loc>/bigdata/oozie-workflow-email/</loc>
     <lastmod>2019-08-14T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/tags/avroflumeevent/</loc>
+    <loc>/tags/avroflumeevent/</loc>
     <lastmod>2019-08-13T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/bigdata/spring-kafka-flume/</loc>
+    <loc>/bigdata/spring-kafka-flume/</loc>
     <lastmod>2019-08-13T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/bigdata/cloudera-alert-email/</loc>
+    <loc>/bigdata/cloudera-alert-email/</loc>
     <lastmod>2019-08-13T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/tags/cloudera-manager-alert/</loc>
+    <loc>/tags/cloudera-manager-alert/</loc>
     <lastmod>2019-08-13T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/tags/flume/</loc>
+    <loc>/tags/flume/</loc>
     <lastmod>2019-08-13T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/tags/python/</loc>
+    <loc>/tags/python/</loc>
     <lastmod>2019-08-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/python/python-pyenv-anaconda-mac/</loc>
+    <loc>/python/python-pyenv-anaconda-mac/</loc>
     <lastmod>2019-08-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/bigdata/hive-java-udf/</loc>
+    <loc>/bigdata/hive-java-udf/</loc>
     <lastmod>2019-07-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/tags/hive-udf/</loc>
+    <loc>/tags/hive-udf/</loc>
     <lastmod>2019-07-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/tags/unicode/</loc>
+    <loc>/tags/unicode/</loc>
     <lastmod>2019-07-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/tags/kafka/</loc>
+    <loc>/tags/kafka/</loc>
     <lastmod>2019-06-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/bigdata/kafka-broker-reinstall/</loc>
+    <loc>/bigdata/kafka-broker-reinstall/</loc>
     <lastmod>2019-06-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/tags/markdown/</loc>
+    <loc>/tags/markdown/</loc>
     <lastmod>2019-06-20T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/howto/markdown/</loc>
+    <loc>/howto/markdown/</loc>
     <lastmod>2019-06-20T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/tags/book/</loc>
+    <loc>/tags/book/</loc>
     <lastmod>2019-01-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/book/%EB%AA%A8%EB%93%A0%EC%A3%BC%EC%8B%9D%EC%9D%84%EC%86%8C%EC%9C%A0%ED%95%98%EB%9D%BC/</loc>
+    <loc>/book/%EB%AA%A8%EB%93%A0%EC%A3%BC%EC%8B%9D%EC%9D%84%EC%86%8C%EC%9C%A0%ED%95%98%EB%9D%BC/</loc>
     <lastmod>2019-01-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/tags/github.io/</loc>
+    <loc>/tags/github.io/</loc>
     <lastmod>2019-01-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/tags/jekyll/</loc>
+    <loc>/tags/jekyll/</loc>
     <lastmod>2019-01-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/howto/jekyll-github-mistakes-blog/</loc>
+    <loc>/howto/jekyll-github-mistakes-blog/</loc>
     <lastmod>2019-01-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>http://hahafamilia.github.io/categories/</loc>
+    <loc>/categories/</loc>
     <changefreq>weekly</changefreq>
   </url>
   

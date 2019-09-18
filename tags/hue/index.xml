@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hue on hahafamilia</title>
-    <link>http://hahafamilia.github.io/tags/hue/</link>
+    <link>/tags/hue/</link>
     <description>Recent content in hue on hahafamilia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <lastBuildDate>Wed, 14 Aug 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://hahafamilia.github.io/tags/hue/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/hue/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Oozie Workflow Email 알림 설정</title>
-      <link>http://hahafamilia.github.io/bigdata/oozie-workflow-email/</link>
+      <link>/bigdata/oozie-workflow-email/</link>
       <pubDate>Wed, 14 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://hahafamilia.github.io/bigdata/oozie-workflow-email/</guid>
+      <guid>/bigdata/oozie-workflow-email/</guid>
       <description>Oozie 에서 Workflow 의 결과에 따른 Email 알림을 받는 방법에 대해서 알아볼게요.
 Workflow 를 1회성으로 실행시키는 경우와 Schedule 로 등록하여 주기적으로 실행하는 경우가 있을 수 있을텐데요. 1회성으로 Workflow 만 실행할때는 성공/실패에 대한 처리 결과를 받도록 하고, Schedule 로 등록하여 주기적으로 실행하는 경우에는 실패에 대한 알림 만을 받도록 합니다.
 Version  Cloudera 6.1.1 Oozie 5.0.0 Hue 4.3.0  Oozie SMTP 설정 Cloudera Manager &amp;gt; Oozie &amp;gt; 구성 탭 에서 mail 을 검색해서, oozie.</description>

@@ -2,147 +2,147 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on hahafamilia</title>
-    <link>http://hahafamilia.github.io/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on hahafamilia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <lastBuildDate>Thu, 29 Aug 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://hahafamilia.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>zeppelin</title>
-      <link>http://hahafamilia.github.io/tags/zeppelin/</link>
+      <link>/tags/zeppelin/</link>
       <pubDate>Thu, 29 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://hahafamilia.github.io/tags/zeppelin/</guid>
+      <guid>/tags/zeppelin/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hue</title>
-      <link>http://hahafamilia.github.io/tags/hue/</link>
+      <link>/tags/hue/</link>
       <pubDate>Wed, 14 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://hahafamilia.github.io/tags/hue/</guid>
+      <guid>/tags/hue/</guid>
       <description></description>
     </item>
     
     <item>
       <title>monitoring</title>
-      <link>http://hahafamilia.github.io/tags/monitoring/</link>
+      <link>/tags/monitoring/</link>
       <pubDate>Wed, 14 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://hahafamilia.github.io/tags/monitoring/</guid>
+      <guid>/tags/monitoring/</guid>
       <description></description>
     </item>
     
     <item>
       <title>oozie</title>
-      <link>http://hahafamilia.github.io/tags/oozie/</link>
+      <link>/tags/oozie/</link>
       <pubDate>Wed, 14 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://hahafamilia.github.io/tags/oozie/</guid>
+      <guid>/tags/oozie/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AvroFlumeEvent</title>
-      <link>http://hahafamilia.github.io/tags/avroflumeevent/</link>
+      <link>/tags/avroflumeevent/</link>
       <pubDate>Tue, 13 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://hahafamilia.github.io/tags/avroflumeevent/</guid>
+      <guid>/tags/avroflumeevent/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cloudera-manager-alert</title>
-      <link>http://hahafamilia.github.io/tags/cloudera-manager-alert/</link>
+      <link>/tags/cloudera-manager-alert/</link>
       <pubDate>Tue, 13 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://hahafamilia.github.io/tags/cloudera-manager-alert/</guid>
+      <guid>/tags/cloudera-manager-alert/</guid>
       <description></description>
     </item>
     
     <item>
       <title>flume</title>
-      <link>http://hahafamilia.github.io/tags/flume/</link>
+      <link>/tags/flume/</link>
       <pubDate>Tue, 13 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://hahafamilia.github.io/tags/flume/</guid>
+      <guid>/tags/flume/</guid>
       <description></description>
     </item>
     
     <item>
       <title>python</title>
-      <link>http://hahafamilia.github.io/tags/python/</link>
+      <link>/tags/python/</link>
       <pubDate>Fri, 09 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://hahafamilia.github.io/tags/python/</guid>
+      <guid>/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hive-udf</title>
-      <link>http://hahafamilia.github.io/tags/hive-udf/</link>
+      <link>/tags/hive-udf/</link>
       <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://hahafamilia.github.io/tags/hive-udf/</guid>
+      <guid>/tags/hive-udf/</guid>
       <description></description>
     </item>
     
     <item>
       <title>unicode</title>
-      <link>http://hahafamilia.github.io/tags/unicode/</link>
+      <link>/tags/unicode/</link>
       <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://hahafamilia.github.io/tags/unicode/</guid>
+      <guid>/tags/unicode/</guid>
       <description></description>
     </item>
     
     <item>
       <title>kafka</title>
-      <link>http://hahafamilia.github.io/tags/kafka/</link>
+      <link>/tags/kafka/</link>
       <pubDate>Tue, 25 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://hahafamilia.github.io/tags/kafka/</guid>
+      <guid>/tags/kafka/</guid>
       <description></description>
     </item>
     
     <item>
       <title>markdown</title>
-      <link>http://hahafamilia.github.io/tags/markdown/</link>
+      <link>/tags/markdown/</link>
       <pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://hahafamilia.github.io/tags/markdown/</guid>
+      <guid>/tags/markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>book</title>
-      <link>http://hahafamilia.github.io/tags/book/</link>
+      <link>/tags/book/</link>
       <pubDate>Sat, 26 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://hahafamilia.github.io/tags/book/</guid>
+      <guid>/tags/book/</guid>
       <description></description>
     </item>
     
     <item>
       <title>github.io</title>
-      <link>http://hahafamilia.github.io/tags/github.io/</link>
+      <link>/tags/github.io/</link>
       <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://hahafamilia.github.io/tags/github.io/</guid>
+      <guid>/tags/github.io/</guid>
       <description></description>
     </item>
     
     <item>
       <title>jekyll</title>
-      <link>http://hahafamilia.github.io/tags/jekyll/</link>
+      <link>/tags/jekyll/</link>
       <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://hahafamilia.github.io/tags/jekyll/</guid>
+      <guid>/tags/jekyll/</guid>
       <description></description>
     </item>
     

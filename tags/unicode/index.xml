@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>unicode on hahafamilia</title>
-    <link>http://hahafamilia.github.io/tags/unicode/</link>
+    <link>/tags/unicode/</link>
     <description>Recent content in unicode on hahafamilia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <lastBuildDate>Fri, 19 Jul 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://hahafamilia.github.io/tags/unicode/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/unicode/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hive Java UDF, 유니코드</title>
-      <link>http://hahafamilia.github.io/bigdata/hive-java-udf/</link>
+      <link>/bigdata/hive-java-udf/</link>
       <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://hahafamilia.github.io/bigdata/hive-java-udf/</guid>
+      <guid>/bigdata/hive-java-udf/</guid>
       <description>개요 Cloudera Document 6.1 Hive UDF 문서를 참고하여 Cloudera CDH 플랫폼에서 HIVE UDF 를 작성하는 방법을 알아봅니다.
 또한 MySQL의 Collate 와 문자열 유니코드에 대해서도 간단히 알아보겠습니다.
 저의 이번 경우는 HIVE로 집계된 데이터를 SQOOP으로 export 시에 오류가 발생하였습니다.

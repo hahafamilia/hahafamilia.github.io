@@ -1,251 +1,251 @@
 [
 {
-	"uri": "/bigdata/",
+	"uri": "https://hahafamilia.github.io/bigdata/",
 	"title": "Bigdata",
 	"tags": [],
 	"description": "",
 	"content": " Posts  빅데이터 시각화, Zeppelin Interpreter, Hive, Impala     빅데이터 시각화 Zeppelin Usage     빅데이터 시각화 Zeppelin 설치, QuickStart     Oozie Workflow Email 알림 설정     AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집     Cloudera Manager 알람 설정, Gmail SMPT 서버 사용     Hive Java UDF, 유니코드     Kafka Broker 디스크 증설, RAID구성, OS 재설치     "
 },
 {
-	"uri": "/python/",
+	"uri": "https://hahafamilia.github.io/python/",
 	"title": "Python",
 	"tags": [],
 	"description": "",
 	"content": " Posts  Python 개발환경, Pyenv, Anaconda3     "
 },
 {
-	"uri": "/howto/",
+	"uri": "https://hahafamilia.github.io/howto/",
 	"title": "HowTo",
 	"tags": [],
 	"description": "",
 	"content": " Posts  Markdown 작성법     Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그     "
 },
 {
-	"uri": "/book/",
+	"uri": "https://hahafamilia.github.io/book/",
 	"title": "Book",
 	"tags": [],
 	"description": "",
 	"content": " Posts  모든 주식을 소유하라     "
 },
 {
-	"uri": "/life/",
+	"uri": "https://hahafamilia.github.io/life/",
 	"title": "Life",
 	"tags": [],
 	"description": "",
 	"content": " Posts  "
 },
 {
-	"uri": "/about/",
+	"uri": "https://hahafamilia.github.io/about/",
 	"title": "About Me",
 	"tags": [],
 	"description": "",
 	"content": " Juil Cho About Me \n\nEmail octchristmas@naver.com\nGitHub https://github.com/hahafamilia\n이전 블로그 https://tjstory.tistory.com/ \n"
 },
 {
-	"uri": "/",
+	"uri": "https://hahafamilia.github.io/",
 	"title": "Content",
 	"tags": [],
 	"description": "",
 	"content": " Hahafam\u0026rsquo;s Developement and Life Blog  Bigdata    빅데이터 시각화, Zeppelin Interpreter, Hive, Impala   빅데이터 시각화 Zeppelin Usage   빅데이터 시각화 Zeppelin 설치, QuickStart   Oozie Workflow Email 알림 설정   AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집   Cloudera Manager 알람 설정, Gmail SMPT 서버 사용   Hive Java UDF, 유니코드   Kafka Broker 디스크 증설, RAID구성, OS 재설치    Python    Python 개발환경, Pyenv, Anaconda3    HowTo    Markdown 작성법   Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그    Book    모든 주식을 소유하라    Life     "
 },
 {
-	"uri": "/tags/",
+	"uri": "https://hahafamilia.github.io/tags/",
 	"title": "Tags",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "/tags/zeppelin/",
+	"uri": "https://hahafamilia.github.io/tags/zeppelin/",
 	"title": "zeppelin",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "/bigdata/zeppelin-interpreter/",
+	"uri": "https://hahafamilia.github.io/bigdata/zeppelin-interpreter/",
 	"title": "빅데이터 시각화, Zeppelin Interpreter, Hive, Impala",
 	"tags": ["zeppelin"],
 	"description": "",
 	"content": " Apache Zeppelin 과 Cloudera CDH 의 Hive, Impala 를 연동하는 방법을 알아볼게요.\nEnvironment  Oracle JDK 1.8 CentOS 7 Zepplin 0.8.1 Cloudera CDH 6.1.1 Hive 2.1.1 Impala 3.1.0 Impala JDBC Driver 2.6.12  Hive Zeppelin Hive Interpreter Document 문서를 보면 Jdbc Interpreter 를 사용하라고 되어있네요. 기본으로 PostgreSQL Connector 지원하고 그외는 Connector 는 추가를 해줘야 해요.\nMaven Repository Zeppelin 콘솔에서 우측 상단의 메뉴에서 interpreter 메뉴를 클릭하여 Interpreter 설정 화면으로 이동해요. Repository 버튼을 클릭하면 등록되어져 있는 Repository 를 확인 할 수 있어요. 그 옆으로 + 버튼 클릭해서 Cloudera Maven Repository https://repository.cloudera.com/artifactory/cloudera-repos/ 를 추가 해주세요.\nHive Interpreter 추가 Create 버튼을 클릭하여 Interpreter 를 추가 해요. Interpreter Group 은 jdbc 로하고 아래의 Properties, Dependencies 값 조정해 주세요.\nProperties * default.driver : org.apache.hive.jdbc.HiveDriver * default.url : jdbc:hive2://\u0026lt;HiveServer2\u0026gt;:10000\nDependencies artifact * org.apache.hive:hive-jdbc:2.1.1-cdh6.1.1 * org.apache.hadoop:hadoop-common:3.0.0-cdh6.1.1\n CDH 6.1.x Maven Artifacts\n Impala Cloudera 는 Impala JDBC Connector 를 Maven 으로 제공하고 있지 않아요. Zeppelin 설치 경로에 external-lib/impala 디렉토리를 생성하고 Impala JDBC Download 링크를 통해 다운로드 해주세요.\nInterpreter Name 은 impala 로, Interpreter Group 은 jdbc 로 Interpreter 를 생성하고 Properties, Dependencies 값을 조정해 주세요.\nProperties * default.driver : com.cloudera.impala.jdbc41.Driver * default.url : jdbc:impala://\u0026lt;ImpalaServer\u0026gt;:21050/scdh;AuthMech=0; \u0026gt; Properties default.user 에 기본값이 들어가 있네요. 저는 삭제 했어요.\nDenpendies artifact * /opt/zeppelin/external-lib/impala/ImpalaJDBC41.jar (Download 한 jar 파일의 경로) \u0026gt; AuthMech=0 권한 설정을 하지 않았어요. Impala JDBC 권한 설정은 Impala JDBC Document 문서를 참고해 주세요.\nNotebook 잘 연동 되었느지 확인해 볼게요. Note 를 생성하고 Interpreter binding 메뉴에서 impala, hive Interpreter 를 상단으로 올려주세요.\nHive 와 Impala 쿼리가 잘 동작하네요.\n"
 },
 {
-	"uri": "/bigdata/zeppelin-usage/",
+	"uri": "https://hahafamilia.github.io/bigdata/zeppelin-usage/",
 	"title": "빅데이터 시각화 Zeppelin Usage",
 	"tags": ["zeppelin"],
 	"description": "",
 	"content": " Apache Zeppelin 은 노트북 방식의 시각화 툴이예요.\nEnvironment  Oracle JDK 1.8 CentOS 7 Zepplin 0.8.1  Dynamic Form Zeppelin 에서는 Dynamic Form 을 제공하고 있어서 Form 을 통해 입력받은 값으로 조건을 주는 형태로 사용 가능해요. Dynamic Form 은 Paragraph scope 와 Note scope 에서 사용 문법의 차이가 있고, 또한 Programmatically 하게 추가하실 수 있어요. 예제에서는 text, select, checkbox 를 소개하고 있네요.\nParagraph scope Text input form ${formName=defaultValue} 의 형태예요.\n%md Hello ${name} %md Hello ${name=Michelle}  Select form ${formName=defaultVallue,option1(displayName)|option2(displayName)|...} 의 형태예요\n%md This is ${day=mon,mon|tue|wed|thu|fri|sat|sun} %md This is ${day=mon,1(mon)|2(tue)|3(wed)|4(thu)|5(fri)|6(sat)|7(sun)}  Checkbox form {checkbox(delimiter):formName=defaultValue1|defaultValue2...,option1|option2...} 의 형태에요. 구분자 delemiter 의 기본값은 , 이고, 지정 할 수 있어요.\n%md select ${checkbox:fields=name|age,name|age|salary|gender} from employees # name, age %md select ${checkbox( and ):fruit=apple|banana,apple|orange|banana} from employees # name and age  Note scope Paragraph 에서와 사용법은 동일하고 $$ 로 시작해요.\nParagraph scope, Programmatically Text input form z.textbox(String formName, String defaultValue) 의 형태예요. textbox 대신에 input 을 사용 할 수 있어요.\n%spark println(\u0026quot;Hello\u0026quot;, + z.textbox(\u0026quot;name\u0026quot;, \u0026quot;Michelle\u0026quot;)) println(\u0026quot;Hello\u0026quot;, + z.input(\u0026quot;name\u0026quot;))  Select form z.select(String formName, Seq((String option, String displayName), ...)) 형태예요.\n%spark println(\u0026quot;Hello \u0026quot;+z.select(\u0026quot;day\u0026quot;, Seq((\u0026quot;1\u0026quot;,\u0026quot;mon\u0026quot;), (\u0026quot;2\u0026quot;,\u0026quot;tue\u0026quot;), (\u0026quot;3\u0026quot;,\u0026quot;wed\u0026quot;), (\u0026quot;4\u0026quot;,\u0026quot;thurs\u0026quot;), (\u0026quot;5\u0026quot;,\u0026quot;fri\u0026quot;), (\u0026quot;6\u0026quot;,\u0026quot;sat\u0026quot;), (\u0026quot;7\u0026quot;,\u0026quot;sun\u0026quot;))))  Checkbox form z.checkbox(String formName, Seq((String option, String displayName), ...)).mkString(String delimiter) 형태예요.\n%spark val options = Seq((\u0026quot;apple\u0026quot;,\u0026quot;Apple\u0026quot;), (\u0026quot;banana\u0026quot;,\u0026quot;Banana\u0026quot;), (\u0026quot;orange\u0026quot;,\u0026quot;Orange\u0026quot;)) println(\u0026quot;Hello \u0026quot;+z.checkbox(\u0026quot;fruit\u0026quot;, options).mkString(\u0026quot; and \u0026quot;))  Note scope, Programmatically Note scope 에서는 noteTextbox, noteSelect, noteCheckbox 로 사용해요.\nDisplay System Zeppelin 은 Display System 이 있는데, Text Display System 을 기본 값으로 HTML, Table, Network, Angular Display System 을 통해서 결과를 출력할 수 있어요. %displaySystemName 의 형태로 Display System 을 명시 하여 사용해요.\nText # 기본값으로 Text Display System 을 사용 %sh echo \u0026quot;Hello Zeppelin\u0026quot; # Text Display System 명시 %sh echo \u0026quot;%text Hello Zeppelin\u0026quot;  HTML %sh echo \u0026quot;%html \u0026lt;h3\u0026gt;Hello Zeppelin\u0026lt;/h3\u0026gt;\u0026quot;  Methematical expressions MathJax\nTable \\t 으로 칼럼을 구분하고, \\n 으로 행을 구분해줘요.\n%sh echo -e \u0026quot;%table name\\tsize\\nsun\\t100\\nmoon\\t10\u0026quot;  Table 의 내용이 %html 일 경우 HTML Display System 을 사용해요.\n%sh echo -e \u0026quot;%table name\\tsize %html \u0026lt;img src='http://...sun.png'/\u0026gt;sun\\t100 %html \u0026lt;img src='http://...moon.png'/\u0026gt; moon\\t10\u0026quot;  Network %network Display System 은 Graph 로 처리되요. \u0026gt; Graph 는 연관된 객체들의 집합, Vertex, Edge 를 가집니다.\n%spark print(s\u0026quot;\u0026quot;\u0026quot; %network { \u0026quot;nodes\u0026quot;: [{\u0026quot;id\u0026quot;: 1, \u0026quot;label\u0026quot;: \u0026quot;User\u0026quot;, \u0026quot;data\u0026quot;: {\u0026quot;fullName\u0026quot;:\u0026quot;Andrea Santurbano\u0026quot;}},{\u0026quot;id\u0026quot;: 2, \u0026quot;label\u0026quot;: \u0026quot;User\u0026quot;, \u0026quot;data\u0026quot;: {\u0026quot;fullName\u0026quot;:\u0026quot;Lee Moon Soo\u0026quot;}},{\u0026quot;id\u0026quot;: 3, \u0026quot;label\u0026quot;: \u0026quot;Project\u0026quot;, \u0026quot;data\u0026quot;: {\u0026quot;name\u0026quot;:\u0026quot;Zeppelin\u0026quot;}}], \u0026quot;edges\u0026quot;: [{\u0026quot;source\u0026quot;: 2, \u0026quot;target\u0026quot;: 1, \u0026quot;id\u0026quot; : 1, \u0026quot;label\u0026quot;: \u0026quot;HELPS\u0026quot;},{\u0026quot;source\u0026quot;: 2, \u0026quot;target\u0026quot;: 3, \u0026quot;id\u0026quot; : 2, \u0026quot;label\u0026quot;: \u0026quot;CREATE\u0026quot;},{\u0026quot;source\u0026quot;: 1, \u0026quot;target\u0026quot;: 3, \u0026quot;id\u0026quot; : 3, \u0026quot;label\u0026quot;: \u0026quot;CONTRIBUTE_TO\u0026quot;, \u0026quot;data\u0026quot;: {\u0026quot;oldPR\u0026quot;: \u0026quot;https://github.com/apache/zeppelin/pull/1582\u0026quot;}}], \u0026quot;labels\u0026quot;: {\u0026quot;User\u0026quot;: \u0026quot;#8BC34A\u0026quot;, \u0026quot;Project\u0026quot;: \u0026quot;#3071A9\u0026quot;}, \u0026quot;directed\u0026quot;: true, \u0026quot;types\u0026quot;: [\u0026quot;HELPS\u0026quot;, \u0026quot;CREATE\u0026quot;, \u0026quot;CONTRIBUTE_TO\u0026quot;] } \u0026quot;\u0026quot;\u0026quot;)  Angular Zeppelin 과 AngularJS 사이의 게이트웨이를 제공해요. Backend / Frontend API 제공합니다.\n마치며 Zepplin 대시보드 만들기 라는 유튜브 동영상 이예요. Zeppelin 프로젝트 참여자이신 것 같네요.\n"
 },
 {
-	"uri": "/bigdata/zeppelin-quickstart/",
+	"uri": "https://hahafamilia.github.io/bigdata/zeppelin-quickstart/",
 	"title": "빅데이터 시각화 Zeppelin 설치, QuickStart",
 	"tags": ["zeppelin"],
 	"description": "",
 	"content": " Apache Zeppelin 은 노트북 방식의 시각화 툴이예요. 다양한 시각화 툴이 존재하지만 \u0026lsquo;가장 좋은 것\u0026rsquo;이 아니라 \u0026lsquo;나에게 맞는 것\u0026rsquo; 을 선택했어요. 제가 Zeppelin을 선택한 이유는 아래와 같아요.\n 설치와 사용법이 쉬워야 한다. 요구사항을 유연하게 처리 할 수 있어야 한다. BI 웹 어드민을 개발 하지 않아도 되도록 정적 HTML 을 제공해야 한다.  화# Environment * Oracle JDK 1.8 * CentOS 7 * Zepplin 0.8.1\nZeppelin 와우! Zeppelin~ 아파치 오픈 소스 프로젝트에 채택된 국내 프로젝트네요. 공식 문서를 보고 Quick Start 부터 진행 해볼게요.\nInstall Oracle JDK 1.7 를 필요로 하네요. 그리고 JAVA_HOME 이 필요하다고 하네요. 제가 사용중인 클러스터는 Cloudera CDH 6.1.x 으로 Oracle JDK 1.8 라이센스를 보유하고 있어서, JDK 1.8 환경에서 설치 진행해요. \u0026gt; Oracle JDK 1.8 이 상용화 되어서 사용하지 못하는게 아닐까요? 오픈소스에서 사용시 무료 라이센스 주면 안되나\u0026hellip; Oracle\u0026hellip;\n JAVA_HOME 설정은 readlink -f $(which java) 의 경로를 /etc/profile 파일에 export 명령문으로 저장해주시면 되요. source /etc/profile 해주셔야 현재의 터미널에 반영됩니다.\n 두 가지 버전의 Download 를 제공하고 있네요. all interpreter 버전으로 다운로드 진행 했어요. 제 설치 경로는 /opt 이예요.\n# 사용자 추가 useradd -s /sbin/nologin zeppelin # 설치 디렉토리 cd /opt tar -xvf zeppelin-0.8.1-bin-all.tgz # 권한, 링크 chown -R zeppelin:zeppelin zeppelin-0.8.1-bin-all ln -s zeppelin-0.8.1-bin-all zeppelin chown -h zeppelin:zeppelin zeppelin  Zeppelin 설치하였으니 /opt/zeppelin/bin/zeppelin-daemon.sh start 시작 명령어로 실행시시켜 볼게요. http://localhost:8080 접속하시면 시작화면을 보실 수 있어요. Stop 시켜주시고, 서비스 등록을 할게요.\nService 등록 /usr/lib/systemd/system/zeppelin.service 파일을 생성해 주시고, 아래의 내용을 작성해 주세요.\n# CentOS 7 [Unit] Description=Zeppelin Service After=syslog.target network.target [Service] Type=forking User=zeppelin Group=zeppelin Restart=always Environment=\u0026quot;JAVA_HOME=\u0026lt;java home path\u0026gt;\u0026quot; WorkingDirectory=/opt/zeppelin ExecStart=/opt/zeppelin/bin/zeppelin-daemon.sh start ExecStop=/opt/zeppelin/bin/zeppelin-daemon.sh stop ExecReload=/opt/zeppelin/bin/zeppelin-daemon.sh reload [Install] WantedBy=multi-user.target  zeppelin.service 파일을 작성했으면, systemctl daemon-reload 명령어로 반영시켜준후, 서비스 enable 시켜 주세요.\nsystemctl enable zeppelin systemctl start zeppelin  Account Zeppelin 에 접속해 보면 anonymous 익명 사용자로 접속 되는데요. 익명 사용자 접근을 제한하고 계정을 생성해 볼게요.\nDisable Anonymous Access cd /opt/zeppelin cp conf/zeppelin-site.xml.template conf/zeppelin-site.xml vi zeppelin-site.xml  \u0026lt;property\u0026gt; \u0026lt;name\u0026gt;zeppelin.anonymous.allowed\u0026lt;/name\u0026gt; \u0026lt;value\u0026gt;false\u0026lt;/value\u0026gt; \u0026lt;/property\u0026gt;  Enable Shiro Authentication cd /opt/zeppelin cp conf/shiro.ini.template conf/shiro.ini vi shiro.ini  [users] admin = password1234, admin user1 = password1234, role1, role2 # user2 = password3, role3 # user3 = password4, role2  Explore UI Explore UI 섹션에는 Layout, Menu, Notebook, Paragraph 에 관한 UI 사용법이 있네요.\nTutorial Tutorial 에서는 LocalFile 을 사용하는 예제와 Twitter Stream 데이터를 사용하는 예제가 있어요.\n샘플데이터 bank.zip 을 다운로드해서 간단히 따라해 볼 수 있어요. \u0026gt; Zeppelin 에서 Spark Interpreter 가 기본 값이어서 샘플 코드에 Interperter 지정을 안해주고 있어요. 만약 예제가 동작하지 않는다면 RDD 생성 코드에 %spark Interpreter 를 지정해 주세요.\n마치며 다음 포스트에 계속해서 Usage 문서에 대해서 알아 볼게요.\n여기 에 Zeppelin 설치에 관해서 잘 정리되어져 있네요.\n"
 },
 {
-	"uri": "/tags/hue/",
+	"uri": "https://hahafamilia.github.io/tags/hue/",
 	"title": "hue",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "/tags/monitoring/",
+	"uri": "https://hahafamilia.github.io/tags/monitoring/",
 	"title": "monitoring",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "/tags/oozie/",
+	"uri": "https://hahafamilia.github.io/tags/oozie/",
 	"title": "oozie",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "/bigdata/oozie-workflow-email/",
+	"uri": "https://hahafamilia.github.io/bigdata/oozie-workflow-email/",
 	"title": "Oozie Workflow Email 알림 설정",
 	"tags": ["oozie", "monitoring", "hue"],
 	"description": "",
 	"content": " Oozie 에서 Workflow 의 결과에 따른 Email 알림을 받는 방법에 대해서 알아볼게요.\nWorkflow 를 1회성으로 실행시키는 경우와 Schedule 로 등록하여 주기적으로 실행하는 경우가 있을 수 있을텐데요. 1회성으로 Workflow 만 실행할때는 성공/실패에 대한 처리 결과를 받도록 하고, Schedule 로 등록하여 주기적으로 실행하는 경우에는 실패에 대한 알림 만을 받도록 합니다.\nVersion  Cloudera 6.1.1 Oozie 5.0.0 Hue 4.3.0  Oozie SMTP 설정 Cloudera Manager \u0026gt; Oozie \u0026gt; 구성 탭 에서 mail 을 검색해서, oozie.email.smtp.host, oozie.email.from.address 설정에 SMTP 의 도메인과 발신인 메일 주소를 설정해주세요. Oozie, Hue 서비스의 재시작이 필요합니다.\n 아쉽게도 Oozie 5.0.0 버전에서는 SSL 설정을 할 수 없네요. JIRA OOZIE-1393 를 확인해 보니 5.1.0 버전부터 Fixed 되었습니다.\n Workflow 처리 결과 알림 Oozie 서비스에 Mail 설정이 되어 있다면 Workflow 를 제출 할 때 처리 결과에 Email 받기 체크박스를 확인 할 수 있어요. 체크 해줌으로써 간단히 Mail 수신이 가능해요.\nWorkflow 실패시 알림 Hue Workflow Editor 에서 신규 Workflow 를 작성하는 레이아웃 이예요. 종료 Action을 지정하는 Action에서(맨 마지막의 네모모양 레이어의 톱니바퀴 버튼) 실패에 대한 메일 알림 설정을 할 수 있습니다.\n수신 대상 Mail 주소를 , 구분자로 넣어주세요. 제목과 내용에 EL Function 을 사용할 수 있어요. ${wf:name()} 는 Workflow 의 이름, ${wf:errofMessage(wf:lastErrorNode())} 는 실패 액션의 오류 원인 이예요.\n특정 Action 의 결과 알림 만약 특정 Action 의 처리 결과에 대한 알림을 받고 싶을 경우, Email Action 을 사용 해야 해요. Hue Workflow Editor 에서 선행 Action 의 수행후 전환 설정에서 KO 시에 Kill 이 아닌 Email Aciton 으로 전환 하게되면 Mail 을 수신할 수 있습니다.\n"
 },
 {
-	"uri": "/tags/avroflumeevent/",
+	"uri": "https://hahafamilia.github.io/tags/avroflumeevent/",
 	"title": "AvroFlumeEvent",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "/bigdata/spring-kafka-flume/",
+	"uri": "https://hahafamilia.github.io/bigdata/spring-kafka-flume/",
 	"title": "AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집",
 	"tags": ["flume", "AvroFlumeEvent"],
 	"description": "",
 	"content": "다음과 같은 데이터 파이프 라인을 가정해 볼게요.\n 사용자의 Activity 이벤트가 발생 API 서버를 통해 Kafka 에 Produce Flume 을 통해 Kafka 의 메시지를 HDFS 로 적재 HDFS 에는 일자 별로 생성된 디렉토리에 저장  Flume 을 퉁한 데이터 수집시에 Hdfs Sink 는 useLocalTimestamp 설정은 제공 해요. 하지만 이 설정은 이벤트의 수집 시각을 기준으로 해요.\n예제 그림에서 API 에서 시작된 데이터는 파이프라인을 거쳐 HDFS 에 도달하기까지 2초의 시간이 소요된다고 가정하면, 2019-08-01 23:59:59 시각에 발생한 이벤트는 useLocalTimestamp 설정에 의해 2019-08-02 00:00:01 의 시각으로 2019-08-02 디렉토리에 적재됩니다.\n데이터 수집 파이프라인에서 이벤트의 발생시각에 따른 수집이 필요한데요. Flumg NG 라이브러리는 AvroFlumeEvent 클래스를 제공 해요.\nKafka 에 저장하는 이벤트 메시지에 Flume Ng 의 헤더 데이터로 Timestamp 추가하고, Flume 에서 이 헤더의 Timestamp 값으로 데이터를 저장하면 되요. AvroFlumeEvent 는 Header 를 추가할 수 있게 해주는 클래스 라고 보시면 되요.\npublic void send(String topic, ActivityEvent message) throws IOException { Optional\u0026lt;Long\u0026gt; optionalTs = Optional.ofNullable(message.getActivityTime()); long ts = optionalTs.orElse(Instant.now().toEpochMilli()); // Flume message header Map\u0026lt;CharSequence, CharSequence\u0026gt; headers = new HashMap\u0026lt;\u0026gt;(); headers.put(\u0026quot;timestamp\u0026quot;, Long.toString(ts)); // Avro message bytes byte[] bytes = ActivityEvent.serializeByte(message); // Attatch flume message header with avro message. bytes = packFlumeMessage(headers, bytes); // 카프카 레코드 작성 ProducerRecord\u0026lt;Long, byte[]\u0026gt; record = new ProducerRecord\u0026lt;\u0026gt;(topic, ts, bytes); // 카프카 전송 ListenableFuture\u0026lt;SendResult\u0026gt; future = kafkaTemplate.send(record); future.addCallback(new ListenableFutureCallback\u0026lt;SendResult\u0026gt;() { @Override public void onFailure(Throwable e) { log.warn(\u0026quot;failed after send to kafka: exception={}, record={}\u0026quot;, e.getMessage(), message, e); } @Override public void onSuccess(SendResult sendResult) { log.info(\u0026quot;success after send to kafka: record={}\u0026quot;, message); } }); } /** * Kafka 전송 메시지에 Flume 의 헤더 값을 추가합니다. * eventTime 을 Flume 에 추가하기 위함입니다. * Flume 은 수집시간이 아닌 이벤트 발생시간 기준으로 파티션되어 저장합니다. * @param headers \u0026quot;timestamp\u0026quot; 밀리초, String * @param message * @return * @throws IOException */ private byte[] packFlumeMessage(Map\u0026lt;CharSequence, CharSequence\u0026gt; headers, byte[] message) throws IOException { AvroFlumeEvent avroFlumeEvent = new AvroFlumeEvent(headers, ByteBuffer.wrap(message)); ByteArrayOutputStream out = new ByteArrayOutputStream(); BinaryEncoder encoder = EncoderFactory.get().directBinaryEncoder(out, null); SpecificDatumWriter\u0026lt;AvroFlumeEvent\u0026gt; writer = new SpecificDatumWriter\u0026lt;\u0026gt;(AvroFlumeEvent.class); writer.write(avroFlumeEvent, encoder); encoder.flush(); return out.toByteArray(); }  보셔야 할 코드는 send 함수의 packFlumeMessage 함수 호출 부분 이예요. Kafka 에 메시지를 byte 로 저장하고 packFlumeMessage 함수에서 Timestamp 헤더를 추가하고 있어요.\n// Attatch flume message header with avro message. bytes = packFlumeMessage(headers, bytes);  전체 예제 소스는 Github 를 통해서 보실 수 있어요. 코드에는 Avro 데이터 처리는 Jackson 을 사용하고 있어요. 테스트는 EmbeddedKafka 테스트와 CloudKafka 테스트 가 있습니다.\n"
 },
 {
-	"uri": "/bigdata/cloudera-alert-email/",
+	"uri": "https://hahafamilia.github.io/bigdata/cloudera-alert-email/",
 	"title": "Cloudera Manager 알람 설정, Gmail SMPT 서버 사용",
 	"tags": ["cloudera-manager-alert", "monitoring"],
 	"description": "",
 	"content": " Cloudera Manager 알림을 보내는 방법은 SMTP, SNMP, Custom Script 세가지를 제공하고 있어요. 여기서 SNMP, Custom Script 는 Enterprise 버전에서만 지원해요. 별도의 SMTP 서버를 운영하고 있지 않다면 Gmail 을 이용할 수 있어요.\nCloudera Version Cloudera 6.1\nGmail 설정 우선 Gmail 설정에서 IMAP 사용이 허용되어야 해요. 그리고 Google 계정 설정 \u0026gt; 보안 \u0026gt; 보안 수준이 낮은 앱의 액세스 가 허용되어야 합니다.\n 이 방법은 보안상 권장하지 않는 방법 이예요. 하지만 제가 근무하는 회사의 G Suite 에서는 액세스키에 의한 접근 기능이 제공되고 있지 안아서 이 방법을 사용하고 있어요.\n Cloudera Alert Publisher Mail 환경설정 Email 구성 문서 문서를 참조해서 간단하게 구성이 가능 합니다.\nCloudera Manager Service \u0026gt; Configuration \u0026gt; Filter(Alert Pulisher \u0026amp; Main) 에서 설정이 가능해요. 아래의 항목들을 변경해요.\n 메일 서버 프로토콜 : smtps 메일 서버 호스트 이름 : smtp.gmail.com 메일 서버 사용자 이름 : 보내는 메일 주소 메일 서버 암호 : 보내는 메일 주소의 로그인 비밀번호 보낸 사람 주소 : 받는 사람 주소 :   Cloudera Manager 의 상단 메뉴의 관리 메뉴에서 테스트 알림 전송 기능을 제공하고 있어요.\n Alert, Trigger 설정 어떤 알림을 받을 수 있을까요? Cloudera 의 경고 관리 문서 를 보면 클러서터의 상태/로그/활동에 대한 경고들이 설정되어 있다고 합니다. Cloudera Manager \u0026gt; 관리 \u0026gt; 알림 메뉴에 알림 항목들이 설정되어 있어요. 편집 버튼을 통해 각 서비스의 구성 에서 설정을 변경 할 수 있습니다.\nTrigger 원하는 조건에 해당하는 알림을 받고 싶으면 Trigger 를 구성할 수 있어요. 트리거는 클러스터의 각 서비스의 관리 페이지에 트리거 생성 버튼을 통해서 만들수 있습니다.\n트리거 문서 를 보면 Trigger 는 이름/표현/임계값/활성화여부 로 구성되요. Trigger 표현은 아래처럼 조건과 액션으로 작성합니다.\nIF (CONDITIONS) DO HEALTH_ACTION  IF ((SELECT fd_open WHERE roleType=DataNode AND last(fd_open) \u0026gt; 500) OR (SELECT fd_open WHERE roleType=NameNode AND last(fd_open) \u0026gt; 500)) DO health:bad  "
 },
 {
-	"uri": "/tags/cloudera-manager-alert/",
+	"uri": "https://hahafamilia.github.io/tags/cloudera-manager-alert/",
 	"title": "cloudera-manager-alert",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "/tags/flume/",
+	"uri": "https://hahafamilia.github.io/tags/flume/",
 	"title": "flume",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "/tags/python/",
+	"uri": "https://hahafamilia.github.io/tags/python/",
 	"title": "python",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "/python/python-pyenv-anaconda-mac/",
+	"uri": "https://hahafamilia.github.io/python/python-pyenv-anaconda-mac/",
 	"title": "Python 개발환경, Pyenv, Anaconda3",
 	"tags": ["python"],
 	"description": "",
 	"content": " Mac 에서 Homebrew 통해서 Python 가상화 환경을 구성하려고 합니다. 우선 Mac 버전이 모하비라면 모하비 brew error 글을 한번 읽어보세요.\nPython 가상환경 구성방법은 여러가지가 있지만, pyenv/virtualenv 를 사용할거예요. 대략적인 과정은 pyenv 설치, anaconda3 설치, 가상환경 구성의 순서예요. pyenv 는 가상화 관리를 위해서 pyenv-virtual 패키지를 사용하는데, anaconda3 정도만 사요할 예정이면 설치 하지 않아요 되요.\npyenv brew help brew update brew install pyenv pyenv -v pyenv 1.2.13 pyenv install -list | grep anaconda ... pyenv install anaconda3-2019.03 coffee time... pyenv versions * system.... anaconda3-2019.03 pyenv activate anaconda3-2019.03 pyenv deactivate conda update conda # zshell ~/.zshrc # bash ~/.bashrc eval \u0026quot;$(pyenv init -)\u0026quot; source ~/.zshrc   zshell 만 그런진 모르겠지만, PATH 설정은 안해줘도 pyenv 명령어 사용이 가능했어요. anaconda3 설치후 conda 명령어는 사용이 불가능 했어요. activate 로 가상환경 들어갔다나오니 사용 가능해지더라고요.\n default Python 만약 특정 버전만 사용 하고, 가상화 activate 가 귀찮다면, default python(2.7) 을 변경 시킬 수 있어요.\npyenv global anaconda3-2019.03 python -V python versions  pyenv-virtualenv brew install pyenv-virtualenv pyenv virtualenv \u0026lt;인터프리터명\u0026gt; \u0026lt;가상화명\u0026gt; pyenv versions pyenv virtualenvs pyenv activate \u0026lt;가상화명\u0026gt; pyenv deactivate # anaconda3 pyenv virtualenv anaconda3-2019.03 conda3 conda activate conda3 which python conda deactivate # zshell ~/.zshrc # bash ~/.bashrc eval \u0026quot;$(pyenv virtualenv-init -)\u0026quot; source ~/.zshrc   anaconda3 를 사용할경우 pyenv activate conda3 이렇게 사용이 안되요.\n uninstall  pyenv uninstall anaconda3-2019.03 pyenv uninstall conda3  pyenv 가상환경 구성 방법, 그 외의 방법들까지 상세 하게 정리 해놓으신 블로그 입니다.\n"
 },
 {
-	"uri": "/bigdata/hive-java-udf/",
+	"uri": "https://hahafamilia.github.io/bigdata/hive-java-udf/",
 	"title": "Hive Java UDF, 유니코드",
 	"tags": ["hive-udf", "unicode"],
 	"description": "",
 	"content": " 개요 Cloudera Document 6.1 Hive UDF 문서를 참고하여 Cloudera CDH 플랫폼에서 HIVE UDF 를 작성하는 방법을 알아봅니다.\n또한 MySQL의 Collate 와 문자열 유니코드에 대해서도 간단히 알아보겠습니다.\n저의 이번 경우는 HIVE로 집계된 데이터를 SQOOP으로 export 시에 오류가 발생하였습니다.\n기존에 설계된 MySQL 디비의 테이블 칼럼 Collate 속성이 utf8-general-ci 로 설계되어 있어 Key 칼럼에 Accent 문자열을 포함하는 문자열 데이터 자정시에 상황에 따라 키중복이 발생했던 것이었습니다.\n칼럼의 Collate 속성이 utf8-general-ci 일경우 아래와 같은 경우 ã 문자열은 저장이 되겠지만 a 문자열 저장시 Key 중복 오류가 발생합니다.\ninsert into test(word) values ('ã'); insert into test(word) values ('a');  왜 그럴까요? Collate 는 문자열 정렬에 관련한 속성으로 값의 비교정책입니다. utf-general-ci 는 대소문자, 악센트 문자등을 같은 값으로 비교판단합니다. 그렇기 때문에 ã 문자는 a 취급되고 키중복이 발생합니다.\n제 경우에 테이블의 변경할 수 없는 상황으로 HIVE 쿼리 수행시에 악센트 문자열을 제거 하는 작업을 수행했습니다.\nUDF JAR Maven 에 HIVE dependency를 추가합니다. \u0026gt; 묶여진 Jar 파일은 모든 디펜던시를 포함하고 있어야 하는데요. Uber Jar 로의 빌드가 필요합니다. maven-shade-plugin 을 사용합니다.\n\u0026lt;dependency\u0026gt; \u0026lt;groupid\u0026gt;org.apache.hive\u0026lt;/groupid\u0026gt; \u0026lt;artifactId\u0026gt;hive-exec\u0026lt;/artifactId\u0026gt; \u0026lt;version\u0026gt;2.1.1\u0026lt;/version\u0026gt; \u0026lt;/dependency\u0026gt;  NaverD2 한글인코딩 에 잘 설명되어 있어 있어 많은 참고가 되었습니다. 우선 악센트를 포함하는 문자열을 정준분해(NFD) 한후 정규식을 통해 캐릭터를 치환한후 다시 정준결합(NFC) 하는 HIVE UDF 함수를 작성합니다. 각 이라는 문자열을 정준분해 분해 할경우 ㄱㅏㄱ 이 됩니다.\nstring = Normalizer.normalize(string, Normalizer.Form.NFD); string = string.replaceAll(\u0026quot;\\\\p{InCombiningDiacriticalMarks}+\u0026quot;,\u0026quot;\u0026quot;); string = Normalizer.normalize(string, Normalizer.Form.NFC);  package bigdata.hive.udf; import lombok.extern.slf4j.Slf4j; import org.apache.hadoop.hive.ql.exec.Description; import org.apache.hadoop.hive.ql.exec.UDFArgumentException; import org.apache.hadoop.hive.ql.exec.UDFArgumentLengthException; import org.apache.hadoop.hive.ql.metadata.HiveException; import org.apache.hadoop.hive.ql.udf.generic.GenericUDF; import org.apache.hadoop.hive.serde2.objectinspector.ObjectInspector; import org.apache.hadoop.hive.serde2.objectinspector.primitive.PrimitiveObjectInspectorFactory; import org.apache.hadoop.hive.serde2.objectinspector.primitive.StringObjectInspector; import java.text.Normalizer; @Slf4j @Description( name=\u0026quot;str_normal\u0026quot;, value=\u0026quot;remove special character. ex) accent\u0026quot;, extended=\u0026quot;step1. Normalizer.Form.NFD\u0026quot; + \u0026quot;step2. replaceAll regular InCombiningDiacriticalMarks\u0026quot; + \u0026quot;step3. Normalizer.Form.NFC\u0026quot; ) public final class StringNormalize extends GenericUDF { StringObjectInspector stringOI; @Override public ObjectInspector initialize(ObjectInspector[] objectInspectors) throws UDFArgumentException { if (objectInspectors.length != 1) { throw new UDFArgumentLengthException(\u0026quot;required string argument.\u0026quot;); } ObjectInspector objectInspector = objectInspectors[0]; if (false == objectInspector instanceof StringObjectInspector) { throw new UDFArgumentException(String.format( \u0026quot;argument must be a string. class=%s\u0026quot;, objectInspector.getClass())); } this.stringOI = (StringObjectInspector) objectInspector; return PrimitiveObjectInspectorFactory.javaStringObjectInspector; } @Override public Object evaluate(DeferredObject[] deferredObjects) throws HiveException{ DeferredObject deferredObject = deferredObjects[0]; String string = this.stringOI.getPrimitiveJavaObject(deferredObject.get()); if (string == null || string == \u0026quot;\u0026quot;) { return string; } string = Normalizer.normalize(string, Normalizer.Form.NFD); string = string.replaceAll(\u0026quot;\\\\p{InCombiningDiacriticalMarks}+\u0026quot;,\u0026quot;\u0026quot;); string = Normalizer.normalize(string, Normalizer.Form.NFC); return string; } @Override public String getDisplayString(String[] strings) { return \u0026quot;String normalize. \u0026quot;; } }  Hive UDF Jar 파일을 HADOOP 파일시스템 hdfs:///app/hive-udf/hive-udf.jar 경로에 복사합니다. 또한 HIVE SERVER2 를 서비스 하고 있는 호스트의 로컬 파일 시스템에도 /usr/local/bigdata/hive-udf/hive-udf.jar 저장합니다. \u0026gt; 빌드된 jar 파일은 HADOOP과 HIVE SERVER2의 서버에 모두 등록되어이 있어야 합니다.\nHIVE 서비스가 Jar 를 classpath 에 등록하기 위해서는 아래의 설정값을 변경해 주어야 합니다. 설정값을 변경 한후 HIVE 구성파일을 재배포 하고 서비스를 재시작 합니다. \u0026gt; reloadable 속성을 정의 할경우 추후 Jar 파일이 변경될 경우 reload; 명령어를 사용할 수 있습니다.\nCloudera Manager \u0026gt; Hive \u0026gt; Configuration \u0026gt; Filter : Hive Serivce-Wide Advanced \u0026gt; Hive Service Advanced Configuration Snipped(Safety Valve) for hive-site.xml Click(+)\nName : hive.reloadable.aux.jars.path Value : /usr/local/bigdata/hive-udf  beeline 혹은 hue 의 HIVE Editor 에서 함수를 등록 합니다.\ncreate function str_normal as 'bigdata.hive.udf.StrignNormalize' using jar 'hdfs:///app/hive-udf/hive-udf.jar'; describe function extended str_normal; show functions; select str_normal('ã')); --- result a  UDF 함수 업데이트 먼저 HIVE UDF 함수를 제거합니다.\ndrop function if exists str_normal;  HADOOP 과 HIVESERVER2 의 Jar 파일을 업데이트 한 후 beeline 혹은 Hue 에서 reload; 명령어를 수행합니다.\n HUE Editor 에서 SQL을 작성하실 때 HIVESERVER2 의 호스트 서버에 Jar 파일을 등록하지 않고 진행 않아도 UDF 를 사용할 수 있습니다. 하지만 이럴경우 Oozie Workflow 를 실행하거나 Schedule 로 등록시 UDF 함수를 찾을 수 없다는 오류가 발생합니다.\n "
 },
 {
-	"uri": "/tags/hive-udf/",
+	"uri": "https://hahafamilia.github.io/tags/hive-udf/",
 	"title": "hive-udf",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "/tags/unicode/",
+	"uri": "https://hahafamilia.github.io/tags/unicode/",
 	"title": "unicode",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "/tags/kafka/",
+	"uri": "https://hahafamilia.github.io/tags/kafka/",
 	"title": "kafka",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "/bigdata/kafka-broker-reinstall/",
+	"uri": "https://hahafamilia.github.io/bigdata/kafka-broker-reinstall/",
 	"title": "Kafka Broker 디스크 증설, RAID구성, OS 재설치",
 	"tags": ["kafka"],
 	"description": "",
 	"content": " Kafka Broker 재설치 Kafka Broker 서버의 디스크 용량을 증설하는 작업을 진행 하게 되었습니다. RAID 10으로 디스크 구성을 변경하다보니 불가피하게 OS를 재설치 합니다. Kafka는 Broker 서버의 장애 상황에서도 서비스를 유지 할 수 있도록 설계되어 있어요. Broker 서버를 1대씩 순차적으로 RAID 구성 및 OS 재설치 진행후에 Partition을 Reassign 할 계획입니다.\nEnvironment  CentOS 7.6 Cloudera CDH 6.1.1 Cloudera Manager Kafka 2.0.0-cdh6.1.1 Kafka Manager Kafka Broker 3대 Replication fector 3  HowTo Cloudera Manager 에서 작업대상 Broker 서버를 서비스에서 제거해요. Cloudera Manager의 Host 메뉴에서 해당 서버를 제거하여 CDH 플랫폼에서 호스트를 완전 제거 해요. RAID 를 구성하고 OS를 재설치 진행해요. Cloudera Manager 에서 호스트를 클러스터에 추가하고, Kafka 서비스에서 역할을 할당 해요.\n{: .align-left} 여기까지 진행하고 Broker를 투입하게 되면 Cloudera Manager 에서 나머지 2대의 Broker 서버에 경고가(Lagging Replicas Test) 표시 되요. Kafka 는 Broker가 재투입 되더라도 Partition을 자동으로 재조정 하지 않기 때문이예요.\nKafka Manager 의 Topic 리스트에는 Under Replication 으로 표시되네요.\n파티션을 재조정 하려면 각 Broker에 위치할 파티션들과 Replication 들을 Json 형식으로 일일이 작성해 Kafka Tool 명령어를 사용해야 해요. 이 작업은 매우 번거로울 수 있어요. 다행이 Kafka Manager 가 손쉽게 작업 할 수 있게 도와 주네요.\nKafka Manager 의 Topic 리스트에 작업할 Topic 의 상세 정보에 보면 Operation 들이 보입니다. Generate Partition Assignments 작업을 수행합니다. 위에서 말한 Json 파일을 만들어 준다고 보시면 되요. 이후 Reassign Partitions 작업을 수행합니다. Broker 서버로 파티션들을 옮기는 작업이예요. 용량에 따라 수분, 수십분이 소요 됩니다.\n아래는 2번째 Topic의 Reassign Partition 작업을 진행하고 6번째 Topic에서 Reassign Partition 작업을 진행 중입니다. 진행 중인 Topic에 대해 하일라이트 표시를 해주고 있네요. Reassign Partition 작업이 완료된 Topic는 Broker 가 3으로 표기되고, Under Replication 은 0으로 표기 되고 있습니다.\n그런데 Borker Leader Skew 가 발생 했네요. Skew는 사전적 의미로 왜곡된 이란 뜻이고, 파티션의 ISR Leader 선출에 문제가 있음을 말해요.\n모든 Topic에 대해 Reassign Partition 작업이 완료 되면 투입된 Broker 디렉토리에 파티션이 할당되었을 거예요. Kafka Data 디렉토리에서 du -hs 명령어로 데이터 들이 잘 복제 되었음을 확인 할 수 있어요.\n이제 Leader Skew를 해결 합니다. 파티션은 각 Broker로 분배 되어 투입된 Broker에 할당되었지만 투입된 Broker는 아직 파티션의 Leader 역할을 가지고 있지 않기 때문에 Skew가 발생해요. Kafka Manager 에서 Preferred Replica Election 작업을 수행 합니다.\n"
 },
 {
-	"uri": "/tags/markdown/",
+	"uri": "https://hahafamilia.github.io/tags/markdown/",
 	"title": "markdown",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "/howto/markdown/",
+	"uri": "https://hahafamilia.github.io/howto/markdown/",
 	"title": "Markdown 작성법",
 	"tags": ["markdown"],
 	"description": "",
 	"content": " # header ## header ### header #### header ##### header ###### header  header header header header header header *** --- ===  ===\n# header ## header ### header #### header ##### header ###### header  header header header header header header 1. List 1. List 1. Sub List 1. List  * List * List * List * List - List + List   List  List  List   List List List\nthis is `code`   this is code\n\u0026gt; This is a blockQuote \u0026gt;\u0026gt; This is a blockQuote \u0026gt;\u0026gt; * List \u0026gt;\u0026gt; * List \u0026gt;\u0026gt;\u0026gt; This is a blockQuote   This is a blockQuote \u0026gt; This is a blockQuote \u0026gt; * List \u0026gt; * List \u0026gt;\u0026gt; This is a blockQuote\n |header 1|header 2 | |:-------|:-------| |row 1 col 1| row1 col 2| |row 2| row 2|     header 1 header 2     row 1 col 1 row1 col 2   row 2 row 2    [Go Naver][naverLink] Link: [Naver][naverLink] [naverLink]: http://www.naver.com \u0026quot;Go Naver\u0026quot;  Go Naver Link: Naver\nsyntax: [Go Naver](http://naver.com)  syntax: Go Naver\n\u0026lt;http://www.naver.com\u0026gt; \u0026lt;octchristmas@naver.com\u0026gt;  http://www.naver.com octchristmas@naver.com\n![Title](/assets/images/2019/babyelephant.png) \u0026lt;img src=\u0026quot;/assets/images/2019/babyelephant.png\u0026quot; width=\u0026quot;50px\u0026quot;\u0026gt;  {: .align-left}\n*asterisks* **asterisks** _underscores_ __underscores__ ++underline++ ~~cancelline~~  asterisks asterisks underscores underscores ++underline++ cancelline\n참고 : ihoneymon Github\n"
 },
 {
-	"uri": "/tags/book/",
+	"uri": "https://hahafamilia.github.io/tags/book/",
 	"title": "book",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "/book/%EB%AA%A8%EB%93%A0%EC%A3%BC%EC%8B%9D%EC%9D%84%EC%86%8C%EC%9C%A0%ED%95%98%EB%9D%BC/",
+	"uri": "https://hahafamilia.github.io/book/%EB%AA%A8%EB%93%A0%EC%A3%BC%EC%8B%9D%EC%9D%84%EC%86%8C%EC%9C%A0%ED%95%98%EB%9D%BC/",
 	"title": "모든 주식을 소유하라",
 	"tags": ["book"],
 	"description": "",
 	"content": " Description 세계 4대 투자의 거장, 존 보글의 투자 법칙.\n2015년 워렌 버핏이 주주들에게 주천한 책!\n교보문고\n우화, 고트락스 가문 고트락스라는 부자 가문이 여러 대에 걸쳐 번창하여 형제, 자매, 삼촌, 사촌이 수천명이나 되었고, 미국의 모든 주식을 100% 소유하게 되었다. 얼마 후 브로커가 나타나서 다른 친척들보다 돈을 더 많이 벌 수 있는 방법이 있다고 속삭였다. 브로커들은 친척에게 보유 주식을 사고 팔게 했다. 브로커들은 대가로 수수료를 받고, 가문 사람들은 주식을 거래하는데 발생하는 자본이득에 대해서도 세금을 내야 했다.\n개인평 이 책은 고트락스 가문의 우화에 책의 모든 내용이 담겨져 있어요. 모든 주식을 소유하고 있다면, 경제의 성장이 개인의 수익이 되는 이기는 투자를 하게 된다는 것이예요. 그런 투자 개념에 맞게 주식투자에 앞서 투자 수익을 높이기 이전에 수수료 및 세금을 최소화 해야 한다고 말하고 있어요. 또한 지수를 따라가는 인덱스 펀드와 ETF, 장기 투자 방식에 대해 말하고 있습니다. 전 이 책을 읽고 제 투자 방향을 결정했습니다. 애초에 주식을 하게 된 이유도 대박의 이익을 노리고 시작한게 것이 아니었거든요.\n"
 },
 {
-	"uri": "/tags/github.io/",
+	"uri": "https://hahafamilia.github.io/tags/github.io/",
 	"title": "github.io",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "/tags/jekyll/",
+	"uri": "https://hahafamilia.github.io/tags/jekyll/",
 	"title": "jekyll",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "/howto/jekyll-github-mistakes-blog/",
+	"uri": "https://hahafamilia.github.io/howto/jekyll-github-mistakes-blog/",
 	"title": "Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그",
 	"tags": ["jekyll", "github.io"],
 	"description": "",
 	"content": " 개발자 초창기에는 블로그(이전의 블로그) 활동도 열심히 했었는데\u0026hellip; 너무 잊고 살았었네요. 새롭게 블로그를 시작 할 생각에 Jekyll, Github.io 로 블로그를 구성하게 되었어요.\n간단히 Jekyll 은 정적파일 생성기, Github.io 는 호스팅, Minimal mistakes 는 수많은 Jekyll 테마중의 하나예요.\n선택의 기준은 markdown 에디터 때문이에요. 개발자는 에디터 툴을 가장 많이 다루는데요. 아무래도 markdown 으로 글을 작성하고 Git 으로 Push 하여 포스팅을 하는 구조라면 블로그 활동량이 많아지지 않을까 합니다.\n그럼 Github.io, Jekyll, Minimal mistakes theme 를 이용해 블로그를 만들어 봐요. 쭉~ 진행해본후 복기하여 글을 작성해서 순서가 바뀐부분이 있음을 감안해주세요.\nGit Git 은 형상관리 솔루션의 발전딘 형태로, 형상관리 외에도 많은 걸 해주고 있어요. 혹시 글을 읽으시는 분께서 Git을 모르시는\u0026hellip; 비 개발자라면 GitHub 사이트에서 파일을 생성/편집을 진행하셔도 되요. 그렇게 진행하시다 Git에 대해서 알아가셔도 됩니다.\nGithub.io GitHub 에 새로운 저장소를 생성해요. 저장소의 이름은 \u0026lt;github username\u0026gt;.github.io 로 생성하고 저장소의 이름이 도메인이 되요. 맘에 드는 Jekyll 테마 테마를 선택하시면되요. 저는 Minimal mistakes 를 선택했어요.\ntheme 설치 Minimal mistakes 의 가이드를 참고하면서 구성했어요. minimal-mistakes Quick Start 두가지 방법이 있어요. * 테마를 설치하는 방법 : local 에서 페이지 결과를 확인해 볼 수 있어요. * 테마를 원격으로 사용하는 방법 : 설치 과정이 없어요.\n저 같은 경우는 markdown 이니 preview 는 에디터 에서 가능하고, 초기 셋팅이 끝나면 설정하는 작업이 드물것이라 생각해서 원격 테마를 사용하는 방식으로 구성했어요. 하지만 조금 다른 방법으로 구성해 볼게요.\nQuick Start 에는 Minimal mistakes Github Project fork 하여 hahafamilia.github.io 로 이름 변경하라고 되어있어요.\n우선 mistakes 저장소를 이름 그대로 포크 합니다. 그림과 같이 Github에 2개의 Repository 가 있게 되요. Quick Start 불필요한 파일들을 삭제하라고 되어있어요. 삭제 하셔도 되고 안하셔도 됩니다.\nremove the unnecessary .editorconfig .gitattributes .github /docs /test CHANGELOG.md minimal-mistakes-jekyll.gemspec README.md screenshot-layouts.png screenshot.png  mmistakes Repository 에서 _config.yml 파일을 .github.io Repository 로 복사하고 remote_theme 항목을 수정해요.\n#_config.yml remote_theme : hahafamilia/minimal-mistakes  Hello world! 블로그 이렇게 연동 작업이 끝났어요. Git commit, push 하시면 블로그 주소에 접속하시면 기본 화면을 보실 수 있어요.\n_config.yml 에서 블로그에 관한 몇가지 정보들을 수정해 볼게요.\n#_config.yml title : \u0026quot;HaHa Familia\u0026quot; title_separator : \u0026quot;-\u0026quot; name : \u0026quot;HaHaFam\u0026quot; description : \u0026quot;HaHaFam Blog\u0026quot; url : \u0026quot;https://hahafamilia.github.io\u0026quot; repository : \u0026quot;hahafamilia/hahafamilia.github.io\u0026quot; logo : \u0026quot;/assets/images/logo.jpg\u0026quot; # Site Author author: name : \u0026quot;HaHaFam\u0026quot; avatar : \u0026quot;/assets/images/author.png\u0026quot; # path of avatar image, e.g. \u0026quot;/assets/images/bio-photo.jpg\u0026quot; bio : \u0026quot;Github.io Blog\u0026quot; location : \u0026quot;Seoul, Korea\u0026quot;  First Post 첫번째 글을 작성해 보도록 해요. github.io Repository 에 _drafts, _posts 두 개의 디렉토리를 생성해주세요. _posts 디렉토리에 년-월-일-글제목.md 형식으로 글을 작성하고 Git commit, push 하시면 블로그에 글이 게시 되요. _drafts 디렉토리는 작성중인 임시 글들을 저장하는 곳이라고 생각하시면 되요.\n_posts 디렉토리에 2019-01-25-first-post.md 라는 파일을 생성해 줍니다. 글을 작성하는 방법은 Front Matter 를 최상단에 작성하고, 이후 Markdown 형식으로 써내려 가면되요. Front Matter 는 일종의 설정값이라고 생각하면되요.\n# Front Matter --- date: 2019-01-25 title: \u0026quot;Jekyll 첫번째 글\u0026quot; categories: blog tags: jekyll # 목차 toc: true toc_sticky: true ---  글 내용으로 이미지를 첨부 하고 싶다면 github.io Repository aassets/images 라는 디렉토리에 보관해주세요.\n_config.yml _config.yml 에 몇가지 설정을 추가해 볼게요.\n검색은 google 검색을 비롯해 다양한 연동 설정을 제공하고 있는데요. 우선은 기본만 설정하고 추후에 다루도록 할게요.\nauthor, footer 의 links 설정에 블로그 주인장의 email, twitter, git, facebook 등의 링크들을 설정할 수 있어요.\ndefaults 는 글에 대한 기본 설정값이예요. 동일하게 글의 Front Matter 에서 개별적으로 설정이 가능해요.\nlocale : \u0026quot;ko-KR\u0026quot; search : true # true, false (default) # Site Author author: links: # Site Footer footer: links: # Defaults defaults: # _posts - scope: path: \u0026quot;\u0026quot; type: posts values: layout: single author_profile: true read_time: true  Category, Tags 블로그 활동이 왕성해지만 글들도 많아지게 되고, 글들에 대한 분류 작업이 필요해져요. 그래서 블로그에 카테고리와 테그, 연도 아카이브로 분류하는 설정을 해 줄게요.\n우선 github.io Repository 에 _pages 디렉토리를 생성하고, category-archive.md, year-archive.md, tag-archive.md 파일을 생성해주세요. 각각의 파일에 작성해야할 내용 이예요. 이렇게 되면 작성한 글의 Front Matter 설정값을 토대로 분류되요.\n# category-archive.md --- title: \u0026quot;Posts by Category\u0026quot; layout: categories permalink: /categories/ author_profile: true --- # year-archive.md --- title: \u0026quot;Posts by Year\u0026quot; permalink: /year-archive/ layout: posts author_profile: true --- # tag-archive.md --- title: \u0026quot;Posts by Tag\u0026quot; permalink: /tags/ layout: tags author_profile: true ---  fork 해온 minimal mistakes Repository 에서 _data/navigation.yml 파일을 복사해서 동일한 디렉토리를 생성하고 저장해주세요. 이 설정은 블로그의 상단 메뉴에 관한 설정이예요. 카테고리, 테그, 연도 아카이브 메뉴를 생성해 주세요. 예를 들어 카테고리라면..\n- title: \u0026quot;Categories\u0026quot; url: /categories/  Stylesheet minimal mistakes repository 에서 assets/css/main.scss 파일을 복사해서 동일한 경로의 디렉토리를 생성하고 저장해주세요. 대부분의 Style 수정은 main.scss 에서 이루어져요.\nFont main.scss 파일을 수정하여 변경할 웹폰트를 import 합니다.\n@charset \u0026quot;utf-8\u0026quot;; @import \u0026quot;minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}\u0026quot;; // skin @import \u0026quot;minimal-mistakes\u0026quot;; // main p // Font 변경 @import url('https://fonts.googleapis.com/css?family=Inconsolata');  전 Inconsolata 를 선택했습니다. Inconsolata 프로그래머들이 사용하는 Font 랭크 ( Best Programming fonts) 순위권 안에 드는 고정폭 폰트 입니다.\n그리고 import 다음 라인으로 폰트 변수에 폰트를 할당해 줍니다.\n$serif : \u0026quot;Inconsolata\u0026quot;, monospace, \u0026quot;PT Serif\u0026quot;, Georgia, Times, serif; $sans-serif-narrow : \u0026quot;Inconsolata\u0026quot;, monospace, \u0026quot;PT Sans Narrow\u0026quot;, -apple-system, BlinkMacSystemFont, \u0026quot;Roboto\u0026quot;, \u0026quot;Segoe UI\u0026quot;, \u0026quot;Helvetica Neue\u0026quot;, \u0026quot;Lucida Grande\u0026quot;, Arial, sans-serif; $global-font-family : $serif; $header-font-family : $sans-serif-narrow; $caption-font-family: $serif !default;   css 변수에 대한 기본값은 minimal mistakes repository 의 _sass/minimal-mitakes/_variables.scss 에서 확인 가능해요.\n Font Size main.scss 파일을 수정하여 폰트의 크기를 조정해요. 이렇게 설정할경우 블로그의 전체 폰트 크기가 일정한 폭으로 변경됩니다.\nhtml { font-size: 12px; // originally 16px @include breakpoint($medium) { font-size: 14px; // originally 18px } @include breakpoint($large) { font-size: 16px; // originally 20px } @include breakpoint($x-large) { font-size: 18px; // originally 22px } }  Title Link Style 포스트의 목록에서 타이틀의 언더라인이 깔끔해 보이지 않네요. main.scss 파일을 수정합니다.\n// list title link remove underline .archive a { color: inherit; text-decoration: none; }  댓글(Disqus), 방문자통계(Google Analystics) Disqus, Google Analystics 계정이 있다면 설정은 간단하게 이루어 저요.\nGoogle Analystics 는 트래킹 코드가 필요합니다. Disqus 댓글 설정시에는 shortname 필요합니다. shortname 은 Disqus 에서 사이트 생성시 할당되는 이름이예요. 저 같은 경우 hahafamilia.disqus.com 의 hahafamilia 가 shorname 이 됩니다.\n# _config.yml comments: provider : \u0026quot;disqus\u0026quot; # false (default), \u0026quot;disqus\u0026quot;, \u0026quot;discourse\u0026quot;, \u0026quot;facebook\u0026quot;, \u0026quot;google-plus\u0026quot;, \u0026quot;staticman\u0026quot;, \u0026quot;staticman_v2\u0026quot;, \u0026quot;utterances\u0026quot;, \u0026quot;custom\u0026quot; disqus: shortname : \u0026quot;hahafamilia\u0026quot; # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-  # _config.yml analytics: provider : \u0026quot;google\u0026quot; # false (default), \u0026quot;google\u0026quot;, \u0026quot;google-universal\u0026quot;, \u0026quot;custom\u0026quot; google: tracking_id : \u0026quot;UA-145448356-1\u0026quot;   Disqus 는 Git push 하고 반영 되는데 꽤 오랜 시간이 걸리네요.\n 목차(toc), 한글 링크 이동하지 않는 버그 Front Matter toc: true 를 설정하게 되면 친절하게 markdown 헤더들로 목차를 만들어 줘요. 그런데 목차를 한글로 입력하니 클릭 해도 링크로 이동하질 않는 버그가 있어요.\n해결책 찾는 과정에서 해결해서 프로젝트 기여하신 분이 계시네요. 이전 버전 사용하시는 분은 Bugfix 수정해서 사용하시면 되겠어요.\n마치며 여기까지 Jekyll, Github.io, Minimal mistakes 를 이용해서 블로그 만드는 방법에 대해 알아 봤습니다. 블로그 활동량이 많아져 그들이 많아지게 되면, 추가적인 구성들을 더 해볼 생각입니다. 먼저, 글을 꾸준히 올리는 습관을 들여야겠네요.\n"
 },
 {
-	"uri": "/categories/",
+	"uri": "https://hahafamilia.github.io/categories/",
 	"title": "Categories",
 	"tags": [],
 	"description": "",

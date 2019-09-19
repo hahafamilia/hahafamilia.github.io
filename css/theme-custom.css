@@ -104,7 +104,7 @@ a:hover {
 /* 
   Hahafamilia.2019.09.Fontsize
 */ 
-
+/*
 h1 {
     font-size: 3rem;
 }
@@ -136,4 +136,19 @@ h6 {
   font-size: 0.5rem;
   line-height: 110% !important;
   margin: 0.5rem 0 0.2rem 0;
+}
+*/
+html {
+  font-size: 10px; // originally 16px
+  @include breakpoint($medium) {
+      font-size: 14px; // originally 18px
+  }
+
+  @include breakpoint($large) {
+      font-size: 16px; // originally 20px
+  }
+
+  @include breakpoint($x-large) {
+      font-size: 18px; // originally 22px
+  }
 }

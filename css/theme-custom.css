@@ -104,48 +104,7 @@ a:hover {
 /* 
   Hahafamilia.2019.09.Fontsize
 */ 
+
 h1 {
-    font-size: 2.5rem !important;
-    line-height: 110% !important;
-    margin: 2.5rem 0 3rem 0;
-}
-h2 {
-  font-size: 2.1rem;
-  line-height: 110% !important;
-  margin: 2.1rem 0 1.5rem 0;
-}
-
-h3 {
-  font-size: 1.7rem;
-  line-height: 110% !important;
-  margin: 1.7rem 0 1rem 0;
-}
-
-h4 {
-  font-size: 1.3rem;
-  line-height: 110% !important;
-  margin: 1.3rem 0 0.7rem 0;
-}
-
-h5 {
-  font-size: 1rem;
-  line-height: 110% !important;
-  margin: 1rem 0 0.2rem 0;
-}
-
-h6 {
-  font-size: 0.5rem;
-  line-height: 110% !important;
-  margin: 0.5rem 0 0.2rem 0;
-}
-
-/* 
-  Hahafamilia.2019.09.Fontfamilia
-*/
-@import url('https://fonts.googleapis.com/css?family=Inconsolata');
-html {
-  font-family: "Inconsolata" !important;
-}
-chapter {
-  font-family: "Inconsolata" !important;
+    font-size: 1rem;
 }

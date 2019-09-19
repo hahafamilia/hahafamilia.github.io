@@ -106,7 +106,7 @@ a:hover {
 */ 
 html {
   /* originally 16px */
-  font-size: 14px;
+  font-size: 10px;
   @include breakpoint($medium) {
     /* originally 18px */
     font-size: 14px; 

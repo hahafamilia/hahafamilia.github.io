@@ -104,32 +104,48 @@ a:hover {
 /* 
   Hahafamilia.2019.09.Fontsize
 */ 
-html {
-  /* originally 16px */
-  font-size: 12px;
-  @include breakpoint($medium) {
-    /* originally 18px */
-    font-size: 14px; 
-  }
+h1 {
+    font-size: 2.5rem !important;
+    line-height: 110% !important;
+    margin: 2.5rem 0 3rem 0;
+}
+h2 {
+  font-size: 2.1rem;
+  line-height: 110% !important;
+  margin: 2.1rem 0 1.5rem 0;
+}
 
-  @include breakpoint($large) {
-    /* originally 20px */
-    font-size: 16px; 
-  }
+h3 {
+  font-size: 1.7rem;
+  line-height: 110% !important;
+  margin: 1.7rem 0 1rem 0;
+}
 
-  @include breakpoint($x-large) {
-    /* originally 22px */
-    font-size: 18px;
-  }
+h4 {
+  font-size: 1.3rem;
+  line-height: 110% !important;
+  margin: 1.3rem 0 0.7rem 0;
+}
+
+h5 {
+  font-size: 1rem;
+  line-height: 110% !important;
+  margin: 1rem 0 0.2rem 0;
+}
+
+h6 {
+  font-size: 0.5rem;
+  line-height: 110% !important;
+  margin: 0.5rem 0 0.2rem 0;
 }
 
 /* 
   Hahafamilia.2019.09.Fontfamilia
+*/
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
-serif              : "Inconsolata", monospace, "PT Serif", Georgia, Times, serif;
-$sans-serif-narrow  : "Inconsolata", monospace, "PT Sans Narrow", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
-
-$global-font-family : $serif;
-$header-font-family : $sans-serif-narrow;
-$caption-font-family: $serif !default;
-*/ 
+html {
+  font-family: "Inconsolata" !important;
+}
+chapter {
+  font-family: "Inconsolata" !important;
+}

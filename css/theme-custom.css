@@ -108,24 +108,29 @@ html {
   font-size: 14px;
 }
 h1 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   line-height: 110% !important;
-  margin: 3rem 0 4rem 0;
+  margin: 3rem 0 3rem 0;
 }
 h2 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   line-height: 110% !important;
   margin: 2rem 0 2rem 0;
 }
 h3 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   line-height: 110% !important;
   margin: 2rem 0 1.5rem 0;
 }
 h4 {
-  font-size: 1.5rem;
+  font-size: 1rem;
   line-height: 110% !important;
-  margin: 1.5rem 0 1rem 0;
+  margin: 1rem 0 0.5rem 0;
+}
+h5 {
+  font-size: 1rem;
+  line-height: 110% !important;
+  margin: 1rem 0 0.5rem 0;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap');
@@ -141,20 +146,26 @@ h1, h2, h3, h4, h5, h6 {
   font-weight : 700;
 }
 */
-
-h2, h3, h4, h5, h6 {
-    font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
-    text-rendering: optimizeLegibility;
-    color: #5e5e5e;
-    font-weight: 400;
-    letter-spacing: -1px;
-}
 h1 {
     font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
     text-align: center;
     text-transform: uppercase;
     text-rendering: optimizeLegibility;
     color: #222;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+h2, h3 {
+    font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    text-rendering: optimizeLegibility;
+    color: #5e5e5e;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+h4, h5, h6 {
+    font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    color: #222;
+    text-rendering: optimizeLegibility;
     font-weight: 400;
     letter-spacing: -1px;
 }

@@ -9,23 +9,23 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>빅데이터 시각화, Zeppelin Interpreter, Hive, Impala :: hahafamilia</title>
+    <title>빅데이터 시각화, Zeppelin Interpreter, Hive, Impala :: haha family&#39;s happy blog</title>
 
     
-    <link href="/css/nucleus.css?1568884856" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1568884856" rel="stylesheet">
-    <link href="/css/hybrid.css?1568884856" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1568884856" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1568884856" rel="stylesheet">
-    <link href="/css/auto-complete.css?1568884856" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1568884856" rel="stylesheet">
-    <link href="/css/theme.css?1568884856" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1568884856" rel="stylesheet">
+    <link href="/css/nucleus.css?1568969315" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1568969315" rel="stylesheet">
+    <link href="/css/hybrid.css?1568969315" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1568969315" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1568969315" rel="stylesheet">
+    <link href="/css/auto-complete.css?1568969315" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1568969315" rel="stylesheet">
+    <link href="/css/theme.css?1568969315" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1568969315" rel="stylesheet">
     
-      <link href="/css/theme-custom.css?1568884856" rel="stylesheet">
+      <link href="/css/theme-custom.css?1568969315" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1568884856"></script>
+    <script src="/js/jquery-3.3.1.min.js?1568969315"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -33,17 +33,7 @@
       }
       
     </style>
-    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
-
-
-<style type="css">
-@font-face {
-    font-family: 'Inconsolata';
-    src: url("https://fonts.googleapis.com/css?family=Inconsolata");
-    font-style: normal;
-    font-weight: 200;
-}
-</style>
+    
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -78,14 +68,14 @@ if (!doNotTrack) {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1568884856"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1568884856"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1568969315"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1568969315"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/hahafamilia.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1568884856"></script>
+<script type="text/javascript" src="/js/search.js?1568969315"></script>
 
     
   </div>
@@ -209,6 +199,9 @@ if (!doNotTrack) {
           
           
         
+          
+             
+            
           
              
             
@@ -369,14 +362,28 @@ if (!doNotTrack) {
 <ul>
 <li>
 <ul>
+<li>
+<ul>
 <li><a href="#environment">Environment</a></li>
 <li><a href="#hive">Hive</a>
 <ul>
 <li><a href="#maven-repository">Maven Repository</a></li>
-<li><a href="#hive-interpreter-추가">Hive Interpreter 추가</a></li>
+<li><a href="#hive-interpreter-추가">Hive Interpreter 추가</a>
+<ul>
+<li><a href="#properties">Properties</a></li>
+<li><a href="#dependencies-artifact">Dependencies artifact</a></li>
 </ul></li>
-<li><a href="#impala">Impala</a></li>
+</ul></li>
+<li><a href="#impala">Impala</a>
+<ul>
+<li>
+<ul>
+<li><a href="#properties-1">Properties</a></li>
+<li><a href="#denpendies-artifact">Denpendies artifact</a></li>
+</ul></li>
+</ul></li>
 <li><a href="#notebook">Notebook</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -413,7 +420,7 @@ if (!doNotTrack) {
 
 <p><a href="https://zeppelin.apache.org/">Apache Zeppelin</a> 과 Cloudera CDH 의 Hive, Impala 를 연동하는 방법을 알아볼게요.</p>
 
-<h2 id="environment">Environment</h2>
+<h3 id="environment">Environment</h3>
 
 <ul>
 <li>Oracle JDK 1.8</li>
@@ -425,7 +432,7 @@ if (!doNotTrack) {
 <li>Impala JDBC Driver 2.6.12</li>
 </ul>
 
-<h2 id="hive">Hive</h2>
+<h3 id="hive">Hive</h3>
 
 <p><a href="https://zeppelin.apache.org/docs/0.8.0/interpreter/hive.html">Zeppelin Hive Interpreter Document</a>
 문서를 보면 Jdbc Interpreter 를 사용하라고 되어있네요.
@@ -433,7 +440,7 @@ if (!doNotTrack) {
 
 <p><img src="/assets/images/2019/2019-08-30-14-16-05.png" alt="Menu Interpreter" /></p>
 
-<h3 id="maven-repository">Maven Repository</h3>
+<h4 id="maven-repository">Maven Repository</h4>
 
 <p>Zeppelin 콘솔에서 우측 상단의 메뉴에서 <code>interpreter</code> 메뉴를 클릭하여 Interpreter 설정 화면으로 이동해요.
 <code>Repository</code> 버튼을 클릭하면 등록되어져 있는 Repository 를 확인 할 수 있어요.
@@ -442,25 +449,31 @@ if (!doNotTrack) {
 
 <p><img src="/assets/images/2019/2019-08-30-14-46-45.png" alt="Add Repository" /></p>
 
-<h3 id="hive-interpreter-추가">Hive Interpreter 추가</h3>
+<h4 id="hive-interpreter-추가">Hive Interpreter 추가</h4>
 
 <p><code>Create</code> 버튼을 클릭하여 Interpreter 를 추가 해요. Interpreter Group 은 <code>jdbc</code> 로하고 아래의 Properties, Dependencies 값 조정해 주세요.</p>
 
 <p><img src="/assets/images/2019/2019-08-30-14-49-53.png" alt="Add Interpreter" /></p>
 
-<p><strong>Properties</strong>
-* default.driver : <code>org.apache.hive.jdbc.HiveDriver</code>
-* default.url : <code>jdbc:hive2://&lt;HiveServer2&gt;:10000</code></p>
+<h5 id="properties">Properties</h5>
 
-<p><strong>Dependencies artifact</strong>
-* <code>org.apache.hive:hive-jdbc:2.1.1-cdh6.1.1</code>
-* <code>org.apache.hadoop:hadoop-common:3.0.0-cdh6.1.1</code></p>
+<ul>
+<li>default.driver : <code>org.apache.hive.jdbc.HiveDriver</code></li>
+<li>default.url : <code>jdbc:hive2://&lt;HiveServer2&gt;:10000</code></li>
+</ul>
+
+<h5 id="dependencies-artifact">Dependencies artifact</h5>
+
+<ul>
+<li><code>org.apache.hive:hive-jdbc:2.1.1-cdh6.1.1</code></li>
+<li><code>org.apache.hadoop:hadoop-common:3.0.0-cdh6.1.1</code></li>
+</ul>
 
 <blockquote>
 <p><a href="https://www.cloudera.com/documentation/enterprise/6/release-notes/topics/rg_cdh_61_maven_artifacts.html#concept_2gp_d8n_yk">CDH 6.1.x Maven Artifacts</a></p>
 </blockquote>
 
-<h2 id="impala">Impala</h2>
+<h3 id="impala">Impala</h3>
 
 <p>Cloudera 는 Impala JDBC Connector 를 Maven 으로 제공하고 있지 않아요.
 Zeppelin 설치 경로에 <code>external-lib/impala</code> 디렉토리를 생성하고
@@ -469,18 +482,24 @@ Zeppelin 설치 경로에 <code>external-lib/impala</code> 디렉토리를 생�
 
 <p><code>Interpreter Name</code> 은 <code>impala</code> 로, <code>Interpreter Group</code> 은 <code>jdbc</code> 로 Interpreter 를 생성하고 Properties, Dependencies 값을 조정해 주세요.</p>
 
-<p><strong>Properties</strong>
-* default.driver : <code>com.cloudera.impala.jdbc41.Driver</code>
-* default.url : <code>jdbc:impala://&lt;ImpalaServer&gt;:21050/scdh;AuthMech=0;</code>
-&gt; Properties <code>default.user</code> 에 기본값이 들어가 있네요. 저는 삭제 했어요.</p>
+<h5 id="properties-1">Properties</h5>
 
-<p><strong>Denpendies artifact</strong>
-* <code>/opt/zeppelin/external-lib/impala/ImpalaJDBC41.jar</code> (Download 한 jar 파일의 경로)
+<ul>
+<li>default.driver : <code>com.cloudera.impala.jdbc41.Driver</code></li>
+<li>default.url : <code>jdbc:impala://&lt;ImpalaServer&gt;:21050/scdh;AuthMech=0;</code>
+&gt; Properties <code>default.user</code> 에 기본값이 들어가 있네요. 저는 삭제 했어요.</li>
+</ul>
+
+<h5 id="denpendies-artifact">Denpendies artifact</h5>
+
+<ul>
+<li><code>/opt/zeppelin/external-lib/impala/ImpalaJDBC41.jar</code> (Download 한 jar 파일의 경로)
 &gt; <code>AuthMech=0</code> 권한 설정을 하지 않았어요. Impala JDBC 권한 설정은
 <a href="https://www.cloudera.com/documentation/other/connectors/impala-jdbc/latest.html">Impala JDBC Document</a>
-문서를 참고해 주세요.</p>
+문서를 참고해 주세요.</li>
+</ul>
 
-<h2 id="notebook">Notebook</h2>
+<h3 id="notebook">Notebook</h3>
 
 <p>잘 연동 되었느지 확인해 볼게요. Note 를 생성하고 <code>Interpreter binding</code> 메뉴에서 <code>impala</code>, <code>hive</code> Interpreter 를 상단으로 올려주세요.</p>
 
@@ -506,8 +525,10 @@ Zeppelin 설치 경로에 <code>external-lib/impala</code> 디렉토리를 생�
 
     
     var logicalName = 'zeppelin-interpreter.md';
-    if (logicalName == "_index.md")
+    var relPermalink = '\/bigdata\/zeppelin-interpreter\/';
+    if (logicalName == "_index.md" || relPermalink == "/tags/")
         return;
+
         
     
     
@@ -647,6 +668,11 @@ Zeppelin 설치 경로에 <code>external-lib/impala</code> 디렉토리를 생�
             
         
                     
+                        
+            
+            
+        
+                    
             
         
                     
@@ -702,19 +728,19 @@ Zeppelin 설치 경로에 <code>external-lib/impala</code> 디렉토리를 생�
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1568884856"></script>
-    <script src="/js/perfect-scrollbar.min.js?1568884856"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1568884856"></script>
-    <script src="/js/jquery.sticky.js?1568884856"></script>
-    <script src="/js/featherlight.min.js?1568884856"></script>
-    <script src="/js/highlight.pack.js?1568884856"></script>
+    <script src="/js/clipboard.min.js?1568969315"></script>
+    <script src="/js/perfect-scrollbar.min.js?1568969315"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1568969315"></script>
+    <script src="/js/jquery.sticky.js?1568969315"></script>
+    <script src="/js/featherlight.min.js?1568969315"></script>
+    <script src="/js/highlight.pack.js?1568969315"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1568884856"></script>
-    <script src="/js/learn.js?1568884856"></script>
-    <script src="/js/hugo-learn.js?1568884856"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1568969315"></script>
+    <script src="/js/learn.js?1568969315"></script>
+    <script src="/js/hugo-learn.js?1568969315"></script>
 
-    <link href="/mermaid/mermaid.css?1568884856" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1568884856"></script>
+    <link href="/mermaid/mermaid.css?1568969315" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1568969315"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

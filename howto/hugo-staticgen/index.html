@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.57.2" />
+    <meta name="description" content="hahafamilia blog">
+<meta name="author" content="hahafamilia">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>휴고 설치 및 설정, Learn 테마, Hugo Website :: haha family&#39;s happy blog</title>
+
+    
+    <link href="/css/nucleus.css?1568969315" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1568969315" rel="stylesheet">
+    <link href="/css/hybrid.css?1568969315" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1568969315" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1568969315" rel="stylesheet">
+    <link href="/css/auto-complete.css?1568969315" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1568969315" rel="stylesheet">
+    <link href="/css/theme.css?1568969315" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1568969315" rel="stylesheet">
+    
+      <link href="/css/theme-custom.css?1568969315" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1568969315"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-145448356-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </head>
+  <body class="" data-url="/howto/hugo-staticgen/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://hahafamilia.github.io/">
+<img src="/images/logo.png" alt="logo.png">
+
+</a>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1568969315"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1568969315"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/hahafamilia.github.io\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1568969315"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/bigdata/" title="Bigdata" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/bigdata/">
+          <i class='fas fa-angle-right'></i> Bigdata
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/python/" title="Python" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/python/">
+          <i class='fas fa-angle-right'></i> Python
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/howto/" title="HowTo" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/howto/">
+          <i class='fas fa-angle-right'></i> HowTo
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/book/" title="Book" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/book/">
+          <i class='fas fa-angle-right'></i> Book
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/life/" title="Life" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/life/">
+          <i class='fas fa-angle-right'></i> Life
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/hahafamilia"><i class='fab fa-github'></i> Github</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://hahafamilia.github.io/about"><i class='fas fa-address-card'></i> About</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://tjstory.tistory.com"><i class='fas fa-blog'></i> 이전 블로그</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://hahafamilia.github.io/tags"><i class='fas fa-tags'></i> Tags</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Happy <i class="fas fa-heart"></i> hahaFamily</p>
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Content</a> > <a href='/howto/'>HowTo</a> > 휴고 설치 및 설정, Learn 테마, Hugo Website
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#environment-requirement">Environment &amp; Requirement</a></li>
+</ul></li>
+<li><a href="#quick-start">Quick Start</a>
+<ul>
+<li><a href="#install">Install</a></li>
+<li><a href="#웹사이트-생성">웹사이트 생성</a></li>
+<li><a href="#설정-config-toml">설정, config.toml</a></li>
+<li><a href="#글-작성">글 작성</a></li>
+</ul></li>
+<li><a href="#theme-hugo-theme-learn">Theme, hugo-theme-learn</a>
+<ul>
+<li><a href="#메뉴">메뉴</a></li>
+<li><a href="#favicon">favicon</a></li>
+<li><a href="#logo">logo</a></li>
+<li><a href="#menu-footer">Menu Footer</a></li>
+<li><a href="#font">Font</a></li>
+</ul></li>
+<li><a href="#추가기능">추가기능</a>
+<ul>
+<li><a href="#google-analystics">Google Analystics</a></li>
+<li><a href="#disqus-댓글">Disqus 댓글</a></li>
+<li><a href="#검색노출">검색노출</a></li>
+</ul></li>
+<li><a href="#github-호스팅">Github 호스팅</a>
+<ul>
+<li><a href="#github-repository">Github Repository</a></li>
+<li><a href="#배포">배포</a></li>
+</ul></li>
+<li><a href="#팁-게시글-초안">팁 게시글 초안</a></li>
+<li><a href="#마치며">마치며</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+<div class="tags">
+
+  <a class="tag-link" href="/tags/hugo-staticgen">hugo-staticgen</a>
+
+</div>
+
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              휴고 설치 및 설정, Learn 테마, Hugo Website
+            </h1>
+          
+
+        
+
+
+
+
+
+<p>Jekyll 을 사용하다 이번에 Hugo 로 블로그를 이전하게 되었어요.
+Jekyll 과 Hugo 를 비교하는 글들이 많은데, 제 이유는 Category 관리가 Hugo 가 좀 더 직관적이여서 예요.</p>
+
+<p><a href="https://gohugo.io/">Hugo</a> 를 설치하고 <a href="https://learn.netlify.com/en/">Learn Theme</a> 를
+적용하는 방법을 살펴볼게요.
+또 Disqus 댓글, 검색어 노출을 위해 Google Analystics, Google Search, 네이버 웹마스터와 연동하는 방법,
+초안(Draft) 작성을 위한 설정 등을 살펴 볼게요.</p>
+
+<h3 id="environment-requirement">Environment &amp; Requirement</h3>
+
+<ul>
+<li>Hugo Static Site Generator v0.57.2</li>
+<li>Mac</li>
+<li>Git</li>
+</ul>
+
+<h2 id="quick-start">Quick Start</h2>
+
+<h3 id="install">Install</h3>
+
+<p>Mac 에서 <a href="https://gohugo.io/getting-started/quick-start/">Hugo Install Doc</a>
+따라서 설치는 쉽게 진행 가능해요.</p>
+
+<blockquote>
+<p>Mac이 아닐경우 <a href="https://gohugo.io/getting-started/installing/">Hugo Install</a></p>
+</blockquote>
+
+<pre><code class="language-shell">brew install hugo
+hugo version
+</code></pre>
+
+<p>Directory Structure</p>
+
+<pre><code class="language-md">.
+├── archetypes
+├── config.toml
+├── content
+├── data
+├── layouts
+├── static
+└── themes
+</code></pre>
+
+<p>몇 개만 살펴보면 <code>content</code> 작성한 글, <code>layouts</code> Custom html 파일, <code>static</code> 는 css, image 등이 저장되요.</p>
+
+<h3 id="웹사이트-생성">웹사이트 생성</h3>
+
+<pre><code class="language-shell"># Site 생성
+hugo new site &lt;site directory&gt;
+# Website server 실행
+cd &lt;site directory&gt;
+hugo server -D 
+</code></pre>
+
+<blockquote>
+<p>Hugo의 CLI 명령어는 웹사이트의 Root <code>&lt;site directory&gt;</code> 에서 수행해 주세요.
+어떠한 명령어들은 Root 디렉토리가 아닐경우 정상 동작하지 않아요.</p>
+</blockquote>
+
+<h3 id="설정-config-toml">설정, config.toml</h3>
+
+<pre><code class="language-toml">baseURL = &quot;https://hahafamilia.github.io/&quot;
+languageCode = &quot;ko-kr&quot;
+title = &quot;haha family's happy blog&quot;
+theme = &quot;learn&quot;
+</code></pre>
+
+<h3 id="글-작성">글 작성</h3>
+
+<p>컨텐츠 추가</p>
+
+<pre><code class="language-shell">hugo new content/posts/my-first-post.md
+</code></pre>
+
+<blockquote>
+<p><code>hugo new</code> 명령어로 생성되는 파일은 <code>archetypes/default.md</code> 파일에 템플릿화 되어 있어요.</p>
+</blockquote>
+
+<p>글은 최상단에 <a href="https://gohugo.io/content-management/front-matter/#readout">Front Matter</a> 를
+추가하고 Markdown 으로 써 내려 가요.</p>
+
+<h2 id="theme-hugo-theme-learn">Theme, hugo-theme-learn</h2>
+
+<p><a href="https://themes.gohugo.io/">Hugo Theme</a> 다양한 테마가 존재하네요. Jekyll 에 비해 조금 부족한 듯 보이긴 해요.</p>
+
+<p><a href="https://github.com/search?o=desc&amp;q=hugo+theme&amp;s=stars&amp;type=Repositories">Github Hugo Theme Stars</a>
+<code>hugo-academic</code> 테마가 압도적으로 많이 사용되고 있네요.
+전 <code>hugo-theme-learn</code> 테마를 사용하도록 하겠습니다.
+아무래도 개발 관련 포스트 들이 주이기에 조금 올드한 트리구조의 메뉴가 편할 것 같거든요.</p>
+
+<p>Git <a href="https://git-scm.com/book/ko/v1/Git-%EB%8F%84%EA%B5%AC-%EC%84%9C%EB%B8%8C%EB%AA%A8%EB%93%88">submodule</a>
+로 등록하는 것을 추천합니다. 테마는 언제든지 바뀔 수 있고, 업데이트 될 수 있으니까요.</p>
+
+<p>테마추가</p>
+
+<pre><code class="language-shell">cd &lt;site directory&gt;
+git init
+git submodule add https://github.com/matcornic/hugo-theme-learn.git themes/learn
+
+# themes/ 디렉토리 이하 테마 디렉토리 명
+echo 'theme = &quot;learn&quot;' &gt;&gt; config.toml
+</code></pre>
+
+<blockquote>
+<p>이후 부터는 hugo-theme-learn 에서 재공하는 <code>shortcode</code> 나 설정들에 따라 테마 종속적인 것들이 있어요.
+그리 많지는 않으니 다른 테마를 사용해도 많이 달라지지는 않아요.</p>
+</blockquote>
+
+<h3 id="메뉴">메뉴</h3>
+
+<p><a href="https://learn.netlify.com/en/">hugo-heme-learn</a>
+테마는 <code>content</code> 디렉토리 이하의 디렉토리, <code>.md</code> 파일을 자동으로 좌측 메뉴에 트리 구조로 표시해줘요.</p>
+
+<p><code>content</code> 디렉토리 포함하여, 하나의 디렉토리 마다 <code>_index.md</code> 파일을 작성해 주세요.
+디렉토리 이하의 <code>_index.md</code> 메뉴에서 디렉토리 클릭시 표시되는 페이지 예요.</p>
+
+<p>디렉토리 index 페이지에서 이하의 포스트들을 나열하고 싶으면
+<code>children</code> <a href="https://learn.netlify.com/en/shortcodes/children/">shortcode</a>
+를 사용해 보세요.</p>
+
+<p>좌측 메뉴에 카테고리 이하 글들을 노출하고 싶지 않으면 <code>hidden</code>
+<a href="https://learn.netlify.com/en/cont/pages/#front-matter-configuration">Front Matter</a>
+필드를 사용해 보세요.</p>
+
+<p>메뉴에 별도의 Link 를 연결하길 원할 경우(Git 주소등) <code>config.toml</code> 파일에 <code>menu.shortcuts</code> 을 사용하면되요.</p>
+
+<pre><code class="language-toml"># config.toml
+[[menu.shortcuts]]
+name = &quot;&lt;i class='fas fa-tags'&gt;&lt;/i&gt; Tags&quot;
+url = &quot;/tags&quot;
+</code></pre>
+
+<h3 id="favicon">favicon</h3>
+
+<p><code>static/images/favicon.png</code> 파일명으로 저장</p>
+
+<h3 id="logo">logo</h3>
+
+<p><code>layouts/partials/logo.html</code> 편집</p>
+
+<pre><code class="language-html">&lt;a id=&quot;logo&quot; href=&quot;{{ .Site.BaseURL }}&quot;&gt;
+&lt;img src=&quot;/images/logo.png&quot; alt=&quot;logo.png&quot;&gt;
+&lt;/a&gt;
+</code></pre>
+
+<h3 id="menu-footer">Menu Footer</h3>
+
+<p><code>layouts/partials/menu-footer.html</code> 편집</p>
+
+<blockquote>
+<p><code>themes/layouts/partials</code> 디렉토리를 보시면 이 외에도 설정 가능한 html 들이 있어요.
+<code>themes</code> 디렉토리에서 설정하지 마시고, website 루트 디렉토리에서 설정해야 관리가 편해요.</p>
+</blockquote>
+
+<h3 id="font">Font</h3>
+
+<p>Hugo 에서 font-familiy 를 변경할 수 있는 설정은 없어요. 엄밀히 말하면 있긴 해요.
+각 테마에서 Style 편집을 해주는 게 손쉬운 방법 이에요.
+<a href="https://learn.netlify.com/en/basics/style-customization/#yours-variant">hugo-theme-learn Custom Style</a>
+문서에 Custom Style 설정 방법이 나와있어요.</p>
+
+<p><code>static/css/theme-custom.css</code> 파일을 생성하고 기본 Style 값을 복사 해주세요.</p>
+
+<pre><code class="language-toml">[params]
+themeVariant = &quot;custom&quot;
+</code></pre>
+
+<blockquote>
+<p>파일명의 <code>theme-</code> 는 고정이고, <code>custom</code> 은 변수명 처럼 사용가능해요.</p>
+</blockquote>
+
+<p>font-family 변경은 더 좋은 방법이 있을 것으로 보이지만, 우선 포스트 영역만 변경 했어요.</p>
+
+<pre><code class="language-style">
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;display=swap');
+body {
+  font-family: 'Inconsolata', monospace;
+}
+code {
+  font-family: 'Inconsolata', monospace;
+}
+</code></pre>
+
+<blockquote>
+<p>더 상세히 Style 조정을 하려면, <code>themes/learn//static/css/</code> 디렉토리를 확인해 보세요.</p>
+</blockquote>
+
+<p>font-size 는 테마에서 <code>rem</code> 단위를 사용하기 때문에 <code>html</code> 요소의 font-size 변경해주세요.</p>
+
+<pre><code>html {
+  font-size: 14px;
+}
+</code></pre>
+
+<h2 id="추가기능">추가기능</h2>
+
+<p>Hugo Website 가  hugo-theme-learn 테마를 사용해서 조금 깔끔해 졌네요.
+이제 블로그 운영을 위해 필수적으로 필요한 추가 기능들을 적용해 봐요.
+Disqus, Google Analystics, Google Search, 네이버 웹마스터 의 계정이 필요하고
+각 사이트 설정 방법에 대해서는 생략할게요.
+연동에 필요한 것들을 구성하는 방법 이예요.</p>
+
+<h3 id="google-analystics">Google Analystics</h3>
+
+<pre><code class="language-toml"># config.toml
+googleAnalytics = &quot;&lt;your tracking id&gt;&quot;
+</code></pre>
+
+<p><code>layouts/partials/custom-header.thml</code> Google Analystics <code>Internal Template</code> 삽입</p>
+
+<pre><code>{{ template &quot;_internal/google_analytics.html&quot; . }}
+</code></pre>
+
+<h3 id="disqus-댓글">Disqus 댓글</h3>
+
+<pre><code class="language-toml"># config.toml
+disqusShortname = &quot;&lt;disqus shortname&gt;&quot;
+</code></pre>
+
+<p><a href="https://gohugo.io/templates/internal#conditional-loading-of-disqus-comments">Hugo Disqus Docs</a>
+에 Disqus 댓글을 조건에 따라 설정하는 방법이 나와있어요.
+<code>layouts/partials/disqus.html</code> 에 문서에서 제공하는 스크립트를 추가해주세요.
+예를 들어 _index.md 파일에서는 Disqus 댓글을 안보이게 할 수도 있겠어요.</p>
+
+<pre><code class="language-js">var logicalName = '{{ .File.LogicalName }}';
+if (logicalName == &quot;_index.md&quot;)
+    return;
+</code></pre>
+
+<h3 id="검색노출">검색노출</h3>
+
+<p>정적 HTML 생성기로 만들어진 블로그는 검색 사이트에 노출되지 않기에 노출될 수 있도록 설정해줘야 되요.
+Google Search, 네이버 웹마스터 등록에 필요한 것은 robots, sitemap, rss feed 링크에요.</p>
+
+<p>다른 설정을 하기 전에 우선 config.toml 에 outputs 설정을 해줘야 해요.</p>
+
+<pre><code class="language-toml"># config.toml
+[outputs]
+home = [&quot;HTML&quot;, &quot;RSS&quot;, &quot;JSON&quot;]
+</code></pre>
+
+<p>어서오세요. 로봇님. robots.txt</p>
+
+<pre><code class="language-toml"># config.toml
+enableRobotsTXT = true
+</code></pre>
+
+<p><a href="http://localhost:1313/robots.txt">http://localhost:1313/robots.txt</a></p>
+
+<p>sitemap.xml</p>
+
+<pre><code class="language-toml"># config.toml
+[sitemap]
+changefreq = &quot;weekly&quot;
+filename = &quot;sitemap.xml&quot;
+</code></pre>
+
+<p><a href="http://localhost:1313/sitemap.xml">http://localhost:1313/sitemap.xml</a></p>
+
+<p>RSS Template
+<a href="https://gohugo.io/templates/rss/">여기</a> 를 보면
+Hugo 에서 자동으로 RSS 파일을 생성하는데 다양하게 있어요.
+모든 컨텐츠를 포함할 수 있도록 최상단의 RSS 를 사용해요.</p>
+
+<p><a href="http://localhost:1313/index.xml">http://localhost:1313/index.xml</a></p>
+
+<h2 id="github-호스팅">Github 호스팅</h2>
+
+<h3 id="github-repository">Github Repository</h3>
+
+<p>우선 Github 에 2개의 저장소를 만들어야 합니다.
+Hugo 프로젝트 소스를 저장할 저장소를 생성하고 Hugo 프로젝트 소스를 업로드 해서 유실에 대비하세요.
+GitHub Pages 호스팅 방법은
+<a href="https://pages.github.com/">Github Pages</a> 와
+<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">Hugo on Github Doc</a> 에
+잘 설명되어 있어요.</p>
+
+<p><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">Hugo on Github Doc</a>
+문서를 요약하면</p>
+
+<ol>
+<li><p>Hugo Project 리포지토리 생성</p></li>
+
+<li><p><code>Git Username</code> 리포지토리 생성</p></li>
+
+<li><p>새로운 디렉토리에 <code>git clone</code> 하라고 하는데 지금까지 작업한 디렉토리에 연동해도 되요.</p>
+
+<pre><code>cd &lt;site directory&gt;
+git init
+git remote add origin &lt;Hugo Project Repository Http Link&gt;
+git add .
+git commit -m 'first commit'
+git push -u origin master
+</code></pre></li>
+
+<li><p><code>public</code> 디렉토리가 있다면 삭제해주세요.</p>
+
+<blockquote>
+<p>루트에서 <code>hugo</code> 명령어를 수행하면 <code>public</code> 디렉토리가 생성되고 정적파일들이 생성되요.</p>
+</blockquote></li>
+
+<li><p>submodule 로 <code>public</code> 디렉토리를 Github Repository 에 등록</p>
+
+<pre><code class="language-shell">git submodule add -b master &lt;Username Repository Http Link&gt; public
+</code></pre></li>
+</ol>
+
+<h3 id="배포">배포</h3>
+
+<p><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#put-it-into-a-script">deploy.sh</a>
+쉘을 작성해주세요.
+<code>depoly.sh</code> 를 실행하면 정적파일을 생성하고 Repository 로 commit 합니다.
+<code>https://&lt;git username&gt;.github.io</code> 주소가 블로그 주소가 됩니다.</p>
+
+<blockquote>
+<p>포스트를 삭제하거나 카테고리 디렉토리를 삭제해도 <code>hugo</code> 명령어를 통해 정적 파일을 생성할때,
+<code>public</code> 디렉토리에서 삭제되지 않아요. 이럴때  <code>public</code> 디렉토리를 삭제후 정적 파일을 재생성 해야 하는데요.
+이때 <code>public</code> 디렉토리의 <code>.git</code> 파일이 삭제 되지 않도록 하세요.</p>
+</blockquote>
+
+<h2 id="팁-게시글-초안">팁 게시글 초안</h2>
+
+<p>Jekyll 에서는 <code>_drafts</code> 디렉토리를 사용해서 작성중인 포스트를 관리 했었는데,
+Hugo 에서는 <code>Front Matter</code> 의 <code>draft: true</code> 값으로 관리 되요.</p>
+
+<p>전 Jekyll 의 방식이 더 좋아서 Jekyll 처럼 구성해 봤어요.
+간단히 설명드리면 2개의 환경을 구성해서 초안작성 환경에서
+초안작성용 Config 파일이 초안이 있는 Content 디렉토리를 바라보게 해서
+Hugo Server 실행할 때 초안 환경을 지정해 주는 방식이에요</p>
+
+<p><a href="https://gohugo.io/getting-started/configuration/#configuration-directory">Hugo Configuration Directory Doc</a> 에
+Config 관리 방식이 나와있어요.</p>
+
+<ol>
+<li><p><code>draft/content</code> 초안 작성 디렉토리를 생성해주세요. <code>_index.md</code> 파일도 생성하고 <code>children</code> shortcode 로 작성글도 리스트업 해주세요.</p></li>
+
+<li><p>지금까지의 설정이 저장된 <code>config.toml</code>파일을 <code>config/_default/config.toml</code> 로 옮겨주세요.</p></li>
+
+<li><p><code>config/draft/config.toml</code> 빈 파일을 생성하고 <code>contentDir</code> 디렉토리를 초안작업 디렉토리로 설정하세요.</p>
+
+<pre><code class="language-toml">contentDir = &quot;draft&quot;
+</code></pre></li>
+
+<li><p>draft 환경으로 hugo 서버를 시작하세요.</p>
+
+<pre><code class="language-shell">hugo server -e draft
+</code></pre></li>
+</ol>
+
+<p><strong>Draft</strong>
+<img src="/images/howto/2019-09-20-16-00-10.png?classes=border,shadow&amp;width=80%" alt="Draft" />
+<strong>Production</strong>
+<img src="/images/howto/2019-09-20-16-00-51.png?classes=border,shadow&amp;width=80%" alt="Production" /></p>
+
+<h2 id="마치며">마치며</h2>
+
+<p>Jekyll 과 Hugo 를 잠깐씩 써본 경험상 성능의 이슈는 제외하고 Hugo 가 셋팅하기에 아주 약간 수월했어요.
+Hugo 테마가 좀 적어 아쉽긴 하지만 만족합니다.</p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+
+    
+    var logicalName = 'hugo-staticgen.md';
+    var relPermalink = '\/howto\/hugo-staticgen\/';
+    if (logicalName == "_index.md" || relPermalink == "/tags/")
+        return;
+
+        
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'hahafamilia';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1568969315"></script>
+    <script src="/js/perfect-scrollbar.min.js?1568969315"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1568969315"></script>
+    <script src="/js/jquery.sticky.js?1568969315"></script>
+    <script src="/js/featherlight.min.js?1568969315"></script>
+    <script src="/js/highlight.pack.js?1568969315"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1568969315"></script>
+    <script src="/js/learn.js?1568969315"></script>
+    <script src="/js/hugo-learn.js?1568969315"></script>
+
+    <link href="/mermaid/mermaid.css?1568969315" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1568969315"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

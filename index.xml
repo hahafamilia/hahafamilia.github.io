@@ -12,16 +12,6 @@
     
     
     <item>
-      <title>필리핀 세부 마리밥고 블루워터 여름휴가</title>
-      <link>https://hahafamilia.github.io/life/travel-cebu-2019/</link>
-      <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://hahafamilia.github.io/life/travel-cebu-2019/</guid>
-      <description>이번 여름 휴가는 필리핀 세부(Cebu) 막탄으로 다녀오게되었어요. 향공권, 마리바고 블루워터 리조트, 세부날씨, 그랩, 유심칩, 모닝글로리, 탑스그릴, 김떡순, 예스마트, 오스파, 플라워트리, 그랜드네일, 그리고 브라질리언 왁싱 등의 여행을 준비하면서 다녀오고 나서의 후기를 간략히 남겨보려합니다.
-2019년 09월, 필리핀 세부, 블루워터 마리바고 여름휴가 어른 2명, 5살 아이 1명, 돌된 아이 1명 이렇게 4인 가족의 9월 21 ~ 9월 26 일까지의 일정 이었어요. 가기전에 날씨 검색해보니 이틀 정도 소나기 예상이였는데, 여행 기간 중에 비가 오진 않았어요.</description>
-    </item>
-    
-    <item>
       <title>About Me</title>
       <link>https://hahafamilia.github.io/about/</link>
       <pubDate>Mon, 16 Sep 2019 15:26:00 +0900</pubDate>
@@ -178,6 +168,16 @@ Environment  CentOS 7.6 Cloudera CDH 6.1.1 Cloudera Manager Kafka 2.0.0-cdh6.1.1
 간단히 Jekyll 은 정적파일 생성기, Github.io 는 호스팅, Minimal mistakes 는 수많은 Jekyll 테마중의 하나예요.
 선택의 기준은 markdown 에디터 때문이에요. 개발자는 에디터 툴을 가장 많이 다루는데요. 아무래도 markdown 으로 글을 작성하고 Git 으로 Push 하여 포스팅을 하는 구조라면 블로그 활동량이 많아지지 않을까 합니다.
 그럼 Github.io, Jekyll, Minimal mistakes theme 를 이용해 블로그를 만들어 봐요.</description>
+    </item>
+    
+    <item>
+      <title>필리핀 세부 마리바고 블루워터 여름휴가</title>
+      <link>https://hahafamilia.github.io/life/travel-cebu-2019/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/life/travel-cebu-2019/</guid>
+      <description>이번 여름 휴가는 필리핀 세부(Cebu) 막탄으로 다녀오게되었어요. 향공권, 마리바고 블루워터 리조트, 세부날씨, 그랩, 유심칩, 모닝글로리, 탑스그릴, 김떡순, 예스마트, 오스파, 플라워트리, 그랜드네일, 그리고 브라질리언 왁싱 등의 여행을 준비하면서 다녀오고 나서의 후기를 간략히 남겨보려합니다.
+2019년 09월, 필리핀 세부, 블루워터 마리바고 여름휴가 어른 2명, 5살 아이 1명, 돌된 아이 1명 이렇게 4인 가족의 9월 21 ~ 9월 26 일까지의 일정 이었어요. 가기전에 날씨 검색해보니 이틀 정도 소나기 예상이였는데, 여행 기간 중에 비가 오진 않았어요.</description>
     </item>
     
   </channel>

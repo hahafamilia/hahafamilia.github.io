@@ -149,7 +149,11 @@ body {
 }
 code {
   font-family: 'Inconsolata', monospace;
-  font-size: 1rem
+  font-size: 1rem;
+}
+blockquote p {
+    font-size: 1rem;
+    color: #999;
 }
 /*
 h1, h2, h3, h4, h5, h6 {

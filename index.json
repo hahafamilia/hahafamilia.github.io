@@ -43,10 +43,10 @@
 },
 {
 	"uri": "https://hahafamilia.github.io/",
-	"title": "Content",
+	"title": "Developement and Life Blog",
 	"tags": [],
 	"description": "",
-	"content": " Hahafam\u0026rsquo;s Developement and Life Blog  Bigdata    빅데이터 시각화, Zeppelin Interpreter, Hive, Impala   빅데이터 시각화 Zeppelin Usage   빅데이터 시각화 Zeppelin 설치, QuickStart   Oozie Workflow Email 알림 설정   AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집   Cloudera Manager 알람 설정, Gmail SMPT 서버 사용   Hive Java UDF, 유니코드   Kafka Broker 디스크 증설, RAID구성, OS 재설치    Python    Python 개발환경, Pyenv, Anaconda3    HowTo    휴고 설치 및 설정, Learn 테마, Hugo Website   Markdown 작성법   Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그    Book    모든 주식을 소유하라    Life     "
+	"content": " Posts  Bigdata    빅데이터 시각화, Zeppelin Interpreter, Hive, Impala   빅데이터 시각화 Zeppelin Usage   빅데이터 시각화 Zeppelin 설치, QuickStart   Oozie Workflow Email 알림 설정   AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집   Cloudera Manager 알람 설정, Gmail SMPT 서버 사용   Hive Java UDF, 유니코드   Kafka Broker 디스크 증설, RAID구성, OS 재설치    Python    Python 개발환경, Pyenv, Anaconda3    HowTo    휴고 설치 및 설정, Learn 테마, Hugo Website   Markdown 작성법   Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그    Book    모든 주식을 소유하라    Life     "
 },
 {
 	"uri": "https://hahafamilia.github.io/tags/hugo-staticgen/",

@@ -25,7 +25,7 @@
 	"title": "Book",
 	"tags": [],
 	"description": "",
-	"content": "  모든 주식을 소유하라     "
+	"content": "  카프카, 데이터 플랫폼의 최강자     모든 주식을 소유하라     "
 },
 {
 	"uri": "https://hahafamilia.github.io/life/",
@@ -67,7 +67,7 @@
 	"title": "Developement and Life Blog",
 	"tags": [],
 	"description": "",
-	"content": " Hahafam\u0026rsquo;s Developement and Life Blog  Bigdata    빅데이터 시각화, Zeppelin Interpreter, Hive, Impala   빅데이터 시각화 Zeppelin Usage   빅데이터 시각화 Zeppelin 설치, QuickStart   Oozie Workflow Email 알림 설정   AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집   Cloudera Manager 알람 설정, Gmail SMPT 서버 사용   Hive Java UDF, 유니코드   Kafka Broker 디스크 증설, RAID구성, OS 재설치    Python    Python 개발환경, Pyenv, Anaconda3    HowTo    휴고 설치 및 설정, Learn 테마, Hugo Website   Markdown 작성법   Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그    Book    모든 주식을 소유하라    Life    필리핀 세부 마리바고 블루워터 여름휴가    "
+	"content": " Hahafam\u0026rsquo;s Developement and Life Blog  Bigdata    빅데이터 시각화, Zeppelin Interpreter, Hive, Impala   빅데이터 시각화 Zeppelin Usage   빅데이터 시각화 Zeppelin 설치, QuickStart   Oozie Workflow Email 알림 설정   AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집   Cloudera Manager 알람 설정, Gmail SMPT 서버 사용   Hive Java UDF, 유니코드   Kafka Broker 디스크 증설, RAID구성, OS 재설치    Python    Python 개발환경, Pyenv, Anaconda3    HowTo    휴고 설치 및 설정, Learn 테마, Hugo Website   Markdown 작성법   Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그    Book    카프카, 데이터 플랫폼의 최강자   모든 주식을 소유하라    Life    필리핀 세부 마리바고 블루워터 여름휴가    "
 },
 {
 	"uri": "https://hahafamilia.github.io/tags/hugo-staticgen/",
@@ -243,6 +243,20 @@
 	"tags": [],
 	"description": "",
 	"content": ""
+},
+{
+	"uri": "https://hahafamilia.github.io/tags/%EA%B8%B0%EC%88%A0%EC%84%9C/",
+	"title": "기술서",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://hahafamilia.github.io/book/%EC%B9%B4%ED%94%84%EC%B9%B4-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%94%8C%EB%9E%AB%ED%8F%BC%EC%9D%98-%EC%B5%9C%EA%B0%95%EC%9E%90/",
+	"title": "카프카, 데이터 플랫폼의 최강자",
+	"tags": ["book", "기술서"],
+	"description": "",
+	"content": " 실시간 비동기 스트리밍 솔루션 Kafka의 기본부터 확장 응용까지 라는 부제를 가지고 있는 이 책에서는 카프카 메시지 큐(버전 1.0.0)의 컨슈머, 프로듀서, 주키퍼, 카프카 모니터링, 카프카 매니저 등의 개념과 운영에 대해서 설명하고, 확장하여 카프카 스트림즈 API, 카프카SQL, 파일비트, 나이파이, 키반, 엘라스틱서치, 구글 펍/섭, 아마존 키네시스, 도커 등의 키워드를 설명하고 있어요.\n교보문고 링크\n기본정보  저자 : 고승범, 공용준 출판사 : 책만 출간일 : 2018.04.26  목차  1부 카프카를 시작하며  1장 카프카란 무엇인가 2장 카프카와 주키퍼 설치  2부 기본 개념과 운영 가이드  카프카 디자인 카프카 프로듀서 카프카 컨슈머 카프카 운영 가이드  3부 카프카의 확장과 응용  카프카를 활용한 데이터 파이프라인 구축 카프카 스트림즈 API 카프카 SQL을 이용한 스트리밍 처리 그 밖의 클라우드 기반 메시징 서비스  부록 도커를 이용한 카프카 설치  개인평 빅데이터 플랫폼 고도화 과정의 일환으로 RabbitMQ 3.0.1 로 운영해 오던 메시지 큐를 Kafka 로 전환하게 되었어요. 실시간 메시지 큐는 데이터의 길목으로 장애 발생시 서비스에 파급력이 큰 부분이기에, 한번 더 확인하자는 취지로 책을 구매했어요.\n저 같은 경우 항상 새로운 어플리케이션을 도입 할때 가장 어려운 점은 Best Practice 찾는 것이예요. 이건 정답이 없고 각각의 플랫폼에 따라 달라지는 것이니 많은 테스트 와 시행착오를 거치게 되는 부분이죠. 이 시간을 줄여 줄 수 있는 플랫폼 성격에 맞는 Best Practice 에 대한 가이드를 찾았을때는 소화제를 먹은 것처럼 뻥 뚤리는 시원함이 느껴집니다.\n대부분의 기술 문서에서는 어플리케이션의 설계 개념 및 각각의 설정 값들이 하는 역할들을 설명하고 있지만, 어떤 설정이 구축하려는 플랫폼에 적합한 설정인지를 결정하는 일은 개념을 이해하는 것 보다도 더 어려운 일 같아요. 사실 카프카의 개념에 대해서는 책이 아니여도 이해하기 어려운 부분은 아니예요. Best Practice, 이것이 제가 이 책을 선택한 이유 이기도 합니다.\n역시나 책에서는 다년간 Kafka 운영 실무를 경험하신 저자로 설정값들의 가이드를 제공하고 있어요. 이 책에 아쉬운 점이 있다면 그것도 이 부분 입니다. 책에서는 Kafka 외에서 메시지 처리 및 데이터 파이프 라인에 관련한 키워들 다루고 있는데요. 이부분이 Kafka 구축 및 운영의 실무에서 발생할 수 있는 다양한 경우에 대한 가이드 였더라면\u0026hellip; 하는 아쉬움 입니다. 혹은 Kafka 가 그만큼 심플해서 다루지 않으셨을지도 모르겠네요.\n예를들어 메시지의 순서가 중요한 플랫폼, 유실을 감안할 수 있는 플랫폼, 절대 유실되어서는 안되는 플랫폼, 처리량이 많은 플랫폼, 처리량이 적은 플랫폼 등의 구축하려는 플랫폼들의 성격에 맞는 설정에 대한 Best Practice 가이드라던가. 이 책에서도 설명하고 있지만 더 많은 장애 상황들에 대한 가이드가 있었다면 책의 출판 목적에 더 부합하지 않았을까? 하는 개인적인 생각입니다.\n이 책을 추천합니다. 가까이 두고 자주 꺼내볼 책은 아닐지라도, Kafka 도입을 생각하신다면 시간이 아깝지는 않은 책이예요.\n"
 },
 {
 	"uri": "https://hahafamilia.github.io/book/%EB%AA%A8%EB%93%A0%EC%A3%BC%EC%8B%9D%EC%9D%84%EC%86%8C%EC%9C%A0%ED%95%98%EB%9D%BC/",

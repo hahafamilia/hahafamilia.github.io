@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Python 개발환경, Pyenv, Anaconda3 :: haha family&#39;s happy blog</title>
+    <title>기술서 :: haha family&#39;s happy blog</title>
 
     
     <link href="/css/nucleus.css?1569898079" rel="stylesheet">
@@ -49,7 +49,7 @@ if (!doNotTrack) {
 </script>
 
   </head>
-  <body class="" data-url="/python/python-pyenv-anaconda-mac/">
+  <body class="" data-url="/tags/%EA%B8%B0%EC%88%A0%EC%84%9C/">
     
 <nav id="sidebar" class="">
 
@@ -144,7 +144,7 @@ if (!doNotTrack) {
   
     
     <li data-nav-id="/python/" title="Python" class="dd-item 
-        parent
+        
         
         
         ">
@@ -357,7 +357,7 @@ if (!doNotTrack) {
             
           
           
-            <a href='/'>Developement and Life Blog</a> > <a href='/python/'>Python</a> > Python 개발환경, Pyenv, Anaconda3
+            <a href='/'>Developement and Life Blog</a> > <a href='/tags/'>Tags</a> > 기술서
           
          
           
@@ -370,17 +370,7 @@ if (!doNotTrack) {
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#pyenv">pyenv</a></li>
-<li><a href="#default-python">default Python</a></li>
-<li><a href="#pyenv-virtualenv">pyenv-virtualenv</a></li>
-<li><a href="#uninstall">uninstall</a></li>
-</ul></li>
-</ul>
-</nav>
+
     </div>
 </div>
 
@@ -390,19 +380,15 @@ if (!doNotTrack) {
             
         <div id="head-tags">
         
-<div class="tags">
-
-  <a class="tag-link" href="/tags/python">python</a>
-
-</div>
-
         </div>
         
         <div id="body-inner">
           
             <h1>
               
-              Python 개발환경, Pyenv, Anaconda3
+                taxonomy ::
+              
+              기술서
             </h1>
           
 
@@ -412,105 +398,17 @@ if (!doNotTrack) {
 
 
 
-<p>Mac 에서 Homebrew 통해서 Python 가상화 환경을 구성하려고 합니다.
-우선 Mac 버전이 모하비라면 <a href="https://nesoy.github.io/articles/2018-10/Mac-Mojave-brew-error">모하비 brew error</a> 글을 한번 읽어보세요.</p>
 
-<p>Python 가상환경 구성방법은 여러가지가 있지만, pyenv/virtualenv 를 사용할거예요.
-대략적인 과정은 pyenv 설치, anaconda3 설치, 가상환경 구성의 순서예요. pyenv 는 가상화 관리를 위해서 pyenv-virtual 패키지를 사용하는데, anaconda3 정도만 사요할 예정이면 설치 하지 않아요 되요.</p>
-
-<h2 id="pyenv">pyenv</h2>
-
-<pre><code class="language-shell">
-brew help
-brew update
-
-brew install pyenv
-
-pyenv -v
-    pyenv 1.2.13
-
-pyenv install -list | grep anaconda
-    ...
-
-pyenv install anaconda3-2019.03
-    coffee time...
-
-pyenv versions
-    * system....
-    anaconda3-2019.03
-
-pyenv activate anaconda3-2019.03
-pyenv deactivate 
-
-conda update conda
-
-# zshell ~/.zshrc 
-# bash ~/.bashrc
-eval &quot;$(pyenv init -)&quot;
-source ~/.zshrc
-
-</code></pre>
-
-<blockquote>
-<p>zshell 만 그런진 모르겠지만, PATH 설정은 안해줘도 pyenv 명령어 사용이 가능했어요.
-anaconda3 설치후 conda 명령어는 사용이 불가능 했어요. activate 로 가상환경 들어갔다나오니 사용 가능해지더라고요.</p>
-</blockquote>
-
-<h2 id="default-python">default Python</h2>
-
-<p>만약 특정 버전만 사용 하고, 가상화 activate 가 귀찮다면, default python(2.7) 을 변경 시킬 수 있어요.</p>
-
-<pre><code class="language-shell">
-pyenv global anaconda3-2019.03
-python -V
-python versions
-
-</code></pre>
-
-<h2 id="pyenv-virtualenv">pyenv-virtualenv</h2>
-
-<pre><code class="language-shell">
-brew install pyenv-virtualenv
-
-pyenv virtualenv &lt;인터프리터명&gt; &lt;가상화명&gt;
-pyenv versions
-pyenv virtualenvs
-
-pyenv activate &lt;가상화명&gt;
-pyenv deactivate
-
-# anaconda3
-pyenv virtualenv anaconda3-2019.03 conda3
-conda activate conda3
-which python
-conda deactivate
-
-# zshell ~/.zshrc 
-# bash ~/.bashrc
-eval &quot;$(pyenv virtualenv-init -)&quot;
-source ~/.zshrc
-
-</code></pre>
-
-<blockquote>
-<p>anaconda3 를 사용할경우 <code>pyenv activate conda3</code> 이렇게 사용이 안되요.</p>
-</blockquote>
-
-<h2 id="uninstall">uninstall</h2>
-
-<pre><code>
-pyenv uninstall anaconda3-2019.03
-pyenv uninstall conda3
-
-</code></pre>
-
-<p><a href="http://egloos.zum.com/mcchae/v/11271948">pyenv 가상환경 구성 방법</a>, 그 외의 방법들까지 상세 하게 정리 해놓으신 블로그 입니다.</p>
+<ul>
+	
+		<li><a href="/book/%EC%B9%B4%ED%94%84%EC%B9%B4-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%94%8C%EB%9E%AB%ED%8F%BC%EC%9D%98-%EC%B5%9C%EA%B0%95%EC%9E%90/">카프카, 데이터 플랫폼의 최강자</a></li>
+	
+</ul>
 
 
 <footer class=" footline" >
 	
 </footer>
-
 
         
         </div> 
@@ -521,8 +419,8 @@ pyenv uninstall conda3
 (function() {
 
     
-    var logicalName = 'python-pyenv-anaconda-mac.md';
-    var relPermalink = '\/python\/python-pyenv-anaconda-mac\/';
+    var logicalName = '';
+    var relPermalink = '\/tags\/%EA%B8%B0%EC%88%A0%EC%84%9C\/';
     if (logicalName == "_index.md" || relPermalink == "/tags/")
         return;
 
@@ -625,7 +523,6 @@ pyenv uninstall conda3
             
                 
                     
-                    
                 
                 
 
@@ -646,9 +543,6 @@ pyenv uninstall conda3
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -758,4 +652,3 @@ pyenv uninstall conda3
 
   </body>
 </html>
-

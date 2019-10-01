@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Python 개발환경, Pyenv, Anaconda3 :: haha family&#39;s happy blog</title>
+    <title>카프카, 데이터 플랫폼의 최강자 :: haha family&#39;s happy blog</title>
 
     
     <link href="/css/nucleus.css?1569898079" rel="stylesheet">
@@ -49,7 +49,7 @@ if (!doNotTrack) {
 </script>
 
   </head>
-  <body class="" data-url="/python/python-pyenv-anaconda-mac/">
+  <body class="" data-url="/book/%EC%B9%B4%ED%94%84%EC%B9%B4-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%94%8C%EB%9E%AB%ED%8F%BC%EC%9D%98-%EC%B5%9C%EA%B0%95%EC%9E%90/">
     
 <nav id="sidebar" class="">
 
@@ -144,7 +144,7 @@ if (!doNotTrack) {
   
     
     <li data-nav-id="/python/" title="Python" class="dd-item 
-        parent
+        
         
         
         ">
@@ -220,7 +220,7 @@ if (!doNotTrack) {
   
     
     <li data-nav-id="/book/" title="Book" class="dd-item 
-        
+        parent
         
         
         ">
@@ -357,7 +357,7 @@ if (!doNotTrack) {
             
           
           
-            <a href='/'>Developement and Life Blog</a> > <a href='/python/'>Python</a> > Python 개발환경, Pyenv, Anaconda3
+            <a href='/'>Developement and Life Blog</a> > <a href='/book/'>Book</a> > 카프카, 데이터 플랫폼의 최강자
           
          
           
@@ -374,10 +374,12 @@ if (!doNotTrack) {
 <ul>
 <li>
 <ul>
-<li><a href="#pyenv">pyenv</a></li>
-<li><a href="#default-python">default Python</a></li>
-<li><a href="#pyenv-virtualenv">pyenv-virtualenv</a></li>
-<li><a href="#uninstall">uninstall</a></li>
+<li>
+<ul>
+<li><a href="#기본정보">기본정보</a></li>
+<li><a href="#목차">목차</a></li>
+</ul></li>
+<li><a href="#개인평">개인평</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -392,7 +394,9 @@ if (!doNotTrack) {
         
 <div class="tags">
 
-  <a class="tag-link" href="/tags/python">python</a>
+  <a class="tag-link" href="/tags/book">book</a>
+
+  <a class="tag-link" href="/tags/%EA%B8%B0%EC%88%A0%EC%84%9C">기술서</a>
 
 </div>
 
@@ -402,7 +406,7 @@ if (!doNotTrack) {
           
             <h1>
               
-              Python 개발환경, Pyenv, Anaconda3
+              카프카, 데이터 플랫폼의 최강자
             </h1>
           
 
@@ -412,99 +416,83 @@ if (!doNotTrack) {
 
 
 
-<p>Mac 에서 Homebrew 통해서 Python 가상화 환경을 구성하려고 합니다.
-우선 Mac 버전이 모하비라면 <a href="https://nesoy.github.io/articles/2018-10/Mac-Mojave-brew-error">모하비 brew error</a> 글을 한번 읽어보세요.</p>
+<p><em>실시간 비동기 스트리밍 솔루션 Kafka의 기본부터 확장 응용까지</em> 라는 부제를 가지고 있는
+이 책에서는 카프카 메시지 큐(버전 1.0.0)의 컨슈머, 프로듀서, 주키퍼, 카프카 모니터링, 카프카 매니저 등의
+개념과 운영에 대해서 설명하고,
+확장하여 카프카 스트림즈 API, 카프카SQL, 파일비트, 나이파이, 키반, 엘라스틱서치,
+구글 펍/섭, 아마존 키네시스, 도커 등의 키워드를 설명하고 있어요.</p>
 
-<p>Python 가상환경 구성방법은 여러가지가 있지만, pyenv/virtualenv 를 사용할거예요.
-대략적인 과정은 pyenv 설치, anaconda3 설치, 가상환경 구성의 순서예요. pyenv 는 가상화 관리를 위해서 pyenv-virtual 패키지를 사용하는데, anaconda3 정도만 사요할 예정이면 설치 하지 않아요 되요.</p>
+<p><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9791196203726&amp;orderClick=LAG&amp;Kc=#N">교보문고 링크</a></p>
 
-<h2 id="pyenv">pyenv</h2>
+<p><img src="/images/book/2019-10-01-apache-kafka.jpeg# mk-quater" alt="" /></p>
 
-<pre><code class="language-shell">
-brew help
-brew update
+<h3 id="기본정보">기본정보</h3>
 
-brew install pyenv
+<ul>
+<li>저자 : 고승범, 공용준</li>
+<li>출판사 : 책만</li>
+<li>출간일 : 2018.04.26</li>
+</ul>
 
-pyenv -v
-    pyenv 1.2.13
+<h3 id="목차">목차</h3>
 
-pyenv install -list | grep anaconda
-    ...
+<ul>
+<li>1부 카프카를 시작하며
 
-pyenv install anaconda3-2019.03
-    coffee time...
+<ul>
+<li>1장 카프카란 무엇인가</li>
+<li>2장 카프카와 주키퍼 설치</li>
+</ul></li>
+<li>2부 기본 개념과 운영 가이드
 
-pyenv versions
-    * system....
-    anaconda3-2019.03
+<ul>
+<li>카프카 디자인</li>
+<li>카프카 프로듀서</li>
+<li>카프카 컨슈머</li>
+<li>카프카 운영 가이드</li>
+</ul></li>
+<li>3부 카프카의 확장과 응용
 
-pyenv activate anaconda3-2019.03
-pyenv deactivate 
+<ul>
+<li>카프카를 활용한 데이터 파이프라인 구축</li>
+<li>카프카 스트림즈 API</li>
+<li>카프카 SQL을 이용한 스트리밍 처리</li>
+<li>그 밖의 클라우드 기반 메시징 서비스</li>
+</ul></li>
+<li>부록 도커를 이용한 카프카 설치</li>
+</ul>
 
-conda update conda
+<h2 id="개인평">개인평</h2>
 
-# zshell ~/.zshrc 
-# bash ~/.bashrc
-eval &quot;$(pyenv init -)&quot;
-source ~/.zshrc
+<p>빅데이터 플랫폼 고도화 과정의 일환으로 RabbitMQ 3.0.1 로 운영해 오던 메시지 큐를 Kafka 로 전환하게 되었어요.
+실시간 메시지 큐는 데이터의 길목으로 장애 발생시 서비스에 파급력이 큰 부분이기에,
+한번 더 확인하자는 취지로 책을 구매했어요.</p>
 
-</code></pre>
+<p>저 같은 경우 항상 새로운 어플리케이션을 도입 할때 가장 어려운 점은 Best Practice 찾는 것이예요.
+이건 정답이 없고 각각의 플랫폼에 따라 달라지는 것이니 많은 테스트 와 시행착오를 거치게 되는 부분이죠.
+이 시간을 줄여 줄 수 있는 플랫폼 성격에 맞는 Best Practice 에 대한 가이드를
+찾았을때는 소화제를 먹은 것처럼 뻥 뚤리는 시원함이 느껴집니다.</p>
 
-<blockquote>
-<p>zshell 만 그런진 모르겠지만, PATH 설정은 안해줘도 pyenv 명령어 사용이 가능했어요.
-anaconda3 설치후 conda 명령어는 사용이 불가능 했어요. activate 로 가상환경 들어갔다나오니 사용 가능해지더라고요.</p>
-</blockquote>
+<p>대부분의 기술 문서에서는 어플리케이션의 설계 개념 및 각각의 설정 값들이 하는 역할들을 설명하고 있지만,
+어떤 설정이 구축하려는 플랫폼에 적합한 설정인지를 결정하는 일은
+개념을 이해하는 것 보다도 더 어려운 일 같아요.
+사실 카프카의 개념에 대해서는 책이 아니여도 이해하기 어려운 부분은 아니예요.
+Best Practice, 이것이 제가 이 책을 선택한 이유 이기도 합니다.</p>
 
-<h2 id="default-python">default Python</h2>
+<p>역시나 책에서는 다년간 Kafka 운영 실무를 경험하신 저자로 설정값들의 가이드를 제공하고 있어요.
+이 책에 아쉬운 점이 있다면 그것도 이 부분 입니다.
+책에서는 Kafka 외에서 메시지 처리 및 데이터 파이프 라인에 관련한 키워들 다루고 있는데요.
+이부분이 Kafka 구축 및 운영의 실무에서 발생할 수 있는 다양한 경우에 대한 가이드 였더라면&hellip; 하는 아쉬움 입니다.
+혹은 Kafka 가 그만큼 심플해서 다루지 않으셨을지도 모르겠네요.</p>
 
-<p>만약 특정 버전만 사용 하고, 가상화 activate 가 귀찮다면, default python(2.7) 을 변경 시킬 수 있어요.</p>
+<p>예를들어 메시지의 순서가 중요한 플랫폼, 유실을 감안할 수 있는 플랫폼, 절대 유실되어서는 안되는 플랫폼,
+처리량이 많은 플랫폼, 처리량이 적은 플랫폼 등의
+구축하려는 플랫폼들의 성격에 맞는 설정에 대한 Best Practice 가이드라던가.
+이 책에서도 설명하고 있지만 더 많은 장애 상황들에 대한 가이드가 있었다면
+책의 출판 목적에 더 부합하지 않았을까? 하는 개인적인 생각입니다.</p>
 
-<pre><code class="language-shell">
-pyenv global anaconda3-2019.03
-python -V
-python versions
-
-</code></pre>
-
-<h2 id="pyenv-virtualenv">pyenv-virtualenv</h2>
-
-<pre><code class="language-shell">
-brew install pyenv-virtualenv
-
-pyenv virtualenv &lt;인터프리터명&gt; &lt;가상화명&gt;
-pyenv versions
-pyenv virtualenvs
-
-pyenv activate &lt;가상화명&gt;
-pyenv deactivate
-
-# anaconda3
-pyenv virtualenv anaconda3-2019.03 conda3
-conda activate conda3
-which python
-conda deactivate
-
-# zshell ~/.zshrc 
-# bash ~/.bashrc
-eval &quot;$(pyenv virtualenv-init -)&quot;
-source ~/.zshrc
-
-</code></pre>
-
-<blockquote>
-<p>anaconda3 를 사용할경우 <code>pyenv activate conda3</code> 이렇게 사용이 안되요.</p>
-</blockquote>
-
-<h2 id="uninstall">uninstall</h2>
-
-<pre><code>
-pyenv uninstall anaconda3-2019.03
-pyenv uninstall conda3
-
-</code></pre>
-
-<p><a href="http://egloos.zum.com/mcchae/v/11271948">pyenv 가상환경 구성 방법</a>, 그 외의 방법들까지 상세 하게 정리 해놓으신 블로그 입니다.</p>
+<p><strong>이 책을 추천합니다.</strong>
+가까이 두고 자주 꺼내볼 책은 아닐지라도, Kafka 도입을 생각하신다면 시간이 아깝지는 않은 책이예요.</p>
 
 
 <footer class=" footline" >
@@ -521,8 +509,8 @@ pyenv uninstall conda3
 (function() {
 
     
-    var logicalName = 'python-pyenv-anaconda-mac.md';
-    var relPermalink = '\/python\/python-pyenv-anaconda-mac\/';
+    var logicalName = '카프카 데이터 플랫폼의 최강자.md';
+    var relPermalink = '\/book\/%EC%B9%B4%ED%94%84%EC%B9%B4-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%94%8C%EB%9E%AB%ED%8F%BC%EC%9D%98-%EC%B5%9C%EA%B0%95%EC%9E%90\/';
     if (logicalName == "_index.md" || relPermalink == "/tags/")
         return;
 
@@ -625,7 +613,6 @@ pyenv uninstall conda3
             
                 
                     
-                    
                 
                 
 
@@ -633,40 +620,6 @@ pyenv uninstall conda3
                     
                     
 
-                    
-                        
-            
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
                     
                         
             
@@ -699,6 +652,11 @@ pyenv uninstall conda3
             
         
                     
+                        
+            
+            
+        
+                    
             
         
                     
@@ -706,6 +664,36 @@ pyenv uninstall conda3
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 

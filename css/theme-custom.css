@@ -216,7 +216,9 @@ h4, h5, h6 {
 #header-wrapper {
     background-image: url("/images/logo.png") !important;
     background-size: cover !important;
+    border-bottom: 1px solid !important;
 }
 #header-wrapper #header{
-  height: 7rem;
+  height: 8rem;
+  cursor: pointer;
 }

@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>빅데이터 시각화, Zeppelin Interpreter, Hive, Impala :: haha family&#39;s happy blog</title>
+    <title>하이브 핵심 정리, Apache Hive Essentials :: haha family&#39;s happy blog</title>
 
     
     <link href="/css/nucleus.css?1569914121" rel="stylesheet">
@@ -49,7 +49,7 @@ if (!doNotTrack) {
 </script>
 
   </head>
-  <body class="" data-url="/bigdata/zeppelin-interpreter/">
+  <body class="" data-url="/book/%ED%95%98%EC%9D%B4%EB%B8%8C-%ED%95%B5%EC%8B%AC%EC%A0%95%EB%A6%AC/">
     
 <nav id="sidebar" class="">
 
@@ -88,7 +88,7 @@ if (!doNotTrack) {
   
     
     <li data-nav-id="/bigdata/" title="Bigdata" class="dd-item 
-        parent
+        
         
         
         ">
@@ -220,7 +220,7 @@ if (!doNotTrack) {
   
     
     <li data-nav-id="/book/" title="Book" class="dd-item 
-        
+        parent
         
         
         ">
@@ -360,7 +360,7 @@ if (!doNotTrack) {
             
           
           
-            <a href='/'>Developement and Life Blog</a> > <a href='/bigdata/'>Bigdata</a> > 빅데이터 시각화, Zeppelin Interpreter, Hive, Impala
+            <a href='/'>Developement and Life Blog</a> > <a href='/book/'>Book</a> > 하이브 핵심 정리, Apache Hive Essentials
           
          
           
@@ -379,26 +379,10 @@ if (!doNotTrack) {
 <ul>
 <li>
 <ul>
-<li><a href="#environment">Environment</a></li>
-<li><a href="#hive">Hive</a>
-<ul>
-<li><a href="#maven-repository">Maven Repository</a></li>
-<li><a href="#hive-interpreter-추가">Hive Interpreter 추가</a>
-<ul>
-<li><a href="#properties">Properties</a></li>
-<li><a href="#dependencies-artifact">Dependencies artifact</a></li>
+<li><a href="#출판">출판</a></li>
+<li><a href="#목차">목차</a></li>
 </ul></li>
-</ul></li>
-<li><a href="#impala">Impala</a>
-<ul>
-<li>
-<ul>
-<li><a href="#properties-1">Properties</a></li>
-<li><a href="#denpendies-artifact">Denpendies artifact</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#notebook">Notebook</a></li>
-</ul></li>
+<li><a href="#개인평">개인평</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -413,7 +397,7 @@ if (!doNotTrack) {
         
 <div class="tags">
 
-  <a class="tag-link" href="/tags/zeppelin">zeppelin</a>
+  <a class="tag-link" href="/tags/book">book</a>
 
 </div>
 
@@ -423,7 +407,7 @@ if (!doNotTrack) {
           
             <h1>
               
-              빅데이터 시각화, Zeppelin Interpreter, Hive, Impala
+              하이브 핵심 정리, Apache Hive Essentials
             </h1>
           
 
@@ -433,96 +417,46 @@ if (!doNotTrack) {
 
 
 
-<p><a href="https://zeppelin.apache.org/">Apache Zeppelin</a> 과 Cloudera CDH 의 Hive, Impala 를 연동하는 방법을 알아볼게요.</p>
+<p><em>하둡 기반 대용량 데이터 저장, 관리의 핵심 솔루션</em> 라는 부제를 가지고 있는 이 책에서는
+HIVE(1.0.0) 에 대해서 설명하고, HQL, 성능, 보안, 다른 툴과의 연동에 대해서 설명하고 있어요.</p>
 
-<h3 id="environment">Environment</h3>
+<p><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9788960779792&amp;orderClick=LAG&amp;Kc=">교보문고 링크</a></p>
 
-<ul>
-<li>Oracle JDK 1.8</li>
-<li>CentOS 7</li>
-<li>Zepplin 0.8.1</li>
-<li>Cloudera CDH 6.1.1</li>
-<li>Hive 2.1.1</li>
-<li>Impala 3.1.0</li>
-<li>Impala JDBC Driver 2.6.12</li>
-</ul>
+<p><img src="/images/book/2019-10-01-apache-hive-essentials.jpg# mk-quater" alt="" /></p>
 
-<h3 id="hive">Hive</h3>
-
-<p><a href="https://zeppelin.apache.org/docs/0.8.0/interpreter/hive.html">Zeppelin Hive Interpreter Document</a>
-문서를 보면 Jdbc Interpreter 를 사용하라고 되어있네요.
-기본으로 PostgreSQL Connector 지원하고 그외는 Connector 는 추가를 해줘야 해요.</p>
-
-<p><img src="/assets/images/2019/2019-08-30-14-16-05.png" alt="Menu Interpreter" /></p>
-
-<h4 id="maven-repository">Maven Repository</h4>
-
-<p>Zeppelin 콘솔에서 우측 상단의 메뉴에서 <code>interpreter</code> 메뉴를 클릭하여 Interpreter 설정 화면으로 이동해요.
-<code>Repository</code> 버튼을 클릭하면 등록되어져 있는 Repository 를 확인 할 수 있어요.
-그 옆으로 <code>+</code> 버튼 클릭해서 Cloudera Maven Repository
-<code>https://repository.cloudera.com/artifactory/cloudera-repos/</code> 를 추가 해주세요.</p>
-
-<p><img src="/assets/images/2019/2019-08-30-14-46-45.png" alt="Add Repository" /></p>
-
-<h4 id="hive-interpreter-추가">Hive Interpreter 추가</h4>
-
-<p><code>Create</code> 버튼을 클릭하여 Interpreter 를 추가 해요. Interpreter Group 은 <code>jdbc</code> 로하고 아래의 Properties, Dependencies 값 조정해 주세요.</p>
-
-<p><img src="/assets/images/2019/2019-08-30-14-49-53.png" alt="Add Interpreter" /></p>
-
-<h5 id="properties">Properties</h5>
+<h3 id="출판">출판</h3>
 
 <ul>
-<li>default.driver : <code>org.apache.hive.jdbc.HiveDriver</code></li>
-<li>default.url : <code>jdbc:hive2://&lt;HiveServer2&gt;:10000</code></li>
+<li>저자 : 다융 두, 김용환 옮김</li>
+<li>출판사 : 에이콘출판</li>
+<li>출간일 : 2017.02.28</li>
 </ul>
 
-<h5 id="dependencies-artifact">Dependencies artifact</h5>
+<h3 id="목차">목차</h3>
 
 <ul>
-<li><code>org.apache.hive:hive-jdbc:2.1.1-cdh6.1.1</code></li>
-<li><code>org.apache.hadoop:hadoop-common:3.0.0-cdh6.1.1</code></li>
+<li>1장. 빅데이터와 하이브 소개</li>
+<li>2장. 하이브 환경 설정</li>
+<li>3장. 데이터 정의와 설명</li>
+<li>4장. 데이터 선택과 범위</li>
+<li>5장. 데이터 조작</li>
+<li>6장. 데이터 집계와 샘플링</li>
+<li>7장. 성능 고려 사항</li>
+<li>8장. 확장성 고려 사항</li>
+<li>9장. 보안 고려 사항</li>
+<li>10장. 다른 툴과의 연동</li>
 </ul>
 
-<blockquote>
-<p><a href="https://www.cloudera.com/documentation/enterprise/6/release-notes/topics/rg_cdh_61_maven_artifacts.html#concept_2gp_d8n_yk">CDH 6.1.x Maven Artifacts</a></p>
-</blockquote>
+<h2 id="개인평">개인평</h2>
 
-<h3 id="impala">Impala</h3>
+<p>SQL 에 익숙하다면 HQL 을 다루는데 큰 어려움은 없을 거예요.
+빅데이터를 다루는데 HQL 을 상당히 많이 쓰이고 있어요.
+책 구매 목적은 HQL 보다도 HIVE 에 대해서 놓치고 있는게 없을까?
+많이 쓰이기 때문에 꼼꼼히 알아야 할 필요성이 있어 이 책을 구매하게 되었어요.
+하지만 이 책의 대부분은 HQL 을 직접 사례로 들어가며 쿼리의 결과를 통해 HQL 을 사용법을 설명하고 있어요.</p>
 
-<p>Cloudera 는 Impala JDBC Connector 를 Maven 으로 제공하고 있지 않아요.
-Zeppelin 설치 경로에 <code>external-lib/impala</code> 디렉토리를 생성하고
-<a href="https://www.cloudera.com/downloads/connectors/impala/jdbc/2-6-12.html">Impala JDBC Download</a>
-링크를 통해 다운로드 해주세요.</p>
-
-<p><code>Interpreter Name</code> 은 <code>impala</code> 로, <code>Interpreter Group</code> 은 <code>jdbc</code> 로 Interpreter 를 생성하고 Properties, Dependencies 값을 조정해 주세요.</p>
-
-<h5 id="properties-1">Properties</h5>
-
-<ul>
-<li>default.driver : <code>com.cloudera.impala.jdbc41.Driver</code></li>
-<li>default.url : <code>jdbc:impala://&lt;ImpalaServer&gt;:21050/scdh;AuthMech=0;</code>
-&gt; Properties <code>default.user</code> 에 기본값이 들어가 있네요. 저는 삭제 했어요.</li>
-</ul>
-
-<h5 id="denpendies-artifact">Denpendies artifact</h5>
-
-<ul>
-<li><code>/opt/zeppelin/external-lib/impala/ImpalaJDBC41.jar</code> (Download 한 jar 파일의 경로)
-&gt; <code>AuthMech=0</code> 권한 설정을 하지 않았어요. Impala JDBC 권한 설정은
-<a href="https://www.cloudera.com/documentation/other/connectors/impala-jdbc/latest.html">Impala JDBC Document</a>
-문서를 참고해 주세요.</li>
-</ul>
-
-<h3 id="notebook">Notebook</h3>
-
-<p>잘 연동 되었느지 확인해 볼게요. Note 를 생성하고 <code>Interpreter binding</code> 메뉴에서 <code>impala</code>, <code>hive</code> Interpreter 를 상단으로 올려주세요.</p>
-
-<p><img src="/assets/images/2019/2019-08-30-15-28-22.png" alt="Note Interpreter binding" /></p>
-
-<p>Hive 와 Impala 쿼리가 잘 동작하네요.</p>
-
-<p><img src="/assets/images/2019/2019-08-30-15-34-23.png" alt="Note Paragraph" /></p>
+<p><strong>이 책을 추천하지 않습니다.</strong>
+SQL을 다뤄본 독자라면 HQL은 공식 문서나 웹 검색을 통해 익히는 것이 낳은 것 같아요.</p>
 
 
 <footer class=" footline" >
@@ -539,8 +473,8 @@ Zeppelin 설치 경로에 <code>external-lib/impala</code> 디렉토리를 생�
 (function() {
 
     
-    var logicalName = 'zeppelin-interpreter.md';
-    var relPermalink = '\/bigdata\/zeppelin-interpreter\/';
+    var logicalName = '하이브 핵심정리.md';
+    var relPermalink = '\/book\/%ED%95%98%EC%9D%B4%EB%B8%8C-%ED%95%B5%EC%8B%AC%EC%A0%95%EB%A6%AC\/';
     if (logicalName == "_index.md" || relPermalink == "/tags/")
         return;
 
@@ -584,63 +518,6 @@ Zeppelin 설치 경로에 <code>external-lib/impala</code> 디렉토리를 생�
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -651,6 +528,41 @@ Zeppelin 설치 경로에 <code>external-lib/impala</code> 디렉토리를 생�
                     
                     
 
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
                     
                         
             
@@ -672,16 +584,6 @@ Zeppelin 설치 경로에 <code>external-lib/impala</code> 디렉토리를 생�
                     
                     
 
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
                     
                         
             
@@ -726,6 +628,41 @@ Zeppelin 설치 경로에 <code>external-lib/impala</code> 디렉토리를 생�
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 

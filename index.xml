@@ -202,5 +202,16 @@ Environment  CentOS 7.6 Cloudera CDH 6.1.1 Cloudera Manager Kafka 2.0.0-cdh6.1.1
 그럼 Github.io, Jekyll, Minimal mistakes theme 를 이용해 블로그를 만들어 봐요.</description>
     </item>
     
+    <item>
+      <title>하둡 애플리케이션 아키텍처</title>
+      <link>https://hahafamilia.github.io/book/%ED%95%98%EB%91%A1-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98/</link>
+      <pubDate>Mon, 01 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/book/%ED%95%98%EB%91%A1-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98/</guid>
+      <description>하둡 에코시스템을 활용한 빅데이터 처리 라는 부제을 가지고 있는 이 책에서는 HDFS/HBASE 스키마 디자인, 데이터 파이프라인, 맵리듀스, 스파크, 피크, 크런치, 하이브, ETL, 스트리밍, 근접 실시간, 데이터 웨어하우스, 사례연구 등 데이터의 수집에서 분석까지의 빅데이터 아키텍처에 대해 설명하고 있어요.
+교보문고 링크
+출간  저자 : 마크 그로버, 테드 멀래스커, 조나단 사이드먼, 그웬 사피라 옮김 : 정동식, 홍다경, 우지현 출판사 : 비제이퍼블릭 출간일 : 2016.05.30  목차  1부. 하둡 애플리케이션의 아키텍처 고려사항  1장.</description>
+    </item>
+    
   </channel>
 </rss>

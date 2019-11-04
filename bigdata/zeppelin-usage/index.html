@@ -9,23 +9,23 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>빅데이터 시각화 Zeppelin Usage :: haha family&#39;s happy blog</title>
+    <title>Apache Zeppelin Usage :: haha family&#39;s happy blog</title>
 
     
-    <link href="/css/nucleus.css?1571886198" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1571886198" rel="stylesheet">
-    <link href="/css/hybrid.css?1571886198" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1571886198" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1571886198" rel="stylesheet">
-    <link href="/css/auto-complete.css?1571886198" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1571886198" rel="stylesheet">
-    <link href="/css/theme.css?1571886198" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1571886198" rel="stylesheet">
+    <link href="/css/nucleus.css?1572858840" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1572858840" rel="stylesheet">
+    <link href="/css/hybrid.css?1572858840" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1572858840" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1572858840" rel="stylesheet">
+    <link href="/css/auto-complete.css?1572858840" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1572858840" rel="stylesheet">
+    <link href="/css/theme.css?1572858840" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1572858840" rel="stylesheet">
     
-      <link href="/css/theme-custom.css?1571886198" rel="stylesheet">
+      <link href="/css/theme-custom.css?1572858840" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1571886198"></script>
+    <script src="/js/jquery-3.3.1.min.js?1572858840"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@ if (!doNotTrack) {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1571886198"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1571886198"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1572858840"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1572858840"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/hahafamilia.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1571886198"></script>
+<script type="text/javascript" src="/js/search.js?1572858840"></script>
 
     
   </div>
@@ -108,6 +108,9 @@ if (!doNotTrack) {
           
           
         
+          
+             
+            
           
              
             
@@ -367,7 +370,7 @@ if (!doNotTrack) {
             
           
           
-            <a href='/'>Developement and Life Blog</a> > <a href='/bigdata/'>Bigdata</a> > 빅데이터 시각화 Zeppelin Usage
+            <a href='/'>Developement and Life Blog</a> > <a href='/bigdata/'>Bigdata</a> > Apache Zeppelin Usage
           
          
           
@@ -382,6 +385,12 @@ if (!doNotTrack) {
     <div class="wrapper">
 <nav id="TableOfContents">
 <ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#zeppelin-posts">Zeppelin Posts</a></li>
+</ul></li>
 <li><a href="#environment">Environment</a></li>
 <li><a href="#dynamic-form">Dynamic Form</a>
 <ul>
@@ -412,6 +421,7 @@ if (!doNotTrack) {
 <li><a href="#angular">Angular</a></li>
 </ul></li>
 <li><a href="#마치며">마치며</a></li>
+</ul></li>
 </ul>
 </nav>
     </div>
@@ -435,7 +445,7 @@ if (!doNotTrack) {
           
             <h1>
               
-              빅데이터 시각화 Zeppelin Usage
+              Apache Zeppelin Usage
             </h1>
           
 
@@ -447,7 +457,15 @@ if (!doNotTrack) {
 
 <p><a href="https://zeppelin.apache.org/">Apache Zeppelin</a> 은 노트북 방식의 시각화 툴이예요.</p>
 
-<h1 id="environment">Environment</h1>
+<h3 id="zeppelin-posts">Zeppelin Posts</h3>
+
+<ol>
+<li><a href="/bigdata/zeppelin-quickstart/">Zeppelin Install &amp; QuickStart</a></li>
+<li><a href="/bigdata/zeppelin-usage/">Zeppelin Usage</a></li>
+<li><a href="/bigdata/zeppelin-interpreter/">Zeppelin interpreter</a></li>
+</ol>
+
+<h2 id="environment">Environment</h2>
 
 <ul>
 <li>Oracle JDK 1.8</li>
@@ -455,15 +473,15 @@ if (!doNotTrack) {
 <li>Zepplin 0.8.1</li>
 </ul>
 
-<h1 id="dynamic-form">Dynamic Form</h1>
+<h2 id="dynamic-form">Dynamic Form</h2>
 
 <p>Zeppelin 에서는 Dynamic Form 을 제공하고 있어서 Form 을 통해 입력받은 값으로 조건을 주는 형태로 사용 가능해요.
 Dynamic Form 은 Paragraph scope 와 Note scope 에서 사용 문법의 차이가 있고, 또한 Programmatically 하게 추가하실 수 있어요.
 예제에서는 text, select, checkbox 를 소개하고 있네요.</p>
 
-<h2 id="paragraph-scope">Paragraph scope</h2>
+<h3 id="paragraph-scope">Paragraph scope</h3>
 
-<h3 id="text-input-form">Text input form</h3>
+<h4 id="text-input-form">Text input form</h4>
 
 <p><code>${formName=defaultValue}</code> 의 형태예요.</p>
 
@@ -471,7 +489,7 @@ Dynamic Form 은 Paragraph scope 와 Note scope 에서 사용 문법의 차이�
 %md Hello ${name=Michelle}
 </code></pre>
 
-<h3 id="select-form">Select form</h3>
+<h4 id="select-form">Select form</h4>
 
 <p><code>${formName=defaultVallue,option1(displayName)|option2(displayName)|...}</code> 의 형태예요</p>
 
@@ -479,7 +497,7 @@ Dynamic Form 은 Paragraph scope 와 Note scope 에서 사용 문법의 차이�
 %md This is ${day=mon,1(mon)|2(tue)|3(wed)|4(thu)|5(fri)|6(sat)|7(sun)}
 </code></pre>
 
-<h3 id="checkbox-form">Checkbox form</h3>
+<h4 id="checkbox-form">Checkbox form</h4>
 
 <p><code>{checkbox(delimiter):formName=defaultValue1|defaultValue2...,option1|option2...}</code> 의 형태에요.
 구분자 <code>delemiter</code> 의 기본값은 <code>,</code> 이고, 지정 할 수 있어요.</p>
@@ -490,13 +508,13 @@ Dynamic Form 은 Paragraph scope 와 Note scope 에서 사용 문법의 차이�
 # name and age
 </code></pre>
 
-<h2 id="note-scope">Note scope</h2>
+<h3 id="note-scope">Note scope</h3>
 
 <p>Paragraph 에서와 사용법은 동일하고 <code>$$</code> 로 시작해요.</p>
 
-<h2 id="paragraph-scope-programmatically">Paragraph scope, Programmatically</h2>
+<h3 id="paragraph-scope-programmatically">Paragraph scope, Programmatically</h3>
 
-<h3 id="text-input-form-1">Text input form</h3>
+<h4 id="text-input-form-1">Text input form</h4>
 
 <p><code>z.textbox(String formName, String defaultValue)</code> 의 형태예요. <code>textbox</code> 대신에 <code>input</code> 을 사용 할 수 있어요.</p>
 
@@ -505,7 +523,7 @@ println(&quot;Hello&quot;, + z.textbox(&quot;name&quot;, &quot;Michelle&quot;))
 println(&quot;Hello&quot;, + z.input(&quot;name&quot;))
 </code></pre>
 
-<h3 id="select-form-1">Select form</h3>
+<h4 id="select-form-1">Select form</h4>
 
 <p><code>z.select(String formName, Seq((String option, String displayName), ...))</code>  형태예요.</p>
 
@@ -519,7 +537,7 @@ println(&quot;Hello &quot;+z.select(&quot;day&quot;, Seq((&quot;1&quot;,&quot;mo
                                     (&quot;7&quot;,&quot;sun&quot;))))
 </code></pre>
 
-<h3 id="checkbox-form-1">Checkbox form</h3>
+<h4 id="checkbox-form-1">Checkbox form</h4>
 
 <p><code>z.checkbox(String formName, Seq((String option, String displayName), ...)).mkString(String delimiter)</code>  형태예요.</p>
 
@@ -528,17 +546,17 @@ val options = Seq((&quot;apple&quot;,&quot;Apple&quot;), (&quot;banana&quot;,&qu
 println(&quot;Hello &quot;+z.checkbox(&quot;fruit&quot;, options).mkString(&quot; and &quot;))
 </code></pre>
 
-<h2 id="note-scope-programmatically">Note scope, Programmatically</h2>
+<h3 id="note-scope-programmatically">Note scope, Programmatically</h3>
 
 <p>Note scope 에서는 <code>noteTextbox</code>, <code>noteSelect</code>, <code>noteCheckbox</code> 로 사용해요.</p>
 
-<h1 id="display-system">Display System</h1>
+<h2 id="display-system">Display System</h2>
 
 <p>Zeppelin 은 Display System 이 있는데,
 Text Display System 을 기본 값으로 HTML, Table, Network, Angular Display System 을 통해서 결과를 출력할 수 있어요.
 <code>%displaySystemName</code> 의 형태로 Display System 을 명시 하여 사용해요.</p>
 
-<h2 id="text">Text</h2>
+<h3 id="text">Text</h3>
 
 <pre><code class="language-shell"># 기본값으로 Text Display System 을 사용
 %sh echo &quot;Hello Zeppelin&quot;
@@ -546,16 +564,16 @@ Text Display System 을 기본 값으로 HTML, Table, Network, Angular Display S
 %sh echo &quot;%text Hello Zeppelin&quot;
 </code></pre>
 
-<h2 id="html">HTML</h2>
+<h3 id="html">HTML</h3>
 
 <pre><code class="language-shell">%sh echo &quot;%html &lt;h3&gt;Hello Zeppelin&lt;/h3&gt;&quot;
 </code></pre>
 
-<h3 id="methematical-expressions">Methematical expressions</h3>
+<h4 id="methematical-expressions">Methematical expressions</h4>
 
 <p><a href="https://www.mathjax.org/">MathJax</a></p>
 
-<h2 id="table">Table</h2>
+<h3 id="table">Table</h3>
 
 <p><code>\t</code> 으로 칼럼을 구분하고, <code>\n</code> 으로 행을 구분해줘요.</p>
 
@@ -569,7 +587,7 @@ Text Display System 을 기본 값으로 HTML, Table, Network, Angular Display S
 %html &lt;img src='http://...moon.png'/&gt; moon\t10&quot; 
 </code></pre>
 
-<h2 id="network">Network</h2>
+<h3 id="network">Network</h3>
 
 <p><code>%network</code> Display System 은 Graph 로 처리되요.
 &gt; <a href="https://ko.wikipedia.org/wiki/%EA%B7%B8%EB%9E%98%ED%94%84">Graph</a> 는 연관된 객체들의 집합, Vertex, Edge 를 가집니다.</p>
@@ -586,11 +604,11 @@ print(s&quot;&quot;&quot;
 &quot;&quot;&quot;)
 </code></pre>
 
-<h2 id="angular">Angular</h2>
+<h3 id="angular">Angular</h3>
 
 <p>Zeppelin 과 <a href="https://angularjs.org/">AngularJS</a> 사이의 게이트웨이를 제공해요. Backend / Frontend API 제공합니다.</p>
 
-<h1 id="마치며">마치며</h1>
+<h2 id="마치며">마치며</h2>
 
 <p><a href="https://www.youtube.com/watch?v=VKMB8nFhjug">Zepplin 대시보드 만들기</a>
 라는 유튜브 동영상 이예요. Zeppelin 프로젝트 참여자이신 것 같네요.</p>
@@ -663,6 +681,11 @@ print(s&quot;&quot;&quot;
                     
                     
 
+                    
+                        
+            
+            
+        
                     
                         
             
@@ -834,19 +857,19 @@ print(s&quot;&quot;&quot;
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1571886198"></script>
-    <script src="/js/perfect-scrollbar.min.js?1571886198"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1571886198"></script>
-    <script src="/js/jquery.sticky.js?1571886198"></script>
-    <script src="/js/featherlight.min.js?1571886198"></script>
-    <script src="/js/highlight.pack.js?1571886198"></script>
+    <script src="/js/clipboard.min.js?1572858840"></script>
+    <script src="/js/perfect-scrollbar.min.js?1572858840"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1572858840"></script>
+    <script src="/js/jquery.sticky.js?1572858840"></script>
+    <script src="/js/featherlight.min.js?1572858840"></script>
+    <script src="/js/highlight.pack.js?1572858840"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1571886198"></script>
-    <script src="/js/learn.js?1571886198"></script>
-    <script src="/js/hugo-learn.js?1571886198"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1572858840"></script>
+    <script src="/js/learn.js?1572858840"></script>
+    <script src="/js/hugo-learn.js?1572858840"></script>
 
-    <link href="/mermaid/mermaid.css?1571886198" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1571886198"></script>
+    <link href="/mermaid/mermaid.css?1572858840" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1572858840"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

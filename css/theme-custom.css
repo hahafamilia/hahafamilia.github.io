@@ -122,7 +122,7 @@ h1 {
 h2 {
   font-size: 2.0rem;
   line-height: 110% !important;
-  margin: 2.5rem 0 1.5rem 0;
+  margin: 3rem 0 1.5rem 0;
 }
 h3 {
   font-size: 1.5rem;
@@ -132,7 +132,7 @@ h3 {
 h4 {
   font-size: 1.1rem;
   line-height: 110% !important;
-  margin: 0.5rem 0 0.5rem 0;
+  margin: 1rem 0 0.5rem 0;
 }
 h5 {
   font-size: 1rem;
@@ -150,6 +150,7 @@ body {
 code {
   font-family: 'Inconsolata', monospace;
   font-size: 1rem;
+  padding: 0.2rem !important;
 }
 blockquote p {
     font-size: 1rem;
@@ -167,21 +168,22 @@ h1 {
     text-transform: uppercase;
     text-rendering: optimizeLegibility;
     color: #222;
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: -1px;
 }
 h2, h3 {
     font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
     text-rendering: optimizeLegibility;
-    color: #5e5e5e;
-    font-weight: 400;
-    letter-spacing: -1px;
+    color: #323232 !important;
+    font-weight: 700;
+    letter-spacing: 0px;
 }
 h4, h5, h6 {
     font-family: 'Inconsolata', monospace;
-    color: #222 !important;
+    color: #323232 !important;
     text-rendering: optimizeLegibility;
-    font-weight: 400;
+    font-weight: 700;
+    letter-spacing: 0px;
 }
 
 /* markdown 내 image style */

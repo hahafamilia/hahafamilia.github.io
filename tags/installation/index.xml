@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>installation on haha family&#39;s happy blog</title>
+    <link>https://hahafamilia.github.io/tags/installation/</link>
+    <description>Recent content in installation on haha family&#39;s happy blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Thu, 24 Oct 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://hahafamilia.github.io/tags/installation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cloudera CDH 6.1.1 설치하기</title>
+      <link>https://hahafamilia.github.io/bigdata/cloudera-cdh-6_1-intall/</link>
+      <pubDate>Thu, 24 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/bigdata/cloudera-cdh-6_1-intall/</guid>
+      <description>ASIS 플랫폼의 고도화 일환으로 빅데이터 플랫폼을 신규로 구축하게 되었어요. 구축과정의 일환인 Cloudera CDH 6.1.1 설치과정을 뒤늦게사나마 정리해볼게요. 설치를 진행하기 전에 플랫폼 아키텍처의 설계와 물리서버 사양의 선택, 랙 배치 등이 우선되었겠죠? 이것에 대해서는 또 정리하도록 할게요.
+설치 과정은 크게 3단계로 진행되요.
+ 설치하기 전에 Cloudera Manager 설치 CDH 구성요소 설치  Cloudera CDH 6.1 버전의 공식 문서를 참고해서 진행했어요.
+Cloudera Enterprise 6.1 Document
+Cloudera Installation Guide
+버전  CentOS 7.6.1810 Java 1.</description>
+    </item>
+    
+  </channel>
+</rss>

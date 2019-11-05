@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>AvroFlumeEvent :: haha family&#39;s happy blog</title>
+    <title>Kafka Manager 설치 :: haha family&#39;s happy blog</title>
 
     
     <link href="/css/nucleus.css?1572919143" rel="stylesheet">
@@ -55,7 +55,7 @@ if (!doNotTrack) {
 
 
   </head>
-  <body class="" data-url="/tags/avroflumeevent/">
+  <body class="" data-url="/bigdata/kafka-manager-installation/">
     
 <nav id="sidebar" class="">
 
@@ -94,7 +94,7 @@ if (!doNotTrack) {
   
     
     <li data-nav-id="/bigdata/" title="Bigdata" class="dd-item 
-        
+        parent
         
         
         ">
@@ -375,7 +375,7 @@ if (!doNotTrack) {
             
           
           
-            <a href='/'>Developement and Life Blog</a> > <a href='/tags/'>Tags</a> > AvroFlumeEvent
+            <a href='/'>Developement and Life Blog</a> > <a href='/bigdata/'>Bigdata</a> > Kafka Manager 설치
           
          
           
@@ -388,7 +388,14 @@ if (!doNotTrack) {
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#kafkamanager-설치">KafkaManager 설치</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -398,15 +405,23 @@ if (!doNotTrack) {
             
         <div id="head-tags">
         
+<div class="tags">
+
+  <a class="tag-link" href="/tags/kafka">kafka</a>
+
+  <a class="tag-link" href="/tags/kafka-manager">kafka-manager</a>
+
+  <a class="tag-link" href="/tags/installation">installation</a>
+
+</div>
+
         </div>
         
         <div id="body-inner">
           
             <h1>
               
-                taxonomy ::
-              
-              AvroFlumeEvent
+              Kafka Manager 설치
             </h1>
           
 
@@ -416,17 +431,51 @@ if (!doNotTrack) {
 
 
 
+<h2 id="kafkamanager-설치">KafkaManager 설치</h2>
 
-<ul>
-	
-		<li><a href="/bigdata/spring-kafka-flume/">AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집</a></li>
-	
-</ul>
+<p><a href="https://github.com/yahoo/kafka-manager">Kafka Manager</a> 를 설치해 볼게요.
+Kafka Manager 는 Yahoo 의 오픈소스 인데, Kafka 서비스의 상태를 확인하거나,
+<em>Skew</em> 등이 발생했을때 <em>Reassign Partitoin</em> 등을 할 수 있는 기능을 제공해줘요.</p>
+
+<p><a href="https://hahafamilia.github.io/bigdata/kafka-broker-reinstall/">https://hahafamilia.github.io/bigdata/kafka-broker-reinstall/</a>
+Github 에서 다운로드 한 후, Scala 빌드 빌드툴 <code>sbt</code> 로 빌드 해줘요.</p>
+
+<pre><code>tar -xvzf kafka-manager-1.3.3.22.tar.gz cd kafka-manager-1.3.3.22
+PATH=/usr/java/jdk1.8.0_141-cloudera/bin:$PATH JAVA_HOME=/usr/java/jdk1.8.0_141-cloudera \
+./sbt -java-home /usr/java/jdk1.8.0_141-cloudera clean dist
+cp target/universal/kafka-manager-1.3.3.22.zip /usr/local
+cd /usr/local
+unzip kafka-manager-1.3.3.22.zip
+</code></pre>
+
+<p><em>conf/application.conf</em> 설정파일에 Zookeeper 호스트 주소를 설정해 줘요.</p>
+
+<pre><code>kafka-manager.zkhosts=&quot;zook01.example.com:2181,zook02.example.com:2181,zook03.example.com:2181&quot;
+</code></pre>
+
+<p>Kafka Manager 를 실행해요.</p>
+
+<pre><code>/usr/local/kafka-manager-1.3.3.22/bin/kafka-manager \
+-java-home /usr/java/jdk-1.8.0_181-cloudera \
+-Dconfig.file=/usr/local/kafka-manager-1.3.3.22/conf/application.conf -Dhttp.port=18090
+</code></pre>
+
+<p>Cloudera Manager 웹 콘솔 Kafka 서비스 구성 메뉴에서,
+Kafka JMX 의 바인딩 포트를 0.0.0.0 으로 변경 해줘요.</p>
+
+<pre><code># Additional Broker Java Options(borker_java_opts)
+-Dcom.sun.management.jmxremote.host=0.0.0.0 -Dcom.sun.management.jmxremote.local.only=true
+</code></pre>
+
+<blockquote>
+<p>JMX Server 포트는 127.0.0.1 로 바인딩되어 공인IP 접속이 불가능 해요.</p>
+</blockquote>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -437,8 +486,8 @@ if (!doNotTrack) {
 (function() {
 
     
-    var logicalName = '';
-    var relPermalink = '\/tags\/avroflumeevent\/';
+    var logicalName = 'kafka-manager-installation.md';
+    var relPermalink = '\/bigdata\/kafka-manager-installation\/';
     if (logicalName == "_index.md" || relPermalink == "/tags/")
         return;
 
@@ -482,8 +531,6 @@ if (!doNotTrack) {
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -550,6 +597,9 @@ if (!doNotTrack) {
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -690,3 +740,4 @@ if (!doNotTrack) {
 
   </body>
 </html>
+

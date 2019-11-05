@@ -69,6 +69,30 @@
   </url>
   
   <url>
+    <loc>https://hahafamilia.github.io/categories/bigdata-kafka/</loc>
+    <lastmod>2019-10-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://hahafamilia.github.io/tags/kafka/</loc>
+    <lastmod>2019-10-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://hahafamilia.github.io/bigdata/kafka-manager-installation/</loc>
+    <lastmod>2019-10-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://hahafamilia.github.io/tags/kafka-manager/</loc>
+    <lastmod>2019-10-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
     <loc>https://hahafamilia.github.io/tags/travel/</loc>
     <lastmod>2019-09-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -209,12 +233,6 @@
   <url>
     <loc>https://hahafamilia.github.io/tags/unicode/</loc>
     <lastmod>2019-07-19T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://hahafamilia.github.io/tags/kafka/</loc>
-    <lastmod>2019-06-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   

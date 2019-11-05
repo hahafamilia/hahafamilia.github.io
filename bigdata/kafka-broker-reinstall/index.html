@@ -12,20 +12,20 @@
     <title>Kafka Broker 디스크 증설, RAID구성, OS 재설치 :: haha family&#39;s happy blog</title>
 
     
-    <link href="/css/nucleus.css?1572858840" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1572858840" rel="stylesheet">
-    <link href="/css/hybrid.css?1572858840" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1572858840" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1572858840" rel="stylesheet">
-    <link href="/css/auto-complete.css?1572858840" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1572858840" rel="stylesheet">
-    <link href="/css/theme.css?1572858840" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1572858840" rel="stylesheet">
+    <link href="/css/nucleus.css?1572919143" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1572919143" rel="stylesheet">
+    <link href="/css/hybrid.css?1572919143" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1572919143" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1572919143" rel="stylesheet">
+    <link href="/css/auto-complete.css?1572919143" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1572919143" rel="stylesheet">
+    <link href="/css/theme.css?1572919143" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1572919143" rel="stylesheet">
     
-      <link href="/css/theme-custom.css?1572858840" rel="stylesheet">
+      <link href="/css/theme-custom.css?1572919143" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1572858840"></script>
+    <script src="/js/jquery-3.3.1.min.js?1572919143"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -39,6 +39,7 @@
     </style>
     
 
+
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -51,6 +52,7 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
+
 
   </head>
   <body class="" data-url="/bigdata/kafka-broker-reinstall/">
@@ -69,14 +71,14 @@ if (!doNotTrack) {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1572858840"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1572858840"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1572919143"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1572919143"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/hahafamilia.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1572858840"></script>
+<script type="text/javascript" src="/js/search.js?1572919143"></script>
 
     
   </div>
@@ -108,6 +110,9 @@ if (!doNotTrack) {
           
           
         
+          
+             
+            
           
              
             
@@ -452,7 +457,7 @@ Cloudera Manager의 Host 메뉴에서 해당 서버를 제거하여 CDH 플랫�
 RAID 를 구성하고 OS를 재설치 진행해요.
 Cloudera Manager 에서 호스트를 클러스터에 추가하고, Kafka 서비스에서 역할을 할당 해요.</p>
 
-<p><img src="/assets/images/2019/2019-06-25-12-06-26.png" width="30%">{: .align-left}
+<p><img src="/assets/images/2019/2019-06-25-12-06-26.png" width="30%">
 여기까지 진행하고 Broker를 투입하게 되면 Cloudera Manager 에서 나머지 2대의 Broker 서버에 경고가(Lagging Replicas Test) 표시 되요.
 Kafka 는 Broker가 재투입 되더라도 Partition을 자동으로 재조정 하지 않기 때문이예요.</p>
 
@@ -550,6 +555,11 @@ Kafka Manager 에서 Preferred Replica Election 작업을 수행 합니다.</p>
                     
                     
 
+                    
+                        
+            
+            
+        
                     
                         
             
@@ -726,19 +736,19 @@ Kafka Manager 에서 Preferred Replica Election 작업을 수행 합니다.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1572858840"></script>
-    <script src="/js/perfect-scrollbar.min.js?1572858840"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1572858840"></script>
-    <script src="/js/jquery.sticky.js?1572858840"></script>
-    <script src="/js/featherlight.min.js?1572858840"></script>
-    <script src="/js/highlight.pack.js?1572858840"></script>
+    <script src="/js/clipboard.min.js?1572919143"></script>
+    <script src="/js/perfect-scrollbar.min.js?1572919143"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1572919143"></script>
+    <script src="/js/jquery.sticky.js?1572919143"></script>
+    <script src="/js/featherlight.min.js?1572919143"></script>
+    <script src="/js/highlight.pack.js?1572919143"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1572858840"></script>
-    <script src="/js/learn.js?1572858840"></script>
-    <script src="/js/hugo-learn.js?1572858840"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1572919143"></script>
+    <script src="/js/learn.js?1572919143"></script>
+    <script src="/js/hugo-learn.js?1572919143"></script>
 
-    <link href="/mermaid/mermaid.css?1572858840" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1572858840"></script>
+    <link href="/mermaid/mermaid.css?1572919143" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1572919143"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

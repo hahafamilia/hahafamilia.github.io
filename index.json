@@ -4,7 +4,7 @@
 	"title": "Bigdata",
 	"tags": [],
 	"description": "",
-	"content": "  Cloudera CDH 6.1.1 설치하기     Apache Zeppelin Interpreter, Hive, Impala     Apache Zeppelin Usage     Apache Zeppelin 설치, QuickStart     Oozie Workflow Email 알림 설정     AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집     Cloudera Manager 알람 설정, Gmail SMPT 서버 사용     Hive Java UDF, 유니코드     Kafka Broker 디스크 증설, RAID구성, OS 재설치     "
+	"content": "  Cloudera CDH 6.1.1 설치하기     Kafka Manager 설치     Apache Zeppelin Interpreter, Hive, Impala     Apache Zeppelin Usage     Apache Zeppelin 설치, QuickStart     Oozie Workflow Email 알림 설정     AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집     Cloudera Manager 알람 설정, Gmail SMPT 서버 사용     Hive Java UDF, 유니코드     Kafka Broker 디스크 증설, RAID구성, OS 재설치     "
 },
 {
 	"uri": "https://hahafamilia.github.io/python/",
@@ -77,6 +77,34 @@
 	"content": ""
 },
 {
+	"uri": "https://hahafamilia.github.io/categories/bigdata-kafka/",
+	"title": "bigdata kafka",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://hahafamilia.github.io/tags/kafka/",
+	"title": "kafka",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://hahafamilia.github.io/bigdata/kafka-manager-installation/",
+	"title": "Kafka Manager 설치",
+	"tags": ["kafka", "kafka-manager", "installation"],
+	"description": "",
+	"content": " KafkaManager 설치 Kafka Manager 를 설치해 볼게요. Kafka Manager 는 Yahoo 의 오픈소스 인데, Kafka 서비스의 상태를 확인하거나, Skew 등이 발생했을때 Reassign Partitoin 등을 할 수 있는 기능을 제공해줘요.\nhttps://hahafamilia.github.io/bigdata/kafka-broker-reinstall/ Github 에서 다운로드 한 후, Scala 빌드 빌드툴 sbt 로 빌드 해줘요.\ntar -xvzf kafka-manager-1.3.3.22.tar.gz cd kafka-manager-1.3.3.22 PATH=/usr/java/jdk1.8.0_141-cloudera/bin:$PATH JAVA_HOME=/usr/java/jdk1.8.0_141-cloudera \\ ./sbt -java-home /usr/java/jdk1.8.0_141-cloudera clean dist cp target/universal/kafka-manager-1.3.3.22.zip /usr/local cd /usr/local unzip kafka-manager-1.3.3.22.zip  conf/application.conf 설정파일에 Zookeeper 호스트 주소를 설정해 줘요.\nkafka-manager.zkhosts=\u0026quot;zook01.example.com:2181,zook02.example.com:2181,zook03.example.com:2181\u0026quot;  Kafka Manager 를 실행해요.\n/usr/local/kafka-manager-1.3.3.22/bin/kafka-manager \\ -java-home /usr/java/jdk-1.8.0_181-cloudera \\ -Dconfig.file=/usr/local/kafka-manager-1.3.3.22/conf/application.conf -Dhttp.port=18090  Cloudera Manager 웹 콘솔 Kafka 서비스 구성 메뉴에서, Kafka JMX 의 바인딩 포트를 0.0.0.0 으로 변경 해줘요.\n# Additional Broker Java Options(borker_java_opts) -Dcom.sun.management.jmxremote.host=0.0.0.0 -Dcom.sun.management.jmxremote.local.only=true   JMX Server 포트는 127.0.0.1 로 바인딩되어 공인IP 접속이 불가능 해요.\n "
+},
+{
+	"uri": "https://hahafamilia.github.io/tags/kafka-manager/",
+	"title": "kafka-manager",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://hahafamilia.github.io/tags/travel/",
 	"title": "travel",
 	"tags": [],
@@ -102,7 +130,7 @@
 	"title": "Developement and Life Blog",
 	"tags": [],
 	"description": "",
-	"content": " Developement and Life Blog  Bigdata    Cloudera CDH 6.1.1 설치하기   Apache Zeppelin Interpreter, Hive, Impala   Apache Zeppelin Usage   Apache Zeppelin 설치, QuickStart   Oozie Workflow Email 알림 설정   AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집   Cloudera Manager 알람 설정, Gmail SMPT 서버 사용   Hive Java UDF, 유니코드   Kafka Broker 디스크 증설, RAID구성, OS 재설치    Python    Python 개발환경, Pyenv, Anaconda3    HowTo    휴고 설치 및 설정, Learn 테마, Hugo Website   Markdown 작성법   Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그    Book    하이브 핵심 정리, Apache Hive Essentials   카프카, 데이터 플랫폼의 최강자   모든 주식을 소유하라   하둡 애플리케이션 아키텍처    Life    필리핀 세부 마리바고 블루워터 여름휴가    "
+	"content": " Developement and Life Blog  Bigdata    Cloudera CDH 6.1.1 설치하기   Kafka Manager 설치   Apache Zeppelin Interpreter, Hive, Impala   Apache Zeppelin Usage   Apache Zeppelin 설치, QuickStart   Oozie Workflow Email 알림 설정   AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집   Cloudera Manager 알람 설정, Gmail SMPT 서버 사용   Hive Java UDF, 유니코드   Kafka Broker 디스크 증설, RAID구성, OS 재설치    Python    Python 개발환경, Pyenv, Anaconda3    HowTo    휴고 설치 및 설정, Learn 테마, Hugo Website   Markdown 작성법   Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그    Book    하이브 핵심 정리, Apache Hive Essentials   카프카, 데이터 플랫폼의 최강자   모든 주식을 소유하라   하둡 애플리케이션 아키텍처    Life    필리핀 세부 마리바고 블루워터 여름휴가    "
 },
 {
 	"uri": "https://hahafamilia.github.io/tags/hugo-staticgen/",
@@ -245,18 +273,11 @@
 	"content": ""
 },
 {
-	"uri": "https://hahafamilia.github.io/tags/kafka/",
-	"title": "kafka",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
 	"uri": "https://hahafamilia.github.io/bigdata/kafka-broker-reinstall/",
 	"title": "Kafka Broker 디스크 증설, RAID구성, OS 재설치",
 	"tags": ["kafka"],
 	"description": "",
-	"content": " Kafka Broker 재설치 Kafka Broker 서버의 디스크 용량을 증설하는 작업을 진행 하게 되었습니다. RAID 10으로 디스크 구성을 변경하다보니 불가피하게 OS를 재설치 합니다. Kafka는 Broker 서버의 장애 상황에서도 서비스를 유지 할 수 있도록 설계되어 있어요. Broker 서버를 1대씩 순차적으로 RAID 구성 및 OS 재설치 진행후에 Partition을 Reassign 할 계획입니다.\nEnvironment  CentOS 7.6 Cloudera CDH 6.1.1 Cloudera Manager Kafka 2.0.0-cdh6.1.1 Kafka Manager Kafka Broker 3대 Replication fector 3  HowTo Cloudera Manager 에서 작업대상 Broker 서버를 서비스에서 제거해요. Cloudera Manager의 Host 메뉴에서 해당 서버를 제거하여 CDH 플랫폼에서 호스트를 완전 제거 해요. RAID 를 구성하고 OS를 재설치 진행해요. Cloudera Manager 에서 호스트를 클러스터에 추가하고, Kafka 서비스에서 역할을 할당 해요.\n{: .align-left} 여기까지 진행하고 Broker를 투입하게 되면 Cloudera Manager 에서 나머지 2대의 Broker 서버에 경고가(Lagging Replicas Test) 표시 되요. Kafka 는 Broker가 재투입 되더라도 Partition을 자동으로 재조정 하지 않기 때문이예요.\nKafka Manager 의 Topic 리스트에는 Under Replication 으로 표시되네요.\n파티션을 재조정 하려면 각 Broker에 위치할 파티션들과 Replication 들을 Json 형식으로 일일이 작성해 Kafka Tool 명령어를 사용해야 해요. 이 작업은 매우 번거로울 수 있어요. 다행이 Kafka Manager 가 손쉽게 작업 할 수 있게 도와 주네요.\nKafka Manager 의 Topic 리스트에 작업할 Topic 의 상세 정보에 보면 Operation 들이 보입니다. Generate Partition Assignments 작업을 수행합니다. 위에서 말한 Json 파일을 만들어 준다고 보시면 되요. 이후 Reassign Partitions 작업을 수행합니다. Broker 서버로 파티션들을 옮기는 작업이예요. 용량에 따라 수분, 수십분이 소요 됩니다.\n아래는 2번째 Topic의 Reassign Partition 작업을 진행하고 6번째 Topic에서 Reassign Partition 작업을 진행 중입니다. 진행 중인 Topic에 대해 하일라이트 표시를 해주고 있네요. Reassign Partition 작업이 완료된 Topic는 Broker 가 3으로 표기되고, Under Replication 은 0으로 표기 되고 있습니다.\n그런데 Borker Leader Skew 가 발생 했네요. Skew는 사전적 의미로 왜곡된 이란 뜻이고, 파티션의 ISR Leader 선출에 문제가 있음을 말해요.\n모든 Topic에 대해 Reassign Partition 작업이 완료 되면 투입된 Broker 디렉토리에 파티션이 할당되었을 거예요. Kafka Data 디렉토리에서 du -hs 명령어로 데이터 들이 잘 복제 되었음을 확인 할 수 있어요.\n이제 Leader Skew를 해결 합니다. 파티션은 각 Broker로 분배 되어 투입된 Broker에 할당되었지만 투입된 Broker는 아직 파티션의 Leader 역할을 가지고 있지 않기 때문에 Skew가 발생해요. Kafka Manager 에서 Preferred Replica Election 작업을 수행 합니다.\n"
+	"content": " Kafka Broker 재설치 Kafka Broker 서버의 디스크 용량을 증설하는 작업을 진행 하게 되었습니다. RAID 10으로 디스크 구성을 변경하다보니 불가피하게 OS를 재설치 합니다. Kafka는 Broker 서버의 장애 상황에서도 서비스를 유지 할 수 있도록 설계되어 있어요. Broker 서버를 1대씩 순차적으로 RAID 구성 및 OS 재설치 진행후에 Partition을 Reassign 할 계획입니다.\nEnvironment  CentOS 7.6 Cloudera CDH 6.1.1 Cloudera Manager Kafka 2.0.0-cdh6.1.1 Kafka Manager Kafka Broker 3대 Replication fector 3  HowTo Cloudera Manager 에서 작업대상 Broker 서버를 서비스에서 제거해요. Cloudera Manager의 Host 메뉴에서 해당 서버를 제거하여 CDH 플랫폼에서 호스트를 완전 제거 해요. RAID 를 구성하고 OS를 재설치 진행해요. Cloudera Manager 에서 호스트를 클러스터에 추가하고, Kafka 서비스에서 역할을 할당 해요.\n여기까지 진행하고 Broker를 투입하게 되면 Cloudera Manager 에서 나머지 2대의 Broker 서버에 경고가(Lagging Replicas Test) 표시 되요. Kafka 는 Broker가 재투입 되더라도 Partition을 자동으로 재조정 하지 않기 때문이예요.\nKafka Manager 의 Topic 리스트에는 Under Replication 으로 표시되네요.\n파티션을 재조정 하려면 각 Broker에 위치할 파티션들과 Replication 들을 Json 형식으로 일일이 작성해 Kafka Tool 명령어를 사용해야 해요. 이 작업은 매우 번거로울 수 있어요. 다행이 Kafka Manager 가 손쉽게 작업 할 수 있게 도와 주네요.\nKafka Manager 의 Topic 리스트에 작업할 Topic 의 상세 정보에 보면 Operation 들이 보입니다. Generate Partition Assignments 작업을 수행합니다. 위에서 말한 Json 파일을 만들어 준다고 보시면 되요. 이후 Reassign Partitions 작업을 수행합니다. Broker 서버로 파티션들을 옮기는 작업이예요. 용량에 따라 수분, 수십분이 소요 됩니다.\n아래는 2번째 Topic의 Reassign Partition 작업을 진행하고 6번째 Topic에서 Reassign Partition 작업을 진행 중입니다. 진행 중인 Topic에 대해 하일라이트 표시를 해주고 있네요. Reassign Partition 작업이 완료된 Topic는 Broker 가 3으로 표기되고, Under Replication 은 0으로 표기 되고 있습니다.\n그런데 Borker Leader Skew 가 발생 했네요. Skew는 사전적 의미로 왜곡된 이란 뜻이고, 파티션의 ISR Leader 선출에 문제가 있음을 말해요.\n모든 Topic에 대해 Reassign Partition 작업이 완료 되면 투입된 Broker 디렉토리에 파티션이 할당되었을 거예요. Kafka Data 디렉토리에서 du -hs 명령어로 데이터 들이 잘 복제 되었음을 확인 할 수 있어요.\n이제 Leader Skew를 해결 합니다. 파티션은 각 Broker로 분배 되어 투입된 Broker에 할당되었지만 투입된 Broker는 아직 파티션의 Leader 역할을 가지고 있지 않기 때문에 Skew가 발생해요. Kafka Manager 에서 Preferred Replica Election 작업을 수행 합니다.\n"
 },
 {
 	"uri": "https://hahafamilia.github.io/tags/markdown/",

@@ -6,10 +6,19 @@
     <description>Recent content in Tags on haha family&#39;s happy blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Thu, 24 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 07 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://hahafamilia.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>zeppelin</title>
+      <link>https://hahafamilia.github.io/tags/zeppelin/</link>
+      <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/tags/zeppelin/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>cloudera</title>
@@ -62,15 +71,6 @@
       <pubDate>Sun, 01 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://hahafamilia.github.io/tags/hugo-staticgen/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>zeppelin</title>
-      <link>https://hahafamilia.github.io/tags/zeppelin/</link>
-      <pubDate>Thu, 29 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://hahafamilia.github.io/tags/zeppelin/</guid>
       <description></description>
     </item>
     

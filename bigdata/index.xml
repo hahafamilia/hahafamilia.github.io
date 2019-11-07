@@ -12,6 +12,18 @@
     
     
     <item>
+      <title>Apache Zeppelin Upgrade from 0.8.1 to 0.8.2</title>
+      <link>https://hahafamilia.github.io/bigdata/zeppelin-upgrade-0.8.2/</link>
+      <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/bigdata/zeppelin-upgrade-0.8.2/</guid>
+      <description>Apache Zeppelin 0.8.2 버전이 2019.11.29 일에 Release 되었어요. 0.8.1 버전에서 발견되었던 버그들도 수정이 되었으니 업그레이드를 진행 해보도록 할게요.
+Apache Zeppelin 0.8.2 Upgrading 문서를 보니 0.8.x 버전에서의 업그레이드는 conf 와 notebook 디렉토리를 복사해주기만 하면 된다고 하니 손쉽게 진행 될 것으로 예상되요.
+업그레이드 Apache Zeppelin Download 다운로드 사이트에서 바이너리 파일을 다운로드 해서, 0.8.2 버전의 설치를 마치고 conf 와 notebook 디렉토리 옮겨준 후 서버를 구동하니 사이트가 정상적으로 열리네요.
+Interpreter 별도 추가한 interpreter 설정도 알아서 잡아주네요.</description>
+    </item>
+    
+    <item>
       <title>Cloudera CDH 6.1.1 설치하기</title>
       <link>https://hahafamilia.github.io/bigdata/cloudera-cdh-6_1-intall/</link>
       <pubDate>Thu, 24 Oct 2019 00:00:00 +0000</pubDate>

@@ -4,7 +4,7 @@
 	"title": "Bigdata",
 	"tags": [],
 	"description": "",
-	"content": "  Cloudera CDH 6.1.1 설치하기     Kafka Manager 설치     Apache Zeppelin Interpreter, Hive, Impala     Apache Zeppelin Usage     Apache Zeppelin 설치, QuickStart     Oozie Workflow Email 알림 설정     AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집     Cloudera Manager 알람 설정, Gmail SMPT 서버 사용     Hive Java UDF, 유니코드     Kafka Broker 디스크 증설, RAID구성, OS 재설치     "
+	"content": "  Apache Zeppelin Upgrade from 0.8.1 to 0.8.2     Cloudera CDH 6.1.1 설치하기     Kafka Manager 설치     Apache Zeppelin Interpreter, Hive, Impala     Apache Zeppelin Usage     Apache Zeppelin 설치, QuickStart     Oozie Workflow Email 알림 설정     AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집     Cloudera Manager 알람 설정, Gmail SMPT 서버 사용     Hive Java UDF, 유니코드     Kafka Broker 디스크 증설, RAID구성, OS 재설치     "
 },
 {
 	"uri": "https://hahafamilia.github.io/python/",
@@ -35,15 +35,22 @@
 	"content": "  필리핀 세부 마리바고 블루워터 여름휴가     "
 },
 {
-	"uri": "https://hahafamilia.github.io/categories/bigdata-cloudera/",
-	"title": "bigdata cloudera",
+	"uri": "https://hahafamilia.github.io/bigdata/zeppelin-upgrade-0.8.2/",
+	"title": "Apache Zeppelin Upgrade from 0.8.1 to 0.8.2",
+	"tags": ["zeppelin"],
+	"description": "",
+	"content": " Apache Zeppelin 0.8.2 버전이 2019.11.29 일에 Release 되었어요. 0.8.1 버전에서 발견되었던 버그들도 수정이 되었으니 업그레이드를 진행 해보도록 할게요.\nApache Zeppelin 0.8.2 Upgrading 문서를 보니 0.8.x 버전에서의 업그레이드는 conf 와 notebook 디렉토리를 복사해주기만 하면 된다고 하니 손쉽게 진행 될 것으로 예상되요.\n업그레이드 Apache Zeppelin Download 다운로드 사이트에서 바이너리 파일을 다운로드 해서, 0.8.2 버전의 설치를 마치고 conf 와 notebook 디렉토리 옮겨준 후 서버를 구동하니 사이트가 정상적으로 열리네요.\nInterpreter 별도 추가한 interpreter 설정도 알아서 잡아주네요. 별도의 repository 설정을 했다라면 다운로드 하는데 시간이 조금 걸리긴해요.\nimpala 인터프리터가 사용하는 JDBC 라이브러리를 별도 디렉토리로 관리 해왔기에, 해당 디렉토리도 같이 복사해줬어요.\n그런데 문제가 있어요 모든 게 정상으로 보이는데 옮겨온 노트북들이 열리지 않네요. 새로운 노트북을 생성해도 만들어지지 않구요. 서버로그를 확인해도 특별한 오류가 보이지 않네요. 그래서\u0026hellip; 하나씩 하나씩 해봤어요.\n원인은 Helium 플러그인! Helium 차트를 사용했었는데, conf/helium.json 설정에 관련 정보가 있어요. 이 설정 파일을 옮기게 되면 노트북이 작동을 안해요.\nHelium 플러그인을 사용한 노트북이 많다면, 해결책을 찾아야 할텐데요. 그렇지 않다면 helium.json 파일은 옮기지 마시고, Zeppelin 서버를 실행해 보세요. 그리고 Helium 플러그인 기능을 다시 Enable 시키시면 되요.\n"
+},
+{
+	"uri": "https://hahafamilia.github.io/tags/",
+	"title": "Tags",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "https://hahafamilia.github.io/categories/",
-	"title": "Categories",
+	"uri": "https://hahafamilia.github.io/tags/zeppelin/",
+	"title": "zeppelin",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -65,20 +72,6 @@
 {
 	"uri": "https://hahafamilia.github.io/tags/installation/",
 	"title": "installation",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://hahafamilia.github.io/tags/",
-	"title": "Tags",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://hahafamilia.github.io/categories/bigdata-kafka/",
-	"title": "bigdata kafka",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -130,7 +123,7 @@
 	"title": "Developement and Life Blog",
 	"tags": [],
 	"description": "",
-	"content": " Developement and Life Blog  Bigdata    Cloudera CDH 6.1.1 설치하기   Kafka Manager 설치   Apache Zeppelin Interpreter, Hive, Impala   Apache Zeppelin Usage   Apache Zeppelin 설치, QuickStart   Oozie Workflow Email 알림 설정   AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집   Cloudera Manager 알람 설정, Gmail SMPT 서버 사용   Hive Java UDF, 유니코드   Kafka Broker 디스크 증설, RAID구성, OS 재설치    Python    Python 개발환경, Pyenv, Anaconda3    HowTo    휴고 설치 및 설정, Learn 테마, Hugo Website   Markdown 작성법   Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그    Book    하이브 핵심 정리, Apache Hive Essentials   카프카, 데이터 플랫폼의 최강자   모든 주식을 소유하라   하둡 애플리케이션 아키텍처    Life    필리핀 세부 마리바고 블루워터 여름휴가    "
+	"content": " Developement and Life Blog  Bigdata    Apache Zeppelin Upgrade from 0.8.1 to 0.8.2   Cloudera CDH 6.1.1 설치하기   Kafka Manager 설치   Apache Zeppelin Interpreter, Hive, Impala   Apache Zeppelin Usage   Apache Zeppelin 설치, QuickStart   Oozie Workflow Email 알림 설정   AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집   Cloudera Manager 알람 설정, Gmail SMPT 서버 사용   Hive Java UDF, 유니코드   Kafka Broker 디스크 증설, RAID구성, OS 재설치    Python    Python 개발환경, Pyenv, Anaconda3    HowTo    휴고 설치 및 설정, Learn 테마, Hugo Website   Markdown 작성법   Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그    Book    하이브 핵심 정리, Apache Hive Essentials   카프카, 데이터 플랫폼의 최강자   모든 주식을 소유하라   하둡 애플리케이션 아키텍처    Life    필리핀 세부 마리바고 블루워터 여름휴가    "
 },
 {
 	"uri": "https://hahafamilia.github.io/tags/hugo-staticgen/",
@@ -154,13 +147,6 @@
 	"content": " Apache Zeppelin 과 Cloudera CDH 의 Hive, Impala 를 연동하는 방법을 알아볼게요.\nZeppelin Posts  Zeppelin Install \u0026amp; QuickStart Zeppelin Usage Zeppelin interpreter  Environment  Oracle JDK 1.8 CentOS 7 Zepplin 0.8.1 Cloudera CDH 6.1.1 Hive 2.1.1 Impala 3.1.0 Impala JDBC Driver 2.6.12  Hive Zeppelin Hive Interpreter Document 문서를 보면 Jdbc Interpreter 를 사용하라고 되어있네요. 기본으로 PostgreSQL Connector 지원하고 그외는 Connector 는 추가를 해줘야 해요.\nMaven Repository Zeppelin 콘솔에서 우측 상단의 메뉴에서 interpreter 메뉴를 클릭하여 Interpreter 설정 화면으로 이동해요. Repository 버튼을 클릭하면 등록되어져 있는 Repository 를 확인 할 수 있어요. 그 옆으로 + 버튼 클릭해서 Cloudera Maven Repository https://repository.cloudera.com/artifactory/cloudera-repos/ 를 추가 해주세요.\nHive Interpreter 추가 Create 버튼을 클릭하여 Interpreter 를 추가 해요. Interpreter Group 은 jdbc 로하고 아래의 Properties, Dependencies 값 조정해 주세요.\nProperties  default.driver : org.apache.hive.jdbc.HiveDriver default.url : jdbc:hive2://\u0026lt;HiveServer2\u0026gt;:10000  Dependencies artifact  org.apache.hive:hive-jdbc:2.1.1-cdh6.1.1 org.apache.hadoop:hadoop-common:3.0.0-cdh6.1.1   CDH 6.1.x Maven Artifacts\n Impala Cloudera 는 Impala JDBC Connector 를 Maven 으로 제공하고 있지 않아요. Zeppelin 설치 경로에 external-lib/impala 디렉토리를 생성하고 Impala JDBC Download 링크를 통해 다운로드 해주세요.\nInterpreter Name 은 impala 로, Interpreter Group 은 jdbc 로 Interpreter 를 생성하고 Properties, Dependencies 값을 조정해 주세요.\nProperties  default.driver : com.cloudera.impala.jdbc41.Driver default.url : jdbc:impala://\u0026lt;ImpalaServer\u0026gt;:21050/scdh;AuthMech=0; \u0026gt; Properties default.user 에 기본값이 들어가 있네요. 저는 삭제 했어요.  Denpendies artifact  /opt/zeppelin/external-lib/impala/ImpalaJDBC41.jar (Download 한 jar 파일의 경로) \u0026gt; AuthMech=0 권한 설정을 하지 않았어요. Impala JDBC 권한 설정은 Impala JDBC Document 문서를 참고해 주세요.  Notebook 잘 연동 되었느지 확인해 볼게요. Note 를 생성하고 Interpreter binding 메뉴에서 impala, hive Interpreter 를 상단으로 올려주세요.\nHive 와 Impala 쿼리가 잘 동작하네요.\nSpark Zeppelin 은 Spark 가 임베디드 되어있는데, 버전 이 2.2.1 이네요. 새로운 버전의 Spark 를 설치하고 /opt/zeppelin/conf/zeppelin-env/sh 파일에서 SPARK_HOME 을 설정해 주시면 되요. Spark Interpreter Doc 문서에 잘 설명되어 있어요.\nexport SPARK_HOME=\u0026lt;스파크설치경로\u0026gt;  "
 },
 {
-	"uri": "https://hahafamilia.github.io/tags/zeppelin/",
-	"title": "zeppelin",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
 	"uri": "https://hahafamilia.github.io/bigdata/zeppelin-usage/",
 	"title": "Apache Zeppelin Usage",
 	"tags": ["zeppelin"],
@@ -172,7 +158,7 @@
 	"title": "Apache Zeppelin 설치, QuickStart",
 	"tags": ["zeppelin"],
 	"description": "",
-	"content": " Apache Zeppelin 은 노트북 방식의 시각화 툴이예요. 다양한 시각화 툴이 존재하지만 \u0026lsquo;가장 좋은 것\u0026rsquo;이 아니라 \u0026lsquo;나에게 맞는 것\u0026rsquo; 을 선택했어요. 제가 Zeppelin을 선택한 이유는 아래와 같아요.\n 설치와 사용법이 쉬워야 한다. 요구사항을 유연하게 처리 할 수 있어야 한다. BI 웹 어드민을 개발 하지 않아도 되도록 정적 HTML 을 제공해야 한다.  Zeppelin Posts  Zeppelin Install \u0026amp; QuickStart Zeppelin Usage Zeppelin interpreter  Environment  Oracle JDK 1.8 CentOS 7 Zepplin 0.8.1  Zeppelin 와우! Zeppelin~ 아파치 오픈 소스 프로젝트에 채택된 국내 프로젝트네요. 공식 문서를 보고 Quick Start 부터 진행 해볼게요.\nInstall Oracle JDK 1.7 를 필요로 하네요. 그리고 JAVA_HOME 이 필요하다고 하네요. 제가 사용중인 클러스터는 Cloudera CDH 6.1.x 으로 Oracle JDK 1.8 라이센스를 보유하고 있어서, JDK 1.8 환경에서 설치 진행해요. \u0026gt; Oracle JDK 1.8 이 상용화 되어서 사용하지 못하는게 아닐까요? 오픈소스에서 사용시 무료 라이센스 주면 안되나\u0026hellip; Oracle\u0026hellip;\n JAVA_HOME 설정은 readlink -f $(which java) 의 경로를 /etc/profile 파일에 export 명령문으로 저장해주시면 되요. source /etc/profile 해주셔야 현재의 터미널에 반영됩니다.\n 두 가지 버전의 Download 를 제공하고 있네요. all interpreter 버전으로 다운로드 진행 했어요. 제 설치 경로는 /opt 이예요.\n# 사용자 추가 useradd -s /sbin/nologin zeppelin # 설치 디렉토리 cd /opt tar -xvf zeppelin-0.8.1-bin-all.tgz # 권한, 링크 chown -R zeppelin:zeppelin zeppelin-0.8.1-bin-all ln -s zeppelin-0.8.1-bin-all zeppelin chown -h zeppelin:zeppelin zeppelin  Zeppelin 설치하였으니 /opt/zeppelin/bin/zeppelin-daemon.sh start 시작 명령어로 실행시시켜 볼게요. http://localhost:8080 접속하시면 시작화면을 보실 수 있어요. Stop 시켜주시고, 서비스 등록을 할게요.\nService 등록 /usr/lib/systemd/system/zeppelin.service 파일을 생성해 주시고, 아래의 내용을 작성해 주세요.\n# CentOS 7 [Unit] Description=Zeppelin Service After=syslog.target network.target [Service] Type=forking User=zeppelin Group=zeppelin Restart=always Environment=\u0026quot;JAVA_HOME=\u0026lt;java home path\u0026gt;\u0026quot; WorkingDirectory=/opt/zeppelin ExecStart=/opt/zeppelin/bin/zeppelin-daemon.sh start ExecStop=/opt/zeppelin/bin/zeppelin-daemon.sh stop ExecReload=/opt/zeppelin/bin/zeppelin-daemon.sh reload [Install] WantedBy=multi-user.target  zeppelin.service 파일을 작성했으면, systemctl daemon-reload 명령어로 반영시켜준후, 서비스 enable 시켜 주세요.\nsystemctl enable zeppelin systemctl start zeppelin  Account Zeppelin 에 접속해 보면 anonymous 익명 사용자로 접속 되는데요. 익명 사용자 접근을 제한하고 계정을 생성해 볼게요.\nDisable Anonymous Access cd /opt/zeppelin cp conf/zeppelin-site.xml.template conf/zeppelin-site.xml vi zeppelin-site.xml  \u0026lt;property\u0026gt; \u0026lt;name\u0026gt;zeppelin.anonymous.allowed\u0026lt;/name\u0026gt; \u0026lt;value\u0026gt;false\u0026lt;/value\u0026gt; \u0026lt;/property\u0026gt;  Enable Shiro Authentication cd /opt/zeppelin cp conf/shiro.ini.template conf/shiro.ini vi shiro.ini  [users] admin = password1234, admin user1 = password1234, role1, role2 # user2 = password3, role3 # user3 = password4, role2  Explore UI Explore UI 섹션에는 Layout, Menu, Notebook, Paragraph 에 관한 UI 사용법이 있네요.\nTutorial Tutorial 에서는 LocalFile 을 사용하는 예제와 Twitter Stream 데이터를 사용하는 예제가 있어요.\n샘플데이터 bank.zip 을 다운로드해서 간단히 따라해 볼 수 있어요. \u0026gt; Zeppelin 에서 Spark Interpreter 가 기본 값이어서 샘플 코드에 Interperter 지정을 안해주고 있어요. 만약 예제가 동작하지 않는다면 RDD 생성 코드에 %spark Interpreter 를 지정해 주세요.\n마치며 다음 포스트에 계속해서 Usage 문서에 대해서 알아 볼게요.\n여기 에 Zeppelin 설치에 관해서 잘 정리되어져 있네요.\n"
+	"content": " Apache Zeppelin 은 노트북 방식의 시각화 툴이예요. 다양한 시각화 툴이 존재하지만 \u0026lsquo;가장 좋은 것\u0026rsquo;이 아니라 \u0026lsquo;나에게 맞는 것\u0026rsquo; 을 선택했어요. 제가 Zeppelin을 선택한 이유는 아래와 같아요.\n 설치와 사용법이 쉬워야 한다. 요구사항을 유연하게 처리 할 수 있어야 한다. BI 웹 어드민을 개발 하지 않아도 되도록 정적 HTML 을 제공해야 한다.  Zeppelin Posts  Zeppelin Install \u0026amp; QuickStart Zeppelin Usage Zeppelin interpreter  Environment  Oracle JDK 1.8 CentOS 7 Zepplin 0.8.1  Zeppelin 와우! Zeppelin~ 아파치 오픈 소스 프로젝트에 채택된 국내 프로젝트네요. 공식 문서를 보고 Quick Start 부터 진행 해볼게요.\nInstall Oracle JDK 1.7 를 필요로 하네요. 그리고 JAVA_HOME 이 필요하다고 하네요. 제가 사용중인 클러스터는 Cloudera CDH 6.1.x 으로 Oracle JDK 1.8 라이센스를 보유하고 있어서, JDK 1.8 환경에서 설치 진행해요. \u0026gt; Oracle JDK 1.8 이 상용화 되어서 사용하지 못하는게 아닐까요? 오픈소스에서 사용시 무료 라이센스 주면 안되나\u0026hellip; Oracle\u0026hellip;\n JAVA_HOME 설정은 readlink -f $(which java) 의 경로를 /etc/profile 파일에 export 명령문으로 저장해주시면 되요. source /etc/profile 해주셔야 현재의 터미널에 반영됩니다.\n 두 가지 버전의 Download 를 제공하고 있네요. all interpreter 버전으로 다운로드 진행 했어요. 제 설치 경로는 /opt 이예요.\n# 사용자 추가 useradd -s /sbin/nologin zeppelin # 설치 디렉토리 cd /opt tar -xvf zeppelin-0.8.1-bin-all.tgz # 권한, 링크 chown -R zeppelin:zeppelin zeppelin-0.8.1-bin-all ln -s zeppelin-0.8.1-bin-all zeppelin chown -h zeppelin:zeppelin zeppelin  Zeppelin 설치하였으니 /opt/zeppelin/bin/zeppelin-daemon.sh start 시작 명령어로 실행시시켜 볼게요. http://localhost:8080 접속하시면 시작화면을 보실 수 있어요. Stop 시켜주시고, 서비스 등록을 할게요.\nService 등록 /usr/lib/systemd/system/zeppelin.service 파일을 생성해 주시고, 아래의 내용을 작성해 주세요.\n# CentOS 7 [Unit] Description=Zeppelin Service After=syslog.target network.target [Service] Type=forking User=zeppelin Group=zeppelin Restart=always Environment=\u0026quot;JAVA_HOME=\u0026lt;java home path\u0026gt;\u0026quot; WorkingDirectory=/opt/zeppelin ExecStart=/opt/zeppelin/bin/zeppelin-daemon.sh start ExecStop=/opt/zeppelin/bin/zeppelin-daemon.sh stop ExecReload=/opt/zeppelin/bin/zeppelin-daemon.sh reload [Install] WantedBy=multi-user.target  zeppelin.service 파일을 작성했으면, systemctl daemon-reload 명령어로 반영시켜준후, 서비스 enable 시켜 주세요.\nsystemctl enable zeppelin systemctl start zeppelin  Account Zeppelin 에 접속해 보면 anonymous 익명 사용자로 접속 되는데요. 익명 사용자 접근을 제한하고 계정을 생성해 볼게요.\nDisable Anonymous Access cd /opt/zeppelin cp conf/zeppelin-site.xml.template conf/zeppelin-site.xml vi zeppelin-site.xml  \u0026lt;property\u0026gt; \u0026lt;name\u0026gt;zeppelin.anonymous.allowed\u0026lt;/name\u0026gt; \u0026lt;value\u0026gt;false\u0026lt;/value\u0026gt; \u0026lt;/property\u0026gt; \u0026lt;property\u0026gt; \u0026lt;name\u0026gt;zeppelin.notebook.public\u0026lt;/name\u0026gt; \u0026lt;value\u0026gt;false\u0026lt;/value\u0026gt; \u0026lt;/property\u0026gt; \u0026lt;property\u0026gt; \u0026lt;name\u0026gt;zeppelin.notebook.default.owner.username\u0026lt;/name\u0026gt; \u0026lt;value\u0026gt;admin\u0026lt;/value\u0026gt; \u0026lt;/property\u0026gt;  Enable Shiro Authentication cd /opt/zeppelin cp conf/shiro.ini.template conf/shiro.ini vi shiro.ini  [users] admin = password1234, admin user1 = password1234, role1, role2 # user2 = password3, role3 # user3 = password4, role2  Explore UI Explore UI 섹션에는 Layout, Menu, Notebook, Paragraph 에 관한 UI 사용법이 있네요.\nTutorial Tutorial 에서는 LocalFile 을 사용하는 예제와 Twitter Stream 데이터를 사용하는 예제가 있어요.\n샘플데이터 bank.zip 을 다운로드해서 간단히 따라해 볼 수 있어요. \u0026gt; Zeppelin 에서 Spark Interpreter 가 기본 값이어서 샘플 코드에 Interperter 지정을 안해주고 있어요. 만약 예제가 동작하지 않는다면 RDD 생성 코드에 %spark Interpreter 를 지정해 주세요.\n마치며 다음 포스트에 계속해서 Usage 문서에 대해서 알아 볼게요.\n여기 에 Zeppelin 설치에 관해서 잘 정리되어져 있네요.\n"
 },
 {
 	"uri": "https://hahafamilia.github.io/tags/hue/",
@@ -348,4 +334,11 @@
 	"tags": ["book"],
 	"description": "",
 	"content": " 하둡 에코시스템을 활용한 빅데이터 처리 라는 부제을 가지고 있는 이 책에서는 HDFS/HBASE 스키마 디자인, 데이터 파이프라인, 맵리듀스, 스파크, 피크, 크런치, 하이브, ETL, 스트리밍, 근접 실시간, 데이터 웨어하우스, 사례연구 등 데이터의 수집에서 분석까지의 빅데이터 아키텍처에 대해 설명하고 있어요.\n교보문고 링크\n출간  저자 : 마크 그로버, 테드 멀래스커, 조나단 사이드먼, 그웬 사피라 옮김 : 정동식, 홍다경, 우지현 출판사 : 비제이퍼블릭 출간일 : 2016.05.30  목차  1부. 하둡 애플리케이션의 아키텍처 고려사항  1장. 하둡 데이터 모델링 2장. 데이터 이동 3장. 하둡 데이터 프로세싱 4장. 하둡의 일반적인 프로세싱 패턴들 5장. 하둡 그래프 프로세싱 6장. 오케스트레이션 7장. 하둡을 활용한 근접 실시간 프로세싱  2부. 사례 연구  8장. 클릭스트림 분석 9장. 부정거래 탐지 10장. 데이터 웨어하우스   개인평 이 책에는 하둡을 기반으로 하는 빅데이터 플랫폼 아키텍처에 대해 설명하고 있어요. 아키텍처에 대한 책이다보니 각 어플리케이션의 설치 방법 등의 내용은 포함하고 있지 않아요.\n데이터의 수집, 이동, 분석, 시각화까지 플랫폼을 구축하는데 있어서 하둡 에코 시스템내의 어플리케이션들이 어떤 것들이 있고, 어떻게 배치 할 것인가? 각각의 경우에 어떠한 어플리케이션을 선택해야 하는가? 등의 아키텍처에 대해 설명하고 있어요.\n아쉬운 점이라면 2016년 출간 이후 하둡 에코 시스템은 계속 변화 하였고, 새로운 어플리케이션들이 다양하게 있는데, 이러한 부분은 담고 있지 않아요. 책을 통해서 아키텍처를 흐름을 이해하고, 구축하려는 플랫폼에 맞게 재구성할 필요가 있어요.\n큰 주제를 다루다보니 뜬 구름 일 수도 있어 보이는 내용은 하둡 에코시스템에 대한 지식이 부족하고, 하둡 아키테처 설계에 대한 기초 지식을 쌓아야 하는 분에게 이 책을 추천합니다.\n"
+},
+{
+	"uri": "https://hahafamilia.github.io/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
 }]

@@ -33,13 +33,37 @@
   </url>
   
   <url>
-    <loc>https://hahafamilia.github.io/bigdata/zeppelin-upgrade-0.8.2/</loc>
-    <lastmod>2019-11-07T00:00:00+00:00</lastmod>
+    <loc>https://hahafamilia.github.io/life/bgiu/</loc>
+    <lastmod>2019-11-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://hahafamilia.github.io/tags/ffmpeg/</loc>
+    <lastmod>2019-11-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://hahafamilia.github.io/tags/ffmpeg-music-youtube/</loc>
+    <lastmod>2019-11-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://hahafamilia.github.io/howto/ffmpeg-music-youtube/</loc>
+    <lastmod>2019-11-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
     <loc>https://hahafamilia.github.io/tags/</loc>
+    <lastmod>2019-11-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://hahafamilia.github.io/bigdata/zeppelin-upgrade-0.8.2/</loc>
     <lastmod>2019-11-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>

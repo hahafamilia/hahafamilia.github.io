@@ -9,23 +9,23 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>github.io :: haha family&#39;s happy blog</title>
+    <title>FFMPEG를 이용해 음악 플레이리스트 동영상 만들기 :: haha family&#39;s happy blog</title>
 
     
     <link href="/css/nucleus.css?1574773581" rel="stylesheet">
     <link href="/css/fontawesome-all.min.css?1574773581" rel="stylesheet">
     <link href="/css/hybrid.css?1574773581" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1574773582" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1574773582" rel="stylesheet">
-    <link href="/css/auto-complete.css?1574773582" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1574773582" rel="stylesheet">
-    <link href="/css/theme.css?1574773582" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1574773582" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1574773581" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1574773581" rel="stylesheet">
+    <link href="/css/auto-complete.css?1574773581" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1574773581" rel="stylesheet">
+    <link href="/css/theme.css?1574773581" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1574773581" rel="stylesheet">
     
-      <link href="/css/theme-custom.css?1574773582" rel="stylesheet">
+      <link href="/css/theme-custom.css?1574773581" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1574773582"></script>
+    <script src="/js/jquery-3.3.1.min.js?1574773581"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,7 +55,7 @@ if (!doNotTrack) {
 
 
   </head>
-  <body class="" data-url="/tags/github.io/">
+  <body class="" data-url="/howto/ffmpeg-music-youtube/">
     
 <nav id="sidebar" class="">
 
@@ -71,14 +71,14 @@ if (!doNotTrack) {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1574773582"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1574773582"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1574773581"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1574773581"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/hahafamilia.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1574773582"></script>
+<script type="text/javascript" src="/js/search.js?1574773581"></script>
 
     
   </div>
@@ -194,7 +194,7 @@ if (!doNotTrack) {
   
     
     <li data-nav-id="/howto/" title="HowTo" class="dd-item 
-        
+        parent
         
         
         ">
@@ -384,7 +384,7 @@ if (!doNotTrack) {
             
           
           
-            <a href='/'>Developement and Life Blog</a> > <a href='/tags/'>Tags</a> > github.io
+            <a href='/'>Developement and Life Blog</a> > <a href='/howto/'>HowTo</a> > FFMPEG를 이용해 음악 플레이리스트 동영상 만들기
           
          
           
@@ -397,7 +397,17 @@ if (!doNotTrack) {
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#프로토타입">프로토타입</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -407,15 +417,21 @@ if (!doNotTrack) {
             
         <div id="head-tags">
         
+<div class="tags">
+
+  <a class="tag-link" href="/tags/ffmpeg">ffmpeg</a>
+
+  <a class="tag-link" href="/tags/ffmpeg-music-youtube">ffmpeg-music-youtube</a>
+
+</div>
+
         </div>
         
         <div id="body-inner">
           
             <h1>
               
-                taxonomy ::
-              
-              github.io
+              FFMPEG를 이용해 음악 플레이리스트 동영상 만들기
             </h1>
           
 
@@ -425,17 +441,34 @@ if (!doNotTrack) {
 
 
 
+<p>음원의 플레이리스트를 앨범 자켓 이미지를 포함시켜 동영상으로 만들 수 있나요?
+라는 얘기를 듣게 되었어요.
+의도는 Youtube 에는 음악등록을 할 수 없어서, 동영상으로 만들어서 업로드 해야된다고 하네요.</p>
 
-<ul>
-	
-		<li><a href="/howto/jekyll-github-mistakes-blog/">Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그</a></li>
-	
-</ul>
+<p>그래서 간단하게 프로토타입을 만들어 봤어요. FFMPEG 검색을 해보니 이러한 시도를 하는 분들이 꽤 있나 보군요.</p>
+
+<h3 id="프로토타입">프로토타입</h3>
+
+<ol>
+<li>하나의 음원을 이미지를 포함시켜 동영상으로 제작</li>
+
+<li><p>각 동영상들을 이어 붙히기</p>
+
+<pre><code class="language-bash">ffmpeg -loop 1 -i Happy.jpg -i Happy.mp3 -shortest -acodec copy 2.mp4
+ffmpeg -loop 1 -i StellaJang.jpg -i StellaJang.mp3 -shortest -acodec copy 1.mp4
+
+echo &quot;file 1.mp4&quot; &gt; playlist.txt
+echo &quot;file 2.mp4&quot; &gt;&gt; playlist.txt
+
+ffmpeg -f concat -i playlist.txt -c copy playlist.mp4
+</code></pre></li>
+</ol>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -446,8 +479,8 @@ if (!doNotTrack) {
 (function() {
 
     
-    var logicalName = '';
-    var relPermalink = '\/tags\/github.io\/';
+    var logicalName = 'ffmpeg-music-youtube.md';
+    var relPermalink = '\/howto\/ffmpeg-music-youtube\/';
     if (logicalName == "_index.md" || relPermalink == "/tags/")
         return;
 
@@ -586,6 +619,7 @@ if (!doNotTrack) {
             
                 
                     
+                    
                 
                 
 
@@ -621,6 +655,9 @@ if (!doNotTrack) {
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -694,19 +731,19 @@ if (!doNotTrack) {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1574773582"></script>
-    <script src="/js/perfect-scrollbar.min.js?1574773582"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1574773582"></script>
-    <script src="/js/jquery.sticky.js?1574773582"></script>
-    <script src="/js/featherlight.min.js?1574773582"></script>
-    <script src="/js/highlight.pack.js?1574773582"></script>
+    <script src="/js/clipboard.min.js?1574773581"></script>
+    <script src="/js/perfect-scrollbar.min.js?1574773581"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1574773581"></script>
+    <script src="/js/jquery.sticky.js?1574773581"></script>
+    <script src="/js/featherlight.min.js?1574773581"></script>
+    <script src="/js/highlight.pack.js?1574773581"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1574773582"></script>
-    <script src="/js/learn.js?1574773582"></script>
-    <script src="/js/hugo-learn.js?1574773582"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1574773581"></script>
+    <script src="/js/learn.js?1574773581"></script>
+    <script src="/js/hugo-learn.js?1574773581"></script>
 
-    <link href="/mermaid/mermaid.css?1574773582" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1574773582"></script>
+    <link href="/mermaid/mermaid.css?1574773581" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1574773581"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
@@ -714,3 +751,4 @@ if (!doNotTrack) {
 
   </body>
 </html>
+

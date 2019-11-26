@@ -18,7 +18,7 @@
 	"title": "HowTo",
 	"tags": [],
 	"description": "",
-	"content": "  휴고 설치 및 설정, Learn 테마, Hugo Website     Markdown 작성법     Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그     "
+	"content": "  FFMPEG를 이용해 음악 플레이리스트 동영상 만들기     휴고 설치 및 설정, Learn 테마, Hugo Website     Markdown 작성법     Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그     "
 },
 {
 	"uri": "https://hahafamilia.github.io/book/",
@@ -32,14 +32,35 @@
 	"title": "Life",
 	"tags": [],
 	"description": "",
-	"content": "  필리핀 세부 마리바고 블루워터 여름휴가     "
+	"content": "  Bgiu     필리핀 세부 마리바고 블루워터 여름휴가     "
 },
 {
-	"uri": "https://hahafamilia.github.io/bigdata/zeppelin-upgrade-0.8.2/",
-	"title": "Apache Zeppelin Upgrade from 0.8.1 to 0.8.2",
-	"tags": ["zeppelin"],
+	"uri": "https://hahafamilia.github.io/life/bgiu/",
+	"title": "Bgiu",
+	"tags": [],
 	"description": "",
-	"content": " Apache Zeppelin 0.8.2 버전이 2019.11.29 일에 Release 되었어요. 0.8.1 버전에서 발견되었던 버그들도 수정이 되었으니 업그레이드를 진행 해보도록 할게요.\nApache Zeppelin 0.8.2 Upgrading 문서를 보니 0.8.x 버전에서의 업그레이드는 conf 와 notebook 디렉토리를 복사해주기만 하면 된다고 하니 손쉽게 진행 될 것으로 예상되요.\n업그레이드 Apache Zeppelin Download 다운로드 사이트에서 바이너리 파일을 다운로드 해서, 0.8.2 버전의 설치를 마치고 conf 와 notebook 디렉토리 옮겨준 후 서버를 구동하니 사이트가 정상적으로 열리네요.\nInterpreter 별도 추가한 interpreter 설정도 알아서 잡아주네요. 별도의 repository 설정을 했다라면 다운로드 하는데 시간이 조금 걸리긴해요.\nimpala 인터프리터가 사용하는 JDBC 라이브러리를 별도 디렉토리로 관리 해왔기에, 해당 디렉토리도 같이 복사해줬어요.\n그런데 문제가 있어요 모든 게 정상으로 보이는데 옮겨온 노트북들이 열리지 않네요. 새로운 노트북을 생성해도 만들어지지 않구요. 서버로그를 확인해도 특별한 오류가 보이지 않네요. 그래서\u0026hellip; 하나씩 하나씩 해봤어요.\n원인은 Helium 플러그인! Helium 차트를 사용했었는데, conf/helium.json 설정에 관련 정보가 있어요. 이 설정 파일을 옮기게 되면 노트북이 작동을 안해요.\nHelium 플러그인을 사용한 노트북이 많다면, 해결책을 찾아야 할텐데요. 그렇지 않다면 helium.json 파일은 옮기지 마시고, Zeppelin 서버를 실행해 보세요. 그리고 Helium 플러그인 기능을 다시 Enable 시키시면 되요.\n"
+	"content": "Unit 94. Sue reads a newspaper every day. He speaks English very well. I like Italian food very much. Did you watch television all night? Paul often wears a black hat. We invited a lot of people to the party. I opened the door slowly. Why do you always make the same mistakes? I\u0026rsquo;m going to borrow some money from the bank. We went to a party last night. Lisa walks to work every day. Will you be at home tonight? I usually go to bed early. We arrived at the airport at 7:00. They\u0026rsquo;ve lived in the same house for 20 years. Joe\u0026rsquo;s father has been in the hospital since June.\n"
+},
+{
+	"uri": "https://hahafamilia.github.io/tags/ffmpeg/",
+	"title": "ffmpeg",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://hahafamilia.github.io/tags/ffmpeg-music-youtube/",
+	"title": "ffmpeg-music-youtube",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://hahafamilia.github.io/howto/ffmpeg-music-youtube/",
+	"title": "FFMPEG를 이용해 음악 플레이리스트 동영상 만들기",
+	"tags": ["ffmpeg", "ffmpeg-music-youtube"],
+	"description": "",
+	"content": " 음원의 플레이리스트를 앨범 자켓 이미지를 포함시켜 동영상으로 만들 수 있나요? 라는 얘기를 듣게 되었어요. 의도는 Youtube 에는 음악등록을 할 수 없어서, 동영상으로 만들어서 업로드 해야된다고 하네요.\n그래서 간단하게 프로토타입을 만들어 봤어요. FFMPEG 검색을 해보니 이러한 시도를 하는 분들이 꽤 있나 보군요.\n프로토타입  하나의 음원을 이미지를 포함시켜 동영상으로 제작 각 동영상들을 이어 붙히기\nffmpeg -loop 1 -i Happy.jpg -i Happy.mp3 -shortest -acodec copy 2.mp4 ffmpeg -loop 1 -i StellaJang.jpg -i StellaJang.mp3 -shortest -acodec copy 1.mp4 echo \u0026quot;file 1.mp4\u0026quot; \u0026gt; playlist.txt echo \u0026quot;file 2.mp4\u0026quot; \u0026gt;\u0026gt; playlist.txt ffmpeg -f concat -i playlist.txt -c copy playlist.mp4   "
 },
 {
 	"uri": "https://hahafamilia.github.io/tags/",
@@ -47,6 +68,13 @@
 	"tags": [],
 	"description": "",
 	"content": ""
+},
+{
+	"uri": "https://hahafamilia.github.io/bigdata/zeppelin-upgrade-0.8.2/",
+	"title": "Apache Zeppelin Upgrade from 0.8.1 to 0.8.2",
+	"tags": ["zeppelin"],
+	"description": "",
+	"content": " Apache Zeppelin 0.8.2 버전이 2019.11.29 일에 Release 되었어요. 0.8.1 버전에서 발견되었던 버그들도 수정이 되었으니 업그레이드를 진행 해보도록 할게요.\nApache Zeppelin 0.8.2 Upgrading 문서를 보니 0.8.x 버전에서의 업그레이드는 conf 와 notebook 디렉토리를 복사해주기만 하면 된다고 하니 손쉽게 진행 될 것으로 예상되요.\n업그레이드 Apache Zeppelin Download 다운로드 사이트에서 바이너리 파일을 다운로드 해서, 0.8.2 버전의 설치를 마치고 conf 와 notebook 디렉토리 옮겨준 후 서버를 구동하니 사이트가 정상적으로 열리네요.\nInterpreter 별도 추가한 interpreter 설정도 알아서 잡아주네요. 별도의 repository 설정을 했다라면 다운로드 하는데 시간이 조금 걸리긴해요.\nimpala 인터프리터가 사용하는 JDBC 라이브러리를 별도 디렉토리로 관리 해왔기에, 해당 디렉토리도 같이 복사해줬어요.\n그런데 문제가 있어요 모든 게 정상으로 보이는데 옮겨온 노트북들이 열리지 않네요. 새로운 노트북을 생성해도 만들어지지 않구요. 서버로그를 확인해도 특별한 오류가 보이지 않네요. 그래서\u0026hellip; 하나씩 하나씩 해봤어요.\n원인은 Helium 플러그인! Helium 차트를 사용했었는데, conf/helium.json 설정에 관련 정보가 있어요. 이 설정 파일을 옮기게 되면 노트북이 작동을 안해요.\nHelium 플러그인을 사용한 노트북이 많다면, 해결책을 찾아야 할텐데요. 그렇지 않다면 helium.json 파일은 옮기지 마시고, Zeppelin 서버를 실행해 보세요. 그리고 Helium 플러그인 기능을 다시 Enable 시키시면 되요.\n"
 },
 {
 	"uri": "https://hahafamilia.github.io/tags/zeppelin/",
@@ -123,7 +151,7 @@
 	"title": "Developement and Life Blog",
 	"tags": [],
 	"description": "",
-	"content": " Developement and Life Blog  Bigdata    Apache Zeppelin Upgrade from 0.8.1 to 0.8.2   Cloudera CDH 6.1.1 설치하기   Kafka Manager 설치   Apache Zeppelin Interpreter, Hive, Impala   Apache Zeppelin Usage   Apache Zeppelin 설치, QuickStart   Oozie Workflow Email 알림 설정   AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집   Cloudera Manager 알람 설정, Gmail SMPT 서버 사용   Hive Java UDF, 유니코드   Kafka Broker 디스크 증설, RAID구성, OS 재설치    Python    Python 개발환경, Pyenv, Anaconda3    HowTo    휴고 설치 및 설정, Learn 테마, Hugo Website   Markdown 작성법   Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그    Book    하이브 핵심 정리, Apache Hive Essentials   카프카, 데이터 플랫폼의 최강자   모든 주식을 소유하라   하둡 애플리케이션 아키텍처    Life    필리핀 세부 마리바고 블루워터 여름휴가    "
+	"content": " Developement and Life Blog  Bigdata    Apache Zeppelin Upgrade from 0.8.1 to 0.8.2   Cloudera CDH 6.1.1 설치하기   Kafka Manager 설치   Apache Zeppelin Interpreter, Hive, Impala   Apache Zeppelin Usage   Apache Zeppelin 설치, QuickStart   Oozie Workflow Email 알림 설정   AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집   Cloudera Manager 알람 설정, Gmail SMPT 서버 사용   Hive Java UDF, 유니코드   Kafka Broker 디스크 증설, RAID구성, OS 재설치    Python    Python 개발환경, Pyenv, Anaconda3    HowTo    FFMPEG를 이용해 음악 플레이리스트 동영상 만들기   휴고 설치 및 설정, Learn 테마, Hugo Website   Markdown 작성법   Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그    Book    하이브 핵심 정리, Apache Hive Essentials   카프카, 데이터 플랫폼의 최강자   모든 주식을 소유하라   하둡 애플리케이션 아키텍처    Life    Bgiu   필리핀 세부 마리바고 블루워터 여름휴가    "
 },
 {
 	"uri": "https://hahafamilia.github.io/tags/hugo-staticgen/",

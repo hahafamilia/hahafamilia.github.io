@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ffmpeg-music-youtube on haha family&#39;s happy blog</title>
+    <link>https://hahafamilia.github.io/tags/ffmpeg-music-youtube/</link>
+    <description>Recent content in ffmpeg-music-youtube on haha family&#39;s happy blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Fri, 15 Nov 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://hahafamilia.github.io/tags/ffmpeg-music-youtube/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>FFMPEG를 이용해 음악 플레이리스트 동영상 만들기</title>
+      <link>https://hahafamilia.github.io/howto/ffmpeg-music-youtube/</link>
+      <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/howto/ffmpeg-music-youtube/</guid>
+      <description>음원의 플레이리스트를 앨범 자켓 이미지를 포함시켜 동영상으로 만들 수 있나요? 라는 얘기를 듣게 되었어요. 의도는 Youtube 에는 음악등록을 할 수 없어서, 동영상으로 만들어서 업로드 해야된다고 하네요.
+그래서 간단하게 프로토타입을 만들어 봤어요. FFMPEG 검색을 해보니 이러한 시도를 하는 분들이 꽤 있나 보군요.
+프로토타입  하나의 음원을 이미지를 포함시켜 동영상으로 제작 각 동영상들을 이어 붙히기
+ffmpeg -loop 1 -i Happy.jpg -i Happy.mp3 -shortest -acodec copy 2.mp4 ffmpeg -loop 1 -i StellaJang.jpg -i StellaJang.</description>
+    </item>
+    
+  </channel>
+</rss>

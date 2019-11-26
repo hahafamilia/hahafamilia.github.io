@@ -32,14 +32,7 @@
 	"title": "Life",
 	"tags": [],
 	"description": "",
-	"content": "  Bgiu     필리핀 세부 마리바고 블루워터 여름휴가     "
-},
-{
-	"uri": "https://hahafamilia.github.io/life/bgiu/",
-	"title": "Bgiu",
-	"tags": [],
-	"description": "",
-	"content": "Unit 94. Sue reads a newspaper every day. He speaks English very well. I like Italian food very much. Did you watch television all night? Paul often wears a black hat. We invited a lot of people to the party. I opened the door slowly. Why do you always make the same mistakes? I\u0026rsquo;m going to borrow some money from the bank. We went to a party last night. Lisa walks to work every day. Will you be at home tonight? I usually go to bed early. We arrived at the airport at 7:00. They\u0026rsquo;ve lived in the same house for 20 years. Joe\u0026rsquo;s father has been in the hospital since June.\n"
+	"content": "  필리핀 세부 마리바고 블루워터 여름휴가     "
 },
 {
 	"uri": "https://hahafamilia.github.io/tags/ffmpeg/",
@@ -151,7 +144,7 @@
 	"title": "Developement and Life Blog",
 	"tags": [],
 	"description": "",
-	"content": " Developement and Life Blog  Bigdata    Apache Zeppelin Upgrade from 0.8.1 to 0.8.2   Cloudera CDH 6.1.1 설치하기   Kafka Manager 설치   Apache Zeppelin Interpreter, Hive, Impala   Apache Zeppelin Usage   Apache Zeppelin 설치, QuickStart   Oozie Workflow Email 알림 설정   AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집   Cloudera Manager 알람 설정, Gmail SMPT 서버 사용   Hive Java UDF, 유니코드   Kafka Broker 디스크 증설, RAID구성, OS 재설치    Python    Python 개발환경, Pyenv, Anaconda3    HowTo    FFMPEG를 이용해 음악 플레이리스트 동영상 만들기   휴고 설치 및 설정, Learn 테마, Hugo Website   Markdown 작성법   Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그    Book    하이브 핵심 정리, Apache Hive Essentials   카프카, 데이터 플랫폼의 최강자   모든 주식을 소유하라   하둡 애플리케이션 아키텍처    Life    Bgiu   필리핀 세부 마리바고 블루워터 여름휴가    "
+	"content": " Developement and Life Blog  Bigdata    Apache Zeppelin Upgrade from 0.8.1 to 0.8.2   Cloudera CDH 6.1.1 설치하기   Kafka Manager 설치   Apache Zeppelin Interpreter, Hive, Impala   Apache Zeppelin Usage   Apache Zeppelin 설치, QuickStart   Oozie Workflow Email 알림 설정   AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집   Cloudera Manager 알람 설정, Gmail SMPT 서버 사용   Hive Java UDF, 유니코드   Kafka Broker 디스크 증설, RAID구성, OS 재설치    Python    Python 개발환경, Pyenv, Anaconda3    HowTo    FFMPEG를 이용해 음악 플레이리스트 동영상 만들기   휴고 설치 및 설정, Learn 테마, Hugo Website   Markdown 작성법   Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그    Book    하이브 핵심 정리, Apache Hive Essentials   카프카, 데이터 플랫폼의 최강자   모든 주식을 소유하라   하둡 애플리케이션 아키텍처    Life    필리핀 세부 마리바고 블루워터 여름휴가    "
 },
 {
 	"uri": "https://hahafamilia.github.io/tags/hugo-staticgen/",

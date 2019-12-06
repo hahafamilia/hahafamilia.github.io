@@ -51,6 +51,30 @@
   </url>
   
   <url>
+    <loc>https://hahafamilia.github.io/life/basic-grammar-inuse/</loc>
+    <lastmod>2019-11-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://hahafamilia.github.io/bigdata/zeppelin-project-build/</loc>
+    <lastmod>2019-11-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://hahafamilia.github.io/tags/zeppelin/</loc>
+    <lastmod>2019-11-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://hahafamilia.github.io/bigdata/zeppelin-on-cdh/</loc>
+    <lastmod>2019-11-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
     <loc>https://hahafamilia.github.io/tags/ffmpeg/</loc>
     <lastmod>2019-11-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -70,12 +94,6 @@
   
   <url>
     <loc>https://hahafamilia.github.io/bigdata/zeppelin-upgrade-0.8.2/</loc>
-    <lastmod>2019-11-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://hahafamilia.github.io/tags/zeppelin/</loc>
     <lastmod>2019-11-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>

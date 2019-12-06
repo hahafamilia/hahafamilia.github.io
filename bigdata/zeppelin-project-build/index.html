@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Oozie Workflow Email 알림 설정 :: haha family&#39;s happy blog</title>
+    <title>Apache Zeppelin Project Build :: haha family&#39;s happy blog</title>
 
     
     <link href="/css/nucleus.css?1575625023" rel="stylesheet">
@@ -55,7 +55,7 @@ if (!doNotTrack) {
 
 
   </head>
-  <body class="" data-url="/bigdata/oozie-workflow-email/">
+  <body class="" data-url="/bigdata/zeppelin-project-build/">
     
 <nav id="sidebar" class="">
 
@@ -393,7 +393,7 @@ if (!doNotTrack) {
             
           
           
-            <a href='/'>Developement and Life Blog</a> > <a href='/bigdata/'>Bigdata</a> > Oozie Workflow Email 알림 설정
+            <a href='/'>Developement and Life Blog</a> > <a href='/bigdata/'>Bigdata</a> > Apache Zeppelin Project Build
           
          
           
@@ -408,12 +408,19 @@ if (!doNotTrack) {
     <div class="wrapper">
 <nav id="TableOfContents">
 <ul>
-<li><a href="#version">Version</a></li>
-<li><a href="#oozie-smtp-설정">Oozie SMTP 설정</a></li>
-<li><a href="#workflow-처리-결과-알림">Workflow 처리 결과 알림</a></li>
-<li><a href="#workflow-실패시-알림">Workflow 실패시 알림</a>
+<li>
 <ul>
-<li><a href="#특정-action-의-결과-알림">특정 Action 의 결과 알림</a></li>
+<li>
+<ul>
+<li><a href="#zeppelin-posts">Zeppelin Posts</a></li>
+<li><a href="#versions">Versions</a></li>
+<li><a href="#project-build">Project Build</a>
+<ul>
+<li><a href="#download-source-code">Download source code</a></li>
+<li><a href="#maven-build">Maven build</a></li>
+<li><a href="#문제해결">문제해결</a></li>
+</ul></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -428,11 +435,7 @@ if (!doNotTrack) {
         
 <div class="tags">
 
-  <a class="tag-link" href="/tags/oozie">oozie</a>
-
-  <a class="tag-link" href="/tags/monitoring">monitoring</a>
-
-  <a class="tag-link" href="/tags/hue">hue</a>
+  <a class="tag-link" href="/tags/zeppelin">zeppelin</a>
 
 </div>
 
@@ -442,7 +445,7 @@ if (!doNotTrack) {
           
             <h1>
               
-              Oozie Workflow Email 알림 설정
+              Apache Zeppelin Project Build
             </h1>
           
 
@@ -452,56 +455,62 @@ if (!doNotTrack) {
 
 
 
-<p>Oozie 에서 Workflow 의 결과에 따른 Email 알림을 받는 방법에 대해서 알아볼게요.</p>
+<p>Zeppelin 소스 코드를 빌드해봐요. 오픈소스 수정은 선호하진 않지만,
+Frontend 화면 수정은 필요할 것 같아요.<br />
+<strong>Personalized</strong> 기능이 필요한데 0.8.2 버전에서
+Bug <a href="https://issues.apache.org/jira/browse/ZEPPELIN-3065">ZEPPELIN-3065</a> 가 있어요.</p>
 
-<p>Workflow 를 1회성으로 실행시키는 경우와 Schedule 로 등록하여 주기적으로 실행하는 경우가 있을 수 있을텐데요.
-1회성으로 Workflow 만 실행할때는 성공/실패에 대한 처리 결과를 받도록 하고,
-Schedule 로 등록하여 주기적으로 실행하는 경우에는 실패에 대한 알림 만을 받도록 합니다.</p>
+<h3 id="zeppelin-posts">Zeppelin Posts</h3>
 
-<h1 id="version">Version</h1>
+<ol>
+<li><a href="/bigdata/zeppelin-quickstart/">Zeppelin Install &amp; QuickStart</a></li>
+<li><a href="/bigdata/zeppelin-usage/">Zeppelin Usage</a></li>
+<li><a href="/bigdata/zeppelin-interpreter/">Zeppelin interpreter</a></li>
+<li><a href="/bigdata/zeppelin-on-cdh/">Zeppelin on CDH</a></li>
+<li><a href="/bigdata/zeppelin-project-build/">Zeppelin Project Build</a></li>
+<li><a href="/bigdata/zeppelin-upgrade-0.8.2/">Zeppelin Project Upgrade 0.8.2 </a></li>
+</ol>
+
+<h3 id="versions">Versions</h3>
 
 <ul>
-<li>Cloudera 6.1.1</li>
-<li>Oozie 5.0.0</li>
-<li>Hue 4.3.0</li>
+<li>Zeppelin 0.8.2</li>
+<li>Git Any</li>
+<li>Maven 3.1 or igher</li>
+<li>JDK 1.7</li>
+<li>Mac, IntelliJ</li>
 </ul>
 
-<h1 id="oozie-smtp-설정">Oozie SMTP 설정</h1>
-
-<p><code>Cloudera Manager &gt; Oozie &gt; 구성</code> 탭 에서 mail 을 검색해서,
-<code>oozie.email.smtp.host</code>, <code>oozie.email.from.address</code> 설정에 SMTP 의 도메인과 발신인 메일 주소를 설정해주세요.
-Oozie, Hue 서비스의 재시작이 필요합니다.</p>
-
 <blockquote>
-<p>아쉽게도 Oozie 5.0.0 버전에서는 SSL 설정을 할 수 없네요.
-<a href="https://issues.apache.org/jira/browse/OOZIE-1393">JIRA OOZIE-1393</a> 를 확인해 보니 5.1.0 버전부터 Fixed 되었습니다.</p>
+<p>제환경은 OpenJDK 1.8 이예요. 빌드는 잘 되요.</p>
 </blockquote>
 
-<h1 id="workflow-처리-결과-알림">Workflow 처리 결과 알림</h1>
+<p><a href="http://zeppelin.apache.org/docs/0.8.2/setup/basics/how_to_build.html#build-requirements">Build Zeppelin</a>
+공식 문서 링크</p>
 
-<p>Oozie 서비스에 Mail 설정이 되어 있다면 Workflow 를 제출 할 때 처리 결과에 Email 받기 체크박스를 확인 할 수 있어요.
-체크 해줌으로써 간단히 Mail 수신이 가능해요.</p>
+<h3 id="project-build">Project Build</h3>
 
-<p><img src="/assets/images/2019/2019-08-14-18-03-26.png" alt="" /></p>
+<h4 id="download-source-code">Download source code</h4>
 
-<h1 id="workflow-실패시-알림">Workflow 실패시 알림</h1>
+<p>stable 버전으로 하시는게 정신건강에 좋아요.</p>
 
-<p>Hue Workflow Editor 에서 신규 Workflow 를 작성하는 레이아웃 이예요.
-종료 Action을 지정하는 Action에서(맨 마지막의 네모모양 레이어의 톱니바퀴 버튼) 실패에 대한 메일 알림 설정을 할 수 있습니다.</p>
+<pre><code>git clone -b v0.8.2 https://github.com/apache/zeppelin.git zeppelin
+</code></pre>
 
-<p><img src="/assets/images/2019/2019-08-14-18-10-51.png" alt="" /></p>
+<h4 id="maven-build">Maven build</h4>
 
-<p>수신 대상 Mail 주소를 <code>,</code> 구분자로 넣어주세요. 제목과 내용에
-<a href="https://oozie.apache.org/docs/5.0.0/WorkflowFunctionalSpec.html#a4.2_Expression_Language_Functions">EL Function</a>
- 을 사용할 수 있어요.
-<code>${wf:name()}</code> 는 Workflow 의 이름, <code>${wf:errofMessage(wf:lastErrorNode())}</code> 는 실패 액션의 오류 원인 이예요.</p>
+<pre><code class="language-bash">./dev/change_scala_version.sh 2.11
+# build zeppelin with all interpreters and include latest version of Apache spark support for local mode.
+mvn clean package -DskipTests -Pspark-2.0 -Phadoop-2.4 -Pr -Pscala-2.11
+</code></pre>
 
-<p><img src="/assets/images/2019/2019-08-14-18-13-43.png" alt="" /></p>
+<p>IntelliJ 에서는
+View &gt; Tool Window &gt;  Maven &gt; <em>Execute Maven Goal</em></p>
 
-<h2 id="특정-action-의-결과-알림">특정 Action 의 결과 알림</h2>
+<h4 id="문제해결">문제해결</h4>
 
-<p>만약 특정 Action 의 처리 결과에 대한 알림을 받고 싶을 경우, <code>Email</code> Action 을 사용 해야 해요.
-Hue Workflow Editor 에서 선행 Action 의 수행후 <code>전환</code> 설정에서 <code>KO</code> 시에 <code>Kill</code> 이 아닌 Email Aciton 으로 전환 하게되면 Mail 을 수신할 수 있습니다.</p>
+<p>R 관련 오류가 발생하는데, 우선 R interpreter 를 빌드에서 제외하고 진행했어요.
+<code>-Pr</code> 옵션을 제거하고 다시 빌드하면 성공해요.</p>
 
 
 <footer class=" footline" >
@@ -518,8 +527,8 @@ Hue Workflow Editor 에서 선행 Action 의 수행후 <code>전환</code> 설�
 (function() {
 
     
-    var logicalName = 'oozie-workflow-email.md';
-    var relPermalink = '\/bigdata\/oozie-workflow-email\/';
+    var logicalName = 'zeppelin-project-build.md';
+    var relPermalink = '\/bigdata\/zeppelin-project-build\/';
     if (logicalName == "_index.md" || relPermalink == "/tags/")
         return;
 

@@ -18,15 +18,47 @@
       
       <guid>https://hahafamilia.github.io/howto/linux-command/</guid>
       <description>터미널에서 자주 사용하는 Linux 명령어 들을 메모합니다.
-정규표현식 &amp;rdquo;([0-9]{1,3}.){3}[0-9]{1,3}&amp;rdquo; (.?)*
-Linux Command 문자열 라인의 일치 개수 | awk -F &amp;lsquo;[]&amp;rsquo; &amp;lsquo;{print NF -1}&amp;rsquo; Comment) NF(필드 개수)
-Base64 echo &amp;lsquo;&amp;rsquo; | base64 -d
+Linux Command 문자열 라인의 일치 개수 | awk -F &amp;lsquo;[[text]]&amp;rsquo; &amp;lsquo;{print NF -1}&amp;rsquo; Comment) NF(필드 개수)
+Base64 echo &amp;lsquo;[text]&amp;rsquo; | base64 -d
 문자세기 문자세기
 cat ua.test | sed s/[^원하는문자]//g | awk &amp;lsquo;{printf(&amp;ldquo;%d\n&amp;rdquo;,length($0));}&amp;rsquo;
 sed s/[^원하는문자]//g 원하는문자가 아니면 공백으로 대체
 sed 3d 3번재 라인 삭제
 sed /문자/!d 문자가 포함되지 않은 라인 삭제
-문자열 리스트 필터링 일치, 불일치 ls  | grep  | grep -v</description>
+문자열 리스트 필터링 일치, 불일치 ls [path] | grep [text] | grep -v [text]</description>
+    </item>
+    
+    <item>
+      <title>Basic Grammar in use, Unit 94 -</title>
+      <link>https://hahafamilia.github.io/life/basic-grammar-inuse/</link>
+      <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/life/basic-grammar-inuse/</guid>
+      <description>Unit 94  Sue reads a newspaper every day. He speaks English very well. I like Italian food very much. Did you watch television all night? Paul often wears a black hat. We invited a lot of people to the party. I opened the door slowly. Why do you always make the same mistakes? I&amp;rsquo;m going to borrow some money from the bank. We went to a party last night.</description>
+    </item>
+    
+    <item>
+      <title>Apache Zeppelin Project Build</title>
+      <link>https://hahafamilia.github.io/bigdata/zeppelin-project-build/</link>
+      <pubDate>Thu, 21 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/bigdata/zeppelin-project-build/</guid>
+      <description>Zeppelin 소스 코드를 빌드해봐요. 오픈소스 수정은 선호하진 않지만, Frontend 화면 수정은 필요할 것 같아요.
+Personalized 기능이 필요한데 0.8.2 버전에서 Bug ZEPPELIN-3065 가 있어요.
+Zeppelin Posts  Zeppelin Install &amp;amp; QuickStart Zeppelin Usage Zeppelin interpreter Zeppelin on CDH Zeppelin Project Build Zeppelin Project Upgrade 0.8.2   Versions  Zeppelin 0.8.2 Git Any Maven 3.1 or igher JDK 1.7 Mac, IntelliJ   제환경은 OpenJDK 1.8 이예요. 빌드는 잘 되요.</description>
+    </item>
+    
+    <item>
+      <title>Apache Zeppelin on CDH, Yarn</title>
+      <link>https://hahafamilia.github.io/bigdata/zeppelin-on-cdh/</link>
+      <pubDate>Wed, 20 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/bigdata/zeppelin-on-cdh/</guid>
+      <description>Apache Zeppelin 과 CDH 를 연동해요.
+Yarn 리소스 매니저 관리하에 Spark 어플리케이션을 실행시킬 수 있어요.
+Zeppelin Posts  Zeppelin Install &amp;amp; QuickStart Zeppelin Usage Zeppelin interpreter Zeppelin on CDH Zeppelin Project Build Zeppelin Project Upgrade 0.8.2   Version  Zeppelin 0.8.2 Cloudera CDH 6.1.x  Zeppelin Zeppelin on CDH 공식 문서를 참고해요.
+설정 /conf/zeppelin-env.sh 파일을 수정해요. 설치 환경에 따라서 경로는 다를 수 있어요.
+export MASTER=yarn-client export SPARK_HOME=&#39;/opt/cloudera/parcels/CDH/lib/spark` export HADOOP_CONF_DIR=&#39;etc/hadoop/conf&#39;  Cloudera Manager &amp;gt; Yarn &amp;gt; Application 목록에서 Zeppelin 이 실행중인걸 확인 할 수 있어요.</description>
     </item>
     
     <item>
@@ -48,9 +80,8 @@ ffmpeg -loop 1 -i Happy.jpg -i Happy.mp3 -shortest -acodec copy 2.mp4 ffmpeg -lo
       
       <guid>https://hahafamilia.github.io/bigdata/zeppelin-upgrade-0.8.2/</guid>
       <description>Apache Zeppelin 0.8.2 버전이 2019.11.29 일에 Release 되었어요. 0.8.1 버전에서 발견되었던 버그들도 수정이 되었으니 업그레이드를 진행 해보도록 할게요.
-Apache Zeppelin 0.8.2 Upgrading 문서를 보니 0.8.x 버전에서의 업그레이드는 conf 와 notebook 디렉토리를 복사해주기만 하면 된다고 하니 손쉽게 진행 될 것으로 예상되요.
-업그레이드 Apache Zeppelin Download 다운로드 사이트에서 바이너리 파일을 다운로드 해서, 0.8.2 버전의 설치를 마치고 conf 와 notebook 디렉토리 옮겨준 후 서버를 구동하니 사이트가 정상적으로 열리네요.
-Interpreter 별도 추가한 interpreter 설정도 알아서 잡아주네요.</description>
+Zeppelin Posts  Zeppelin Install &amp;amp; QuickStart Zeppelin Usage Zeppelin interpreter Zeppelin on CDH Zeppelin Project Build Zeppelin Project Upgrade 0.8.2   Apache Zeppelin 0.8.2 Upgrading 문서를 보니 0.8.x 버전에서의 업그레이드는 conf 와 notebook 디렉토리를 복사해주기만 하면 된다고 하니 손쉽게 진행 될 것으로 예상되요.
+업그레이드 Apache Zeppelin Download 다운로드 사이트에서 바이너리 파일을 다운로드 해서, 0.</description>
     </item>
     
     <item>
@@ -119,8 +150,7 @@ Environment &amp;amp; Requirement  Hugo Static Site Generator v0.57.2 Mac Git  Q
       
       <guid>https://hahafamilia.github.io/bigdata/zeppelin-interpreter/</guid>
       <description>Apache Zeppelin 과 Cloudera CDH 의 Hive, Impala 를 연동하는 방법을 알아볼게요.
-Zeppelin Posts  Zeppelin Install &amp;amp; QuickStart Zeppelin Usage Zeppelin interpreter  Environment  Oracle JDK 1.8 CentOS 7 Zepplin 0.8.1 Cloudera CDH 6.1.1 Hive 2.1.1 Impala 3.1.0 Impala JDBC Driver 2.6.12  Hive Zeppelin Hive Interpreter Document 문서를 보면 Jdbc Interpreter 를 사용하라고 되어있네요. 기본으로 PostgreSQL Connector 지원하고 그외는 Connector 는 추가를 해줘야 해요.
-Maven Repository Zeppelin 콘솔에서 우측 상단의 메뉴에서 interpreter 메뉴를 클릭하여 Interpreter 설정 화면으로 이동해요.</description>
+Zeppelin Posts  Zeppelin Install &amp;amp; QuickStart Zeppelin Usage Zeppelin interpreter Zeppelin on CDH Zeppelin Project Build Zeppelin Project Upgrade 0.8.2   Environment  Oracle JDK 1.8 CentOS 7 Zepplin 0.8.1 Cloudera CDH 6.1.1 Hive 2.1.1 Impala 3.1.0 Impala JDBC Driver 2.6.12  Hive Zeppelin Hive Interpreter Document 문서를 보면 Jdbc Interpreter 를 사용하라고 되어있네요. 기본으로 PostgreSQL Connector 지원하고 그외는 Connector 는 추가를 해줘야 해요.</description>
     </item>
     
     <item>
@@ -130,7 +160,7 @@ Maven Repository Zeppelin 콘솔에서 우측 상단의 메뉴에서 interpreter
       
       <guid>https://hahafamilia.github.io/bigdata/zeppelin-usage/</guid>
       <description>Apache Zeppelin 은 노트북 방식의 시각화 툴이예요.
-Zeppelin Posts  Zeppelin Install &amp;amp; QuickStart Zeppelin Usage Zeppelin interpreter  Environment  Oracle JDK 1.8 CentOS 7 Zepplin 0.8.1  Dynamic Form Zeppelin 에서는 Dynamic Form 을 제공하고 있어서 Form 을 통해 입력받은 값으로 조건을 주는 형태로 사용 가능해요. Dynamic Form 은 Paragraph scope 와 Note scope 에서 사용 문법의 차이가 있고, 또한 Programmatically 하게 추가하실 수 있어요. 예제에서는 text, select, checkbox 를 소개하고 있네요.</description>
+Zeppelin Posts  Zeppelin Install &amp;amp; QuickStart Zeppelin Usage Zeppelin interpreter Zeppelin on CDH Zeppelin Project Build Zeppelin Project Upgrade 0.8.2   Environment  Oracle JDK 1.8 CentOS 7 Zepplin 0.8.1  Dynamic Form Zeppelin 에서는 Dynamic Form 을 제공하고 있어서 Form 을 통해 입력받은 값으로 조건을 주는 형태로 사용 가능해요. Dynamic Form 은 Paragraph scope 와 Note scope 에서 사용 문법의 차이가 있고, 또한 Programmatically 하게 추가하실 수 있어요.</description>
     </item>
     
     <item>
@@ -140,7 +170,7 @@ Zeppelin Posts  Zeppelin Install &amp;amp; QuickStart Zeppelin Usage Zeppelin in
       
       <guid>https://hahafamilia.github.io/bigdata/zeppelin-quickstart/</guid>
       <description>Apache Zeppelin 은 노트북 방식의 시각화 툴이예요. 다양한 시각화 툴이 존재하지만 &amp;lsquo;가장 좋은 것&amp;rsquo;이 아니라 &amp;lsquo;나에게 맞는 것&amp;rsquo; 을 선택했어요. 제가 Zeppelin을 선택한 이유는 아래와 같아요.
- 설치와 사용법이 쉬워야 한다. 요구사항을 유연하게 처리 할 수 있어야 한다. BI 웹 어드민을 개발 하지 않아도 되도록 정적 HTML 을 제공해야 한다.  Zeppelin Posts  Zeppelin Install &amp;amp; QuickStart Zeppelin Usage Zeppelin interpreter  Environment  Oracle JDK 1.8 CentOS 7 Zepplin 0.</description>
+ 설치와 사용법이 쉬워야 한다. 요구사항을 유연하게 처리 할 수 있어야 한다. BI 웹 어드민을 개발 하지 않아도 되도록 정적 HTML 을 제공해야 한다.  Zeppelin Posts  Zeppelin Install &amp;amp; QuickStart Zeppelin Usage Zeppelin interpreter Zeppelin on CDH Zeppelin Project Build Zeppelin Project Upgrade 0.</description>
     </item>
     
     <item>

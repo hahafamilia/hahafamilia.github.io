@@ -12,20 +12,20 @@
     <title>Linux Command :: haha family&#39;s happy blog</title>
 
     
-    <link href="/css/nucleus.css?1575617441" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1575617441" rel="stylesheet">
-    <link href="/css/hybrid.css?1575617441" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1575617441" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1575617441" rel="stylesheet">
-    <link href="/css/auto-complete.css?1575617441" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1575617441" rel="stylesheet">
-    <link href="/css/theme.css?1575617441" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1575617441" rel="stylesheet">
+    <link href="/css/nucleus.css?1575625023" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1575625023" rel="stylesheet">
+    <link href="/css/hybrid.css?1575625023" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1575625023" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1575625023" rel="stylesheet">
+    <link href="/css/auto-complete.css?1575625023" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1575625023" rel="stylesheet">
+    <link href="/css/theme.css?1575625023" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1575625023" rel="stylesheet">
     
-      <link href="/css/theme-custom.css?1575617441" rel="stylesheet">
+      <link href="/css/theme-custom.css?1575625023" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1575617441"></script>
+    <script src="/js/jquery-3.3.1.min.js?1575625023"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -71,14 +71,14 @@ if (!doNotTrack) {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1575617441"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1575617441"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1575625023"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1575625023"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/hahafamilia.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1575617441"></script>
+<script type="text/javascript" src="/js/search.js?1575625023"></script>
 
     
   </div>
@@ -110,6 +110,12 @@ if (!doNotTrack) {
           
           
         
+          
+             
+            
+          
+             
+            
           
              
             
@@ -305,6 +311,9 @@ if (!doNotTrack) {
              
             
           
+             
+            
+          
         
         </ul>
               
@@ -401,7 +410,6 @@ if (!doNotTrack) {
 <ul>
 <li>
 <ul>
-<li><a href="#정규표현식">정규표현식</a></li>
 <li><a href="#linux-command">Linux Command</a>
 <ul>
 <li><a href="#문자열">문자열</a>
@@ -436,6 +444,7 @@ if (!doNotTrack) {
 <li><a href="#프로세스">프로세스</a></li>
 </ul></li>
 <li><a href="#shell">Shell</a></li>
+<li><a href="#정규표현식">정규표현식</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -472,23 +481,18 @@ if (!doNotTrack) {
 
 <p>터미널에서 자주 사용하는 Linux 명령어 들을 메모합니다.</p>
 
-<h2 id="정규표현식">정규표현식</h2>
-
-<p>&rdquo;([0-9]{1,3}.){3}[0-9]{1,3}&rdquo;
-(.?)*</p>
-
 <h2 id="linux-command">Linux Command</h2>
 
 <h3 id="문자열">문자열</h3>
 
 <h4 id="라인의-일치-개수">라인의 일치 개수</h4>
 
-<p>| awk -F &lsquo;[<text>]&rsquo; &lsquo;{print NF -1}&rsquo;
+<p>| awk -F &lsquo;[[text]]&rsquo; &lsquo;{print NF -1}&rsquo;
 <em>Comment) NF(필드 개수)</em></p>
 
 <h4 id="base64">Base64</h4>
 
-<p>echo &lsquo;<text>&rsquo; | base64 -d</p>
+<p>echo &lsquo;[text]&rsquo; | base64 -d</p>
 
 <h4 id="문자세기">문자세기</h4>
 
@@ -502,11 +506,11 @@ sed /문자/!d 문자가 포함되지 않은 라인 삭제</p>
 
 <h4 id="일치-불일치">일치, 불일치</h4>
 
-<p>ls <path> | grep <text> | grep -v <text></p>
+<p>ls [path] | grep [text] | grep -v [text]</p>
 
 <h4 id="index-칼럼">index 칼럼</h4>
 
-<p>| awk -F&rsquo;<sep>&rsquo; &lsquo;{print $<index>}&rsquo;
+<p>| awk -F&rsquo;[sep]&rsquo; &lsquo;{print $[index]}&rsquo;
 <em>Comment) $NF, $(NF-1), NF는 마지막 인덱스</em></p>
 
 <h4 id="유니크-갯수">유니크 갯수</h4>
@@ -515,7 +519,7 @@ sed /문자/!d 문자가 포함되지 않은 라인 삭제</p>
 
 <h4 id="라인의-숫자-합">라인의 숫자 합</h4>
 
-<p>| awk &lsquo;{sum += $<index)>} end {print sum}&rsquo;</p>
+<p>| awk &lsquo;{sum += $[index)]} end {print sum}&rsquo;</p>
 
 <h4 id="ip-필터">Ip 필터</h4>
 
@@ -525,7 +529,7 @@ sed /문자/!d 문자가 포함되지 않은 라인 삭제</p>
 
 <h4 id="파일검색">파일검색</h4>
 
-<p>find <dir> -name &ldquo;*text.txt&rdquo;</p>
+<p>find [dir] -name &ldquo;*text.txt&rdquo;</p>
 
 <h4 id="검색결과-실행">검색결과 실행</h4>
 
@@ -540,7 +544,7 @@ sed /문자/!d 문자가 포함되지 않은 라인 삭제</p>
 
 <h4 id="grep-경로-파일-복사">Grep 경로 파일 복사</h4>
 
-<p>&hellip; | grep <text> | xargs cp -t <dir></p>
+<p>&hellip; | grep [text] | xargs cp -t [dir]</p>
 
 <h4 id="xargs">xargs</h4>
 
@@ -554,7 +558,7 @@ sed /문자/!d 문자가 포함되지 않은 라인 삭제</p>
 
 <h3 id="프로세스">프로세스</h3>
 
-<p>kill -9 -ef <process_name>
+<p>kill -9 -ef [process_name]
 <a href="https://bakyeono.net/post/2015-05-05-linux-kill-process-by-name.html">프로세스 종료</a></p>
 
 <h2 id="shell">Shell</h2>
@@ -564,11 +568,16 @@ $0(shell path), $@(all argument), $$(pid), $?(result)
 $(basename $0), $(dirname $0)</p>
 
 <pre><code>workPath=$(dirname $0)
-echo $$&gt; $workDir&quot;/$(basename $0).pid&quot;
+echo $$] $workDir&quot;/$(basename $0).pid&quot;
 function LOG {
     echo $1 | tee -a $workDir&quot;/$(basename $0).log
 }
 </code></pre>
+
+<h2 id="정규표현식">정규표현식</h2>
+
+<p>&rdquo;([0-9]{1,3}.){3}[0-9]{1,3}&rdquo;
+(.?)*</p>
 
 
 <footer class=" footline" >
@@ -701,21 +710,10 @@ function LOG {
             
         
                     
-            
-        
-                    
                         
             
             
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
+        
                     
                         
             
@@ -729,7 +727,6 @@ function LOG {
             
             
                 
-                    
                     
                 
                 
@@ -744,21 +741,6 @@ function LOG {
             
         
                     
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
             
         
                     
@@ -767,8 +749,6 @@ function LOG {
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -806,6 +786,9 @@ function LOG {
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -813,6 +796,47 @@ function LOG {
                     
                     
 
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
                     
                         
             
@@ -837,19 +861,19 @@ function LOG {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1575617441"></script>
-    <script src="/js/perfect-scrollbar.min.js?1575617441"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1575617441"></script>
-    <script src="/js/jquery.sticky.js?1575617441"></script>
-    <script src="/js/featherlight.min.js?1575617441"></script>
-    <script src="/js/highlight.pack.js?1575617441"></script>
+    <script src="/js/clipboard.min.js?1575625023"></script>
+    <script src="/js/perfect-scrollbar.min.js?1575625023"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1575625023"></script>
+    <script src="/js/jquery.sticky.js?1575625023"></script>
+    <script src="/js/featherlight.min.js?1575625023"></script>
+    <script src="/js/highlight.pack.js?1575625023"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1575617441"></script>
-    <script src="/js/learn.js?1575617441"></script>
-    <script src="/js/hugo-learn.js?1575617441"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1575625023"></script>
+    <script src="/js/learn.js?1575625023"></script>
+    <script src="/js/hugo-learn.js?1575625023"></script>
 
-    <link href="/mermaid/mermaid.css?1575617441" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1575617441"></script>
+    <link href="/mermaid/mermaid.css?1575625023" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1575625023"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -157,7 +157,7 @@ code {
 }
 blockquote p {
     font-size: 1rem;
-    color: #999;
+    color: #888;
 }
 #sidebar {
   font-family: var(--FONT-TITLE) !important;

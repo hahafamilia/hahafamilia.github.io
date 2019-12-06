@@ -18,15 +18,14 @@
       
       <guid>https://hahafamilia.github.io/howto/linux-command/</guid>
       <description>터미널에서 자주 사용하는 Linux 명령어 들을 메모합니다.
-정규표현식 &amp;rdquo;([0-9]{1,3}.){3}[0-9]{1,3}&amp;rdquo; (.?)*
-Linux Command 문자열 라인의 일치 개수 | awk -F &amp;lsquo;[]&amp;rsquo; &amp;lsquo;{print NF -1}&amp;rsquo; Comment) NF(필드 개수)
-Base64 echo &amp;lsquo;&amp;rsquo; | base64 -d
+Linux Command 문자열 라인의 일치 개수 | awk -F &amp;lsquo;[[text]]&amp;rsquo; &amp;lsquo;{print NF -1}&amp;rsquo; Comment) NF(필드 개수)
+Base64 echo &amp;lsquo;[text]&amp;rsquo; | base64 -d
 문자세기 문자세기
 cat ua.test | sed s/[^원하는문자]//g | awk &amp;lsquo;{printf(&amp;ldquo;%d\n&amp;rdquo;,length($0));}&amp;rsquo;
 sed s/[^원하는문자]//g 원하는문자가 아니면 공백으로 대체
 sed 3d 3번재 라인 삭제
 sed /문자/!d 문자가 포함되지 않은 라인 삭제
-문자열 리스트 필터링 일치, 불일치 ls  | grep  | grep -v</description>
+문자열 리스트 필터링 일치, 불일치 ls [path] | grep [text] | grep -v [text]</description>
     </item>
     
     <item>

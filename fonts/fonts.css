@@ -1,11 +1,15 @@
 @charset "utf-8";
 /* Inconsolata */
+/*
 @import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap');
+*/
 /*
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding&display=swap&subset=korean');
 */
 
 /* Roboto */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap');
+/*
 @font-face {  
     font-family: 'Roboto';  font-style: normal;  font-weight: 300;
     src: url(../fonts/Roboto-Light.woff2) format('woff2'),
@@ -29,6 +33,7 @@
     url(../fonts/Roboto-Bold.woff) format('woff'),
     url(../fonts/Roboto-Bold.otf) format('opentype'); 
 }
+*/
 
 /* NanumSquare */
 @font-face { font-family: 'NanumSquare'; font-weight:300; font-style: normal; src: local('NanumSquare_seR'), local('NanumSquare seR'),
@@ -50,6 +55,7 @@
 	url(../fonts/NanumSquare_seEB.otf) format('opentype');
 }
 
+/*
 @font-face {
 	font-family: 'icomoon';
 	src:  url(../fonts/icomoon.eot?4p0u2v);
@@ -60,3 +66,4 @@
 	font-weight: normal;
 	font-style: normal;
 }
+*/

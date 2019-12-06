@@ -1,5 +1,7 @@
 
 :root{
+    --FONT-TITLE: 'Roboto', 'NanumSquare', "Arial", sans-serif;
+    --FONT-TEXT: 'NanumSquare',  monospace;
     
     --MAIN-TEXT-color:#323232; /* Color of text by default */
     --MAIN-TITLES-TEXT-color: #5e5e5e; /* Color of titles h2-h3-h4-h5 */
@@ -31,8 +33,6 @@
     --MENU-VISITED-color: #599a3e; /* Color of 'page visited' icons in menu */
     --MENU-SECTION-HR-color: #18211c; /* Color of <hr> separator in menu */
     
-    --FONT-TITLE: 'Roboto', 'NanumSquare', 'Work Sans', "Tahoma", "Geneva", "Arial", sans-serif;
-    --FONT-TEXT: 'NanumSquare', 'Inconsolata', monospace;
 }
 
 body {
@@ -128,9 +128,9 @@ h2 {
   margin: 3rem 0 1.5rem 0;
 }
 h3 {
-  font-size: 1.5rem;
-  line-height: 110% !important;
-  margin: 1.5rem 0 1.5rem 0;
+  font-size: 1.4rem;
+  line-height: 100% !important;
+  margin: 2rem 0 1rem 0;
 }
 h4 {
   font-size: 1.1rem;
@@ -152,7 +152,7 @@ body {
 }
 code {
   font-family: var(--FONT-TEXT);
-  font-size: 1rem;
+  font-size: 0.95rem !important;
   padding: 0.2rem !important;
 }
 blockquote p {
@@ -161,7 +161,7 @@ blockquote p {
 }
 #sidebar {
   font-family: var(--FONT-TITLE) !important;
-  font-weight: 500 !important;
+  font-weight: 700 !important;
 }
 
 h1 {
@@ -173,7 +173,14 @@ h1 {
     font-weight: 900;
     letter-spacing: -1px;
 }
-h2, h3 {
+h2 {
+    font-family: var(--FONT-TITLE);
+    text-rendering: optimizeLegibility;
+    color: #454545 !important;
+    font-weight: 900;
+    letter-spacing: 0px;
+}
+h3 {
     font-family: var(--FONT-TITLE);
     text-rendering: optimizeLegibility;
     color: #454545 !important;

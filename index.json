@@ -4,7 +4,7 @@
 	"title": "Bigdata",
 	"tags": [],
 	"description": "",
-	"content": "  Apache Zeppelin Upgrade from 0.8.1 to 0.8.2     Cloudera CDH 6.1.1 설치하기     Kafka Manager 설치     Apache Zeppelin Interpreter, Hive, Impala     Apache Zeppelin Usage     Apache Zeppelin 설치, QuickStart     Oozie Workflow Email 알림 설정     AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집     Cloudera Manager 알람 설정, Gmail SMPT 서버 사용     Hive Java UDF, 유니코드     Kafka Broker 디스크 증설, RAID구성, OS 재설치     "
+	"content": "  Apache Zeppelin Upgrade from 0.8.1 to 0.8.2     Cloudera CDH 6.1.1 설치하기     Kafka Manager 설치     Apache Zeppelin Interpreter, Hive, Impala     Apache Zeppelin Usage     Apache Zeppelin 설치, QuickStart     Oozie Workflow Email 알림 설정     AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집     Cloudera Manager 알람 설정, Gmail SMPT 서버 사용     Hive Java UDF, 유니코드     Kafka Broker 디스크 증설, RAID구성, OS 재설치     Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그     "
 },
 {
 	"uri": "https://hahafamilia.github.io/python/",
@@ -18,7 +18,7 @@
 	"title": "HowTo",
 	"tags": [],
 	"description": "",
-	"content": "  FFMPEG를 이용해 음악 플레이리스트 동영상 만들기     휴고 설치 및 설정, Learn 테마, Hugo Website     Markdown 작성법     Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그     "
+	"content": "  Linux Command     FFMPEG를 이용해 음악 플레이리스트 동영상 만들기     휴고 설치 및 설정, Learn 테마, Hugo Website     Markdown 작성법     "
 },
 {
 	"uri": "https://hahafamilia.github.io/book/",
@@ -33,6 +33,27 @@
 	"tags": [],
 	"description": "",
 	"content": "  필리핀 세부 마리바고 블루워터 여름휴가     "
+},
+{
+	"uri": "https://hahafamilia.github.io/howto/linux-command/",
+	"title": "Linux Command",
+	"tags": ["linux-command"],
+	"description": "",
+	"content": " 터미널에서 자주 사용하는 Linux 명령어 들을 메모합니다.\n정규표현식 \u0026rdquo;([0-9]{1,3}.){3}[0-9]{1,3}\u0026rdquo; (.?)*\nLinux Command 문자열 라인의 일치 개수 | awk -F \u0026lsquo;[]\u0026rsquo; \u0026lsquo;{print NF -1}\u0026rsquo; Comment) NF(필드 개수)\nBase64 echo \u0026lsquo;\u0026rsquo; | base64 -d\n문자세기 문자세기\ncat ua.test | sed s/[^원하는문자]//g | awk \u0026lsquo;{printf(\u0026ldquo;%d\\n\u0026rdquo;,length($0));}\u0026rsquo;\nsed s/[^원하는문자]//g 원하는문자가 아니면 공백으로 대체\nsed 3d 3번재 라인 삭제\nsed /문자/!d 문자가 포함되지 않은 라인 삭제\n문자열 리스트 필터링 일치, 불일치 ls  | grep  | grep -v \nindex 칼럼 | awk -F\u0026rsquo;\u0026rsquo; \u0026lsquo;{print $}\u0026rsquo; Comment) $NF, $(NF-1), NF는 마지막 인덱스\n유니크 갯수 | sort | uniq -c\n라인의 숫자 합 | awk \u0026lsquo;{sum += $} end {print sum}\u0026rsquo;\nIp 필터 | grep -Eo \u0026ldquo;([0-9]{1,3}.){3}[0-9]{1,3}\u0026rdquo;\n검색 파일검색 find  -name \u0026ldquo;*text.txt\u0026rdquo;\n검색결과 실행 -exec cp {} /movedir/ \\;\nexec 앞선 명령어의 결과를 입력으로 받아 “\\;” 라는 표기자를 만날때까지 읽고 실행 즉 exec 커맨드의 끝을 \u0026lsquo;;\u0026rsquo;(세미콜론)으로 표기해줘야함\n실행 Grep 경로 파일 복사 \u0026hellip; | grep  | xargs cp -t \nxargs 앞선 명령어의 결과를 입력으로 받아 인자를 연속으로 나열하여 커맨드를 실행함\n네트워크 포트 체크 nc -vz ip port\n프로세스 kill -9 -ef  프로세스 종료\nShell $BASH_VERSION $0(shell path), $@(all argument), $$(pid), $?(result) $(basename $0), $(dirname $0)\nworkPath=$(dirname $0) echo $$\u0026gt; $workDir\u0026quot;/$(basename $0).pid\u0026quot; function LOG { echo $1 | tee -a $workDir\u0026quot;/$(basename $0).log }  "
+},
+{
+	"uri": "https://hahafamilia.github.io/tags/linux-command/",
+	"title": "linux-command",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://hahafamilia.github.io/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
 },
 {
 	"uri": "https://hahafamilia.github.io/tags/ffmpeg/",
@@ -54,13 +75,6 @@
 	"tags": ["ffmpeg", "ffmpeg-music-youtube"],
 	"description": "",
 	"content": " 음원의 플레이리스트를 앨범 자켓 이미지를 포함시켜 동영상으로 만들 수 있나요? 라는 얘기를 듣게 되었어요. 의도는 Youtube 에는 음악등록을 할 수 없어서, 동영상으로 만들어서 업로드 해야된다고 하네요.\n그래서 간단하게 프로토타입을 만들어 봤어요. FFMPEG 검색을 해보니 이러한 시도를 하는 분들이 꽤 있나 보군요.\n프로토타입  하나의 음원을 이미지를 포함시켜 동영상으로 제작 각 동영상들을 이어 붙히기\nffmpeg -loop 1 -i Happy.jpg -i Happy.mp3 -shortest -acodec copy 2.mp4 ffmpeg -loop 1 -i StellaJang.jpg -i StellaJang.mp3 -shortest -acodec copy 1.mp4 echo \u0026quot;file 1.mp4\u0026quot; \u0026gt; playlist.txt echo \u0026quot;file 2.mp4\u0026quot; \u0026gt;\u0026gt; playlist.txt ffmpeg -f concat -i playlist.txt -c copy playlist.mp4   "
-},
-{
-	"uri": "https://hahafamilia.github.io/tags/",
-	"title": "Tags",
-	"tags": [],
-	"description": "",
-	"content": ""
 },
 {
 	"uri": "https://hahafamilia.github.io/bigdata/zeppelin-upgrade-0.8.2/",
@@ -144,7 +158,7 @@
 	"title": "Developement and Life Blog",
 	"tags": [],
 	"description": "",
-	"content": " Developement and Life Blog  Bigdata    Apache Zeppelin Upgrade from 0.8.1 to 0.8.2   Cloudera CDH 6.1.1 설치하기   Kafka Manager 설치   Apache Zeppelin Interpreter, Hive, Impala   Apache Zeppelin Usage   Apache Zeppelin 설치, QuickStart   Oozie Workflow Email 알림 설정   AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집   Cloudera Manager 알람 설정, Gmail SMPT 서버 사용   Hive Java UDF, 유니코드   Kafka Broker 디스크 증설, RAID구성, OS 재설치    Python    Python 개발환경, Pyenv, Anaconda3    HowTo    FFMPEG를 이용해 음악 플레이리스트 동영상 만들기   휴고 설치 및 설정, Learn 테마, Hugo Website   Markdown 작성법   Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그    Book    하이브 핵심 정리, Apache Hive Essentials   카프카, 데이터 플랫폼의 최강자   모든 주식을 소유하라   하둡 애플리케이션 아키텍처    Life    필리핀 세부 마리바고 블루워터 여름휴가    "
+	"content": " Developement and Life Blog  Bigdata    Apache Zeppelin Upgrade from 0.8.1 to 0.8.2   Cloudera CDH 6.1.1 설치하기   Kafka Manager 설치   Apache Zeppelin Interpreter, Hive, Impala   Apache Zeppelin Usage   Apache Zeppelin 설치, QuickStart   Oozie Workflow Email 알림 설정   AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집   Cloudera Manager 알람 설정, Gmail SMPT 서버 사용   Hive Java UDF, 유니코드   Kafka Broker 디스크 증설, RAID구성, OS 재설치   Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그    Python    Python 개발환경, Pyenv, Anaconda3    HowTo    Linux Command   FFMPEG를 이용해 음악 플레이리스트 동영상 만들기   휴고 설치 및 설정, Learn 테마, Hugo Website   Markdown 작성법    Book    하이브 핵심 정리, Apache Hive Essentials   카프카, 데이터 플랫폼의 최강자   모든 주식을 소유하라   하둡 애플리케이션 아키텍처    Life    필리핀 세부 마리바고 블루워터 여름휴가    "
 },
 {
 	"uri": "https://hahafamilia.github.io/tags/hugo-staticgen/",
@@ -343,7 +357,7 @@
 	"content": ""
 },
 {
-	"uri": "https://hahafamilia.github.io/howto/jekyll-github-mistakes-blog/",
+	"uri": "https://hahafamilia.github.io/bigdata/jekyll-github-mistakes-blog/",
 	"title": "Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그",
 	"tags": ["jekyll", "github.io"],
 	"description": "",

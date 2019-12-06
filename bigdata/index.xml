@@ -136,5 +136,17 @@ Gmail 설정 우선 Gmail 설정에서 IMAP 사용이 허용되어야 해요. �
 Environment  CentOS 7.6 Cloudera CDH 6.1.1 Cloudera Manager Kafka 2.0.0-cdh6.1.1 Kafka Manager Kafka Broker 3대 Replication fector 3  HowTo Cloudera Manager 에서 작업대상 Broker 서버를 서비스에서 제거해요.</description>
     </item>
     
+    <item>
+      <title>Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그</title>
+      <link>https://hahafamilia.github.io/bigdata/jekyll-github-mistakes-blog/</link>
+      <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/bigdata/jekyll-github-mistakes-blog/</guid>
+      <description>개발자 초창기에는 블로그(이전의 블로그) 활동도 열심히 했었는데&amp;hellip; 너무 잊고 살았었네요. 새롭게 블로그를 시작 할 생각에 Jekyll, Github.io 로 블로그를 구성하게 되었어요.
+간단히 Jekyll 은 정적파일 생성기, Github.io 는 호스팅, Minimal mistakes 는 수많은 Jekyll 테마중의 하나예요.
+선택의 기준은 markdown 에디터 때문이에요. 개발자는 에디터 툴을 가장 많이 다루는데요. 아무래도 markdown 으로 글을 작성하고 Git 으로 Push 하여 포스팅을 하는 구조라면 블로그 활동량이 많아지지 않을까 합니다.
+그럼 Github.io, Jekyll, Minimal mistakes theme 를 이용해 블로그를 만들어 봐요.</description>
+    </item>
+    
   </channel>
 </rss>

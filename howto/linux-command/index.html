@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>installation :: haha family&#39;s happy blog</title>
+    <title>Linux Command :: haha family&#39;s happy blog</title>
 
     
     <link href="/css/nucleus.css?1575615930" rel="stylesheet">
@@ -55,7 +55,7 @@ if (!doNotTrack) {
 
 
   </head>
-  <body class="" data-url="/tags/installation/">
+  <body class="" data-url="/howto/linux-command/">
     
 <nav id="sidebar" class="">
 
@@ -197,7 +197,7 @@ if (!doNotTrack) {
   
     
     <li data-nav-id="/howto/" title="HowTo" class="dd-item 
-        
+        parent
         
         
         ">
@@ -384,7 +384,7 @@ if (!doNotTrack) {
             
           
           
-            <a href='/'>Developement and Life Blog</a> > <a href='/tags/'>Tags</a> > installation
+            <a href='/'>Developement and Life Blog</a> > <a href='/howto/'>HowTo</a> > Linux Command
           
          
           
@@ -397,7 +397,48 @@ if (!doNotTrack) {
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#정규표현식">정규표현식</a></li>
+<li><a href="#linux-command">Linux Command</a>
+<ul>
+<li><a href="#문자열">문자열</a>
+<ul>
+<li><a href="#라인의-일치-개수">라인의 일치 개수</a></li>
+<li><a href="#base64">Base64</a></li>
+<li><a href="#문자세기">문자세기</a></li>
+</ul></li>
+<li><a href="#문자열-리스트-필터링">문자열 리스트 필터링</a>
+<ul>
+<li><a href="#일치-불일치">일치, 불일치</a></li>
+<li><a href="#index-칼럼">index 칼럼</a></li>
+<li><a href="#유니크-갯수">유니크 갯수</a></li>
+<li><a href="#라인의-숫자-합">라인의 숫자 합</a></li>
+<li><a href="#ip-필터">Ip 필터</a></li>
+</ul></li>
+<li><a href="#검색">검색</a>
+<ul>
+<li><a href="#파일검색">파일검색</a></li>
+<li><a href="#검색결과-실행">검색결과 실행</a></li>
+<li><a href="#exec">exec</a></li>
+</ul></li>
+<li><a href="#실행">실행</a>
+<ul>
+<li><a href="#grep-경로-파일-복사">Grep 경로 파일 복사</a></li>
+<li><a href="#xargs">xargs</a></li>
+</ul></li>
+<li><a href="#네트워크">네트워크</a>
+<ul>
+<li><a href="#포트-체크">포트 체크</a></li>
+</ul></li>
+<li><a href="#프로세스">프로세스</a></li>
+</ul></li>
+<li><a href="#shell">Shell</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -407,15 +448,19 @@ if (!doNotTrack) {
             
         <div id="head-tags">
         
+<div class="tags">
+
+  <a class="tag-link" href="/tags/linux-command">linux-command</a>
+
+</div>
+
         </div>
         
         <div id="body-inner">
           
             <h1>
               
-                taxonomy ::
-              
-              installation
+              Linux Command
             </h1>
           
 
@@ -425,19 +470,111 @@ if (!doNotTrack) {
 
 
 
+<p>터미널에서 자주 사용하는 Linux 명령어 들을 메모합니다.</p>
 
-<ul>
-	
-		<li><a href="/bigdata/cloudera-cdh-6_1-intall/">Cloudera CDH 6.1.1 설치하기</a></li>
-	
-		<li><a href="/bigdata/kafka-manager-installation/">Kafka Manager 설치</a></li>
-	
-</ul>
+<h2 id="정규표현식">정규표현식</h2>
+
+<p>&rdquo;([0-9]{1,3}.){3}[0-9]{1,3}&rdquo;
+(.?)*</p>
+
+<h2 id="linux-command">Linux Command</h2>
+
+<h3 id="문자열">문자열</h3>
+
+<h4 id="라인의-일치-개수">라인의 일치 개수</h4>
+
+<p>| awk -F &lsquo;[<text>]&rsquo; &lsquo;{print NF -1}&rsquo;
+<em>Comment) NF(필드 개수)</em></p>
+
+<h4 id="base64">Base64</h4>
+
+<p>echo &lsquo;<text>&rsquo; | base64 -d</p>
+
+<h4 id="문자세기">문자세기</h4>
+
+<p><a href="http://linuxstory1.tistory.com/entry/SED-%EB%AA%85%EB%A0%B9%EC%96%B4-%EC%82%AC%EC%9A%A9%EB%B2%95">문자세기</a><br />
+cat ua.test | sed s/[^원하는문자]//g | awk &lsquo;{printf(&ldquo;%d\n&rdquo;,length($0));}&rsquo;<br />
+sed s/[^원하는문자]//g  원하는문자가 아니면 공백으로 대체<br />
+sed 3d  3번재 라인 삭제<br />
+sed /문자/!d 문자가 포함되지 않은 라인 삭제</p>
+
+<h3 id="문자열-리스트-필터링">문자열 리스트 필터링</h3>
+
+<h4 id="일치-불일치">일치, 불일치</h4>
+
+<p>ls <path> | grep <text> | grep -v <text></p>
+
+<h4 id="index-칼럼">index 칼럼</h4>
+
+<p>| awk -F&rsquo;<sep>&rsquo; &lsquo;{print $<index>}&rsquo;
+<em>Comment) $NF, $(NF-1), NF는 마지막 인덱스</em></p>
+
+<h4 id="유니크-갯수">유니크 갯수</h4>
+
+<p>| sort | uniq -c</p>
+
+<h4 id="라인의-숫자-합">라인의 숫자 합</h4>
+
+<p>| awk &lsquo;{sum += $<index)>} end {print sum}&rsquo;</p>
+
+<h4 id="ip-필터">Ip 필터</h4>
+
+<p>| grep -Eo &ldquo;([0-9]{1,3}.){3}[0-9]{1,3}&rdquo;</p>
+
+<h3 id="검색">검색</h3>
+
+<h4 id="파일검색">파일검색</h4>
+
+<p>find <dir> -name &ldquo;*text.txt&rdquo;</p>
+
+<h4 id="검색결과-실행">검색결과 실행</h4>
+
+<p>-exec cp {} /movedir/  \;</p>
+
+<h4 id="exec">exec</h4>
+
+<p>앞선 명령어의 결과를 입력으로 받아 “\;” 라는 표기자를 만날때까지 읽고 실행
+즉 exec 커맨드의 끝을 &lsquo;;&rsquo;(세미콜론)으로 표기해줘야함</p>
+
+<h3 id="실행">실행</h3>
+
+<h4 id="grep-경로-파일-복사">Grep 경로 파일 복사</h4>
+
+<p>&hellip; | grep <text> | xargs cp -t <dir></p>
+
+<h4 id="xargs">xargs</h4>
+
+<p>앞선 명령어의 결과를 입력으로 받아 인자를 연속으로 나열하여 커맨드를 실행함</p>
+
+<h3 id="네트워크">네트워크</h3>
+
+<h4 id="포트-체크">포트 체크</h4>
+
+<p>nc -vz ip port</p>
+
+<h3 id="프로세스">프로세스</h3>
+
+<p>kill -9 -ef <process_name>
+<a href="https://bakyeono.net/post/2015-05-05-linux-kill-process-by-name.html">프로세스 종료</a></p>
+
+<h2 id="shell">Shell</h2>
+
+<p>$BASH_VERSION
+$0(shell path), $@(all argument), $$(pid), $?(result)
+$(basename $0), $(dirname $0)</p>
+
+<pre><code>workPath=$(dirname $0)
+echo $$&gt; $workDir&quot;/$(basename $0).pid&quot;
+function LOG {
+    echo $1 | tee -a $workDir&quot;/$(basename $0).log
+}
+</code></pre>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -448,8 +585,8 @@ if (!doNotTrack) {
 (function() {
 
     
-    var logicalName = '';
-    var relPermalink = '\/tags\/installation\/';
+    var logicalName = 'linux-command.md';
+    var relPermalink = '\/howto\/linux-command\/';
     if (logicalName == "_index.md" || relPermalink == "/tags/")
         return;
 
@@ -593,6 +730,7 @@ if (!doNotTrack) {
             
                 
                     
+                    
                 
                 
 
@@ -628,6 +766,9 @@ if (!doNotTrack) {
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -716,3 +857,4 @@ if (!doNotTrack) {
 
   </body>
 </html>
+

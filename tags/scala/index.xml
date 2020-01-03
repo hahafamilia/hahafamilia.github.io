@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>scala on haha family&#39;s happy blog</title>
+    <link>https://hahafamilia.github.io/tags/scala/</link>
+    <description>Recent content in scala on haha family&#39;s happy blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 23 Dec 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://hahafamilia.github.io/tags/scala/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>IntelliJ maven scala 프로젝트 설정</title>
+      <link>https://hahafamilia.github.io/bigdata/intellij-maven-scala/</link>
+      <pubDate>Mon, 23 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/bigdata/intellij-maven-scala/</guid>
+      <description>IntelliJ IDE 에서 spark streaming 개발을 위해 scala maven 프로젝트 생성 방법을 알아봐요. scala 프로젝트는 sbt 를 기본으로 사용하지만, maven 에 익숙하여 maven 으로 프로젝트를 생성해요. scala-archetype-simple 으로 프로젝트 생성이 가능한데, 제가 직접 구성하는게 좋아요.
+Version  Spark 2.4.0 Scala 2.11 Hadoop 2.7 Java 8 Window  Spark, Hadoop 설치 Spark Download 에서 Spark 를 다운로드해요. 운영중인 클러스터의 스파크버전과 맞추어 2.4.0 버전의 Pre-built for Apache Hadoop2.7 을 다운로드 했어요. 다운로드한 파일을 압축해제 하고 SPARK_HOME 환경변수로 등록후 PATH 설정해요.</description>
+    </item>
+    
+  </channel>
+</rss>

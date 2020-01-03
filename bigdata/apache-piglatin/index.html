@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.57.2" />
+    <meta name="description" content="hahafamilia blog">
+<meta name="author" content="hahafamilia">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Apache Pig Latin :: haha family&#39;s happy blog</title>
+
+    
+    <link href="/css/nucleus.css?1578043510" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1578043510" rel="stylesheet">
+    <link href="/css/hybrid.css?1578043510" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1578043510" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1578043510" rel="stylesheet">
+    <link href="/css/auto-complete.css?1578043510" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1578043510" rel="stylesheet">
+    <link href="/css/theme.css?1578043510" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1578043510" rel="stylesheet">
+    
+      <link href="/css/theme-custom.css?1578043510" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1578043510"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-145448356-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+  </head>
+  <body class="" data-url="/bigdata/apache-piglatin/">
+    
+<nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header" onclick="window.location='https:\/\/hahafamilia.github.io\/';">
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1578043510"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1578043510"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/hahafamilia.github.io\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1578043510"></script>
+
+    
+  </div>
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/bigdata/" title="Bigdata" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/bigdata/">
+          <i class='fas fa-angle-right'></i> Bigdata
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/python/" title="Python" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/python/">
+          <i class='fas fa-angle-right'></i> Python
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/howto/" title="HowTo" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/howto/">
+          <i class='fas fa-angle-right'></i> HowTo
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/book/" title="Book" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/book/">
+          <i class='fas fa-angle-right'></i> Book
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/life/" title="Life" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/life/">
+          <i class='fas fa-angle-right'></i> Life
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/hahafamilia"><i class='fab fa-github'></i> Github</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://hahafamilia.github.io/about"><i class='fas fa-address-card'></i> About</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://tjstory.tistory.com"><i class='fas fa-blog'></i> 이전 블로그</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://hahafamilia.github.io/tags"><i class='fas fa-tags'></i> Tags</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Happy <i class="fas fa-heart"></i> hahaFamily</p>
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Developement and Life Blog</a> > <a href='/bigdata/'>Bigdata</a> > Apache Pig Latin
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#pig-latin-basic">Pig Latin Basic</a>
+<ul>
+<li><a href="#data-types">Data types</a></li>
+<li><a href="#operator">Operator</a></li>
+<li><a href="#주석">주석</a></li>
+<li><a href="#shell-안에서의-사용">Shell 안에서의 사용</a></li>
+</ul></li>
+<li><a href="#로드-저장">로드/저장</a>
+<ul>
+<li><a href="#load">LOAD</a></li>
+<li><a href="#store">STORE</a></li>
+</ul></li>
+<li><a href="#diagnostic">Diagnostic</a></li>
+<li><a href="#그룹-조인">그룹/조인</a>
+<ul>
+<li><a href="#group">GROUP</a></li>
+<li><a href="#cogroup">COGROUP</a></li>
+<li><a href="#self-join">SELF JOIN</a></li>
+<li><a href="#inner-join">INNER JOIN</a></li>
+<li><a href="#left-outer-join">LEFT OUTER JOIN</a></li>
+<li><a href="#right-outer-join">RIGHT OUTER JOIN</a></li>
+<li><a href="#full-outer-join">FULL OUTER JOIN</a></li>
+<li><a href="#다중키-join">다중키 JOIN</a></li>
+<li><a href="#cross">CROSS</a></li>
+</ul></li>
+<li><a href="#결합-분할">결합/분할</a>
+<ul>
+<li><a href="#union">UNION</a></li>
+<li><a href="#split">SPLIT</a></li>
+</ul></li>
+<li><a href="#필터">필터</a>
+<ul>
+<li><a href="#filter">FILTER</a></li>
+<li><a href="#distinct">DISTINCT</a></li>
+<li><a href="#foreach">FOREACH</a></li>
+</ul></li>
+<li><a href="#정렬">정렬</a>
+<ul>
+<li><a href="#order-by">ORDER BY</a></li>
+<li><a href="#limit">LIMIT</a></li>
+</ul></li>
+<li><a href="#내장함수">내장함수</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+<div class="tags">
+
+  <a class="tag-link" href="/tags/bigdata">bigdata</a>
+
+  <a class="tag-link" href="/tags/apache-pig">apache-pig</a>
+
+</div>
+
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Apache Pig Latin
+            </h1>
+          
+
+        
+
+
+
+
+
+<p><a href="http://pig.apache.org/">Apache Pig</a>
+Yahoo 에서 공개한 걸로 알고 있어요.
+최근 버전은 <code>Hive on Spark</code> 처럼 <code>Pig on Spark</code> 으로 사용하는군요.
+새로운 Flow 코드 작성시 잘 사용하진 않지만,
+SQL 사용시 함수와 프로시져를 만들어야 하는 경우가 있는데, 그런 경우 Pig 를 사용하고 있어요.
+ASIS Flow 에서 사용되어지고 있는 코드 들이 있어서 간단히 문법에 대해 정리 해봐요.</p>
+
+<h3 id="pig-latin-basic">Pig Latin Basic</h3>
+
+<p>연산자 및 명령어들은 대소문자를 구분하지만, 별칭 및 함수 이름은 대소문자를 구분해요.</p>
+
+<h4 id="data-types">Data types</h4>
+
+<p>int, long, float, double, chararray, Bytearray, Boolean, Datetime, Biginteger, Bigdecimal,
+Tuple, Bag(collection of tuples), Map</p>
+
+<h4 id="operator">Operator</h4>
+
+<p>피그에는 몇몇 종류의 operator 있는데, SQL 과 느낌이 비슷해요.</p>
+
+<ul>
+<li>로드/저장: LOAD, STORE</li>
+<li>필터: FILTER, DISTINCT, FOREACH GENERATE, STREAM</li>
+<li>그룹/조인 : JOIN, COGROUP, GROUP, CROSS</li>
+<li>정렬 : ORDER, LIMIT</li>
+<li>결합/분할 : UNION, SPLIT</li>
+<li>Diagnostic : DUMP, DESCRIBE, EXPLAIN, ILLUSTRATE</li>
+</ul>
+
+<h4 id="주석">주석</h4>
+
+<pre><code>/* multi line
+comments */
+</code></pre>
+
+<p><code>-- single line comments</code></p>
+
+<h4 id="shell-안에서의-사용">Shell 안에서의 사용</h4>
+
+<pre><code>#!/usr/bin/env bash
+
+today=$(date +&quot;%Y-%m-%d&quot;)
+
+cat &lt;&lt; PIGEND &gt; ./pigscript.pig
+    set [environment]
+    register [library]
+    pig codes
+    ...
+    {$today}
+PIGEND
+
+pig ./pigscript.pig
+</code></pre>
+
+<h3 id="로드-저장">로드/저장</h3>
+
+<h4 id="load">LOAD</h4>
+
+<p><code>Relation_name = LOAD 'Input file path' USING function as schema;</code></p>
+
+<pre><code>student = LOAD 'hdfs://localhost:9000/pig_data/student_data.txt' 
+    USING PigStorage(',')
+    as ( id:int, firstname:chararray, lastname:chararray, phone:chararray, 
+    city:chararray );
+</code></pre>
+
+<h4 id="store">STORE</h4>
+
+<p><code>STORE Relation_name INTO 'directory path' [using function];</code></p>
+
+<pre><code>STORE student INTO 'hdfs://localhost:9000/pig_Output/' USING PigStorage (',');
+</code></pre>
+
+<h3 id="diagnostic">Diagnostic</h3>
+
+<ul>
+<li><code>Dump Relation_name;</code> 결과를 화면에 출력</li>
+<li><code>Describe Relation_name;</code> 스키마 출력</li>
+<li><code>explain Relation_name;</code> 논리적, 물리적, MR plan 출력</li>
+<li><code>illustrate Relation_name;</code> statement 를 단계적으로 실행</li>
+</ul>
+
+<h3 id="그룹-조인">그룹/조인</h3>
+
+<h4 id="group">GROUP</h4>
+
+<p><code>Group_data = GROUP Relation_name BY age;</code></p>
+
+<pre><code>group_data = GROUP student_details by age;
+group_multiple = GROUP student_details by (age, city);
+group_all = GROUP student_details All;
+</code></pre>
+
+<h4 id="cogroup">COGROUP</h4>
+
+<p>두개 이상의 relation 을 그룹핑 해요.</p>
+
+<pre><code>cogroup_data = COGROUP student_details by age, employee_details by age;
+</code></pre>
+
+<pre><code>(23,{(6,Archana,Mishra,23,9848022335,Chennai),(5,Trupthi,Mohanthy,23,9848022336 ,Bhuwaneshwar)}, 
+   {(5,David,23,Bhuwaneshwar),(3,Maya,23,Tokyo),(2,BOB,23,Kolkata)}) 
+</code></pre>
+
+<h4 id="self-join">SELF JOIN</h4>
+
+<p><code>Relation3_name = JOIN Relation1_name BY key, Relation2_name BY key;</code>
+<code>Relation1_name</code>, <code>Relation2_name</code> 가 동일한 데이터소스를 <code>LOAD</code> 해서 <code>JOIN</code> 해요.</p>
+
+<pre><code>customers3 = JOIN customers1 BY id, customers2 BY id;
+</code></pre>
+
+<h4 id="inner-join">INNER JOIN</h4>
+
+<p><code>result = JOIN relation1 BY columnname, relation2 BY columnname;</code></p>
+
+<h4 id="left-outer-join">LEFT OUTER JOIN</h4>
+
+<p><code>Relation3_name = JOIN Relation1_name BY id LEFT OUTER, Relation2_name BY customer_id;</code></p>
+
+<h4 id="right-outer-join">RIGHT OUTER JOIN</h4>
+
+<p><code>outer_right = JOIN customers BY id RIGHT, orders BY customer_id;</code></p>
+
+<h4 id="full-outer-join">FULL OUTER JOIN</h4>
+
+<p><code>outer_full = JOIN customers BY id FULL OUTER, orders BY customer_id;</code></p>
+
+<h4 id="다중키-join">다중키 JOIN</h4>
+
+<p><code>Relation3_name = JOIN Relation2_name BY (key1, key2), Relation3_name BY (key1, key2);</code></p>
+
+<h4 id="cross">CROSS</h4>
+
+<p><code>cross_data = CROSS customers, orders;</code></p>
+
+<h3 id="결합-분할">결합/분할</h3>
+
+<h4 id="union">UNION</h4>
+
+<p><code>Relation_name3 = UNION Relation_name1, Relation_name2;</code></p>
+
+<pre><code>student = UNION student1, student2;
+</code></pre>
+
+<h4 id="split">SPLIT</h4>
+
+<p><code>SPLIT Relation1_name INTO Relation2_name IF (condition1), Relation2_name (condition2);</code></p>
+
+<pre><code>SPLIT student_details into student_details1 if age&lt;23, student_details2 if (22&lt;age and age&gt;25);
+</code></pre>
+
+<h3 id="필터">필터</h3>
+
+<h4 id="filter">FILTER</h4>
+
+<p><code>Relation2_name = FILTER Relation1_name BY (condition);</code></p>
+
+<pre><code>filter_data = FILTER student_details BY city == 'Chennai';
+</code></pre>
+
+<h4 id="distinct">DISTINCT</h4>
+
+<p><code>Relation_name2 = DISTINCT Relatin_name1;</code></p>
+
+<pre><code>distinct_data = DISTINCT student_details;
+</code></pre>
+
+<h4 id="foreach">FOREACH</h4>
+
+<p><code>Relation_name2 = FOREACH Relatin_name1 GENERATE (required data);</code></p>
+
+<pre><code>foreach_data = FOREACH student_details GENERATE id,age,city;
+</code></pre>
+
+<h3 id="정렬">정렬</h3>
+
+<h4 id="order-by">ORDER BY</h4>
+
+<p><code>Relation_name2 = ORDER Relatin_name1 BY (ASC|DESC);</code></p>
+
+<pre><code>order_by_data = ORDER student_details BY age DESC;
+</code></pre>
+
+<h4 id="limit">LIMIT</h4>
+
+<p><code>Result = LIMIT Relation_name required number of tuples;</code></p>
+
+<pre><code>limit_data = LIMIT student_details 4; 
+</code></pre>
+
+<h3 id="내장함수">내장함수</h3>
+
+<p>Eval, Load/Store, String, Datetime, Math 등의 내장 함수는
+<a href="https://www.tutorialspoint.com/apache_pig/apache_pig_eval_functions.htm">링크</a>로 대체 할게요.</p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+
+    
+    var logicalName = 'apache-piglatin.md';
+    var relPermalink = '\/bigdata\/apache-piglatin\/';
+    if (logicalName == "_index.md" || relPermalink == "/tags/" || relPermalink.includes("/tags/"))
+        return;
+        
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'hahafamilia';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1578043510"></script>
+    <script src="/js/perfect-scrollbar.min.js?1578043510"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1578043510"></script>
+    <script src="/js/jquery.sticky.js?1578043510"></script>
+    <script src="/js/featherlight.min.js?1578043510"></script>
+    <script src="/js/highlight.pack.js?1578043510"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1578043510"></script>
+    <script src="/js/learn.js?1578043510"></script>
+    <script src="/js/hugo-learn.js?1578043510"></script>
+
+    <link href="/mermaid/mermaid.css?1578043510" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1578043510"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

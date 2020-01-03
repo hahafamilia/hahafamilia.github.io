@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>스파크 완벽 가이드</title>
+      <link>https://hahafamilia.github.io/book/%EC%8A%A4%ED%8C%8C%ED%81%AC%EC%99%84%EB%B2%BD%EA%B0%80%EC%9D%B4%EB%93%9C/</link>
+      <pubDate>Fri, 04 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/book/%EC%8A%A4%ED%8C%8C%ED%81%AC%EC%99%84%EB%B2%BD%EA%B0%80%EC%9D%B4%EB%93%9C/</guid>
+      <description>스파크 창시자가 알려주는 스파크 활용과 배포, 유지 보수의 모든 것 오픈소스 클러스터 컴퓨팅 프레임워크인 스파크의 창시자가 쓴 스파크에 대한 종합 안내서입니다. 스파크 사용법부터 배포, 유지 보수하는 방법까지 포괄적으로 익힐 수 있습니다. 스파크 2의 개선점과 새로운 기능을 자세히 설명합니다. 구조화된 스파크 API의 특징과 공통 기능은 물론이고, 엔드 투 엔드 스트리밍 애플리케이션을 구축하는 새로운 고수준 API인 구조적 스트리밍을 함께 살펴봅니다. 이 책을 읽으면 스파크를 모니터링, 튜닝, 디버깅하는 데 필요한 기본 지식을 습득할 수 있습니다.</description>
+    </item>
+    
+    <item>
       <title>하이브 핵심 정리, Apache Hive Essentials</title>
       <link>https://hahafamilia.github.io/book/%ED%95%98%EC%9D%B4%EB%B8%8C-%ED%95%B5%EC%8B%AC%EC%A0%95%EB%A6%AC/</link>
       <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>

@@ -204,7 +204,7 @@ h4, h5, h6 {
 
 #body img[src~="mk-thumbnail"] {
   width:150px;
-  height:100px;
+  /*height:100px;*/
 }
 #body img[src~="mk-quarter"] {
   width:25%;
@@ -237,3 +237,4 @@ h4, h5, h6 {
   height: 8rem;
   cursor: pointer;
 }
+

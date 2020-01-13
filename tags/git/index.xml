@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on haha family&#39;s happy blog</title>
+    <link>https://hahafamilia.github.io/tags/git/</link>
+    <description>Recent content in git on haha family&#39;s happy blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://hahafamilia.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git</title>
+      <link>https://hahafamilia.github.io/howto/git/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/howto/git/</guid>
+      <description>Git 기본개념 파일상태  Committed : 커밋상태, git commit Modified : 수정상태 Staged : 커밋대기상태, git add  사용영역  Git directory(Local repository) : git init 으로 지정, .git 디렉토리가 생성 Working directory : branch 를 checkout 한 내용 Staging Area  환경설정  $GIT_HOME/[installed_path]/gitconfig : 시스템의 모든 사용자 설정, git config --system $USER_HOME : 특정 사용자 설정, git config --global .git/config : 특정 저장소 설정  Getting Started cd /your/project/home touch readme.</description>
+    </item>
+    
+  </channel>
+</rss>

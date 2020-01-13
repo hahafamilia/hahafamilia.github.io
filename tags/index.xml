@@ -6,10 +6,46 @@
     <description>Recent content in Tags on haha family&#39;s happy blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Mon, 23 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://hahafamilia.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2020</title>
+      <link>https://hahafamilia.github.io/tags/2020/</link>
+      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/tags/2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kafka</title>
+      <link>https://hahafamilia.github.io/tags/kafka/</link>
+      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/tags/kafka/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>troubleshooting</title>
+      <link>https://hahafamilia.github.io/tags/troubleshooting/</link>
+      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/tags/troubleshooting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>zookeeper</title>
+      <link>https://hahafamilia.github.io/tags/zookeeper/</link>
+      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/tags/zookeeper/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>2019</title>
@@ -75,11 +111,20 @@
     </item>
     
     <item>
-      <title>linux-command</title>
-      <link>https://hahafamilia.github.io/tags/linux-command/</link>
-      <pubDate>Tue, 03 Dec 2019 00:00:00 +0000</pubDate>
+      <title>cloudera-cdh</title>
+      <link>https://hahafamilia.github.io/tags/cloudera-cdh/</link>
+      <pubDate>Wed, 04 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/tags/linux-command/</guid>
+      <guid>https://hahafamilia.github.io/tags/cloudera-cdh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>configuration</title>
+      <link>https://hahafamilia.github.io/tags/configuration/</link>
+      <pubDate>Wed, 04 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/tags/configuration/</guid>
       <description></description>
     </item>
     
@@ -125,15 +170,6 @@
       <pubDate>Thu, 24 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://hahafamilia.github.io/tags/installation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>kafka</title>
-      <link>https://hahafamilia.github.io/tags/kafka/</link>
-      <pubDate>Tue, 15 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://hahafamilia.github.io/tags/kafka/</guid>
       <description></description>
     </item>
     
@@ -278,6 +314,15 @@
       <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://hahafamilia.github.io/tags/jekyll/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://hahafamilia.github.io/tags/git/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/tags/git/</guid>
       <description></description>
     </item>
     

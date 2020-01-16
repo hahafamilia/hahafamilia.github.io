@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>할아버지 클러스터의 엉망진창 HBase 문제해결</title>
+      <link>https://hahafamilia.github.io/bigdata/hbase-troubleshooting/</link>
+      <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/bigdata/hbase-troubleshooting/</guid>
+      <description>입사초기에 있었던 경험에 대해서 적어볼게요. 빅데이터 플랫폼 개발자 포지션으로 입사를 했어요. 면접과정에서 플랫폼에 장애가 빈번하다. 직원들이 많이 빠져나갔다는 얘기는 들었어요. 전 과거 4년간 Apache Hadoop 1.x 버전에서 2.x 버전으로 업그레이드를 진행하면서 운영한 경험이 있어요. 당시 많은 문제들을 경험했고 Hell의 문앞에도 가 보았기 때문에&amp;hellip; 다 해결해 주겠어! 라는 각오로 입사했어요. 막상 입사해보니 그나마 있던 담당자 마저 퇴사&amp;hellip; 뭔가 싸늘한 기운이 느껴집니다? 그래도 파이팅 해봅니다.
+클러스터는 Cloudera CDH 4, 2012년에 릴리즈 되었던 버전이예요.</description>
+    </item>
+    
+    <item>
       <title>클러스터 네트워크 일시 장애로 인한 Kafka/Zookeeper 문제해결</title>
       <link>https://hahafamilia.github.io/bigdata/kafka-zookeeper-troubleshooting/</link>
       <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
@@ -286,16 +296,6 @@ Environment  CentOS 7.6 Cloudera CDH 6.1.1 Cloudera Manager Kafka 2.0.0-cdh6.1.1
       <description>하둡 기반 대용량 데이터 저장, 관리의 핵심 솔루션 라는 부제를 가지고 있는 이 책에서는 HIVE(1.0.0) 에 대해서 설명하고, HQL, 성능, 보안, 다른 툴과의 연동에 대해서 설명하고 있어요.
 교보문고 링크
 출판  저자 : 다융 두, 김용환 옮김 출판사 : 에이콘출판 출간일 : 2017.02.28  목차  1장. 빅데이터와 하이브 소개 2장. 하이브 환경 설정 3장. 데이터 정의와 설명 4장. 데이터 선택과 범위 5장. 데이터 조작 6장. 데이터 집계와 샘플링 7장.</description>
-    </item>
-    
-    <item>
-      <title>할아버지 클러스터의 엉망진창 HBase 문제해결</title>
-      <link>https://hahafamilia.github.io/bigdata/hbase-troubleshooting/</link>
-      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://hahafamilia.github.io/bigdata/hbase-troubleshooting/</guid>
-      <description>빅데이터 플랫폼 개발자 포지션으로 입사를 했어요. 면접과정에서 플랫폼에 장애가 빈번하다. 직원들이 많이 빠져나갔다는 얘기는 들었어요. 전 과거 4년간 Apache Hadoop 1.x 버전에서 2.x 버전으로 업그레이드를 진행하면서 운영한 경험이 있어요. 당시 많은 문제들을 경험했고 Hell의 문앞에도 가 보았기 때문에&amp;hellip; 다 해결해 주겠어! 라는 각오로 입사했어요. 막상 입사해보니 그나마 있던 담당자 마저 퇴사&amp;hellip; 뭔가 싸늘한 기운이 느껴집니다? 그래도 파이팅 해봅니다.
-클러스터는 Cloudera CDH 4, 2012년에 릴리즈 되었던 버전이예요. 7년간 한번도 업그레이드를 안할 수 있는건지.</description>
     </item>
     
     <item>

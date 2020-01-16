@@ -34,24 +34,42 @@
   
   <url>
     <loc>https://hahafamilia.github.io/tags/2020/</loc>
-    <lastmod>2020-01-13T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>https://hahafamilia.github.io/tags/kafka/</loc>
-    <lastmod>2020-01-13T00:00:00+00:00</lastmod>
+    <loc>https://hahafamilia.github.io/tags/cloudera-cdh4/</loc>
+    <lastmod>2020-01-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://hahafamilia.github.io/tags/hbase/</loc>
+    <lastmod>2020-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
     <loc>https://hahafamilia.github.io/tags/</loc>
-    <lastmod>2020-01-13T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
     <loc>https://hahafamilia.github.io/tags/troubleshooting/</loc>
+    <lastmod>2020-01-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://hahafamilia.github.io/bigdata/hbase-troubleshooting/</loc>
+    <lastmod>2020-01-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://hahafamilia.github.io/tags/kafka/</loc>
     <lastmod>2020-01-13T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
@@ -377,24 +395,6 @@
   <url>
     <loc>https://hahafamilia.github.io/book/%ED%95%98%EC%9D%B4%EB%B8%8C-%ED%95%B5%EC%8B%AC%EC%A0%95%EB%A6%AC/</loc>
     <lastmod>2019-04-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://hahafamilia.github.io/tags/cloudera-cdh4/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://hahafamilia.github.io/tags/hbase/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://hahafamilia.github.io/bigdata/hbase-troubleshooting/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   

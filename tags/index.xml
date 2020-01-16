@@ -6,7 +6,7 @@
     <description>Recent content in Tags on haha family&#39;s happy blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Mon, 13 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://hahafamilia.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,36 @@
     <item>
       <title>2020</title>
       <link>https://hahafamilia.github.io/tags/2020/</link>
-      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://hahafamilia.github.io/tags/2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cloudera-cdh4</title>
+      <link>https://hahafamilia.github.io/tags/cloudera-cdh4/</link>
+      <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/tags/cloudera-cdh4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hbase</title>
+      <link>https://hahafamilia.github.io/tags/hbase/</link>
+      <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/tags/hbase/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>troubleshooting</title>
+      <link>https://hahafamilia.github.io/tags/troubleshooting/</link>
+      <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/tags/troubleshooting/</guid>
       <description></description>
     </item>
     
@@ -26,15 +53,6 @@
       <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://hahafamilia.github.io/tags/kafka/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>troubleshooting</title>
-      <link>https://hahafamilia.github.io/tags/troubleshooting/</link>
-      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://hahafamilia.github.io/tags/troubleshooting/</guid>
       <description></description>
     </item>
     
@@ -287,24 +305,6 @@
       <pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://hahafamilia.github.io/tags/markdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cloudera-cdh4</title>
-      <link>https://hahafamilia.github.io/tags/cloudera-cdh4/</link>
-      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://hahafamilia.github.io/tags/cloudera-cdh4/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hbase</title>
-      <link>https://hahafamilia.github.io/tags/hbase/</link>
-      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://hahafamilia.github.io/tags/hbase/</guid>
       <description></description>
     </item>
     

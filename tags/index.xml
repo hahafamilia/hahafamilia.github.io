@@ -111,11 +111,11 @@
     </item>
     
     <item>
-      <title>cloudera-cdh</title>
-      <link>https://hahafamilia.github.io/tags/cloudera-cdh/</link>
+      <title>cloudera-cdh6</title>
+      <link>https://hahafamilia.github.io/tags/cloudera-cdh6/</link>
       <pubDate>Wed, 04 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/tags/cloudera-cdh/</guid>
+      <guid>https://hahafamilia.github.io/tags/cloudera-cdh6/</guid>
       <description></description>
     </item>
     
@@ -152,15 +152,6 @@
       <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>https://hahafamilia.github.io/tags/ffmpeg-music-youtube/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cloudera</title>
-      <link>https://hahafamilia.github.io/tags/cloudera/</link>
-      <pubDate>Thu, 24 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://hahafamilia.github.io/tags/cloudera/</guid>
       <description></description>
     </item>
     
@@ -296,6 +287,24 @@
       <pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://hahafamilia.github.io/tags/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cloudera-cdh4</title>
+      <link>https://hahafamilia.github.io/tags/cloudera-cdh4/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/tags/cloudera-cdh4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hbase</title>
+      <link>https://hahafamilia.github.io/tags/hbase/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/tags/hbase/</guid>
       <description></description>
     </item>
     

@@ -129,7 +129,7 @@
   </url>
   
   <url>
-    <loc>https://hahafamilia.github.io/tags/cloudera-cdh/</loc>
+    <loc>https://hahafamilia.github.io/tags/cloudera-cdh6/</loc>
     <lastmod>2019-12-04T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
@@ -179,12 +179,6 @@
   <url>
     <loc>https://hahafamilia.github.io/bigdata/zeppelin-upgrade-0.8.2/</loc>
     <lastmod>2019-11-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://hahafamilia.github.io/tags/cloudera/</loc>
-    <lastmod>2019-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
@@ -383,6 +377,24 @@
   <url>
     <loc>https://hahafamilia.github.io/book/%ED%95%98%EC%9D%B4%EB%B8%8C-%ED%95%B5%EC%8B%AC%EC%A0%95%EB%A6%AC/</loc>
     <lastmod>2019-04-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://hahafamilia.github.io/tags/cloudera-cdh4/</loc>
+    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://hahafamilia.github.io/tags/hbase/</loc>
+    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://hahafamilia.github.io/bigdata/hbase-troubleshooting/</loc>
+    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   

@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>스파크 완벽 가이드 :: haha family&#39;s happy blog</title>
+    <title>할아버지 클러스터의 엉망진창 HBase 문제해결 :: haha family&#39;s happy blog</title>
 
     
     <link href="/css/nucleus.css?1579146819" rel="stylesheet">
@@ -55,7 +55,7 @@ if (!doNotTrack) {
 
 
   </head>
-  <body class="" data-url="/book/%EC%8A%A4%ED%8C%8C%ED%81%AC%EC%99%84%EB%B2%BD%EA%B0%80%EC%9D%B4%EB%93%9C/">
+  <body class="" data-url="/bigdata/hbase-troubleshooting/">
     
 <nav id="sidebar" class="">
 
@@ -94,7 +94,7 @@ if (!doNotTrack) {
   
     
     <li data-nav-id="/bigdata/" title="Bigdata" class="dd-item 
-        
+        parent
         
         
         ">
@@ -262,7 +262,7 @@ if (!doNotTrack) {
   
     
     <li data-nav-id="/book/" title="Book" class="dd-item 
-        parent
+        
         
         
         ">
@@ -408,7 +408,7 @@ if (!doNotTrack) {
             
           
           
-            <a href='/'>Developement and Life Blog</a> > <a href='/book/'>Book</a> > 스파크 완벽 가이드
+            <a href='/'>Developement and Life Blog</a> > <a href='/bigdata/'>Bigdata</a> > 할아버지 클러스터의 엉망진창 HBase 문제해결
           
          
           
@@ -427,10 +427,16 @@ if (!doNotTrack) {
 <ul>
 <li>
 <ul>
-<li><a href="#출간">출간</a></li>
-<li><a href="#목차">목차</a></li>
+<li><a href="#version">Version</a></li>
+<li><a href="#hbase-archive-파일">Hbase archive 파일</a></li>
+<li><a href="#hbase-meta-장애">HBase Meta 장애</a>
+<ul>
+<li><a href="#현상">현상</a></li>
+<li><a href="#원인">원인</a></li>
+<li><a href="#대응">대응</a></li>
 </ul></li>
-<li><a href="#개인평">개인평</a></li>
+<li><a href="#지나고나서">지나고나서</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -445,7 +451,13 @@ if (!doNotTrack) {
         
 <div class="tags">
 
-  <a class="tag-link" href="/tags/book">book</a>
+  <a class="tag-link" href="/tags/2020">2020</a>
+
+  <a class="tag-link" href="/tags/hbase">hbase</a>
+
+  <a class="tag-link" href="/tags/cloudera-cdh4">cloudera-cdh4</a>
+
+  <a class="tag-link" href="/tags/troubleshooting">troubleshooting</a>
 
 </div>
 
@@ -455,7 +467,7 @@ if (!doNotTrack) {
           
             <h1>
               
-              스파크 완벽 가이드
+              할아버지 클러스터의 엉망진창 HBase 문제해결
             </h1>
           
 
@@ -465,48 +477,103 @@ if (!doNotTrack) {
 
 
 
-<p><strong>스파크 창시자가 알려주는 스파크 활용과 배포, 유지 보수의 모든 것</strong>
-오픈소스 클러스터 컴퓨팅 프레임워크인 스파크의 창시자가 쓴 스파크에 대한 종합 안내서입니다. 스파크 사용법부터 배포, 유지 보수하는 방법까지 포괄적으로 익힐 수 있습니다. 스파크 2의 개선점과 새로운 기능을 자세히 설명합니다. 구조화된 스파크 API의 특징과 공통 기능은 물론이고, 엔드 투 엔드 스트리밍 애플리케이션을 구축하는 새로운 고수준 API인 구조적 스트리밍을 함께 살펴봅니다. 이 책을 읽으면 스파크를 모니터링, 튜닝, 디버깅하는 데 필요한 기본 지식을 습득할 수 있습니다. 나아가 스파크의 확장 머신러닝 라이브러리인 MLlib을 사용하는 방법과 시나리오를 익힐 수 있습니다. (교보문고 발췌)</p>
+<p>빅데이터 플랫폼 개발자 포지션으로 입사를 했어요.
+면접과정에서 플랫폼에 장애가 빈번하다. 직원들이 많이 빠져나갔다는 얘기는 들었어요.
+전 과거 4년간 Apache Hadoop 1.x 버전에서 2.x 버전으로 업그레이드를 진행하면서 운영한 경험이 있어요.
+당시 많은 문제들을 경험했고 Hell의 문앞에도 가 보았기 때문에&hellip; 다 해결해 주겠어! 라는 각오로 입사했어요.
+막상 입사해보니 그나마 있던 담당자 마저 퇴사&hellip; 뭔가 싸늘한 기운이 느껴집니다?
+그래도 파이팅 해봅니다.</p>
 
-<p><a href="https://kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;ejkGb=KOR&amp;barcode=9791162241288&amp;orderClick=JAj">교보문고 스파크 완벽 가이드</a></p>
+<p>클러스터는 Cloudera CDH 4, 2012년에 릴리즈 되었던 버전이예요. 7년간 한번도 업그레이드를 안할 수 있는건지..
+HBase 를 사용하고 있는데, 아이고&hellip; Region Server 버전이 0.92 버전, 0.94 버전 서로 다릅니다?
+Linux OS 는 Debian 그런데 지원이 종료된 버전이라서 더이상 신규 패키지 설치도 안된다고 하네요.
+지난 얘기고 여기에라도 하소연하니 기분이 좀 좋아지는데요? 하하! 그럼 어떤 일이 있었는지 ?좀 풀어 볼게요.</p>
 
-<p><img src="/images/book/2019-10-01-spark-the-definitive-guide.jpg# mk-quarter" alt="" /></p>
-
-<h3 id="출간">출간</h3>
-
-<ul>
-<li>저자 : 빌 체임버스, 마테이 자하리아</li>
-<li>옮김 : 우성한, 이영호, 강재원</li>
-<li>출판 : 한빛미디어, 2018.12.12</li>
-</ul>
-
-<h3 id="목차">목차</h3>
+<h3 id="version">Version</h3>
 
 <ul>
-<li>Part 1 빅데이터와 스파크 간단히 살펴보기</li>
-<li>Part 2 구조적 API: DataFrame, SQL, Dataset</li>
-<li>Part 3 저수준 API</li>
-<li>Part 4 운영용 애플리케이션</li>
-<li>Part 5 스트리밍</li>
-<li>Part 6 고급 분석과 머신러닝</li>
-<li>Part 7 에코시스템</li>
-<li>부록 A 스파크 설치 및 실행</li>
-<li>부록 B 더블린 원정대: 스파크 서밋 2017 더블린 참관기</li>
+<li>Cloudera CDH 4.0</li>
+<li>Hbase 0.92, 0.94</li>
+<li>Debian 6</li>
 </ul>
 
-<h2 id="개인평">개인평</h2>
+<h3 id="hbase-archive-파일">Hbase archive 파일</h3>
 
-<p>책의 전체적인 느낌은 상당히 깊이 조절이 잘 되어지고 잘 짜여져 있다는 느낌이예요.
-적절한 코드 예제와 어플리케이션 개발 및 상용 서비스 적용시에 챙겨야하는 포인트들을 집어주고 있어요.
-스파크를 배우는 개발자에게 스파크에 대한 인덱싱을 만들어 주어, 전체적인 그림을 그려주고
-각 인덱스별로 깊이 있는 학습을 할 수 있도록 해줘요.</p>
+<p>우선 급한불부터 꺼야겠어요. 클러스터의 용량이 비정상적으로 증가해요.
+아무도 이유는 모르고, 실제 저장되는 데이터의 두배 분량 증가하고 있었어요.</p>
 
-<p>개인적으로 &lsquo;고급분석와 머신러닝의 개요&rsquo; 파트는 전반적인 방법론들을 설명해 주고 있어서,
-머신러닝의 막연한 두려움 사라지게 해주는 가장 재미있게 봤던 파트예요.</p>
+<p>Hdfs 의 디렉토리 사용량을 조사해보니 <code>/hbase/.archive</code> 디렉토리 사용량이 서비스에서 저장된 데이터 사용량만큼 차지하고 있어요.
+원인을 알수 없어서 커뮤니티에 문의한 결과를 요약하자면</p>
 
-<p>기억하기위해서 머신러닝 파트만 요약해서 별도 포스팅 해볼 예정이예요.</p>
+<p><em>0.92 버전에서는 <code>.archive</code> 를 생성하지 않아? <code>.archive</code> 디렉토리 삭제를 시도해 볼 수는 있겠지만 나도 장담은 못해!</em><br />
+<a href="https://community.cloudera.com/t5/Support-Questions/I-want-to-reduce-disk-usage/m-p/80359#M54865">Cloudera Community Question</a></p>
 
-<p><strong>이 책을 추천해요</strong></p>
+<p>짜잔~ 어떻해야하죠?</p>
+
+<p>0.94버전의 Region Server가 범인일거예요. 0.94 버전의 Regison Server 제거하기 위해 디컨미션을 시도했지만, 실패!
+신중하게 <code>.archive</code> 디렉토리 삭제를 시도했어요. 서비스 잠시 중지하고 디렉토리 옮긴후 서비스 정상유무 확인하고 삭제.
+휴~ 다행히 성공이에요. 그런데 말입니다~ 또 생길거거든요.</p>
+
+<p>여기서 선택 필요해요. 이 문제를 해결하는데 시간을 쏟을 것인가? 신규 플랫폼 구축의 일정을 앞당길 것인가?
+신규 플랫폼 구축의 일정을 앞당기는 것으로 선택했어요.
+물론 인수인계도 제대로 못받았고, Crontab 에 있는 수십개의 Shell/Python 배치들을 Workflow 로 포팅도 해야하고,
+프로듀서 API 서버도 개발해야되고, Spark Streaming 어플리케이션도 개발해야 하지만&hellip;</p>
+
+<h3 id="hbase-meta-장애">HBase Meta 장애</h3>
+
+<p>업수파악하면서 신규 플랫폼 아키텍처 구상에 한창 열을 올리는 중에 하루는 <code>.archive</code> 디렉토리 삭제하고 HBase 도 정상인데 RabbitMQ 소비되지 않는 메시지들이 증가하기 시작해요.
+주변분들이 긴장하기 시작해요.
+<em>그때 그 장애야&hellip;  그래요? 원인이 뭐예요? 어떻게 해결했어요?
+그런 모르는데! 결국 내부 인력으로 해결안되서 외부인역으로 해결했거든</em></p>
+
+<h4 id="현상">현상</h4>
+
+<ul>
+<li>Hbase Shell 에서 테이블들이 안보여요.</li>
+<li>HBase Web UI 에서 Tables &gt; Catalog Table 에서 .META. 가 보이지 않아요.</li>
+<li>Region Servers 에서 각 Region Server 에서 numberOfOnlineRegions 값이 0으로 보여져요.</li>
+<li>Master 서버의 HDFS, HBASE 로그에 특이점은 발견되지 않았어요.</li>
+<li>Cloudera Manager 에서 보이는 서비스 상태는 모두 정상이예요.</li>
+</ul>
+
+<h4 id="원인">원인</h4>
+
+<p>커뮤니티를 보니 HBase Meta 장애가 자주 생기나 봅니다. 결국 정확한 원인을 밝히지는 못했어요.
+문제를 해결하고 나서 추측한 원인으로는
+HDFS 파일시스템에 일시적인 부하, 혹은 실패가 있었어요. HBase 는 Meta 를 로드하는데 실패했겠죠.
+서비스를 재시작하고 즉각적인 대응 조치가 들어가면서 클러스터는 더 바빠졌을거예요.
+아마 시간을 두고 지켜보면서 관찰했더라면 클러스터가 장애를 극복했을 것 같아요.</p>
+
+<h4 id="대응">대응</h4>
+
+<ol>
+<li>HBase 재시작하였지만 여전히 Meta 오류, RabbitMQ 컨슈머 어플리케이션 일시 중지.</li>
+<li>0.94 Region Server 강제 제거, HDFS 는 리플리케이션 복제에 들어가면서 클러스터는 더 바빠졌을거예요</li>
+<li>HDFS 내의 Meta 저장 경로의 디렉토리를 삭제 <code>/hbase/-ROOT-, /base/.META.</code></li>
+<li>Hbase 시작</li>
+<li><code>sudo -u hbase hbase hbck -repair</code> 메타 복구 명령 시도</li>
+<li>HBase Web UI 에서 Tables &gt; Catalog Table 에서 .META. 가 보이기 시작해요.</li>
+<li>하지만 <code>numberOfOnlineRegions</code> 값은 여전히 0이고 데이터 쿼리는 안되요.</li>
+<li>hbck 명령어의 추가 옵션 시도 <code>-fix, -fixMeta, -fixAssignments, -repairHoles, -repair</code></li>
+<li>이 과정에서 보여지는 HBase 로그에는 region server not online 등의 로그가 보여요.</li>
+<li>대응을 계속 해나가는 과정에서 hbck 수행시 tableDescriptor 목록에 일부의 테이블들이 나열되는게 보여요.</li>
+<li>해당 테이블들을 쿼리 해보니 쿼리가 정상적이예요. 그래서 다른 테이블들을 repair 할 수 있는 방법을 계속 찾아봤어요</li>
+<li>여기까지 대응하면서 HBase 가 알고 있는 Table Region Server 들의 HDFS 내 경로가 블록조정과정으로 실제 경로와 다르기 때문이라는 걸 알게 되었어요.</li>
+<li>계속된 대응으로 hbck 에서 2천개 가량의 inconsistence(불일치) 값이 드디어 repair 되었어요.</li>
+<li>RabbitMQ 컨슈머 어플리케이션 서비스 시작, Queue 가 소진되기 시작했어요.</li>
+<li>몇개의 inconsistence 가 repair 되지 않아 부가적인 문제가 발생해요.</li>
+<li>HDFS 의 로그에서 해당 테이블의 Region Server 파일을 지속적으로 Open 시도하는 것을 확인했어요.</li>
+<li>그러다 보니 파일의 블록이 위치한 혹은 위치한 것으로 알고있는(실제로는 유실) Hbase Region Server (노드) 가 too many open files 오류로 다운되요.</li>
+<li>HBase Web UI 에서 Table 목록의 상세 페이지를 확인하면 inconsistence Tavke Region Server 가 not deployed 로 표시되어 있고 Region Server 이름을 알 수 있어요</li>
+<li>HDFS 내의 파일경로 /hbase/<tableName/<region> 디렉토리를 강제로 삭제했어요.</li>
+<li>hbck 를 수행했고, inconstince 가 더이상 없는 것을 확인했어요. HDFS 에서도 더이상 Open 시도를 안해요.</li>
+</ol>
+
+<h3 id="지나고나서">지나고나서</h3>
+
+<p>문제를 경험하고 해결해 나가는 것도 소중한 경험이지만, 이런 문제는 안만나고 싶어요.
+아! 신규 플랫폼은요~ Shell 배치들 포팅하면서 몇번 토하긴 했지만, 아주 잘 구측되었어요.
+아키텍쳐 구상하면서 계속적으로 Best Practice 찾고 벤치마킹 자료 검토할 때는 의논할 동료 없이 혼자 하는게 너무 힘들더라구요.</p>
 
 
 <footer class=" footline" >
@@ -523,8 +590,8 @@ if (!doNotTrack) {
 (function() {
 
     
-    var logicalName = '스파크완벽가이드.md';
-    var relPermalink = '\/book\/%EC%8A%A4%ED%8C%8C%ED%81%AC%EC%99%84%EB%B2%BD%EA%B0%80%EC%9D%B4%EB%93%9C\/';
+    var logicalName = 'hbase-troubleshooting.md';
+    var relPermalink = '\/bigdata\/hbase-troubleshooting\/';
     if (logicalName == "_index.md" || relPermalink == "/tags/" || relPermalink.includes("/tags/"))
         return;
         
@@ -567,8 +634,6 @@ if (!doNotTrack) {
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -676,6 +741,9 @@ if (!doNotTrack) {
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -738,7 +806,6 @@ if (!doNotTrack) {
             
                 
                     
-                    
                 
                 
 
@@ -779,9 +846,6 @@ if (!doNotTrack) {
             
             
                 
-                    
-                        
-                        
                     
                 
                 

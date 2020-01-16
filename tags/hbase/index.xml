@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hbase on haha family&#39;s happy blog</title>
+    <link>https://hahafamilia.github.io/tags/hbase/</link>
+    <description>Recent content in hbase on haha family&#39;s happy blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 05 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://hahafamilia.github.io/tags/hbase/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>할아버지 클러스터의 엉망진창 HBase 문제해결</title>
+      <link>https://hahafamilia.github.io/bigdata/hbase-troubleshooting/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/bigdata/hbase-troubleshooting/</guid>
+      <description>빅데이터 플랫폼 개발자 포지션으로 입사를 했어요. 면접과정에서 플랫폼에 장애가 빈번하다. 직원들이 많이 빠져나갔다는 얘기는 들었어요. 전 과거 4년간 Apache Hadoop 1.x 버전에서 2.x 버전으로 업그레이드를 진행하면서 운영한 경험이 있어요. 당시 많은 문제들을 경험했고 Hell의 문앞에도 가 보았기 때문에&amp;hellip; 다 해결해 주겠어! 라는 각오로 입사했어요. 막상 입사해보니 그나마 있던 담당자 마저 퇴사&amp;hellip; 뭔가 싸늘한 기운이 느껴집니다? 그래도 파이팅 해봅니다.
+클러스터는 Cloudera CDH 4, 2012년에 릴리즈 되었던 버전이예요. 7년간 한번도 업그레이드를 안할 수 있는건지.</description>
+    </item>
+    
+  </channel>
+</rss>

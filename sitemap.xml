@@ -34,7 +34,31 @@
   
   <url>
     <loc>https://hahafamilia.github.io/tags/2020/</loc>
-    <lastmod>2020-01-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-22T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://hahafamilia.github.io/tags/book/</loc>
+    <lastmod>2020-01-22T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://hahafamilia.github.io/tags/</loc>
+    <lastmod>2020-01-22T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://hahafamilia.github.io/book/%EB%B3%B4%EB%8F%84%EC%84%80%ED%8D%BC%EC%9D%98%EB%8F%88/</loc>
+    <lastmod>2020-01-22T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://hahafamilia.github.io/book/%EC%9D%B4%EC%9B%83%EC%A7%91%EB%B0%B1%EB%A7%8C%EC%9E%A5%EC%9E%90-%EB%B3%80%ED%95%98%EC%A7%80%EC%95%8A%EB%8A%94%EB%B6%80%EC%9D%98%EB%B2%95%EC%B9%99/</loc>
+    <lastmod>2020-01-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
@@ -46,12 +70,6 @@
   
   <url>
     <loc>https://hahafamilia.github.io/tags/hbase/</loc>
-    <lastmod>2020-01-15T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://hahafamilia.github.io/tags/</loc>
     <lastmod>2020-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
@@ -221,12 +239,6 @@
   <url>
     <loc>https://hahafamilia.github.io/tags/kafka-manager/</loc>
     <lastmod>2019-10-15T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://hahafamilia.github.io/tags/book/</loc>
-    <lastmod>2019-10-04T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   

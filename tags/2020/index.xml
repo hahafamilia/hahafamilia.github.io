@@ -12,6 +12,17 @@
     
     
     <item>
+      <title>Presto 설치, PrestoDB, PrestoSQL</title>
+      <link>https://hahafamilia.github.io/bigdata/presto-installation/</link>
+      <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/bigdata/presto-installation/</guid>
+      <description>Cloudera CDH 위에서 Presto 엔진을 싱글 서버로 사용할 계획에 Presto 를 설치하려는데, 0.230 버전, 328 버전이 어떤걸 써야 할지 모르겠어요. 좀 더 알아보니 PrestoDB, PrestoSQL 두개로 나뉘는군요. Presto, PrestoDB, PrestoSQL 의 차이를 설명한 문서예요. 요약하자면 PrestoDB를 사용하라는 겁니다. * Facebook에서 Presto 오픈소스 프로젝트를 공개했고 이것이 PrestoDB(https://prestodb.io/) * Fracebook에서 3인의 개발자가 분사하여 만든 프로젝트가 PrestoSQL(https://prestosql.io/)
+Version  PrestoDB 0.230 CentOS Java8  Presto 설치 Download Link
+tar xvzf presto-server-0.230.tar.gz cd presto-server-0.</description>
+    </item>
+    
+    <item>
       <title>보도섀퍼의돈</title>
       <link>https://hahafamilia.github.io/book/%EB%B3%B4%EB%8F%84%EC%84%80%ED%8D%BC%EC%9D%98%EB%8F%88/</link>
       <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
@@ -63,6 +74,17 @@ Version  Cloudera CDH 6.1.1 Cloudera Kafka 2.11-2.0.0-cdh6.1.1  현상파악 Clo
 Version  Cloudera CDH 6.1 Oracl Java 1.8  YARN Turning YARN YARN 의 리소스 관련 설정의 기본 값 Default Memory Setting
 YARN 리소스 튜닝 방법 Turning YARN
 노드의 전체 가용 리소스에서 서비스 데몬들의 리소스 사용량을 제하고 리소스를 할당 해요. 튜닝 문서와는 다르게 Cloudera Manager 에서 각 호스트들의 리소스 사용량은 상이해요. 튜닝 문서와 Cloudera Manager &amp;gt; Host &amp;gt; Worker &amp;gt; Resource 리소스 사용량을 참고하여 Yarn 에 할당할 CPU, Memory 를 결정한 후, 아래의 프로퍼티에 값을 설정해요.</description>
+    </item>
+    
+    <item>
+      <title>Apache Hadoop 롤링 업그레이드 2.4.1 to 2.6.0</title>
+      <link>https://hahafamilia.github.io/bigdata/apache-hadoop-rollingupgrade-2.4-2.6/</link>
+      <pubDate>Sun, 01 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/bigdata/apache-hadoop-rollingupgrade-2.4-2.6/</guid>
+      <description>예전 하둡 플랫폼으로 10PB(2 peplica) 의 컨텐츠를 운영했던 경험이 있는데요. Apache Hadoop 1.x 버전에서 2.2 버전으로 서비스 중단 업그레이드, 2.2 버전에서 2.4 버전으로 2.6 버전으로 무중단 업그레이드를 진행했었습니다. Apache Hadoop 2.4.1 버전에서 2.6.0 버전으로 Rolling Upgrade 진행했을때의 문서가 남아 있네요. 내용이 잘 정리되어 있진 않지만, 당시 작성내용을 우선 옮겨 두려고 합니다.
+ 네임노드 /data 디렉토리 백업 관리용 쉘 종료
+/monitor/daemon_hdfs_status.sh	- 유지 /monitor/daemon_hdfs_balancer.sh	- 종료 /monitor/daemon_hdfs_namenode.sh	- 종료  2.6.0 설치(모든 노드에 설치하고, 환경설정을 이전버전과 동일하게 맞춥니다)</description>
     </item>
     
   </channel>

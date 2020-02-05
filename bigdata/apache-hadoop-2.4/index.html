@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.57.2" />
+    <meta name="description" content="hahafamilia blog">
+<meta name="author" content="hahafamilia">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Apache Hadoop 2.4 운영 :: haha family&#39;s happy blog</title>
+
+    
+    <link href="/css/nucleus.css?1580893645" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1580893645" rel="stylesheet">
+    <link href="/css/hybrid.css?1580893645" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1580893645" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1580893645" rel="stylesheet">
+    <link href="/css/auto-complete.css?1580893645" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1580893645" rel="stylesheet">
+    <link href="/css/theme.css?1580893645" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1580893645" rel="stylesheet">
+    
+      <link href="/css/theme-custom.css?1580893645" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1580893645"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-145448356-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+  </head>
+  <body class="" data-url="/bigdata/apache-hadoop-2.4/">
+    
+<nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header" onclick="window.location='https:\/\/hahafamilia.github.io\/';">
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1580893645"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1580893645"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/hahafamilia.github.io\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1580893645"></script>
+
+    
+  </div>
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/bigdata/" title="Bigdata" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/bigdata/">
+          <i class='fas fa-angle-right'></i> Bigdata
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/python/" title="Python" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/python/">
+          <i class='fas fa-angle-right'></i> Python
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/howto/" title="HowTo" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/howto/">
+          <i class='fas fa-angle-right'></i> HowTo
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/book/" title="Book" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/book/">
+          <i class='fas fa-angle-right'></i> Book
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/life/" title="Life" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/life/">
+          <i class='fas fa-angle-right'></i> Life
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/hahafamilia"><i class='fab fa-github'></i> Github</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://hahafamilia.github.io/about"><i class='fas fa-address-card'></i> About</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://tjstory.tistory.com"><i class='fas fa-blog'></i> 이전 블로그</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://hahafamilia.github.io/tags"><i class='fas fa-tags'></i> Tags</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Happy <i class="fas fa-heart"></i> hahaFamily</p>
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Developement and Life Blog</a> > <a href='/bigdata/'>Bigdata</a> > Apache Hadoop 2.4 운영
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#version">Version</a></li>
+<li><a href="#cluster-구성">Cluster 구성</a>
+<ul>
+<li><a href="#nodes">Nodes</a></li>
+<li><a href="#namenode">Namenode</a></li>
+<li><a href="#journalnode">Journalnode</a></li>
+<li><a href="#주키퍼-노드">주키퍼 노드</a></li>
+<li><a href="#데이터-노드">데이터 노드</a></li>
+</ul></li>
+<li><a href="#관리-운영">관리 / 운영</a>
+<ul>
+<li><a href="#데몬-시작-종료">데몬 시작/종료</a></li>
+<li><a href="#하둡-명령어">하둡 명령어</a></li>
+<li><a href="#namenode-ha">Namenode HA</a></li>
+<li><a href="#체크포인팅">체크포인팅</a></li>
+<li><a href="#밸런싱">밸런싱</a></li>
+<li><a href="#계획된-데이터-노드-제거">계획된 데이터 노드 제거</a></li>
+<li><a href="#네트워크-토폴로지">네트워크 토폴로지</a></li>
+<li><a href="#디스크-손상">디스크 손상</a></li>
+<li><a href="#블록이름으로-파일-찾기">블록이름으로 파일 찾기</a></li>
+</ul></li>
+<li><a href="#장애-복구-시나리오">장애/복구 시나리오</a>
+<ul>
+<li><a href="#언더-커럽트-오버-블록-찾기">언더/커럽트/오버 블록 찾기</a></li>
+<li><a href="#커럽트-블록-찾기">커럽트 블록 찾기</a></li>
+<li><a href="#namenode-디스크-손상">Namenode 디스크 손상</a></li>
+</ul></li>
+<li><a href="#관리자용-쉘-프로그램">관리자용 쉘 프로그램</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+<div class="tags">
+
+  <a class="tag-link" href="/tags/2014">2014</a>
+
+</div>
+
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Apache Hadoop 2.4 운영
+            </h1>
+          
+
+        
+
+
+
+
+
+<p>과거 하둡 플랫폼 운영 당시 메모 형식으로 작성하였던 문서들을 옮겨 놓았어요.
+당시 운영했던 플랫폼의 구성들과 운영을 위한 가이드 들을 작성했었네요.
+Hadoop CLI Command 에 익숙하지 않은 운영/관리자를 위해 Shell 들도 개발해 놓았고,
+나중의 담당자를 위한 배려도 담겨있네요.</p>
+
+<h3 id="version">Version</h3>
+
+<ul>
+<li>Apache Hadoop 2.4.1</li>
+</ul>
+
+<h3 id="cluster-구성">Cluster 구성</h3>
+
+<ul>
+<li>Replication : 2</li>
+<li>Block size : 128M</li>
+<li>Public / Private Neetwork</li>
+<li>클러스터 상태 확인
+
+<ul>
+<li>http://[namenode-ip]:40070/dfsclusterhealth.jsp</li>
+<li>http://[namenode-ip]:40070/dfshealth.jsp</li>
+</ul></li>
+</ul>
+
+<h4 id="nodes">Nodes</h4>
+
+<ul>
+<li>Namenode * 2Ea</li>
+<li>Journalnode * 3Ea</li>
+<li>ZKFC * 3Ea</li>
+<li>Datanode</li>
+</ul>
+
+<h4 id="namenode">Namenode</h4>
+
+<p>하둡 메타데이터 저장/관리 노드 , Namenode, DFSZKFailoverController 데몬 실행</p>
+
+<ul>
+<li>Namenode : 네임노드 데몬, 하둡 메타 관리</li>
+<li>DFSZKFailoverController : 주키퍼 클라이언트, 네임노드 헬스 체크, HA 컨트롤</li>
+<li>관리/운영 배치(추가 개발)
+
+<ul>
+<li>/monitor/daemon_hdfs_status.sh</li>
+<li>/monitor/daemon_hdfs_balancer.sh</li>
+<li>/monitor/daemon_hdfs_namenode.sh</li>
+<li>/monitor/daemon_hdfs_snapshot.sh</li>
+<li>/monitor/daemon_meta_backup.sh</li>
+<li>/monitor/daemon_del_meta.php</li>
+</ul></li>
+<li>사용포트
+
+<ul>
+<li>40000 : 네임노드 ipc 포트, 기본 주소 포트</li>
+<li>40070 : 네임노드 http 사용 포트</li>
+</ul></li>
+</ul>
+
+<h4 id="journalnode">Journalnode</h4>
+
+<p>하둡 HA 구성을 위해 버전2 에서 등장한 노드로, 파일 추가/삭제 등으로 인한 메타 데이터 변경시 다수의 저널노드중 과반수 이상의 저널노드가 commit 되었을경우만 반영됨.
+active 노드만 쓰기 권한을 소유하고 standby 노드는 commit 된 로그를 주기적으로 동기화함.</p>
+
+<p>클러스터의 HA 구성에는 1개 이상의 홀수개 저널노드를 설치하여 안정성 확보 가능.
+과반수 이하의 저널노드 장애는 서비스에 영향을 주진 않지만 과반수 이상의 장애는 서비스 장애로 이어짐으로 모니터링이 필요함.</p>
+
+<ul>
+<li>실행 데몬명 : JournalNode</li>
+<li>사용포트 : 8485</li>
+</ul>
+
+<h4 id="주키퍼-노드">주키퍼 노드</h4>
+
+<p>하둡 HA 구성을 위해 버전 2에서 등장한 노드로 네임노드의 DFSZKFailoverController 데몬은 주키퍼 노드와의 세션 유지를 통해 네임노드의 상태를 체크하여 네임노드의 active/standby 결정.</p>
+
+<p>클러스터의 HA 구성에는 1개 이상의 홀수개 주키퍼노드를 설치하여 안정성 확보 가능.
+주키퍼 노드의 장애는 서비스에 영향을 주진 않지만, 네임노드 장애가 동시에 발생하여 HA 전환이 필요할경우 standby-standby 상태에 빠질 수 있으니 모니터링이 필요함.</p>
+
+<ul>
+<li>실행 데몬명 : QuorumPeerMain</li>
+<li>사용포트 : 2181</li>
+</ul>
+
+<h4 id="데이터-노드">데이터 노드</h4>
+
+<ul>
+<li>데이터 저장 경로 : $HADOOP_HOME/conf/hdfs-site.xml 파일의 <code>dfs.data.dir</code></li>
+<li>실행 데몬명 : DataNode</li>
+<li>사용포트
+
+<ul>
+<li>40010 : 데이터노드 데이터 전송 포트</li>
+<li>40020 : 데이터노드 ipc 포트</li>
+<li>40075 : 데이터노드 http 포트</li>
+</ul></li>
+</ul>
+
+<h3 id="관리-운영">관리 / 운영</h3>
+
+<h4 id="데몬-시작-종료">데몬 시작/종료</h4>
+
+<ul>
+<li>주키퍼노드
+
+<ul>
+<li><code>zookeeper/bin/zkServer.sh [ start | stop ]</code></li>
+</ul></li>
+<li>주키퍼 노드를 제외한 노드
+
+<ul>
+<li><code>hadoop/sbin/hadoop-daemon.sh [start | stop ] [ namenode | zkfc | journalnode | datanode ]</code></li>
+</ul></li>
+</ul>
+
+<h4 id="하둡-명령어">하둡 명령어</h4>
+
+<ul>
+<li><code>bin/hdfs</code> : 하둡 버전 1.x 의 “bin/hadoop” 명령어를 포함하는 명령어, 자세한 설명은
+<a href="http://hadoop.apache.org/docs/stable/">아파치 홈페이지</a> 에서 확인 가능함.</li>
+</ul>
+
+<h4 id="namenode-ha">Namenode HA</h4>
+
+<ul>
+<li>하둡 HA는 버전 2 에서 추가된 기능으로 하둡 자체적으로 지원한다.</li>
+<li>namespace federation 으로 구성된 Cluster 개념 , namenode 는 HA 구성된 2개의 네임노드를 말한다.</li>
+<li>namespace, namenode 이름은 서버의 [하둡홈]/conf/hdfs-site.xml 에서 확인 가능하다.</li>
+<li>현재 namenode의 상태 확인
+
+<ul>
+<li>[namenode]/hadoop/bin/hdfs haadmin –ns [namespace] –getServiceState [namenode]</li>
+<li>ex) bin/hdfs haadmin -ns ns01 -getServiceState ns01nn1</li>
+</ul></li>
+<li>HA 전환
+
+<ul>
+<li>[namenode]/hadoop/bin/hdfs haadmin –ns [namespace] –failover [active nn] [standby nn]</li>
+<li>ex) bin/hdfs haadmin –ns ns01 –failover ns01nn1 ns01nn2</li>
+</ul></li>
+</ul>
+
+<h4 id="체크포인팅">체크포인팅</h4>
+
+<p>체크포인팅 작업은 editslog 의 내용을 fsimage 로 머지 시키는 작업으로 하둡 버전 1 에서는 세컨더리 네임노드가 당당하였는데, 하둡 버전 2 에서는 세컨더리 네임노드는 사리지고 HA 구성된 standby 노드에서 역할을 수행함.</p>
+
+<h4 id="밸런싱">밸런싱</h4>
+
+<ul>
+<li>데이터노드간 디스크 사용량 이 불균형 할 경우 노드간 블록을 이동시켜 균형화 하는 작업</li>
+<li>밸런싱 수행중에 데이터노드의 시작/종료/추가/제거 가 발생할경우 밸런싱을 재시작 하여야 한다.</li>
+<li>threshold : 밸런싱 작업을 수행할 노드 선정 기준값</li>
+<li>threshold가 3일경우, 클러스터의 전체 용량 퍼센트 전후로 -3, +3 까지 밸런싱 작업을 수행
+
+<ul>
+<li>ex) 평균 사용량 85%, A 노드 사용량 83% : 밸런싱 미대상</li>
+<li>ex) 평균 사용량 85%, A 노드 사용량 80% : 밸런싱 대상</li>
+</ul></li>
+</ul>
+
+<h4 id="계획된-데이터-노드-제거">계획된 데이터 노드 제거</h4>
+
+<ul>
+<li>conf/dfs.exclude 파일에 제거할 데이터노드의 address 추가</li>
+<li><code>/manager/cmd_refreshNodes.sh</code> 실행</li>
+<li>클러스터 정보 웹페이지(dfshealth.jsp) 혹은 하둡 리포트(/manager/cmd_report.sh) 에서 제거할 데이터노드의 상태가 <code>Decommissioning Nodes</code> 로 변경되었는지 확인</li>
+<li>제거 대상이 된 데이터 노드의 블록들은 시간을 가지고 다른 노드로 이동되어진다.</li>
+<li>블록 이동이 완료되면 대상 노드는 DeadNode 로 상태가 변경된다.</li>
+<li>conf/dfs.exclude 에서 대상 노드 address를 제거한다.</li>
+</ul>
+
+<h4 id="네트워크-토폴로지">네트워크 토폴로지</h4>
+
+<ul>
+<li>하둡으로 신규 파일이 업로드시에 1개의 리플리카는 자신의 데이터노드에 위치하고 그외의 리플리카는 자신 외의 노드에 위치시키는데 이러한 리플리카를 어디에 위치시킬 것인지에 대한 규칙.</li>
+<li>hadoop/topology.sh, hadoop/topology.data   data 파일에 토폴로지 규칙을 설정할 수 있다.</li>
+<li>토폴로지로 한번 등록된 서버는 토폴로지 변경이 불가능하다.</li>
+</ul>
+
+<h4 id="디스크-손상">디스크 손상</h4>
+
+<ul>
+<li>데이터노드가 사용하는 디스크 손상시 데몬은 다운된다. 이를 막기 위해 손상된 디스크를 몇 개까지 허용할 것인지에 대한 설정이 필요한다</li>
+<li>hdfs-site.xml 파일의 <code>dfs.datanode.failed.volumes.tolerated</code> 에 설정된 개수</li>
+</ul>
+
+<h4 id="블록이름으로-파일-찾기">블록이름으로 파일 찾기</h4>
+
+<p>블록명으로 하둡의 파일을 찾을경우 최근 파일일 경우 네임노드 로그를 통해 찾을 수 있다.</p>
+
+<ul>
+<li>네임노드는 파일 업로드 시에 파일에 블록을 할당하는 로그를 남긴다
+
+<ul>
+<li>ex) BLOCK* NameSystem.allocateBlock: /hdfs/path/filename. blk_-3299320753949086868_7367814</li>
+</ul></li>
+<li>로그에서 블록명을 검색하면 하둡 파일 명을 찾을 수 있다.</li>
+<li>최근에 업로드된 파일이 아닐 경우, 모든 메타 정보를 체크해야 한다. 이러한 작업은 수분의 시간이 소요되고, 시스템의 부하를 줄 수 있으므로 중복 혹은 반복 실행은 피해야 한다.</li>
+<li>네임노드에서 /manager/cmd_fsck.sh  /hdfs/path –files –blocks &gt; fsck-temp.log  를 수행하여 모든 파일의 블록 정보를 파일로 기록한다.</li>
+</ul>
+
+<h3 id="장애-복구-시나리오">장애/복구 시나리오</h3>
+
+<h4 id="언더-커럽트-오버-블록-찾기">언더/커럽트/오버 블록 찾기</h4>
+
+<ul>
+<li>기본적인 손상/언더/오버 블록의 정보는 하둡 리포트를 통해 확인할 수 있다.
+
+<ul>
+<li>ex) 네임노드의 /manager/cmd_report.sh</li>
+</ul></li>
+<li>모든 메타를 체크하여 손상/언더/오버 블록의 정보를 확인한다.
+
+<ul>
+<li>ex) /manager/cmd_fsck.sh / &gt; fsck-tmp.log</li>
+</ul></li>
+<li>언더/손상 블록의 정보가 보이며 결과의 맨 마지막에 클러스터 전체에 대한 요약 정보가 출력된다.</li>
+</ul>
+
+<h4 id="커럽트-블록-찾기">커럽트 블록 찾기</h4>
+
+<ul>
+<li>커럽트 파일이 있을경우 <code>/manager/cmd_findCorrupt.sh</code> 쉘을 수행하면 커럽트 파일 목록을 찾을 수 있다. 이러한 작업은 수분의 시간이 소요되고, 시스템의 부하를 줄 수 있으므로 중복 혹은 반복 실행은 피해야 한다.</li>
+</ul>
+
+<h4 id="namenode-디스크-손상">Namenode 디스크 손상</h4>
+
+<p>Namenode 디스크가 손상되었을때 HA 전환되어 서비스 장애가 발생하진 않습니다.
+디스크 손상이 해결되었을 경우 각각의 노드를 복구할 필요가 있습니다.</p>
+
+<ul>
+<li>Namenode 복구
+
+<ul>
+<li><code>bin/hdfs namenode –bootstrapStandby</code> namenode disk로 fsimage 파일외의 파일들이 복사 된다.</li>
+</ul></li>
+
+<li><p>Journalnode 복구</p>
+
+<ul>
+<li>다른 저널노드의 /journal/data/path 디렉토를 복사해 온다.</li>
+</ul></li>
+
+<li><p>휴지통/스냅샷 파일 복구</p>
+
+<ul>
+<li>삭제된 파일은 설정된 보관기간동안 휴지통에 보관되어지며, 휴지통의 파일은 복구가 가능합니다.</li>
+<li>휴지통의 경로는 /user/[하둡사용자]/.Trash</li>
+<li>휴지통에서도 삭제된 파일의 경우 스냅샷이 남아있을 경우 복구가 가능</li>
+<li>스냅샷의 경로는 /user/[스냅샷대상디렉토리]/.snapshot</li>
+</ul></li>
+</ul>
+
+<h3 id="관리자용-쉘-프로그램">관리자용 쉘 프로그램</h3>
+
+<p>Hadoop CLI Command 에 익숙하지 않은 운영/관리자를 위해 개발</p>
+
+<ul>
+<li><code>/manager/cmd_fsck.sh</code> : 하둡내 파일/블록/노드 등의 정보 확인용 쉘, 관리자 실행권한.
+대상 디렉토리가 많거나, 표시하는 정보가 자세할수록 시스템 부하 유발됨
+
+<ul>
+<li>ex) ./cmd_fsck.sh /hdfs/path/</li>
+<li>ex) ./cmd_fsck.sh /hdfs/path/filename –files –blocks -locations</li>
+</ul></li>
+<li><code>/manager/cmd_get.sh</code> : 하둡 파일 읽기
+
+<ul>
+<li>ex) ./cmd_get.sh /hdfs/path/filename /local/path/filename</li>
+</ul></li>
+<li><code>/manager/cmd_ls.sh</code> : 하둡 파일 리스트( 리눅스 ls)
+
+<ul>
+<li>ex) ./cmd_ls /hdfs/path/filename</li>
+</ul></li>
+<li><code>/manager/cmd_metasave.sh</code> : 리플리케이션 대기 파일/블록 정보를 파일로 저장
+
+<ul>
+<li>ex ) ./cmd_metasave.sh ms0306.log</li>
+</ul></li>
+<li><code>/manager/cmd_refreshNodes.sh</code> : 계획된 데이터노드 삭제시 노드 정보 갱신</li>
+<li><code>/manager/cmd_report.sh</code> : 하둡 현재 상태에 대한 관리자 리포트 출력, 루트 실행권한</li>
+<li><code>/manager/cmd_safemode.sh</code> : 하둡 읽기전용 ON/OFF
+
+<ul>
+<li>ex) ./cmd_safemode.sh enter</li>
+<li>ex) ./cmd_safemode.sh leave</li>
+</ul></li>
+<li><code>/manager/cmd_setBalancerBandwidth.sh</code> : 밸런싱 작업중 사용할 대역폭, 바이트,
+설정된 바이트 * 10 만큼의 대역폭 사용
+
+<ul>
+<li>ex) ./cmd_setBalancerBandwidth.sh 52428800</li>
+</ul></li>
+<li><code>/manager/cmd_startBalancer.sh</code> : 밸런싱 시작</li>
+<li><code>/manager/cmd_stopBalancer.sh</code> : 밸런싱 중지</li>
+<li><code>/monitor/daemon_del_meta.sh</code> : 24H 이전 백업메타파일 삭제</li>
+<li><code>/monitor/daemon_meta_backup.sh</code> : 네임노드 메타데이터 압축/백업, 매 1시간</li>
+<li><code>/monitor/daemon_hdfs_balancer.sh</code> : 주기적인 밸런싱 시작, 매 1시간</li>
+<li><code>/monitor/daemon_hdfs_status.sh</code> : 하둡 정보 리포트, 매 15분</li>
+<li><code>/monitor/daemon_hdfs_namenode.sh</code> : 하둡2 namenode 데몬 다운시 재시작</li>
+<li><code>[datanode]/manager/start_khdfs.sh</code> [local ip] : 데이터노드 시작</li>
+<li><code>[datanode]/manager/stop_khdfs.sh</code> : 데이터노드 중지</li>
+<li><code>[datanode]/manager/set_loglevel.sh</code> [local ip] : 데이터노드 로그레벨 WARN 설정</li>
+</ul>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+
+    
+    var logicalName = 'apache-hadoop-2.4.md';
+    var relPermalink = '\/bigdata\/apache-hadoop-2.4\/';
+    if (logicalName == "_index.md" || relPermalink == "/tags/" || relPermalink.includes("/tags/"))
+        return;
+        
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'hahafamilia';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1580893645"></script>
+    <script src="/js/perfect-scrollbar.min.js?1580893645"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1580893645"></script>
+    <script src="/js/jquery.sticky.js?1580893645"></script>
+    <script src="/js/featherlight.min.js?1580893645"></script>
+    <script src="/js/highlight.pack.js?1580893645"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1580893645"></script>
+    <script src="/js/learn.js?1580893645"></script>
+    <script src="/js/hugo-learn.js?1580893645"></script>
+
+    <link href="/mermaid/mermaid.css?1580893645" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1580893645"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

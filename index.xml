@@ -12,6 +12,17 @@
     
     
     <item>
+      <title>Presto 설치, PrestoDB, PrestoSQL</title>
+      <link>https://hahafamilia.github.io/bigdata/presto-installation/</link>
+      <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/bigdata/presto-installation/</guid>
+      <description>Cloudera CDH 위에서 Presto 엔진을 싱글 서버로 사용할 계획에 Presto 를 설치하려는데, 0.230 버전, 328 버전이 어떤걸 써야 할지 모르겠어요. 좀 더 알아보니 PrestoDB, PrestoSQL 두개로 나뉘는군요. Presto, PrestoDB, PrestoSQL 의 차이를 설명한 문서예요. 요약하자면 PrestoDB를 사용하라는 겁니다. * Facebook에서 Presto 오픈소스 프로젝트를 공개했고 이것이 PrestoDB(https://prestodb.io/) * Fracebook에서 3인의 개발자가 분사하여 만든 프로젝트가 PrestoSQL(https://prestosql.io/)
+Version  PrestoDB 0.230 CentOS Java8  Presto 설치 Download Link
+tar xvzf presto-server-0.230.tar.gz cd presto-server-0.</description>
+    </item>
+    
+    <item>
       <title>보도섀퍼의돈</title>
       <link>https://hahafamilia.github.io/book/%EB%B3%B4%EB%8F%84%EC%84%80%ED%8D%BC%EC%9D%98%EB%8F%88/</link>
       <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
@@ -72,6 +83,17 @@ Version  Spark 2.4.0 Scala 2.11 Hadoop 2.7 Java 8 Window  Spark, Hadoop 설치 S
       <description>Apache Pig Yahoo 에서 공개한 걸로 알고 있어요. 최근 버전은 Hive on Spark 처럼 Pig on Spark 으로 사용하는군요. 새로운 Flow 코드 작성시 잘 사용하진 않지만, SQL 사용시 함수와 프로시져를 만들어야 하는 경우가 있는데, 그런 경우 Pig 를 사용하고 있어요. ASIS Flow 에서 사용되어지고 있는 코드 들이 있어서 간단히 문법에 대해 정리 해봐요.
 Pig Latin Basic 연산자 및 명령어들은 대소문자를 구분하지만, 별칭 및 함수 이름은 대소문자를 구분해요.
 Data types int, long, float, double, chararray, Bytearray, Boolean, Datetime, Biginteger, Bigdecimal, Tuple, Bag(collection of tuples), Map</description>
+    </item>
+    
+    <item>
+      <title>고급 분석과 머신러닝 개요</title>
+      <link>https://hahafamilia.github.io/bigdata/machine-learning-spark-guide/</link>
+      <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/bigdata/machine-learning-spark-guide/</guid>
+      <description>스파크 완벽가이드 Part 6 고급 분석과 머신러닝 내용을 요약했어요.
+Part 6 24장 고급 분석과 머신러닝 24장 고급 분석과 머신러닝 개요 머신러닝 머신러닝의 방법론들은 예측과 묶음
+ 지도학습 : 레이블을 예측하는 분류/회귀 문제를 포함한 추천엔진 : 사용자의 과거 행동에 기반하는 비지도 : 군집 분석, 이상징후 탐지, 토픽 모델링과 같이 데이터 구조 파악을 위한 학습 그래프 학습 : 소셜 네트워크 상에서 유의미한 패턴을 찾는  지도학습 답(label, 종속변수)이 주어지고 답을 찾는 학습</description>
     </item>
     
     <item>
@@ -373,6 +395,38 @@ Environment  CentOS 7.6 Cloudera CDH 6.1.1 Cloudera Manager Kafka 2.0.0-cdh6.1.1
       <description>하둡 에코시스템을 활용한 빅데이터 처리 라는 부제을 가지고 있는 이 책에서는 HDFS/HBASE 스키마 디자인, 데이터 파이프라인, 맵리듀스, 스파크, 피크, 크런치, 하이브, ETL, 스트리밍, 근접 실시간, 데이터 웨어하우스, 사례연구 등 데이터의 수집에서 분석까지의 빅데이터 아키텍처에 대해 설명하고 있어요.
 교보문고 링크
 출간  저자 : 마크 그로버, 테드 멀래스커, 조나단 사이드먼, 그웬 사피라 옮김 : 정동식, 홍다경, 우지현 출판사 : 비제이퍼블릭 출간일 : 2016.05.30  목차  1부. 하둡 애플리케이션의 아키텍처 고려사항  1장.</description>
+    </item>
+    
+    <item>
+      <title>Apache Hadoop 롤링 업그레이드 2.4.1 to 2.6.0</title>
+      <link>https://hahafamilia.github.io/bigdata/apache-hadoop-rollingupgrade-2.4-2.6/</link>
+      <pubDate>Sun, 01 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/bigdata/apache-hadoop-rollingupgrade-2.4-2.6/</guid>
+      <description>예전 하둡 플랫폼으로 10PB(2 peplica) 의 컨텐츠를 운영했던 경험이 있는데요. Apache Hadoop 1.x 버전에서 2.2 버전으로 서비스 중단 업그레이드, 2.2 버전에서 2.4 버전으로 2.6 버전으로 무중단 업그레이드를 진행했었습니다. Apache Hadoop 2.4.1 버전에서 2.6.0 버전으로 Rolling Upgrade 진행했을때의 문서가 남아 있네요. 내용이 잘 정리되어 있진 않지만, 당시 작성내용을 우선 옮겨 두려고 합니다.
+ 네임노드 /data 디렉토리 백업 관리용 쉘 종료
+/monitor/daemon_hdfs_status.sh	- 유지 /monitor/daemon_hdfs_balancer.sh	- 종료 /monitor/daemon_hdfs_namenode.sh	- 종료  2.6.0 설치(모든 노드에 설치하고, 환경설정을 이전버전과 동일하게 맞춥니다)</description>
+    </item>
+    
+    <item>
+      <title>Apache Hadoop 2.4 운영</title>
+      <link>https://hahafamilia.github.io/bigdata/apache-hadoop-2.4/</link>
+      <pubDate>Sun, 01 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/bigdata/apache-hadoop-2.4/</guid>
+      <description>과거 하둡 플랫폼 운영 당시 메모 형식으로 작성하였던 문서들을 옮겨 놓았어요. 당시 운영했던 플랫폼의 구성들과 운영을 위한 가이드 들을 작성했었네요. Hadoop CLI Command 에 익숙하지 않은 운영/관리자를 위해 Shell 들도 개발해 놓았고, 나중의 담당자를 위한 배려도 담겨있네요.
+Version  Apache Hadoop 2.4.1  Cluster 구성  Replication : 2 Block size : 128M Public / Private Neetwork 클러스터 상태 확인  http://[namenode-ip]:40070/dfsclusterhealth.jsp http://[namenode-ip]:40070/dfshealth.jsp   Nodes  Namenode * 2Ea Journalnode * 3Ea ZKFC * 3Ea Datanode  Namenode 하둡 메타데이터 저장/관리 노드 , Namenode, DFSZKFailoverController 데몬 실행</description>
+    </item>
+    
+    <item>
+      <title>Apache Hadoop 2.2 운영</title>
+      <link>https://hahafamilia.github.io/bigdata/apache-hadoop-2.2/</link>
+      <pubDate>Sat, 01 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://hahafamilia.github.io/bigdata/apache-hadoop-2.2/</guid>
+      <description>과거 하둡 플랫폼 운영당시 메모 형식으로 작성하였던 문서들을 옮겨 놓았어요. 내용이 잘 정리되어 있진 않아도 다시 읽어보니 하둡 1.X 버전으로 플랫폼 운영중에 하둡 2.X 버전으로 업그레이드 하면서 테스트했던 내용들을 메모 했었네요. Federation, HA, fencing, Snapshot, Journalnode, Datanode 성능 등을 테스트 했었군요.
+Federation 에 Namenode 추가 namenode01-02 서버가 HA 구성되어 있고 Federation 구성되어있을경우 namenode03-04 를 추가합니다.
+ namenode03, namenode04 에서 core-site.xml hdfs-site.xml namespace 관련 설정을 추가 namenode03 의 네임노드를 기존 cluster id 로 포맷, bin/hdfs namenode -format -clusterId [clusterID] namespace의 zookeeper 초기화, namenode03 의 zkfc 시작</description>
     </item>
     
   </channel>

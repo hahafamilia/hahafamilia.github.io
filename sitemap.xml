@@ -39,7 +39,25 @@
   </url>
   
   <url>
+    <loc>https://hahafamilia.github.io/tags/bigdata/</loc>
+    <lastmod>2020-01-22T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
     <loc>https://hahafamilia.github.io/tags/book/</loc>
+    <lastmod>2020-01-22T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://hahafamilia.github.io/tags/presto/</loc>
+    <lastmod>2020-01-22T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://hahafamilia.github.io/bigdata/presto-installation/</loc>
     <lastmod>2020-01-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
@@ -153,8 +171,8 @@
   </url>
   
   <url>
-    <loc>https://hahafamilia.github.io/tags/bigdata/</loc>
-    <lastmod>2019-12-19T00:00:00+00:00</lastmod>
+    <loc>https://hahafamilia.github.io/bigdata/machine-learning-spark-guide/</loc>
+    <lastmod>2019-12-17T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
@@ -455,6 +473,30 @@
   <url>
     <loc>https://hahafamilia.github.io/book/%ED%95%98%EB%91%A1-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98/</loc>
     <lastmod>2018-10-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://hahafamilia.github.io/bigdata/apache-hadoop-rollingupgrade-2.4-2.6/</loc>
+    <lastmod>2015-03-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://hahafamilia.github.io/tags/2014/</loc>
+    <lastmod>2014-06-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://hahafamilia.github.io/bigdata/apache-hadoop-2.4/</loc>
+    <lastmod>2014-06-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://hahafamilia.github.io/bigdata/apache-hadoop-2.2/</loc>
+    <lastmod>2014-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   

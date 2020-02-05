@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.57.2" />
+    <meta name="description" content="hahafamilia blog">
+<meta name="author" content="hahafamilia">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Hive Java UDF, 유니코드 :: haha family&#39;s happy blog</title>
+
+    
+    <link href="/css/nucleus.css?1580896039" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1580896039" rel="stylesheet">
+    <link href="/css/hybrid.css?1580896039" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1580896039" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1580896039" rel="stylesheet">
+    <link href="/css/auto-complete.css?1580896039" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1580896039" rel="stylesheet">
+    <link href="/css/theme.css?1580896039" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1580896039" rel="stylesheet">
+    
+      <link href="/css/theme-custom.css?1580896039" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1580896039"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-145448356-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+  </head>
+  <body class="" data-url="/development/hive-java-udf/">
+    
+<nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header" onclick="window.location='https:\/\/hahafamilia.github.io\/';">
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1580896039"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1580896039"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/hahafamilia.github.io\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1580896039"></script>
+
+    
+  </div>
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/development/" title="Bigdata" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/development/">
+          <i class='fas fa-angle-right'></i> Bigdata
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/howto/" title="HowTo" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/howto/">
+          <i class='fas fa-angle-right'></i> HowTo
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/book/" title="Book" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/book/">
+          <i class='fas fa-angle-right'></i> Book
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/life/" title="Life" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/life/">
+          <i class='fas fa-angle-right'></i> Life
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/hahafamilia"><i class='fab fa-github'></i> Github</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://hahafamilia.github.io/about"><i class='fas fa-address-card'></i> About</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://tjstory.tistory.com"><i class='fas fa-blog'></i> 이전 블로그</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://hahafamilia.github.io/tags"><i class='fas fa-tags'></i> Tags</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Happy <i class="fas fa-heart"></i> hahaFamily</p>
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Development and Life Blog</a> > <a href='/development/'>Bigdata</a> > Hive Java UDF, 유니코드
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#개요">개요</a></li>
+<li><a href="#udf-jar">UDF JAR</a></li>
+<li><a href="#hive-udf">Hive UDF</a>
+<ul>
+<li><a href="#udf-함수-업데이트">UDF 함수 업데이트</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+<div class="tags">
+
+  <a class="tag-link" href="/tags/2019">2019</a>
+
+  <a class="tag-link" href="/tags/hive-udf">hive-udf</a>
+
+  <a class="tag-link" href="/tags/unicode">unicode</a>
+
+</div>
+
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Hive Java UDF, 유니코드
+            </h1>
+          
+
+        
+
+
+
+
+
+<h2 id="개요">개요</h2>
+
+<p><a href="https://www.cloudera.com/documentation/enterprise/6/6.1/topics/cm_mc_hive_udf.html">Cloudera Document 6.1 Hive UDF</a>
+문서를 참고하여 Cloudera CDH 플랫폼에서 HIVE UDF 를 작성하는 방법을 알아봅니다.<br />
+또한 MySQL의 <code>Collate</code> 와 문자열 유니코드에 대해서도 간단히 알아보겠습니다.</p>
+
+<p>저의 이번 경우는 HIVE로 집계된 데이터를 SQOOP으로 export 시에 오류가 발생하였습니다.<br />
+기존에 설계된 MySQL 디비의 테이블 칼럼 Collate 속성이 <code>utf8-general-ci</code> 로 설계되어 있어 Key 칼럼에 Accent 문자열을 포함하는 문자열 데이터 자정시에 상황에 따라 키중복이 발생했던 것이었습니다.</p>
+
+<p>칼럼의 Collate 속성이 <code>utf8-general-ci</code> 일경우 아래와 같은 경우 <code>ã</code> 문자열은 저장이 되겠지만 <code>a</code> 문자열 저장시 Key 중복 오류가 발생합니다.</p>
+
+<pre><code class="language-sql">insert into test(word) values ('ã');
+insert into test(word) values ('a');
+</code></pre>
+
+<p>왜 그럴까요? Collate 는 문자열 정렬에 관련한 속성으로 값의 비교정책입니다. <code>utf-general-ci</code> 는 대소문자, 악센트 문자등을 같은 값으로 비교판단합니다.
+그렇기 때문에  <code>ã</code> 문자는 <code>a</code> 취급되고 키중복이 발생합니다.</p>
+
+<p>제 경우에 테이블의 변경할 수 없는 상황으로 HIVE 쿼리 수행시에 악센트 문자열을 제거 하는 작업을 수행했습니다.</p>
+
+<h2 id="udf-jar">UDF JAR</h2>
+
+<p>Maven 에 HIVE dependency를 추가합니다.
+&gt; 묶여진 Jar 파일은 모든 디펜던시를 포함하고 있어야 하는데요. Uber Jar 로의 빌드가 필요합니다. <code>maven-shade-plugin</code> 을 사용합니다.</p>
+
+<pre><code class="language-xml">&lt;dependency&gt;
+    &lt;groupid&gt;org.apache.hive&lt;/groupid&gt;
+    &lt;artifactId&gt;hive-exec&lt;/artifactId&gt;
+    &lt;version&gt;2.1.1&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+
+<p><a href="https://d2.naver.com/helloworld/76650">NaverD2 한글인코딩</a> 에 잘 설명되어 있어 있어 많은 참고가 되었습니다.
+우선 악센트를 포함하는 문자열을 정준분해(NFD) 한후 정규식을 통해 캐릭터를 치환한후 다시 정준결합(NFC) 하는 HIVE UDF 함수를 작성합니다.
+<code>각</code> 이라는 문자열을 정준분해 분해 할경우 <code>ㄱㅏㄱ</code> 이 됩니다.</p>
+
+<pre><code class="language-java">string = Normalizer.normalize(string, Normalizer.Form.NFD);
+string = string.replaceAll(&quot;\\p{InCombiningDiacriticalMarks}+&quot;,&quot;&quot;);
+string = Normalizer.normalize(string, Normalizer.Form.NFC);
+</code></pre>
+
+<pre><code class="language-java">package bigdata.hive.udf;
+
+
+import lombok.extern.slf4j.Slf4j;
+import org.apache.hadoop.hive.ql.exec.Description;
+import org.apache.hadoop.hive.ql.exec.UDFArgumentException;
+import org.apache.hadoop.hive.ql.exec.UDFArgumentLengthException;
+import org.apache.hadoop.hive.ql.metadata.HiveException;
+import org.apache.hadoop.hive.ql.udf.generic.GenericUDF;
+import org.apache.hadoop.hive.serde2.objectinspector.ObjectInspector;
+import org.apache.hadoop.hive.serde2.objectinspector.primitive.PrimitiveObjectInspectorFactory;
+import org.apache.hadoop.hive.serde2.objectinspector.primitive.StringObjectInspector;
+
+import java.text.Normalizer;
+
+@Slf4j
+@Description(
+        name=&quot;str_normal&quot;,
+        value=&quot;remove special character. ex) accent&quot;,
+        extended=&quot;step1. Normalizer.Form.NFD&quot; +
+                &quot;step2. replaceAll regular InCombiningDiacriticalMarks&quot; +
+                &quot;step3. Normalizer.Form.NFC&quot; )
+public final class StringNormalize extends GenericUDF {
+
+    StringObjectInspector stringOI;
+
+    @Override
+    public ObjectInspector initialize(ObjectInspector[] objectInspectors) throws UDFArgumentException {
+
+        if (objectInspectors.length != 1) {
+            throw new UDFArgumentLengthException(&quot;required string argument.&quot;);
+        }
+
+        ObjectInspector objectInspector = objectInspectors[0];
+
+        if (false == objectInspector instanceof StringObjectInspector) {
+            throw new UDFArgumentException(String.format( &quot;argument must be a string. class=%s&quot;, objectInspector.getClass()));
+        }
+
+        this.stringOI = (StringObjectInspector) objectInspector;
+
+        return PrimitiveObjectInspectorFactory.javaStringObjectInspector;
+
+    }
+
+    @Override
+    public Object evaluate(DeferredObject[] deferredObjects) throws HiveException{
+
+        DeferredObject deferredObject = deferredObjects[0];
+
+        String string = this.stringOI.getPrimitiveJavaObject(deferredObject.get());
+
+        if (string == null || string == &quot;&quot;) {
+            return string;
+        }
+
+        string = Normalizer.normalize(string, Normalizer.Form.NFD);
+        string = string.replaceAll(&quot;\\p{InCombiningDiacriticalMarks}+&quot;,&quot;&quot;);
+        string = Normalizer.normalize(string, Normalizer.Form.NFC);
+
+        return string;
+
+    }
+
+    @Override
+    public String getDisplayString(String[] strings) {
+        return &quot;String normalize. &quot;;
+    }
+}
+</code></pre>
+
+<h2 id="hive-udf">Hive UDF</h2>
+
+<p>Jar 파일을 HADOOP 파일시스템 <code>hdfs:///app/hive-udf/hive-udf.jar</code> 경로에 복사합니다.
+또한 HIVE SERVER2 를 서비스 하고 있는 호스트의 로컬 파일 시스템에도 <code>/usr/local/bigdata/hive-udf/hive-udf.jar</code> 저장합니다.
+&gt; 빌드된 jar 파일은 HADOOP과 HIVE SERVER2의 서버에 모두 등록되어이 있어야 합니다.</p>
+
+<p>HIVE 서비스가 Jar 를 classpath 에 등록하기 위해서는 아래의 설정값을 변경해 주어야 합니다. 설정값을 변경 한후 HIVE 구성파일을 재배포 하고 서비스를 재시작 합니다.
+&gt; reloadable 속성을 정의 할경우 추후 Jar 파일이 변경될 경우 <code>reload;</code>  명령어를 사용할 수 있습니다.</p>
+
+<p>Cloudera Manager &gt; Hive &gt; Configuration &gt; Filter : Hive Serivce-Wide Advanced &gt;
+Hive Service Advanced Configuration Snipped(Safety Valve) for hive-site.xml
+Click(+)</p>
+
+<pre><code>Name : hive.reloadable.aux.jars.path
+Value : /usr/local/bigdata/hive-udf
+</code></pre>
+
+<p>beeline 혹은 hue 의 HIVE Editor 에서 함수를 등록 합니다.</p>
+
+<pre><code class="language-sql">create function str_normal  as 'bigdata.hive.udf.StrignNormalize' using jar 'hdfs:///app/hive-udf/hive-udf.jar';
+describe function extended str_normal;
+show functions;
+select str_normal('ã'));
+--- result
+a
+</code></pre>
+
+<h3 id="udf-함수-업데이트">UDF 함수 업데이트</h3>
+
+<p>먼저 HIVE UDF 함수를 제거합니다.</p>
+
+<pre><code class="language-sql">drop function if exists str_normal; 
+</code></pre>
+
+<p>HADOOP 과 HIVESERVER2 의 Jar 파일을 업데이트 한 후 beeline 혹은 Hue 에서 <code>reload;</code> 명령어를 수행합니다.</p>
+
+<blockquote>
+<p>HUE Editor 에서 SQL을 작성하실 때 HIVESERVER2 의 호스트 서버에 Jar 파일을 등록하지 않고 진행 않아도 UDF 를 사용할 수 있습니다.
+하지만 이럴경우 Oozie Workflow 를 실행하거나 Schedule 로 등록시 UDF 함수를 찾을 수 없다는 오류가 발생합니다.</p>
+</blockquote>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+
+    
+    var logicalName = 'hive-java-udf.md';
+    var relPermalink = '\/development\/hive-java-udf\/';
+    if (logicalName == "_index.md" || relPermalink == "/tags/" || relPermalink.includes("/tags/"))
+        return;
+        
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'hahafamilia';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1580896039"></script>
+    <script src="/js/perfect-scrollbar.min.js?1580896039"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1580896039"></script>
+    <script src="/js/jquery.sticky.js?1580896039"></script>
+    <script src="/js/featherlight.min.js?1580896039"></script>
+    <script src="/js/highlight.pack.js?1580896039"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1580896039"></script>
+    <script src="/js/learn.js?1580896039"></script>
+    <script src="/js/hugo-learn.js?1580896039"></script>
+
+    <link href="/mermaid/mermaid.css?1580896039" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1580896039"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

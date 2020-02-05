@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.57.2" />
+    <meta name="description" content="hahafamilia blog">
+<meta name="author" content="hahafamilia">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Apache Hadoop 2.2 운영 :: haha family&#39;s happy blog</title>
+
+    
+    <link href="/css/nucleus.css?1580896039" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1580896039" rel="stylesheet">
+    <link href="/css/hybrid.css?1580896039" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1580896039" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1580896039" rel="stylesheet">
+    <link href="/css/auto-complete.css?1580896039" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1580896039" rel="stylesheet">
+    <link href="/css/theme.css?1580896039" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1580896039" rel="stylesheet">
+    
+      <link href="/css/theme-custom.css?1580896039" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1580896039"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-145448356-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+  </head>
+  <body class="" data-url="/development/apache-hadoop-2.2/">
+    
+<nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header" onclick="window.location='https:\/\/hahafamilia.github.io\/';">
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1580896039"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1580896039"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/hahafamilia.github.io\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1580896039"></script>
+
+    
+  </div>
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/development/" title="Bigdata" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/development/">
+          <i class='fas fa-angle-right'></i> Bigdata
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/howto/" title="HowTo" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/howto/">
+          <i class='fas fa-angle-right'></i> HowTo
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/book/" title="Book" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/book/">
+          <i class='fas fa-angle-right'></i> Book
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/life/" title="Life" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/life/">
+          <i class='fas fa-angle-right'></i> Life
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/hahafamilia"><i class='fab fa-github'></i> Github</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://hahafamilia.github.io/about"><i class='fas fa-address-card'></i> About</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://tjstory.tistory.com"><i class='fas fa-blog'></i> 이전 블로그</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://hahafamilia.github.io/tags"><i class='fas fa-tags'></i> Tags</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Happy <i class="fas fa-heart"></i> hahaFamily</p>
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Development and Life Blog</a> > <a href='/development/'>Bigdata</a> > Apache Hadoop 2.2 운영
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#federation-에-namenode-추가">Federation 에 Namenode 추가</a></li>
+<li><a href="#ha-기능-테스트">HA 기능 테스트</a>
+<ul>
+<li><a href="#hdfsfilesystem-라이브러리에서-configuration-값을-통해-hdfs-에-읽기-쓰기-요청을-보낼때-어떤일이-일어날까">HdfsFilesystem 라이브러리에서 Configuration 값을 통해 HDFS 에 읽기/쓰기 요청을 보낼때 어떤일이 일어날까?</a></li>
+<li><a href="#자동장애복구-autofailover">자동장애복구 - autofailover</a></li>
+<li><a href="#자동장애복구에서-fencing">자동장애복구에서 fencing</a></li>
+</ul></li>
+<li><a href="#snaphost">Snaphost</a>
+<ul>
+<li><a href="#snapshot-테스트">Snapshot 테스트</a></li>
+</ul></li>
+<li><a href="#datanode-xceiver-테스트">Datanode Xceiver 테스트</a>
+<ul>
+<li><a href="#테스트-환경">테스트 환경</a></li>
+<li><a href="#테스트-결과">테스트 결과</a></li>
+</ul></li>
+<li><a href="#journalnode-서버-변경">JournalNode 서버 변경</a>
+<ul>
+<li><a href="#저널노드-서버-이동">저널노드 서버 이동</a></li>
+</ul></li>
+<li><a href="#설정들">설정들</a>
+<ul>
+<li><a href="#core-site-xml">core-site.xml</a></li>
+<li><a href="#hdfs-site-xml">hdfs-site.xml</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+<div class="tags">
+
+  <a class="tag-link" href="/tags/2014">2014</a>
+
+</div>
+
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Apache Hadoop 2.2 운영
+            </h1>
+          
+
+        
+
+
+
+
+
+<p>과거 하둡 플랫폼 운영당시 메모 형식으로 작성하였던 문서들을 옮겨 놓았어요.
+내용이 잘 정리되어 있진 않아도
+다시 읽어보니 하둡 1.X 버전으로 플랫폼 운영중에 하둡 2.X 버전으로 업그레이드 하면서 테스트했던 내용들을 메모 했었네요.
+Federation, HA, fencing, Snapshot, Journalnode, Datanode 성능 등을 테스트 했었군요.</p>
+
+<h3 id="federation-에-namenode-추가">Federation 에 Namenode 추가</h3>
+
+<p>namenode01-02 서버가 HA 구성되어 있고 Federation 구성되어있을경우 namenode03-04 를 추가합니다.</p>
+
+<ol>
+<li>namenode03, namenode04 에서 <code>core-site.xml hdfs-site.xml</code> namespace 관련 설정을 추가</li>
+<li>namenode03 의 네임노드를 기존 cluster id 로 포맷, <code>bin/hdfs namenode -format -clusterId  [clusterID]</code></li>
+
+<li><p>namespace의 zookeeper 초기화, namenode03 의 zkfc 시작</p>
+
+<pre><code>$ bin/hdfs zkfc -formatZK	
+$ sbin/hadoop-daemon.sh start zkfc
+## 확인
+$ zookeeper01:/[hadoop-home]/bin/zkCli.sh -server zookeeper01:2181
+$ ls /hadoop-ha
+</code></pre></li>
+
+<li><p>namenode03 의 namenode 시작, <code>sbin/hadoop-daemon.sh start namenode</code></p></li>
+
+<li><p>namenode04 의 네임노드 초기화, <code>bin/hdfs namenode -bootstrapStandby</code></p>
+
+<pre><code>14/07/09 15:09:33 INFO namenode.TransferFsImage: Opening connection to http://namenode194:40070/imagetransfer?getimage=1&amp;txid=16440263&amp;storageInfo=-56:239138164:1404883838982:CID-clusterID
+</code></pre></li>
+
+<li><p>namenode04 의 namenode 시작, zkfc 시작</p>
+
+<pre><code>$ sbin/hadoop-daemon.sh start zkfc
+$ sbin/hadoop-daemon.sh start namenode
+</code></pre></li>
+
+<li><p>datanode01 에서 namespace 관련 설정추가</p></li>
+
+<li><p>namenode03 에서 datanode01 의 정보 업데이트 명령 수행</p>
+
+<pre><code>$ bin/hdfs dfsadmin -refreshNamenodes datanode01:50020
+</code></pre></li>
+
+<li><p>모든 datanode 에서 작업 수행</p></li>
+</ol>
+
+<h3 id="ha-기능-테스트">HA 기능 테스트</h3>
+
+<h4 id="hdfsfilesystem-라이브러리에서-configuration-값을-통해-hdfs-에-읽기-쓰기-요청을-보낼때-어떤일이-일어날까">HdfsFilesystem 라이브러리에서 Configuration 값을 통해 HDFS 에 읽기/쓰기 요청을 보낼때 어떤일이 일어날까?</h4>
+
+<p>네임노드 접근시에 IPC 요청은 active/standby 2개의 서버로 요청되어 집니다. standby 로의 요청은 실패되어지고, 재시도 되지 않는다.</p>
+
+<pre><code>2014-03-10 15:41:35,010 INFO org.apache.hadoop.ipc.Server: IPC Server handler 1 on 8020 , call org.apache.hadoop.hdfs.protocol.ClientProtocol.create from standby-nn.example.com:8928 Call#0 Retry#0: error: org.apache.hadoop.ipc.StandbyException: Operation category WRITE is not supported in state standby
+</code></pre>
+
+<h4 id="자동장애복구-autofailover">자동장애복구 - autofailover</h4>
+
+<ol>
+<li>nn1-active, nn2-standby 상태에서 nn1 을 리부팅</li>
+<li>nn2 번은 nn1번의 장애를 인지하고 ssh 펜싱을 시도하지만 ssh 원격접속을 하지 못해 active 상태로의 전환 실패</li>
+<li>nn1 번이 재부팅 완료되면, ssh 펜싱 성공하고 active 상태로 전환</li>
+<li>nn1 번의 하둡 데몬은 모두다 종료된 상태로, 서비스노드의 파일 접근이 있을경우 nn2 의 로그에 nn1 번으로의 연결 시도 로그가 계속 보입니다.</li>
+<li>nn1 이 재부팅 되는동안 서비스노드로부터의 액세스는 대기 상태로 빠집니다.</li>
+<li>다운타임이 짧을경우 하둡으로의 요청은 타임아웃되지 않고 nn2의 active 전환이 완료된후 하둡으로의 요청도 이어서 계속 되었다.</li>
+
+<li><p>타임아웃 되는데 소요된 시간( 약 2분 10초 ), 14/03/10 18:51:24 ~ 14/03/10 18:53:35</p>
+
+<pre><code>14/03/10 18:51:24 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+14/03/10 18:53:35 WARN retry.RetryInvocationHandler: Exception while invoking class org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.getFileInfo. Not retrying because failovers (15) exceeded maximum allowed (15)
+</code></pre></li>
+</ol>
+
+<h4 id="자동장애복구에서-fencing">자동장애복구에서 fencing</h4>
+
+<ul>
+<li>fenching 로직을 통과하지 못할경우 standby 가 active로 올라오지 않습니다.
+<code>hdfs haadmin -failover | transitionToActive</code> 등의 명령어 들도 통하지 않는다.</li>
+<li>이럴경우 <code>dfs.ha.automatic-failover.enabled (false)</code> 옵션을 끄고
+<code>bin/hdfs haadmin -ns mycluster -transitionToActive nn1</code> active 전환을 시도합니다.</li>
+<li>쉘 팬싱을 적용할경우, 팬싱이 실패되면 반복적으로 재시도 된다.</li>
+<li>팬싱이 실패되는 상황에서 액티브 노드가 정상화 되면, standby - standby  상태가 된다.</li>
+<li>이럴경우 팬싱쉘에서 강제적으로 exit 0 으로 줄경우 standby 를 액티브로 전환이 가능하다.</li>
+<li>2번 팬싱실패 재시도중 &gt; 1번 정상화 네임노드실행 &gt; standby - standby &gt; 페일오버 명령어로 1번 정상화</li>
+<li>1번 노드가 정상화 되면, 팬싱에 실패되더라도 2번 노드가 액티브로 올라옵니다.</li>
+
+<li><p>standby - standy 상황에서 상대편 노드로의 연결을 계속 실행하면서 실행도중 아래와 같은 에러발생 합니다. 2개의 노드가 모두 연결될때만 메타 파일에 액세스 할 수 있도록 설계 된 것으로 보입니다.</p>
+
+<pre><code class="language-text">WARN org.apache.hadoop.hdfs.server.namenode.ha.EditLogTailer: Unable to trigger a roll of the active NN 
+</code></pre></li>
+</ul>
+
+<h3 id="snaphost">Snaphost</h3>
+
+<ul>
+<li>스냅샷 생성은 빠릅니다. 아이 노드 조회 시간을 제외하고, 비용은 O (1)</li>
+<li>수정이 스냅샷을 기준으로 한 ​​경우 추가 메모리에만 사용됩니다. 메모리 사용량은 O (M) , M은 수정 된 파일 / 디렉토리의 수입니다.</li>
+<li>데이타 노드에 블록은 복사되지 않습니다. 스냅샷 파일은 차단 목록과 파일 크기를 기록한다. 데이터 복사가 없습니다.</li>
+<li>스냅샷에 악영향을 정기적으로 HDFS 작업에 영향을 미치지 않습니다.</li>
+<li>현재의 데이터에 직접 액세스 할 수 있도록 수정은 시간 역순으로 기록됩니다.</li>
+<li>스냅샷 데이터는 전류 데이터로부터 변형을 감산함으로써 계산된다.</li>
+<li>디렉토리의 스냅샷 사용 허락, <code>bin/hdfs dfsadmin -allowSnapshot /</code></li>
+<li>디렉토리의 스냅샷 사용 차단, <code>bin/hdfs dfsadmin -disallowSnapshot /</code></li>
+<li>스냅샷 생성, <code>bin/hdfs dfs -createSnapshot / snap1</code></li>
+<li>스냅샷 삭제, <code>bin/hdfs dfs -deleteSnapshot /directory snap1</code></li>
+<li>스냅샷 허용된 디렉토리, <code>bin/hdfs lsSnapshottableDir</code></li>
+<li>스냅샷 간의 변화 추이, <code>bin/hdfs snapshotDiff /directory snap1 snap2</code></li>
+<li>스냅샷 위치, <code>bin/hdfs dfs -ls /.snapshot/snap1</code><br /></li>
+</ul>
+
+<h4 id="snapshot-테스트">Snapshot 테스트</h4>
+
+<ol>
+<li>t1.txt 파일생성 &gt; snap1 생성</li>
+<li>t1.txt 파일변경 &gt; snap2 생성</li>
+
+<li><p>t1.txt 파일변경 &gt; snap3 생성</p>
+
+<pre><code>bin/hdfs fsck /tmp -files -blocks -locations
+bin/hdfs fsck /tmp/.snapshot/snap1/t1.txt -files -blocks -locations
+</code></pre>
+
+<pre><code># file #1, version 1.0
+BP-876852240-myip.108-1404457930723:blk_1073777524_36701 len=12 repl=2 [myip.118:40010, myip.114:40010]
+BP-876852240-myip.108-1404457930723:blk_1073777524_36701 len=12 repl=2 [myip.118:40010, myip.114:40010]
+# file #2, version 2.0
+BP-876852240-myip.108-1404457930723:blk_1073777525_36702 len=12 repl=2 [myip.114:40010, myip.118:40010]
+BP-876852240-myip.108-1404457930723:blk_1073777525_36702 len=12 repl=2 [myip.114:40010, myip.118:40010]
+# file #3, version 3.0
+BP-876852240-myip.108-1404457930723:blk_1073777526_36703 len=12 repl=2 [myip.118:40010, myip.115:40010]
+BP-876852240-myip.108-1404457930723:blk_1073777526_36703 len=12 repl=2 [myip.118:40010, myip.115:40010]
+</code></pre>
+
+<pre><code># file #2 복원, version 2.0
+BP-876852240-myip.108-1404457930723:blk_1073777527_36704 len=12 repl=2 [myip.114:40010, myip.117:40010]
+</code></pre>
+
+<pre><code># file #1 복원, version 1.0
+BP-876852240-myip.108-1404457930723:blk_1073777528_36705 len=12 repl=2 [myip.116:40010, myip.118:40010]
+</code></pre></li>
+</ol>
+
+<h3 id="datanode-xceiver-테스트">Datanode Xceiver 테스트</h3>
+
+<p>Datanode의 <code>dfs.datanode.max.xcievers</code> 는 동시 data connection 의 수입니다.</p>
+
+<h4 id="테스트-환경">테스트 환경</h4>
+
+<ul>
+<li>Datanode 1번 2번 에 각 xceiver 를 2개로 설정함.</li>
+<li>클라이언트에서 요청 하는 블럭은 1번, 2번 DN이 모두 가지고 있음.
+<br /></li>
+</ul>
+
+<h4 id="테스트-결과">테스트 결과</h4>
+
+<ul>
+<li><p>5개의 클라이언트 연결 시도시, 1번 노드에서 2개의 연결은 성공하고, 3개의 연결은 실패한다.</p>
+
+<pre><code>13/11/12 14:25:08 WARN hdfs.DFSClient: Failed to connect to /myip.13:40010, add to deadNodes and continuejava.io.EOFException
+13/11/12 14:25:08 WARN hdfs.DFSClient: Failed to connect to /myip.13:40010, add to deadNodes and continuejava.io.EOFException
+13/11/12 14:25:08 WARN hdfs.DFSClient: Failed to connect to /myip.13:40010, add to deadNodes and continuejava.io.EOFException
+</code></pre></li>
+
+<li><p>실패한 3개의 클라이언트는 2번 노드로 3개의 연결을 시도하고, 1개의 연결은 실패한다.</p>
+
+<pre><code>13/11/12 14:25:08 WARN hdfs.DFSClient: Failed to connect to /myip.11:40010, add to deadNodes and continuejava.io.EOFException
+</code></pre></li>
+
+<li><p>실패한 1개의 연결은 네임노드로 블럭에 대한 노드정보를 3초간격으로 3회 재요청하고, 실패로 빠진다.</p>
+
+<pre><code>13/11/12 14:25:08 INFO hdfs.DFSClient: Could not obtain block blk_-8368207181666867791_1294 from any node: java.io.IOException: No live nodes contain current block. Will get new block locations from namenode and retry...
+13/11/12 14:25:11 WARN hdfs.DFSClient: Failed to connect to /myip.13:40010, add to deadNodes and continuejava.io.EOFException
+13/11/12 14:25:11 WARN hdfs.DFSClient: Failed to connect to /myip.11:40010, add to deadNodes and continuejava.io.EOFException
+
+13/11/12 14:25:11 INFO hdfs.DFSClient: Could not obtain block blk_-8368207181666867791_1294 from any node: java.io.IOException: No live nodes contain current block. Will get new block locations from namenode and retry...
+13/11/12 14:25:14 WARN hdfs.DFSClient: Failed to connect to /myip.13:40010, add to deadNodes and continuejava.io.EOFException
+13/11/12 14:25:14 WARN hdfs.DFSClient: Failed to connect to /myip.11:40010, add to deadNodes and continuejava.io.EOFException
+
+13/11/12 14:25:14 INFO hdfs.DFSClient: Could not obtain block blk_-8368207181666867791_1294 from any node: java.io.IOException: No live nodes contain current block. Will get new block locations from namenode and retry...
+13/11/12 14:25:17 WARN hdfs.DFSClient: Failed to connect to /myip.13:40010, add to deadNodes and continuejava.io.EOFException
+13/11/12 14:25:17 WARN hdfs.DFSClient: Failed to connect to /myip.11:40010, add to deadNodes and continuejava.io.EOFException
+
+13/11/12 14:25:17 WARN hdfs.DFSClient: DFS Read: java.io.IOException: Could not obtain block: blk_-8368207181666867791_1294 file=/hdfs/path/filename
+at org.apache.hadoop.hdfs.DFSClient$DFSInputStream.chooseDataNode(DFSClient.java:2426)
+at org.apache.hadoop.hdfs.DFSClient$DFSInputStream.blockSeekTo(DFSClient.java:2218)
+at org.apache.hadoop.hdfs.DFSClient$DFSInputStream.read(DFSClient.java:2381)
+at java.io.DataInputStream.read(DataInputStream.java:83)
+at tsetThread.run(testThread.java:39)
+</code></pre></li>
+</ul>
+
+<h3 id="journalnode-서버-변경">JournalNode 서버 변경</h3>
+
+<p>Journalnode는 active 상태가 되는 네임노드에 epoch number 를 할당합니다.
+epoch number 확인은 active 전환하고
+<code>path/current/last-promised-epoch, path/current/last-writer-epoch</code> 파일 내용을 학인할 수 있습니다.</p>
+
+<h4 id="저널노드-서버-이동">저널노드 서버 이동</h4>
+
+<ol>
+<li>기존 저널 다운</li>
+<li>새로운 저널노드 업</li>
+<li>기존 저널의 저장 데이터 를 새로운 저널노드로 옮김</li>
+<li>새로운 저널 재시작</li>
+<li>standby 네임노드 재시작</li>
+<li>새로운 저널노드 epoch number 업데이트</li>
+</ol>
+
+<h3 id="설정들">설정들</h3>
+
+<h4 id="core-site-xml">core-site.xml</h4>
+
+<ul>
+<li>fs.trash.interval</li>
+<li>io.file.buffer.size</li>
+</ul>
+
+<h4 id="hdfs-site-xml">hdfs-site.xml</h4>
+
+<ul>
+<li>dfs.namenode.handler.count</li>
+<li>dfs.datanode.handler.count</li>
+<li>dfs.datanode.max.transfer.threads</li>
+<li>dfs.datanode.socket.write.timeout</li>
+<li>dfs.socket.timeout</li>
+<li>dfs.datanode.du.reserved</li>
+<li>dfs.datanode.scan.preiod.hour</li>
+</ul>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+
+    
+    var logicalName = 'apache-hadoop-2.2.md';
+    var relPermalink = '\/development\/apache-hadoop-2.2\/';
+    if (logicalName == "_index.md" || relPermalink == "/tags/" || relPermalink.includes("/tags/"))
+        return;
+        
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'hahafamilia';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1580896039"></script>
+    <script src="/js/perfect-scrollbar.min.js?1580896039"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1580896039"></script>
+    <script src="/js/jquery.sticky.js?1580896039"></script>
+    <script src="/js/featherlight.min.js?1580896039"></script>
+    <script src="/js/highlight.pack.js?1580896039"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1580896039"></script>
+    <script src="/js/learn.js?1580896039"></script>
+    <script src="/js/hugo-learn.js?1580896039"></script>
+
+    <link href="/mermaid/mermaid.css?1580896039" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1580896039"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

@@ -13,20 +13,20 @@
     
     <item>
       <title>Apache Hadoop 2.4 운영</title>
-      <link>https://hahafamilia.github.io/bigdata/apache-hadoop-2.4/</link>
+      <link>https://hahafamilia.github.io/development/apache-hadoop-2.4/</link>
       <pubDate>Sun, 01 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/bigdata/apache-hadoop-2.4/</guid>
+      <guid>https://hahafamilia.github.io/development/apache-hadoop-2.4/</guid>
       <description>과거 하둡 플랫폼 운영 당시 메모 형식으로 작성하였던 문서들을 옮겨 놓았어요. 당시 운영했던 플랫폼의 구성들과 운영을 위한 가이드 들을 작성했었네요. Hadoop CLI Command 에 익숙하지 않은 운영/관리자를 위해 Shell 들도 개발해 놓았고, 나중의 담당자를 위한 배려도 담겨있네요.
 Version  Apache Hadoop 2.4.1  Cluster 구성  Replication : 2 Block size : 128M Public / Private Neetwork 클러스터 상태 확인  http://[namenode-ip]:40070/dfsclusterhealth.jsp http://[namenode-ip]:40070/dfshealth.jsp   Nodes  Namenode * 2Ea Journalnode * 3Ea ZKFC * 3Ea Datanode  Namenode 하둡 메타데이터 저장/관리 노드 , Namenode, DFSZKFailoverController 데몬 실행</description>
     </item>
     
     <item>
       <title>Apache Hadoop 2.2 운영</title>
-      <link>https://hahafamilia.github.io/bigdata/apache-hadoop-2.2/</link>
+      <link>https://hahafamilia.github.io/development/apache-hadoop-2.2/</link>
       <pubDate>Sat, 01 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/bigdata/apache-hadoop-2.2/</guid>
+      <guid>https://hahafamilia.github.io/development/apache-hadoop-2.2/</guid>
       <description>과거 하둡 플랫폼 운영당시 메모 형식으로 작성하였던 문서들을 옮겨 놓았어요. 내용이 잘 정리되어 있진 않아도 다시 읽어보니 하둡 1.X 버전으로 플랫폼 운영중에 하둡 2.X 버전으로 업그레이드 하면서 테스트했던 내용들을 메모 했었네요. Federation, HA, fencing, Snapshot, Journalnode, Datanode 성능 등을 테스트 했었군요.
 Federation 에 Namenode 추가 namenode01-02 서버가 HA 구성되어 있고 Federation 구성되어있을경우 namenode03-04 를 추가합니다.
  namenode03, namenode04 에서 core-site.xml hdfs-site.xml namespace 관련 설정을 추가 namenode03 의 네임노드를 기존 cluster id 로 포맷, bin/hdfs namenode -format -clusterId [clusterID] namespace의 zookeeper 초기화, namenode03 의 zkfc 시작</description>

@@ -13,10 +13,10 @@
     
     <item>
       <title>Cloudera CDH Configuration</title>
-      <link>https://hahafamilia.github.io/bigdata/cloudera-cdh-configuration/</link>
+      <link>https://hahafamilia.github.io/development/cloudera-cdh-configuration/</link>
       <pubDate>Wed, 04 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/bigdata/cloudera-cdh-configuration/</guid>
+      <guid>https://hahafamilia.github.io/development/cloudera-cdh-configuration/</guid>
       <description>Bigdata 플랫폼으로 Cloudera CDH 6.1.x 를 운영중 트러블슈팅과 설정에 대해 이야기 해볼게요.
 Version  Cloudera CDH 6.1 Oracl Java 1.8  YARN Turning YARN YARN 의 리소스 관련 설정의 기본 값 Default Memory Setting
 YARN 리소스 튜닝 방법 Turning YARN

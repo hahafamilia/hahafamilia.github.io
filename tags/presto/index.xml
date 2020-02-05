@@ -13,10 +13,10 @@
     
     <item>
       <title>Presto 설치, PrestoDB, PrestoSQL</title>
-      <link>https://hahafamilia.github.io/bigdata/presto-installation/</link>
+      <link>https://hahafamilia.github.io/development/presto-installation/</link>
       <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/bigdata/presto-installation/</guid>
+      <guid>https://hahafamilia.github.io/development/presto-installation/</guid>
       <description>Cloudera CDH 위에서 Presto 엔진을 싱글 서버로 사용할 계획에 Presto 를 설치하려는데, 0.230 버전, 328 버전이 어떤걸 써야 할지 모르겠어요. 좀 더 알아보니 PrestoDB, PrestoSQL 두개로 나뉘는군요. Presto, PrestoDB, PrestoSQL 의 차이를 설명한 문서예요. 요약하자면 PrestoDB를 사용하라는 겁니다. * Facebook에서 Presto 오픈소스 프로젝트를 공개했고 이것이 PrestoDB(https://prestodb.io/) * Fracebook에서 3인의 개발자가 분사하여 만든 프로젝트가 PrestoSQL(https://prestosql.io/)
 Version  PrestoDB 0.230 CentOS Java8  Presto 설치 Download Link
 tar xvzf presto-server-0.230.tar.gz cd presto-server-0.</description>

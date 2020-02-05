@@ -3,14 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://hahafamilia.github.io/bigdata/</loc>
+    <loc>https://hahafamilia.github.io/development/</loc>
     <lastmod>2019-09-16T16:32:12+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  
-  <url>
-    <loc>https://hahafamilia.github.io/python/</loc>
-    <lastmod>2019-09-17T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
@@ -57,7 +51,7 @@
   </url>
   
   <url>
-    <loc>https://hahafamilia.github.io/bigdata/presto-installation/</loc>
+    <loc>https://hahafamilia.github.io/development/presto-installation/</loc>
     <lastmod>2020-01-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
@@ -99,7 +93,7 @@
   </url>
   
   <url>
-    <loc>https://hahafamilia.github.io/bigdata/hbase-troubleshooting/</loc>
+    <loc>https://hahafamilia.github.io/development/hbase-troubleshooting/</loc>
     <lastmod>2020-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
@@ -117,7 +111,7 @@
   </url>
   
   <url>
-    <loc>https://hahafamilia.github.io/bigdata/kafka-zookeeper-troubleshooting/</loc>
+    <loc>https://hahafamilia.github.io/development/kafka-zookeeper-troubleshooting/</loc>
     <lastmod>2020-01-13T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
@@ -135,7 +129,7 @@
   </url>
   
   <url>
-    <loc>https://hahafamilia.github.io/bigdata/intellij-maven-scala/</loc>
+    <loc>https://hahafamilia.github.io/development/intellij-maven-scala/</loc>
     <lastmod>2019-12-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
@@ -159,7 +153,7 @@
   </url>
   
   <url>
-    <loc>https://hahafamilia.github.io/bigdata/apache-piglatin/</loc>
+    <loc>https://hahafamilia.github.io/development/apache-piglatin/</loc>
     <lastmod>2019-12-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
@@ -171,13 +165,13 @@
   </url>
   
   <url>
-    <loc>https://hahafamilia.github.io/bigdata/machine-learning-spark-guide/</loc>
+    <loc>https://hahafamilia.github.io/development/machine-learning-spark-guide/</loc>
     <lastmod>2019-12-17T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>https://hahafamilia.github.io/bigdata/cloudera-cdh-configuration/</loc>
+    <loc>https://hahafamilia.github.io/development/cloudera-cdh-configuration/</loc>
     <lastmod>2019-12-04T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
@@ -195,7 +189,7 @@
   </url>
   
   <url>
-    <loc>https://hahafamilia.github.io/bigdata/zeppelin-project-build/</loc>
+    <loc>https://hahafamilia.github.io/development/zeppelin-project-build/</loc>
     <lastmod>2019-11-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
@@ -207,7 +201,7 @@
   </url>
   
   <url>
-    <loc>https://hahafamilia.github.io/bigdata/zeppelin-on-cdh/</loc>
+    <loc>https://hahafamilia.github.io/development/zeppelin-on-cdh/</loc>
     <lastmod>2019-11-20T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
@@ -225,19 +219,19 @@
   </url>
   
   <url>
-    <loc>https://hahafamilia.github.io/howto/ffmpeg-music-youtube/</loc>
+    <loc>https://hahafamilia.github.io/development/ffmpeg-music-youtube/</loc>
     <lastmod>2019-11-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>https://hahafamilia.github.io/bigdata/zeppelin-upgrade-0.8.2/</loc>
+    <loc>https://hahafamilia.github.io/development/zeppelin-upgrade-0.8.2/</loc>
     <lastmod>2019-11-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>https://hahafamilia.github.io/bigdata/cloudera-cdh-6_1-intall/</loc>
+    <loc>https://hahafamilia.github.io/development/cloudera-cdh-6_1-intall/</loc>
     <lastmod>2019-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
@@ -249,7 +243,7 @@
   </url>
   
   <url>
-    <loc>https://hahafamilia.github.io/bigdata/kafka-manager-installation/</loc>
+    <loc>https://hahafamilia.github.io/development/kafka-manager-installation/</loc>
     <lastmod>2019-10-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
@@ -303,19 +297,19 @@
   </url>
   
   <url>
-    <loc>https://hahafamilia.github.io/bigdata/zeppelin-interpreter/</loc>
+    <loc>https://hahafamilia.github.io/development/zeppelin-interpreter/</loc>
     <lastmod>2019-08-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>https://hahafamilia.github.io/bigdata/zeppelin-usage/</loc>
+    <loc>https://hahafamilia.github.io/development/zeppelin-usage/</loc>
     <lastmod>2019-08-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>https://hahafamilia.github.io/bigdata/zeppelin-quickstart/</loc>
+    <loc>https://hahafamilia.github.io/development/zeppelin-quickstart/</loc>
     <lastmod>2019-08-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
@@ -339,7 +333,7 @@
   </url>
   
   <url>
-    <loc>https://hahafamilia.github.io/bigdata/oozie-workflow-email/</loc>
+    <loc>https://hahafamilia.github.io/development/oozie-workflow-email/</loc>
     <lastmod>2019-08-14T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
@@ -351,13 +345,13 @@
   </url>
   
   <url>
-    <loc>https://hahafamilia.github.io/bigdata/spring-kafka-flume/</loc>
+    <loc>https://hahafamilia.github.io/development/spring-kafka-flume/</loc>
     <lastmod>2019-08-13T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>https://hahafamilia.github.io/bigdata/cloudera-alert-email/</loc>
+    <loc>https://hahafamilia.github.io/development/cloudera-alert-email/</loc>
     <lastmod>2019-08-13T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
@@ -381,13 +375,13 @@
   </url>
   
   <url>
-    <loc>https://hahafamilia.github.io/python/python-pyenv-anaconda-mac/</loc>
+    <loc>https://hahafamilia.github.io/development/python-pyenv-anaconda-mac/</loc>
     <lastmod>2019-08-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>https://hahafamilia.github.io/bigdata/hive-java-udf/</loc>
+    <loc>https://hahafamilia.github.io/development/hive-java-udf/</loc>
     <lastmod>2019-07-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
@@ -405,7 +399,7 @@
   </url>
   
   <url>
-    <loc>https://hahafamilia.github.io/bigdata/kafka-broker-reinstall/</loc>
+    <loc>https://hahafamilia.github.io/development/kafka-broker-reinstall/</loc>
     <lastmod>2019-06-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
@@ -459,7 +453,7 @@
   </url>
   
   <url>
-    <loc>https://hahafamilia.github.io/howto/git/</loc>
+    <loc>https://hahafamilia.github.io/development/git/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
@@ -477,7 +471,7 @@
   </url>
   
   <url>
-    <loc>https://hahafamilia.github.io/bigdata/apache-hadoop-rollingupgrade-2.4-2.6/</loc>
+    <loc>https://hahafamilia.github.io/development/apache-hadoop-rollingupgrade-2.4-2.6/</loc>
     <lastmod>2015-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
@@ -489,13 +483,13 @@
   </url>
   
   <url>
-    <loc>https://hahafamilia.github.io/bigdata/apache-hadoop-2.4/</loc>
+    <loc>https://hahafamilia.github.io/development/apache-hadoop-2.4/</loc>
     <lastmod>2014-06-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   
   <url>
-    <loc>https://hahafamilia.github.io/bigdata/apache-hadoop-2.2/</loc>
+    <loc>https://hahafamilia.github.io/development/apache-hadoop-2.2/</loc>
     <lastmod>2014-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>

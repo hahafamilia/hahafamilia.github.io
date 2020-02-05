@@ -13,10 +13,10 @@
     
     <item>
       <title>Hive Java UDF, 유니코드</title>
-      <link>https://hahafamilia.github.io/bigdata/hive-java-udf/</link>
+      <link>https://hahafamilia.github.io/development/hive-java-udf/</link>
       <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/bigdata/hive-java-udf/</guid>
+      <guid>https://hahafamilia.github.io/development/hive-java-udf/</guid>
       <description>개요 Cloudera Document 6.1 Hive UDF 문서를 참고하여 Cloudera CDH 플랫폼에서 HIVE UDF 를 작성하는 방법을 알아봅니다.
 또한 MySQL의 Collate 와 문자열 유니코드에 대해서도 간단히 알아보겠습니다.
 저의 이번 경우는 HIVE로 집계된 데이터를 SQOOP으로 export 시에 오류가 발생하였습니다.

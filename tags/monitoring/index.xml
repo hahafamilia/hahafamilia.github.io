@@ -13,10 +13,10 @@
     
     <item>
       <title>Oozie Workflow Email 알림 설정</title>
-      <link>https://hahafamilia.github.io/bigdata/oozie-workflow-email/</link>
+      <link>https://hahafamilia.github.io/development/oozie-workflow-email/</link>
       <pubDate>Wed, 14 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/bigdata/oozie-workflow-email/</guid>
+      <guid>https://hahafamilia.github.io/development/oozie-workflow-email/</guid>
       <description>Oozie 에서 Workflow 의 결과에 따른 Email 알림을 받는 방법에 대해서 알아볼게요.
 Workflow 를 1회성으로 실행시키는 경우와 Schedule 로 등록하여 주기적으로 실행하는 경우가 있을 수 있을텐데요. 1회성으로 Workflow 만 실행할때는 성공/실패에 대한 처리 결과를 받도록 하고, Schedule 로 등록하여 주기적으로 실행하는 경우에는 실패에 대한 알림 만을 받도록 합니다.
 Version  Cloudera 6.1.1 Oozie 5.0.0 Hue 4.3.0  Oozie SMTP 설정 Cloudera Manager &amp;gt; Oozie &amp;gt; 구성 탭 에서 mail 을 검색해서, oozie.</description>
@@ -24,10 +24,10 @@ Version  Cloudera 6.1.1 Oozie 5.0.0 Hue 4.3.0  Oozie SMTP 설정 Cloudera Manage
     
     <item>
       <title>Cloudera Manager 알람 설정, Gmail SMPT 서버 사용</title>
-      <link>https://hahafamilia.github.io/bigdata/cloudera-alert-email/</link>
+      <link>https://hahafamilia.github.io/development/cloudera-alert-email/</link>
       <pubDate>Tue, 13 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/bigdata/cloudera-alert-email/</guid>
+      <guid>https://hahafamilia.github.io/development/cloudera-alert-email/</guid>
       <description>Cloudera Manager 알림을 보내는 방법은 SMTP, SNMP, Custom Script 세가지를 제공하고 있어요. 여기서 SNMP, Custom Script 는 Enterprise 버전에서만 지원해요. 별도의 SMTP 서버를 운영하고 있지 않다면 Gmail 을 이용할 수 있어요.
 Cloudera Version Cloudera 6.1
 Gmail 설정 우선 Gmail 설정에서 IMAP 사용이 허용되어야 해요. 그리고 Google 계정 설정 &amp;gt; 보안 &amp;gt; 보안 수준이 낮은 앱의 액세스 가 허용되어야 합니다.

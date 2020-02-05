@@ -13,10 +13,10 @@
     
     <item>
       <title>Git</title>
-      <link>https://hahafamilia.github.io/howto/git/</link>
+      <link>https://hahafamilia.github.io/development/git/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/howto/git/</guid>
+      <guid>https://hahafamilia.github.io/development/git/</guid>
       <description>Git 기본개념 파일상태  Committed : 커밋상태, git commit Modified : 수정상태 Staged : 커밋대기상태, git add  사용영역  Git directory(Local repository) : git init 으로 지정, .git 디렉토리가 생성 Working directory : branch 를 checkout 한 내용 Staging Area  환경설정  $GIT_HOME/[installed_path]/gitconfig : 시스템의 모든 사용자 설정, git config --system $USER_HOME : 특정 사용자 설정, git config --global .git/config : 특정 저장소 설정  Getting Started cd /your/project/home touch readme.</description>
     </item>
     

@@ -13,10 +13,10 @@
     
     <item>
       <title>Presto 설치, PrestoDB, PrestoSQL</title>
-      <link>https://hahafamilia.github.io/bigdata/presto-installation/</link>
+      <link>https://hahafamilia.github.io/development/presto-installation/</link>
       <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/bigdata/presto-installation/</guid>
+      <guid>https://hahafamilia.github.io/development/presto-installation/</guid>
       <description>Cloudera CDH 위에서 Presto 엔진을 싱글 서버로 사용할 계획에 Presto 를 설치하려는데, 0.230 버전, 328 버전이 어떤걸 써야 할지 모르겠어요. 좀 더 알아보니 PrestoDB, PrestoSQL 두개로 나뉘는군요. Presto, PrestoDB, PrestoSQL 의 차이를 설명한 문서예요. 요약하자면 PrestoDB를 사용하라는 겁니다. * Facebook에서 Presto 오픈소스 프로젝트를 공개했고 이것이 PrestoDB(https://prestodb.io/) * Fracebook에서 3인의 개발자가 분사하여 만든 프로젝트가 PrestoSQL(https://prestosql.io/)
 Version  PrestoDB 0.230 CentOS Java8  Presto 설치 Download Link
 tar xvzf presto-server-0.230.tar.gz cd presto-server-0.</description>
@@ -46,30 +46,30 @@ tar xvzf presto-server-0.230.tar.gz cd presto-server-0.</description>
     
     <item>
       <title>할아버지 클러스터의 엉망진창 HBase 문제해결</title>
-      <link>https://hahafamilia.github.io/bigdata/hbase-troubleshooting/</link>
+      <link>https://hahafamilia.github.io/development/hbase-troubleshooting/</link>
       <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/bigdata/hbase-troubleshooting/</guid>
+      <guid>https://hahafamilia.github.io/development/hbase-troubleshooting/</guid>
       <description>입사초기에 있었던 경험에 대해서 적어볼게요. 빅데이터 플랫폼 개발자 포지션으로 입사를 했어요. 면접과정에서 플랫폼에 장애가 빈번하다. 직원들이 많이 빠져나갔다는 얘기는 들었어요. 전 과거 4년간 Apache Hadoop 1.x 버전에서 2.x 버전으로 업그레이드를 진행하면서 운영한 경험이 있어요. 당시 많은 문제들을 경험했고 Hell의 문앞에도 가 보았기 때문에&amp;hellip; 다 해결해 주겠어! 라는 각오로 입사했어요. 막상 입사해보니 그나마 있던 담당자 마저 퇴사&amp;hellip; 뭔가 싸늘한 기운이 느껴집니다? 그래도 파이팅 해봅니다.
 클러스터는 Cloudera CDH 4, 2012년에 릴리즈 되었던 버전이예요.</description>
     </item>
     
     <item>
       <title>클러스터 네트워크 일시 장애로 인한 Kafka/Zookeeper 문제해결</title>
-      <link>https://hahafamilia.github.io/bigdata/kafka-zookeeper-troubleshooting/</link>
+      <link>https://hahafamilia.github.io/development/kafka-zookeeper-troubleshooting/</link>
       <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/bigdata/kafka-zookeeper-troubleshooting/</guid>
+      <guid>https://hahafamilia.github.io/development/kafka-zookeeper-troubleshooting/</guid>
       <description>장애알림으로 시작하는 상쾌한 월요일입니다? 빅데이터 플랫폼의 클러스터 일부 서버에서 경고 알림이 보고 되었어요. Cloudra Manager 의 서비스 리스트에는 Kafka 서비스에서 Lagging Replicas Test 실패 발생되었다고 경고를 보여주고 있네요. 이번 경우도 문제의 원인은 눈에 보이는 것과는 다르네요. 어떤 일이 있었던걸까요?
 Version  Cloudera CDH 6.1.1 Cloudera Kafka 2.11-2.0.0-cdh6.1.1  현상파악 Cloudera Manager 확인 3대의 Kafka Broker 중에 01~02 서버에서 경고가보여지고, 03 서버는 정상으로 보여져요. 문제발생한 시간대에 Kafka 로부터 유입되는 데이터의 유실은 다행히 발생하지 않았어요.</description>
     </item>
     
     <item>
       <title>Cloudera CDH Configuration</title>
-      <link>https://hahafamilia.github.io/bigdata/cloudera-cdh-configuration/</link>
+      <link>https://hahafamilia.github.io/development/cloudera-cdh-configuration/</link>
       <pubDate>Wed, 04 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/bigdata/cloudera-cdh-configuration/</guid>
+      <guid>https://hahafamilia.github.io/development/cloudera-cdh-configuration/</guid>
       <description>Bigdata 플랫폼으로 Cloudera CDH 6.1.x 를 운영중 트러블슈팅과 설정에 대해 이야기 해볼게요.
 Version  Cloudera CDH 6.1 Oracl Java 1.8  YARN Turning YARN YARN 의 리소스 관련 설정의 기본 값 Default Memory Setting
 YARN 리소스 튜닝 방법 Turning YARN
@@ -78,10 +78,10 @@ YARN 리소스 튜닝 방법 Turning YARN
     
     <item>
       <title>Apache Hadoop 롤링 업그레이드 2.4.1 to 2.6.0</title>
-      <link>https://hahafamilia.github.io/bigdata/apache-hadoop-rollingupgrade-2.4-2.6/</link>
+      <link>https://hahafamilia.github.io/development/apache-hadoop-rollingupgrade-2.4-2.6/</link>
       <pubDate>Sun, 01 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/bigdata/apache-hadoop-rollingupgrade-2.4-2.6/</guid>
+      <guid>https://hahafamilia.github.io/development/apache-hadoop-rollingupgrade-2.4-2.6/</guid>
       <description>예전 하둡 플랫폼으로 10PB(2 peplica) 의 컨텐츠를 운영했던 경험이 있는데요. Apache Hadoop 1.x 버전에서 2.2 버전으로 서비스 중단 업그레이드, 2.2 버전에서 2.4 버전으로 2.6 버전으로 무중단 업그레이드를 진행했었습니다. Apache Hadoop 2.4.1 버전에서 2.6.0 버전으로 Rolling Upgrade 진행했을때의 문서가 남아 있네요. 내용이 잘 정리되어 있진 않지만, 당시 작성내용을 우선 옮겨 두려고 합니다.
  네임노드 /data 디렉토리 백업 관리용 쉘 종료
 /monitor/daemon_hdfs_status.sh	- 유지 /monitor/daemon_hdfs_balancer.sh	- 종료 /monitor/daemon_hdfs_namenode.sh	- 종료  2.6.0 설치(모든 노드에 설치하고, 환경설정을 이전버전과 동일하게 맞춥니다)</description>

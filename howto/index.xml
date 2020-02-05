@@ -12,18 +12,6 @@
     
     
     <item>
-      <title>FFMPEG를 이용해 음악 플레이리스트 동영상 만들기</title>
-      <link>https://hahafamilia.github.io/howto/ffmpeg-music-youtube/</link>
-      <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://hahafamilia.github.io/howto/ffmpeg-music-youtube/</guid>
-      <description>음원의 플레이리스트를 앨범 자켓 이미지를 포함시켜 동영상으로 만들 수 있나요? 라는 얘기를 듣게 되었어요. 의도는 Youtube 에는 음악등록을 할 수 없어서, 동영상으로 만들어서 업로드 해야된다고 하네요.
-그래서 간단하게 프로토타입을 만들어 봤어요. FFMPEG 검색을 해보니 이러한 시도를 하는 분들이 꽤 있나 보군요.
-프로토타입  하나의 음원을 이미지를 포함시켜 동영상으로 제작 각 동영상들을 이어 붙히기
-ffmpeg -loop 1 -i Happy.jpg -i Happy.mp3 -shortest -acodec copy 2.mp4 ffmpeg -loop 1 -i StellaJang.jpg -i StellaJang.</description>
-    </item>
-    
-    <item>
       <title>휴고 설치 및 설정, Learn 테마, Hugo Website</title>
       <link>https://hahafamilia.github.io/howto/hugo-staticgen/</link>
       <pubDate>Sun, 01 Sep 2019 00:00:00 +0000</pubDate>
@@ -54,15 +42,6 @@ Environment &amp;amp; Requirement  Hugo Static Site Generator v0.57.2 Mac Git  Q
 간단히 Jekyll 은 정적파일 생성기, Github.io 는 호스팅, Minimal mistakes 는 수많은 Jekyll 테마중의 하나예요.
 선택의 기준은 markdown 에디터 때문이에요. 개발자는 에디터 툴을 가장 많이 다루는데요. 아무래도 markdown 으로 글을 작성하고 Git 으로 Push 하여 포스팅을 하는 구조라면 블로그 활동량이 많아지지 않을까 합니다.
 그럼 Github.io, Jekyll, Minimal mistakes theme 를 이용해 블로그를 만들어 봐요.</description>
-    </item>
-    
-    <item>
-      <title>Git</title>
-      <link>https://hahafamilia.github.io/howto/git/</link>
-      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://hahafamilia.github.io/howto/git/</guid>
-      <description>Git 기본개념 파일상태  Committed : 커밋상태, git commit Modified : 수정상태 Staged : 커밋대기상태, git add  사용영역  Git directory(Local repository) : git init 으로 지정, .git 디렉토리가 생성 Working directory : branch 를 checkout 한 내용 Staging Area  환경설정  $GIT_HOME/[installed_path]/gitconfig : 시스템의 모든 사용자 설정, git config --system $USER_HOME : 특정 사용자 설정, git config --global .git/config : 특정 저장소 설정  Getting Started cd /your/project/home touch readme.</description>
     </item>
     
   </channel>

@@ -13,20 +13,20 @@
     
     <item>
       <title>IntelliJ maven scala 프로젝트 설정</title>
-      <link>https://hahafamilia.github.io/bigdata/intellij-maven-scala/</link>
+      <link>https://hahafamilia.github.io/development/intellij-maven-scala/</link>
       <pubDate>Mon, 23 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/bigdata/intellij-maven-scala/</guid>
+      <guid>https://hahafamilia.github.io/development/intellij-maven-scala/</guid>
       <description>IntelliJ IDE 에서 spark streaming 개발을 위해 scala maven 프로젝트 생성 방법을 알아봐요. scala 프로젝트는 sbt 를 기본으로 사용하지만, maven 에 익숙하여 maven 으로 프로젝트를 생성해요. scala-archetype-simple 으로 프로젝트 생성이 가능한데, 제가 직접 구성하는게 좋아요.
 Version  Spark 2.4.0 Scala 2.11 Hadoop 2.7 Java 8 Window  Spark, Hadoop 설치 Spark Download 에서 Spark 를 다운로드해요. 운영중인 클러스터의 스파크버전과 맞추어 2.4.0 버전의 Pre-built for Apache Hadoop2.7 을 다운로드 했어요. 다운로드한 파일을 압축해제 하고 SPARK_HOME 환경변수로 등록후 PATH 설정해요.</description>
     </item>
     
     <item>
       <title>Apache Pig Latin</title>
-      <link>https://hahafamilia.github.io/bigdata/apache-piglatin/</link>
+      <link>https://hahafamilia.github.io/development/apache-piglatin/</link>
       <pubDate>Thu, 19 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/bigdata/apache-piglatin/</guid>
+      <guid>https://hahafamilia.github.io/development/apache-piglatin/</guid>
       <description>Apache Pig Yahoo 에서 공개한 걸로 알고 있어요. 최근 버전은 Hive on Spark 처럼 Pig on Spark 으로 사용하는군요. 새로운 Flow 코드 작성시 잘 사용하진 않지만, SQL 사용시 함수와 프로시져를 만들어야 하는 경우가 있는데, 그런 경우 Pig 를 사용하고 있어요. ASIS Flow 에서 사용되어지고 있는 코드 들이 있어서 간단히 문법에 대해 정리 해봐요.
 Pig Latin Basic 연산자 및 명령어들은 대소문자를 구분하지만, 별칭 및 함수 이름은 대소문자를 구분해요.
 Data types int, long, float, double, chararray, Bytearray, Boolean, Datetime, Biginteger, Bigdecimal, Tuple, Bag(collection of tuples), Map</description>
@@ -34,10 +34,10 @@ Data types int, long, float, double, chararray, Bytearray, Boolean, Datetime, Bi
     
     <item>
       <title>Apache Zeppelin Project Build</title>
-      <link>https://hahafamilia.github.io/bigdata/zeppelin-project-build/</link>
+      <link>https://hahafamilia.github.io/development/zeppelin-project-build/</link>
       <pubDate>Thu, 21 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/bigdata/zeppelin-project-build/</guid>
+      <guid>https://hahafamilia.github.io/development/zeppelin-project-build/</guid>
       <description>Zeppelin 소스 코드를 빌드해봐요. 오픈소스 수정은 선호하진 않지만, Frontend 화면 수정은 필요할 것 같아요.
 Personalized 기능이 필요한데 0.8.2 버전에서 Bug ZEPPELIN-3065 가 있어요.
 Zeppelin Posts  Zeppelin Install &amp;amp; QuickStart Zeppelin Usage Zeppelin interpreter Zeppelin on CDH Zeppelin Project Build Zeppelin Project Upgrade 0.8.2   Versions  Zeppelin 0.8.2 Git Any Maven 3.1 or igher JDK 1.7 Mac, IntelliJ   제환경은 OpenJDK 1.8 이예요. 빌드는 잘 되요.</description>
@@ -45,10 +45,10 @@ Zeppelin Posts  Zeppelin Install &amp;amp; QuickStart Zeppelin Usage Zeppelin in
     
     <item>
       <title>Apache Zeppelin on CDH, Yarn</title>
-      <link>https://hahafamilia.github.io/bigdata/zeppelin-on-cdh/</link>
+      <link>https://hahafamilia.github.io/development/zeppelin-on-cdh/</link>
       <pubDate>Wed, 20 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/bigdata/zeppelin-on-cdh/</guid>
+      <guid>https://hahafamilia.github.io/development/zeppelin-on-cdh/</guid>
       <description>Apache Zeppelin 과 CDH 를 연동해요.
 Yarn 리소스 매니저 관리하에 Spark 어플리케이션을 실행시킬 수 있어요.
 Zeppelin Posts  Zeppelin Install &amp;amp; QuickStart Zeppelin Usage Zeppelin interpreter Zeppelin on CDH Zeppelin Project Build Zeppelin Project Upgrade 0.8.2   Version  Zeppelin 0.8.2 Cloudera CDH 6.1.x  Zeppelin Zeppelin on CDH 공식 문서를 참고해요.
@@ -58,10 +58,10 @@ export MASTER=yarn-client export SPARK_HOME=&#39;/opt/cloudera/parcels/CDH/lib/s
     
     <item>
       <title>FFMPEG를 이용해 음악 플레이리스트 동영상 만들기</title>
-      <link>https://hahafamilia.github.io/howto/ffmpeg-music-youtube/</link>
+      <link>https://hahafamilia.github.io/development/ffmpeg-music-youtube/</link>
       <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/howto/ffmpeg-music-youtube/</guid>
+      <guid>https://hahafamilia.github.io/development/ffmpeg-music-youtube/</guid>
       <description>음원의 플레이리스트를 앨범 자켓 이미지를 포함시켜 동영상으로 만들 수 있나요? 라는 얘기를 듣게 되었어요. 의도는 Youtube 에는 음악등록을 할 수 없어서, 동영상으로 만들어서 업로드 해야된다고 하네요.
 그래서 간단하게 프로토타입을 만들어 봤어요. FFMPEG 검색을 해보니 이러한 시도를 하는 분들이 꽤 있나 보군요.
 프로토타입  하나의 음원을 이미지를 포함시켜 동영상으로 제작 각 동영상들을 이어 붙히기
@@ -70,10 +70,10 @@ ffmpeg -loop 1 -i Happy.jpg -i Happy.mp3 -shortest -acodec copy 2.mp4 ffmpeg -lo
     
     <item>
       <title>Apache Zeppelin Upgrade from 0.8.1 to 0.8.2</title>
-      <link>https://hahafamilia.github.io/bigdata/zeppelin-upgrade-0.8.2/</link>
+      <link>https://hahafamilia.github.io/development/zeppelin-upgrade-0.8.2/</link>
       <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/bigdata/zeppelin-upgrade-0.8.2/</guid>
+      <guid>https://hahafamilia.github.io/development/zeppelin-upgrade-0.8.2/</guid>
       <description>Apache Zeppelin 0.8.2 버전이 2019.11.29 일에 Release 되었어요. 0.8.1 버전에서 발견되었던 버그들도 수정이 되었으니 업그레이드를 진행 해보도록 할게요.
 Zeppelin Posts  Zeppelin Install &amp;amp; QuickStart Zeppelin Usage Zeppelin interpreter Zeppelin on CDH Zeppelin Project Build Zeppelin Project Upgrade 0.8.2   Apache Zeppelin 0.8.2 Upgrading 문서를 보니 0.8.x 버전에서의 업그레이드는 conf 와 notebook 디렉토리를 복사해주기만 하면 된다고 하니 손쉽게 진행 될 것으로 예상되요.
 업그레이드 Apache Zeppelin Download 다운로드 사이트에서 바이너리 파일을 다운로드 해서, 0.</description>
@@ -81,10 +81,10 @@ Zeppelin Posts  Zeppelin Install &amp;amp; QuickStart Zeppelin Usage Zeppelin in
     
     <item>
       <title>Cloudera CDH 6.1.1 설치하기</title>
-      <link>https://hahafamilia.github.io/bigdata/cloudera-cdh-6_1-intall/</link>
+      <link>https://hahafamilia.github.io/development/cloudera-cdh-6_1-intall/</link>
       <pubDate>Thu, 24 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/bigdata/cloudera-cdh-6_1-intall/</guid>
+      <guid>https://hahafamilia.github.io/development/cloudera-cdh-6_1-intall/</guid>
       <description>ASIS 플랫폼의 고도화 일환으로 빅데이터 플랫폼을 신규로 구축하게 되었어요. 구축과정의 일환인 Cloudera CDH 6.1.1 설치과정을 뒤늦게사나마 정리해볼게요. 설치를 진행하기 전에 플랫폼 아키텍처의 설계와 물리서버 사양의 선택, 랙 배치 등이 우선되었겠죠? 이것에 대해서는 또 정리하도록 할게요.
 설치 과정은 크게 3단계로 진행되요.
  설치하기 전에 Cloudera Manager 설치 CDH 구성요소 설치  Cloudera CDH 6.1 버전의 공식 문서를 참고해서 진행했어요.
@@ -95,10 +95,10 @@ Cloudera Installation Guide
     
     <item>
       <title>Kafka Manager 설치</title>
-      <link>https://hahafamilia.github.io/bigdata/kafka-manager-installation/</link>
+      <link>https://hahafamilia.github.io/development/kafka-manager-installation/</link>
       <pubDate>Tue, 15 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/bigdata/kafka-manager-installation/</guid>
+      <guid>https://hahafamilia.github.io/development/kafka-manager-installation/</guid>
       <description>KafkaManager 설치 Kafka Manager 를 설치해 볼게요. Kafka Manager 는 Yahoo 의 오픈소스 인데, Kafka 서비스의 상태를 확인하거나, Skew 등이 발생했을때 Reassign Partitoin 등을 할 수 있는 기능을 제공해줘요.
 https://hahafamilia.github.io/bigdata/kafka-broker-reinstall/ Github 에서 다운로드 한 후, Scala 빌드 빌드툴 sbt 로 빌드 해줘요.
 tar -xvzf kafka-manager-1.3.3.22.tar.gz cd kafka-manager-1.3.3.22 PATH=/usr/java/jdk1.8.0_141-cloudera/bin:$PATH JAVA_HOME=/usr/java/jdk1.8.0_141-cloudera \ ./sbt -java-home /usr/java/jdk1.8.0_141-cloudera clean dist cp target/universal/kafka-manager-1.3.3.22.zip /usr/local cd /usr/local unzip kafka-manager-1.3.3.22.zip  conf/application.conf 설정파일에 Zookeeper 호스트 주소를 설정해 줘요.</description>
@@ -117,40 +117,40 @@ Environment &amp;amp; Requirement  Hugo Static Site Generator v0.57.2 Mac Git  Q
     
     <item>
       <title>Apache Zeppelin Interpreter, Hive, Impala</title>
-      <link>https://hahafamilia.github.io/bigdata/zeppelin-interpreter/</link>
+      <link>https://hahafamilia.github.io/development/zeppelin-interpreter/</link>
       <pubDate>Fri, 30 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/bigdata/zeppelin-interpreter/</guid>
+      <guid>https://hahafamilia.github.io/development/zeppelin-interpreter/</guid>
       <description>Apache Zeppelin 과 Cloudera CDH 의 Hive, Impala 를 연동하는 방법을 알아볼게요.
 Zeppelin Posts  Zeppelin Install &amp;amp; QuickStart Zeppelin Usage Zeppelin interpreter Zeppelin on CDH Zeppelin Project Build Zeppelin Project Upgrade 0.8.2   Environment  Oracle JDK 1.8 CentOS 7 Zepplin 0.8.1 Cloudera CDH 6.1.1 Hive 2.1.1 Impala 3.1.0 Impala JDBC Driver 2.6.12  Hive Zeppelin Hive Interpreter Document 문서를 보면 Jdbc Interpreter 를 사용하라고 되어있네요. 기본으로 PostgreSQL Connector 지원하고 그외는 Connector 는 추가를 해줘야 해요.</description>
     </item>
     
     <item>
       <title>Apache Zeppelin Usage</title>
-      <link>https://hahafamilia.github.io/bigdata/zeppelin-usage/</link>
+      <link>https://hahafamilia.github.io/development/zeppelin-usage/</link>
       <pubDate>Wed, 28 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/bigdata/zeppelin-usage/</guid>
+      <guid>https://hahafamilia.github.io/development/zeppelin-usage/</guid>
       <description>Apache Zeppelin 은 노트북 방식의 시각화 툴이예요.
 Zeppelin Posts  Zeppelin Install &amp;amp; QuickStart Zeppelin Usage Zeppelin interpreter Zeppelin on CDH Zeppelin Project Build Zeppelin Project Upgrade 0.8.2   Environment  Oracle JDK 1.8 CentOS 7 Zepplin 0.8.1  Dynamic Form Zeppelin 에서는 Dynamic Form 을 제공하고 있어서 Form 을 통해 입력받은 값으로 조건을 주는 형태로 사용 가능해요. Dynamic Form 은 Paragraph scope 와 Note scope 에서 사용 문법의 차이가 있고, 또한 Programmatically 하게 추가하실 수 있어요.</description>
     </item>
     
     <item>
       <title>Apache Zeppelin 설치, QuickStart</title>
-      <link>https://hahafamilia.github.io/bigdata/zeppelin-quickstart/</link>
+      <link>https://hahafamilia.github.io/development/zeppelin-quickstart/</link>
       <pubDate>Wed, 21 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/bigdata/zeppelin-quickstart/</guid>
+      <guid>https://hahafamilia.github.io/development/zeppelin-quickstart/</guid>
       <description>Apache Zeppelin 은 노트북 방식의 시각화 툴이예요. 다양한 시각화 툴이 존재하지만 &amp;lsquo;가장 좋은 것&amp;rsquo;이 아니라 &amp;lsquo;나에게 맞는 것&amp;rsquo; 을 선택했어요. 제가 Zeppelin을 선택한 이유는 아래와 같아요.
  설치와 사용법이 쉬워야 한다. 요구사항을 유연하게 처리 할 수 있어야 한다. BI 웹 어드민을 개발 하지 않아도 되도록 정적 HTML 을 제공해야 한다.  Zeppelin Posts  Zeppelin Install &amp;amp; QuickStart Zeppelin Usage Zeppelin interpreter Zeppelin on CDH Zeppelin Project Build Zeppelin Project Upgrade 0.</description>
     </item>
     
     <item>
       <title>Oozie Workflow Email 알림 설정</title>
-      <link>https://hahafamilia.github.io/bigdata/oozie-workflow-email/</link>
+      <link>https://hahafamilia.github.io/development/oozie-workflow-email/</link>
       <pubDate>Wed, 14 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/bigdata/oozie-workflow-email/</guid>
+      <guid>https://hahafamilia.github.io/development/oozie-workflow-email/</guid>
       <description>Oozie 에서 Workflow 의 결과에 따른 Email 알림을 받는 방법에 대해서 알아볼게요.
 Workflow 를 1회성으로 실행시키는 경우와 Schedule 로 등록하여 주기적으로 실행하는 경우가 있을 수 있을텐데요. 1회성으로 Workflow 만 실행할때는 성공/실패에 대한 처리 결과를 받도록 하고, Schedule 로 등록하여 주기적으로 실행하는 경우에는 실패에 대한 알림 만을 받도록 합니다.
 Version  Cloudera 6.1.1 Oozie 5.0.0 Hue 4.3.0  Oozie SMTP 설정 Cloudera Manager &amp;gt; Oozie &amp;gt; 구성 탭 에서 mail 을 검색해서, oozie.</description>
@@ -158,10 +158,10 @@ Version  Cloudera 6.1.1 Oozie 5.0.0 Hue 4.3.0  Oozie SMTP 설정 Cloudera Manage
     
     <item>
       <title>AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집</title>
-      <link>https://hahafamilia.github.io/bigdata/spring-kafka-flume/</link>
+      <link>https://hahafamilia.github.io/development/spring-kafka-flume/</link>
       <pubDate>Tue, 13 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/bigdata/spring-kafka-flume/</guid>
+      <guid>https://hahafamilia.github.io/development/spring-kafka-flume/</guid>
       <description>다음과 같은 데이터 파이프 라인을 가정해 볼게요.
  사용자의 Activity 이벤트가 발생 API 서버를 통해 Kafka 에 Produce Flume 을 통해 Kafka 의 메시지를 HDFS 로 적재 HDFS 에는 일자 별로 생성된 디렉토리에 저장  Flume 을 퉁한 데이터 수집시에 Hdfs Sink 는 useLocalTimestamp 설정은 제공 해요. 하지만 이 설정은 이벤트의 수집 시각을 기준으로 해요.
 예제 그림에서 API 에서 시작된 데이터는 파이프라인을 거쳐 HDFS 에 도달하기까지 2초의 시간이 소요된다고 가정하면, 2019-08-01 23:59:59 시각에 발생한 이벤트는 useLocalTimestamp 설정에 의해 2019-08-02 00:00:01 의 시각으로 2019-08-02 디렉토리에 적재됩니다.</description>
@@ -169,10 +169,10 @@ Version  Cloudera 6.1.1 Oozie 5.0.0 Hue 4.3.0  Oozie SMTP 설정 Cloudera Manage
     
     <item>
       <title>Cloudera Manager 알람 설정, Gmail SMPT 서버 사용</title>
-      <link>https://hahafamilia.github.io/bigdata/cloudera-alert-email/</link>
+      <link>https://hahafamilia.github.io/development/cloudera-alert-email/</link>
       <pubDate>Tue, 13 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/bigdata/cloudera-alert-email/</guid>
+      <guid>https://hahafamilia.github.io/development/cloudera-alert-email/</guid>
       <description>Cloudera Manager 알림을 보내는 방법은 SMTP, SNMP, Custom Script 세가지를 제공하고 있어요. 여기서 SNMP, Custom Script 는 Enterprise 버전에서만 지원해요. 별도의 SMTP 서버를 운영하고 있지 않다면 Gmail 을 이용할 수 있어요.
 Cloudera Version Cloudera 6.1
 Gmail 설정 우선 Gmail 설정에서 IMAP 사용이 허용되어야 해요. 그리고 Google 계정 설정 &amp;gt; 보안 &amp;gt; 보안 수준이 낮은 앱의 액세스 가 허용되어야 합니다.
@@ -181,10 +181,10 @@ Gmail 설정 우선 Gmail 설정에서 IMAP 사용이 허용되어야 해요. �
     
     <item>
       <title>Hive Java UDF, 유니코드</title>
-      <link>https://hahafamilia.github.io/bigdata/hive-java-udf/</link>
+      <link>https://hahafamilia.github.io/development/hive-java-udf/</link>
       <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/bigdata/hive-java-udf/</guid>
+      <guid>https://hahafamilia.github.io/development/hive-java-udf/</guid>
       <description>개요 Cloudera Document 6.1 Hive UDF 문서를 참고하여 Cloudera CDH 플랫폼에서 HIVE UDF 를 작성하는 방법을 알아봅니다.
 또한 MySQL의 Collate 와 문자열 유니코드에 대해서도 간단히 알아보겠습니다.
 저의 이번 경우는 HIVE로 집계된 데이터를 SQOOP으로 export 시에 오류가 발생하였습니다.
@@ -194,10 +194,10 @@ Gmail 설정 우선 Gmail 설정에서 IMAP 사용이 허용되어야 해요. �
     
     <item>
       <title>Kafka Broker 디스크 증설, RAID구성, OS 재설치</title>
-      <link>https://hahafamilia.github.io/bigdata/kafka-broker-reinstall/</link>
+      <link>https://hahafamilia.github.io/development/kafka-broker-reinstall/</link>
       <pubDate>Tue, 25 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/bigdata/kafka-broker-reinstall/</guid>
+      <guid>https://hahafamilia.github.io/development/kafka-broker-reinstall/</guid>
       <description>Kafka Broker 재설치 Kafka Broker 서버의 디스크 용량을 증설하는 작업을 진행 하게 되었습니다. RAID 10으로 디스크 구성을 변경하다보니 불가피하게 OS를 재설치 합니다. Kafka는 Broker 서버의 장애 상황에서도 서비스를 유지 할 수 있도록 설계되어 있어요. Broker 서버를 1대씩 순차적으로 RAID 구성 및 OS 재설치 진행후에 Partition을 Reassign 할 계획입니다.
 Environment  CentOS 7.6 Cloudera CDH 6.1.1 Cloudera Manager Kafka 2.0.0-cdh6.1.1 Kafka Manager Kafka Broker 3대 Replication fector 3  HowTo Cloudera Manager 에서 작업대상 Broker 서버를 서비스에서 제거해요.</description>
     </item>
@@ -226,10 +226,10 @@ Environment  CentOS 7.6 Cloudera CDH 6.1.1 Cloudera Manager Kafka 2.0.0-cdh6.1.1
     
     <item>
       <title>Git</title>
-      <link>https://hahafamilia.github.io/howto/git/</link>
+      <link>https://hahafamilia.github.io/development/git/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hahafamilia.github.io/howto/git/</guid>
+      <guid>https://hahafamilia.github.io/development/git/</guid>
       <description>Git 기본개념 파일상태  Committed : 커밋상태, git commit Modified : 수정상태 Staged : 커밋대기상태, git add  사용영역  Git directory(Local repository) : git init 으로 지정, .git 디렉토리가 생성 Working directory : branch 를 checkout 한 내용 Staging Area  환경설정  $GIT_HOME/[installed_path]/gitconfig : 시스템의 모든 사용자 설정, git config --system $USER_HOME : 특정 사용자 설정, git config --global .git/config : 특정 저장소 설정  Getting Started cd /your/project/home touch readme.</description>
     </item>
     

@@ -9,23 +9,23 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Apache Pig Latin :: haha family&#39;s happy blog</title>
+    <title>Memcache 개념과 설치 / 운영 :: haha family&#39;s happy blog</title>
 
     
-    <link href="/css/nucleus.css?1580893645" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1580893645" rel="stylesheet">
-    <link href="/css/hybrid.css?1580893645" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1580893645" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1580893645" rel="stylesheet">
-    <link href="/css/auto-complete.css?1580893645" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1580893645" rel="stylesheet">
-    <link href="/css/theme.css?1580893645" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1580893645" rel="stylesheet">
+    <link href="/css/nucleus.css?1580897465" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1580897465" rel="stylesheet">
+    <link href="/css/hybrid.css?1580897465" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1580897465" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1580897465" rel="stylesheet">
+    <link href="/css/auto-complete.css?1580897465" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1580897465" rel="stylesheet">
+    <link href="/css/theme.css?1580897465" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1580897465" rel="stylesheet">
     
-      <link href="/css/theme-custom.css?1580893645" rel="stylesheet">
+      <link href="/css/theme-custom.css?1580897465" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1580893645"></script>
+    <script src="/js/jquery-3.3.1.min.js?1580897465"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,7 +55,7 @@ if (!doNotTrack) {
 
 
   </head>
-  <body class="" data-url="/bigdata/apache-piglatin/">
+  <body class="" data-url="/development/memcache-install-management/">
     
 <nav id="sidebar" class="">
 
@@ -71,14 +71,14 @@ if (!doNotTrack) {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1580893645"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1580893645"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1580897465"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1580897465"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/hahafamilia.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1580893645"></script>
+<script type="text/javascript" src="/js/search.js?1580897465"></script>
 
     
   </div>
@@ -93,12 +93,12 @@ if (!doNotTrack) {
  
   
     
-    <li data-nav-id="/bigdata/" title="Bigdata" class="dd-item 
+    <li data-nav-id="/development/" title="Bigdata" class="dd-item 
         parent
         
         
         ">
-      <a href="/bigdata/">
+      <a href="/development/">
           <i class='fas fa-angle-right'></i> Bigdata
           
       </a>
@@ -180,37 +180,14 @@ if (!doNotTrack) {
              
             
           
-        
-        </ul>
-              
-    </li>
-  
- 
-
+             
+            
           
+             
+            
           
-
-
- 
-  
-    
-    <li data-nav-id="/python/" title="Python" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/python/">
-          <i class='fas fa-angle-right'></i> Python
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-          
-        
+             
+            
           
              
             
@@ -246,12 +223,6 @@ if (!doNotTrack) {
           
           
         
-          
-             
-            
-          
-             
-            
           
              
             
@@ -429,7 +400,7 @@ if (!doNotTrack) {
             
           
           
-            <a href='/'>Developement and Life Blog</a> > <a href='/bigdata/'>Bigdata</a> > Apache Pig Latin
+            <a href='/'>Development and Life Blog</a> > <a href='/development/'>Bigdata</a> > Memcache 개념과 설치 / 운영
           
          
           
@@ -448,48 +419,32 @@ if (!doNotTrack) {
 <ul>
 <li>
 <ul>
-<li><a href="#pig-latin-basic">Pig Latin Basic</a>
+<li><a href="#아키텍처">아키텍처</a>
 <ul>
-<li><a href="#data-types">Data types</a></li>
-<li><a href="#operator">Operator</a></li>
-<li><a href="#주석">주석</a></li>
-<li><a href="#shell-안에서의-사용">Shell 안에서의 사용</a></li>
+<li><a href="#데이터-구조">데이터 구조</a></li>
+<li><a href="#프로세스-흐름">프로세스 흐름</a></li>
+<li><a href="#성능">성능</a></li>
+<li><a href="#consistent-hashing">Consistent Hashing</a></li>
 </ul></li>
-<li><a href="#로드-저장">로드/저장</a>
+<li><a href="#memcached-설치">memcached 설치</a>
 <ul>
-<li><a href="#load">LOAD</a></li>
-<li><a href="#store">STORE</a></li>
+<li><a href="#epel-리포지토리-등록">epel 리포지토리 등록</a></li>
+<li><a href="#기타-라이브러리">기타 라이브러리</a></li>
+<li><a href="#서비스-등록">서비스 등록</a></li>
+<li><a href="#apache-php-php-devel">apache, php, php-devel</a></li>
+<li><a href="#php-모듈-확인">PHP 모듈 확인</a></li>
+<li><a href="#memcached-환경설정">memcached 환경설정</a></li>
+<li><a href="#동시접속수">동시접속수</a></li>
+<li><a href="#capacity-memory-mb">capacity memory (MB)</a></li>
+<li><a href="#옵션-t-work-threads">옵션 -t : work threads</a></li>
+<li><a href="#memcached-php-환경설정">memcached-php 환경설정</a></li>
+<li><a href="#데몬구동">데몬구동</a></li>
 </ul></li>
-<li><a href="#diagnostic">Diagnostic</a></li>
-<li><a href="#그룹-조인">그룹/조인</a>
+<li><a href="#운영-기타">운영 기타</a>
 <ul>
-<li><a href="#group">GROUP</a></li>
-<li><a href="#cogroup">COGROUP</a></li>
-<li><a href="#self-join">SELF JOIN</a></li>
-<li><a href="#inner-join">INNER JOIN</a></li>
-<li><a href="#left-outer-join">LEFT OUTER JOIN</a></li>
-<li><a href="#right-outer-join">RIGHT OUTER JOIN</a></li>
-<li><a href="#full-outer-join">FULL OUTER JOIN</a></li>
-<li><a href="#다중키-join">다중키 JOIN</a></li>
-<li><a href="#cross">CROSS</a></li>
+<li><a href="#memcached-h">memcached -h</a></li>
 </ul></li>
-<li><a href="#결합-분할">결합/분할</a>
-<ul>
-<li><a href="#union">UNION</a></li>
-<li><a href="#split">SPLIT</a></li>
-</ul></li>
-<li><a href="#필터">필터</a>
-<ul>
-<li><a href="#filter">FILTER</a></li>
-<li><a href="#distinct">DISTINCT</a></li>
-<li><a href="#foreach">FOREACH</a></li>
-</ul></li>
-<li><a href="#정렬">정렬</a>
-<ul>
-<li><a href="#order-by">ORDER BY</a></li>
-<li><a href="#limit">LIMIT</a></li>
-</ul></li>
-<li><a href="#내장함수">내장함수</a></li>
+<li><a href="#참고자료">참고자료</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -505,11 +460,7 @@ if (!doNotTrack) {
         
 <div class="tags">
 
-  <a class="tag-link" href="/tags/2019">2019</a>
-
-  <a class="tag-link" href="/tags/bigdata">bigdata</a>
-
-  <a class="tag-link" href="/tags/apache-pig">apache-pig</a>
+  <a class="tag-link" href="/tags/2013">2013</a>
 
 </div>
 
@@ -519,7 +470,7 @@ if (!doNotTrack) {
           
             <h1>
               
-              Apache Pig Latin
+              Memcache 개념과 설치 / 운영
             </h1>
           
 
@@ -529,201 +480,251 @@ if (!doNotTrack) {
 
 
 
-<p><a href="http://pig.apache.org/">Apache Pig</a>
-Yahoo 에서 공개한 걸로 알고 있어요.
-최근 버전은 <code>Hive on Spark</code> 처럼 <code>Pig on Spark</code> 으로 사용하는군요.
-새로운 Flow 코드 작성시 잘 사용하진 않지만,
-SQL 사용시 함수와 프로시져를 만들어야 하는 경우가 있는데, 그런 경우 Pig 를 사용하고 있어요.
-ASIS Flow 에서 사용되어지고 있는 코드 들이 있어서 간단히 문법에 대해 정리 해봐요.</p>
+<h3 id="아키텍처">아키텍처</h3>
 
-<h3 id="pig-latin-basic">Pig Latin Basic</h3>
+<p><img src="images/development/2020-02-05-memcache-system.png" alt="" /></p>
 
-<p>연산자 및 명령어들은 대소문자를 구분하지만, 별칭 및 함수 이름은 대소문자를 구분해요.</p>
-
-<h4 id="data-types">Data types</h4>
-
-<p>int, long, float, double, chararray, Bytearray, Boolean, Datetime, Biginteger, Bigdecimal,
-Tuple, Bag(collection of tuples), Map</p>
-
-<h4 id="operator">Operator</h4>
-
-<p>피그에는 몇몇 종류의 operator 있는데, SQL 과 느낌이 비슷해요.</p>
+<h4 id="데이터-구조">데이터 구조</h4>
 
 <ul>
-<li>로드/저장: LOAD, STORE</li>
-<li>필터: FILTER, DISTINCT, FOREACH GENERATE, STREAM</li>
-<li>그룹/조인 : JOIN, COGROUP, GROUP, CROSS</li>
-<li>정렬 : ORDER, LIMIT</li>
-<li>결합/분할 : UNION, SPLIT</li>
-<li>Diagnostic : DUMP, DESCRIBE, EXPLAIN, ILLUSTRATE</li>
-</ul>
-
-<h4 id="주석">주석</h4>
-
-<pre><code>/* multi line
-comments */
-</code></pre>
-
-<p><code>-- single line comments</code></p>
-
-<h4 id="shell-안에서의-사용">Shell 안에서의 사용</h4>
-
-<pre><code>#!/usr/bin/env bash
-
-today=$(date +&quot;%Y-%m-%d&quot;)
-
-cat &lt;&lt; PIGEND &gt; ./pigscript.pig
-    set [environment]
-    register [library]
-    pig codes
-    ...
-    {$today}
-PIGEND
-
-pig ./pigscript.pig
-</code></pre>
-
-<h3 id="로드-저장">로드/저장</h3>
-
-<h4 id="load">LOAD</h4>
-
-<p><code>Relation_name = LOAD 'Input file path' USING function as schema;</code></p>
-
-<pre><code>student = LOAD 'hdfs://localhost:9000/pig_data/student_data.txt' 
-    USING PigStorage(',')
-    as ( id:int, firstname:chararray, lastname:chararray, phone:chararray, 
-    city:chararray );
-</code></pre>
-
-<h4 id="store">STORE</h4>
-
-<p><code>STORE Relation_name INTO 'directory path' [using function];</code></p>
-
-<pre><code>STORE student INTO 'hdfs://localhost:9000/pig_Output/' USING PigStorage (',');
-</code></pre>
-
-<h3 id="diagnostic">Diagnostic</h3>
+<li>캐시 항목을 찾기 위한 해쉬 테이블(burket list)</li>
+<li>캐시 항목 제거(eviction) 순서를 결정하는 LRU(least recently used) list</li>
+<li>키 (key), 데이터 (value), 플래그 및 포인터들을 담고 있는 캐시 데이터 구조</li>
+<li>캐시 항목 데이터 메모리 관리자인 슬랩 할당자 (slab allocator)</li>
+<li>캐시항목
 
 <ul>
-<li><code>Dump Relation_name;</code> 결과를 화면에 출력</li>
-<li><code>Describe Relation_name;</code> 스키마 출력</li>
-<li><code>explain Relation_name;</code> 논리적, 물리적, MR plan 출력</li>
-<li><code>illustrate Relation_name;</code> statement 를 단계적으로 실행</li>
+<li>해쉬 테이블에서 bucket 당 single linked-list를 가르키는 포인터</li>
+<li>LRU에서 double linked-list에 사용되는 포인터</li>
+<li>캐시 항목에 동시에 접근하는 스레드 수를 나타내는 reference counter</li>
+<li>캐시 항목 상태 플래그</li>
+<li>키 (key)</li>
+<li>값 길이 (바이트)</li>
+<li>값 (value)</li>
+</ul></li>
 </ul>
 
-<h3 id="그룹-조인">그룹/조인</h3>
+<h4 id="프로세스-흐름">프로세스 흐름</h4>
 
-<h4 id="group">GROUP</h4>
+<p><img src="images/development/2020-02-05-memcache-flow.png" alt="" /></p>
 
-<p><code>Group_data = GROUP Relation_name BY age;</code></p>
+<ul>
+<li>NIC에 요청 packet이 도착하고 libevent에 의해 처리</li>
+<li>worker thread
 
-<pre><code>group_data = GROUP student_details by age;
-group_multiple = GROUP student_details by (age, city);
-group_all = GROUP student_details All;
+<ul>
+<li>연결 및 데이터 패킷을 받기</li>
+<li>명령 및 데이터를 확인</li>
+</ul></li>
+<li>Hash 값은 키 데이터에서 생성</li>
+<li>해쉬 테이블과 LRU 처리를 위해 global cache lock 획득 (Critical Section 시작)
+
+<ul>
+<li>캐시 항목 메모리 할당</li>
+<li>캐시 항목 데이터 구조에 데이터를 저장 (플래그, 키, 값)</li>
+<li>해쉬 테이블에서 캐시 항목을 GET, STORE, DELETE하기 위해 해쉬 테이블을 탐색</li>
+<li>캐시 항목을 LRU 앞에 삽입 (GET, STORE) 또는 제거 (DELETE) 하면서 LRU 수정</li>
+<li>캐시 항목 플래그를 업데이트</li>
+</ul></li>
+<li>Global cache lock 해제 (Critical Section 끝)</li>
+<li>응답 구성</li>
+<li>(GET만 해당) global cache lock 확인 (assert)
+
+<ul>
+<li>캐시 항목 ref count를 1 감소</li>
+<li>global cache lock 해제</li>
+</ul></li>
+<li>요청한 클라이언트 (프론트엔드 웹 서버)로 응답 전송</li>
+</ul>
+
+<h4 id="성능">성능</h4>
+
+<ul>
+<li>성능 = 싱글코어 &lt; 멀티코어 &lt; 하이퍼스레딩</li>
+<li>Global cache lock은 스레드가 4개 이상일 경우 병목 현상이 발생하는 주요 원인</li>
+<li>Global cache lock은  워쿼 스레드 간의 lock 경합이 높을 수 있음</li>
+<li>Global cache lock의 성능 향상을 위한 1.6 버전 개발중</li>
+</ul>
+
+<h4 id="consistent-hashing">Consistent Hashing</h4>
+
+<p>Key의 Hash 값으로 Cache Server 에 데이터를 저장하는데, Cache Server 의 장애 발생시에
+가장 가까운 Cache Server 로 할당되어 Hash 의 재조정 없이 서비스가 가능합니다.</p>
+
+<ul>
+<li><p>Consistent Hashing 알고리즘에서 한가지 유의 해야 할 점, TTL 이 적절히 설정되어야 합니다.</p>
+
+<ol>
+<li>A 서버 장애</li>
+<li>A 서버에서 담당하는 Hash 들은 B 서버에 저장</li>
+<li>A 서버 복구</li>
+<li>A 서버에서 담당하는 Hash 들은 다시 A 서버에 저장</li>
+<li><em>B 서버에 저장되었던 Hash 들이 남아있음.</em></li>
+<li>A 서버 다시 장애</li>
+<li>B 서버에 남아 있던 데이터로 서비스(Old Data 로 응답)</li>
+</ol></li>
+</ul>
+
+<h3 id="memcached-설치">memcached 설치</h3>
+
+<p><code>yum -y install memcached</code>, 설치 안될경우 epel 리포지토리 등록</p>
+
+<h4 id="epel-리포지토리-등록">epel 리포지토리 등록</h4>
+
+<pre><code>rpm -Uvh http://dl.fedoraproject.org/pub/epel/5/x86_64/epel-release-5-4.noarch.rpm    
+yum repolist
+yum -y install yum-priorities
 </code></pre>
 
-<h4 id="cogroup">COGROUP</h4>
+<h4 id="기타-라이브러리">기타 라이브러리</h4>
 
-<p>두개 이상의 relation 을 그룹핑 해요.</p>
-
-<pre><code>cogroup_data = COGROUP student_details by age, employee_details by age;
+<pre><code>yum -y install libevent libevent-devel 
+yum -y install zlib zlib-devel 
+yum -y install php-pecl-memcache
+yum -y install libmemcached
 </code></pre>
 
-<pre><code>(23,{(6,Archana,Mishra,23,9848022335,Chennai),(5,Trupthi,Mohanthy,23,9848022336 ,Bhuwaneshwar)}, 
-   {(5,David,23,Bhuwaneshwar),(3,Maya,23,Tokyo),(2,BOB,23,Kolkata)}) 
+<h4 id="서비스-등록">서비스 등록</h4>
+
+<pre><code>chkconfig memcached on
+chkconfig --list |grep memcached
 </code></pre>
 
-<h4 id="self-join">SELF JOIN</h4>
+<h4 id="apache-php-php-devel">apache, php, php-devel</h4>
 
-<p><code>Relation3_name = JOIN Relation1_name BY key, Relation2_name BY key;</code>
-<code>Relation1_name</code>, <code>Relation2_name</code> 가 동일한 데이터소스를 <code>LOAD</code> 해서 <code>JOIN</code> 해요.</p>
+<p><code>yum install httpd php php-devel</code></p>
 
-<pre><code>customers3 = JOIN customers1 BY id, customers2 BY id;
+<h4 id="php-모듈-확인">PHP 모듈 확인</h4>
+
+<pre><code># &quot;memcache&quot; 라고 출력됨
+php -m | grep memcache 
+# /etc/php.d/memcache.ini 의 졍보가 출력됨.
+php -i | grep memcache
+updatedb
+# /usr/lib64/php/modules/memcache.so 라고 출력됨.
+locate memcache.so		
 </code></pre>
 
-<h4 id="inner-join">INNER JOIN</h4>
+<h4 id="memcached-환경설정">memcached 환경설정</h4>
 
-<p><code>result = JOIN relation1 BY columnname, relation2 BY columnname;</code></p>
+<p>vi /etc/sysconfig/memcached</p>
 
-<h4 id="left-outer-join">LEFT OUTER JOIN</h4>
-
-<p><code>Relation3_name = JOIN Relation1_name BY id LEFT OUTER, Relation2_name BY customer_id;</code></p>
-
-<h4 id="right-outer-join">RIGHT OUTER JOIN</h4>
-
-<p><code>outer_right = JOIN customers BY id RIGHT, orders BY customer_id;</code></p>
-
-<h4 id="full-outer-join">FULL OUTER JOIN</h4>
-
-<p><code>outer_full = JOIN customers BY id FULL OUTER, orders BY customer_id;</code></p>
-
-<h4 id="다중키-join">다중키 JOIN</h4>
-
-<p><code>Relation3_name = JOIN Relation2_name BY (key1, key2), Relation3_name BY (key1, key2);</code></p>
-
-<h4 id="cross">CROSS</h4>
-
-<p><code>cross_data = CROSS customers, orders;</code></p>
-
-<h3 id="결합-분할">결합/분할</h3>
-
-<h4 id="union">UNION</h4>
-
-<p><code>Relation_name3 = UNION Relation_name1, Relation_name2;</code></p>
-
-<pre><code>student = UNION student1, student2;
+<pre><code>PORT=&quot;11301&quot;
+USER=&quot;nobody&quot;
 </code></pre>
 
-<h4 id="split">SPLIT</h4>
+<h4 id="동시접속수">동시접속수</h4>
 
-<p><code>SPLIT Relation1_name INTO Relation2_name IF (condition1), Relation2_name (condition2);</code></p>
+<p>5 * apache maxclients, MAXCONN=&ldquo;1024&rdquo;</p>
 
-<pre><code>SPLIT student_details into student_details1 if age&lt;23, student_details2 if (22&lt;age and age&gt;25);
+<h4 id="capacity-memory-mb">capacity memory (MB)</h4>
+
+<p>CACHESIZE=&ldquo;2048&rdquo;</p>
+
+<h4 id="옵션-t-work-threads">옵션 -t : work threads</h4>
+
+<p>OPTIONS=&rdquo; -t 4 &ldquo;</p>
+
+<h4 id="memcached-php-환경설정">memcached-php 환경설정</h4>
+
+<ul>
+<li>vi /etc/php.d/memcache.ini<br />
+
+<ul>
+<li>memcache.allow_failover : 0, 연결 에러가 발생할 경우 다른 서버로 연결할 것인지 여부</li>
+<li>memcache.chunk_size : 32768(32KB), 데이터 전송 크기, 기본 8192(8KB), 보통 32768(32KB)</li>
+<li>memcache.default_port : 11301</li>
+<li><code>php -i | grep memcache</code> 설정 확인</li>
+</ul></li>
+</ul>
+
+<h4 id="데몬구동">데몬구동</h4>
+
+<pre><code>/etc/init.d/memcached status
+/etc/init.d/memcached start
+/etc/init.d/memcached stop
+/etc/init.d/memcached restart
 </code></pre>
 
-<h3 id="필터">필터</h3>
+<h3 id="운영-기타">운영 기타</h3>
 
-<h4 id="filter">FILTER</h4>
+<h4 id="memcached-h">memcached -h</h4>
 
-<p><code>Relation2_name = FILTER Relation1_name BY (condition);</code></p>
-
-<pre><code>filter_data = FILTER student_details BY city == 'Chennai';
+<pre><code>-l &lt;addr&gt;     바인드할 주소
+-p &lt;num&gt;      TCP 포트 번호 (기본값: 11211)
+-U &lt;num&gt;      UDP 포트 번호 (기본값: 11211, 0 인경우 사용안함)
+-s &lt;file&gt;     UNIX 소켓 경로 (네트워크 지원 안함)
+-d            데몬으로 실행
+-u &lt;username&gt; 전환할 사용자 이름(루트로 실행시)
+-m &lt;num&gt;      최대 메모리(MB단위, 기본값: 64)
+-M            데이터 저장시 메모리가 부족할 경우 오류를 반환(기본값은 오래된 데이터를 삭제)
+-c &lt;num&gt;      최대 접속 개수 (기본값: 1024)
+-P &lt;file&gt;     PID 파일 저장 위치. -d 옵션 사용시 사용
+-f &lt;factor&gt;   증가 팩터값. (기본값: 1.25)
+-n &lt;bytes&gt;    키+값+플래그를 저장할 최소 단위(기본값: 48)
+-L            large memory pages 사용(가능한경우)
+-t &lt;num&gt;      사용할 쓰레드 개수 (기본값: 4)
+-v            로그 보임
+-vv           자세한 로그 보임
+-vvv          매우 자세한 로그 보임
 </code></pre>
 
-<h4 id="distinct">DISTINCT</h4>
+<ul>
+<li>프로토콜 : 바이너리/아스키, 부하가 많은상황에서 바이너리가 약간의 성능 우위</li>
+<li>명령어 : stats settings 1</li>
 
-<p><code>Relation_name2 = DISTINCT Relatin_name1;</code></p>
+<li><p>기본 튜닝</p>
 
-<pre><code>distinct_data = DISTINCT student_details;
-</code></pre>
+<ul>
+<li>TCP 스펙상 접속을 끊은 후 TIME_WAIT 대기 시간이 발생한다. 30~240초로 설정할 수 있는데, 대부분의 운영체제에서는 240초가 기본값이다.</li>
 
-<h4 id="foreach">FOREACH</h4>
+<li><p>memcached 를 실행한 서버에서 아래와 같이 30초로 세팅한다. 참고로 TCP표준은 최소 60초 이상을 권장한다.</p>
 
-<p><code>Relation_name2 = FOREACH Relatin_name1 GENERATE (required data);</code></p>
+<pre><code>cat /proc/sys/net/ipv4/tcp_fin_timeout
+echo 30 &gt; /proc/sys/net/ipv4/tcp_fin_timeout
+</code></pre></li>
+</ul></li>
 
-<pre><code>foreach_data = FOREACH student_details GENERATE id,age,city;
-</code></pre>
+<li><p>포트변경시</p>
 
-<h3 id="정렬">정렬</h3>
+<pre><code>cat /etc/sysconfig/memcached	
+cat /etc/php.d/memcache.ini
+php -i | grep memcache
+</code></pre></li>
+</ul>
 
-<h4 id="order-by">ORDER BY</h4>
+<h3 id="참고자료">참고자료</h3>
 
-<p><code>Relation_name2 = ORDER Relatin_name1 BY (ASC|DESC);</code></p>
+<ul>
+<li>홈페이지 : <a href="http://memcached.org/">http://memcached.org/</a></li>
+<li>아키텍처 : <a href="http://helloworld.naver.com/helloworld/151047">http://helloworld.naver.com/helloworld/151047</a></li>
+<li>PHP API : <a href="http://www.php.net/manual/en/book.memcache.php">http://www.php.net/manual/en/book.memcache.php</a></li>
+<li>PHP Sample :
 
-<pre><code>order_by_data = ORDER student_details BY age DESC;
-</code></pre>
+<ul>
+<li><a href="http://css.dzone.com/articles/how-use-memcache-php">http://css.dzone.com/articles/how-use-memcache-php</a></li>
+<li><a href="http://pureform.wordpress.com/2008/05/21/using-memcache-with-mysql-and-php/">http://pureform.wordpress.com/2008/05/21/using-memcache-with-mysql-and-php/</a></li>
+</ul></li>
+<li>설치 &amp; 기타
 
-<h4 id="limit">LIMIT</h4>
+<ul>
+<li>윈디나라 : <a href="http://www.solanara.net/solanara/memcached">http://www.solanara.net/solanara/memcached</a></li>
+<li><a href="http://blog.pages.kr/366">http://blog.pages.kr/366</a></li>
+<li>MCB : <a href="http://www.interdb.jp/techinfo/mcb/index-e.html">http://www.interdb.jp/techinfo/mcb/index-e.html</a></li>
+</ul></li>
+<li>Mecache-Mysql
 
-<p><code>Result = LIMIT Relation_name required number of tuples;</code></p>
+<ul>
+<li><a href="http://www.mysqlkorea.co.kr/gnuboard4/bbs/board.php?bo_table=develop_04&amp;wr_id=1">http://www.mysqlkorea.co.kr/gnuboard4/bbs/board.php?bo_table=develop_04&amp;wr_id=1</a></li>
+<li><a href="http://downloads.mysql.com/docs/mysql-memcached-en.pdf">http://downloads.mysql.com/docs/mysql-memcached-en.pdf</a></li>
+</ul></li>
+<li>모니터링
 
-<pre><code>limit_data = LIMIT student_details 4; 
-</code></pre>
-
-<h3 id="내장함수">내장함수</h3>
-
-<p>Eval, Load/Store, String, Datetime, Math 등의 내장 함수는
-<a href="https://www.tutorialspoint.com/apache_pig/apache_pig_eval_functions.htm">링크</a>로 대체 할게요.</p>
+<ul>
+<li><a href="http://blog.bbom.org/65">http://blog.bbom.org/65</a></li>
+<li><a href="https://code.google.com/p/phpmemcacheadmin/">https://code.google.com/p/phpmemcacheadmin/</a></li>
+</ul></li>
+</ul>
 
 
 <footer class=" footline" >
@@ -740,8 +741,8 @@ group_all = GROUP student_details All;
 (function() {
 
     
-    var logicalName = 'apache-piglatin.md';
-    var relPermalink = '\/bigdata\/apache-piglatin\/';
+    var logicalName = 'memcache-install-management.md';
+    var relPermalink = '\/development\/memcache-install-management\/';
     if (logicalName == "_index.md" || relPermalink == "/tags/" || relPermalink.includes("/tags/"))
         return;
         
@@ -908,6 +909,26 @@ group_all = GROUP student_details All;
             
         
                     
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
             
         
                     
@@ -926,37 +947,6 @@ group_all = GROUP student_details All;
                     
                     
 
-                    
-                        
-            
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
                     
                         
             
@@ -1063,19 +1053,19 @@ group_all = GROUP student_details All;
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1580893645"></script>
-    <script src="/js/perfect-scrollbar.min.js?1580893645"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1580893645"></script>
-    <script src="/js/jquery.sticky.js?1580893645"></script>
-    <script src="/js/featherlight.min.js?1580893645"></script>
-    <script src="/js/highlight.pack.js?1580893645"></script>
+    <script src="/js/clipboard.min.js?1580897465"></script>
+    <script src="/js/perfect-scrollbar.min.js?1580897465"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1580897465"></script>
+    <script src="/js/jquery.sticky.js?1580897465"></script>
+    <script src="/js/featherlight.min.js?1580897465"></script>
+    <script src="/js/highlight.pack.js?1580897465"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1580893645"></script>
-    <script src="/js/learn.js?1580893645"></script>
-    <script src="/js/hugo-learn.js?1580893645"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1580897465"></script>
+    <script src="/js/learn.js?1580897465"></script>
+    <script src="/js/hugo-learn.js?1580897465"></script>
 
-    <link href="/mermaid/mermaid.css?1580893645" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1580893645"></script>
+    <link href="/mermaid/mermaid.css?1580897465" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1580897465"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

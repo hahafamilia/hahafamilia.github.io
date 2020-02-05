@@ -1,7 +1,7 @@
 [
 {
 	"uri": "https://hahafamilia.github.io/development/",
-	"title": "Bigdata",
+	"title": "Development",
 	"tags": [],
 	"description": "",
 	"content": "  Presto 설치, PrestoDB, PrestoSQL     할아버지 클러스터의 엉망진창 HBase 문제해결     클러스터 네트워크 일시 장애로 인한 Kafka/Zookeeper 문제해결     IntelliJ maven scala 프로젝트 설정     Apache Pig Latin     고급 분석과 머신러닝 개요     Cloudera CDH Configuration     Apache Zeppelin Project Build     Apache Zeppelin on CDH, Yarn     FFMPEG를 이용해 음악 플레이리스트 동영상 만들기     Apache Zeppelin Upgrade from 0.8.1 to 0.8.2     Cloudera CDH 6.1.1 설치하기     Kafka Manager 설치     Apache Zeppelin Interpreter, Hive, Impala     Apache Zeppelin Usage     Apache Zeppelin 설치, QuickStart     Oozie Workflow Email 알림 설정     AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집     Cloudera Manager 알람 설정, Gmail SMPT 서버 사용     Python 개발환경, Pyenv, Anaconda3     Hive Java UDF, 유니코드     Kafka Broker 디스크 증설, RAID구성, OS 재설치     Git     Apache Hadoop 롤링 업그레이드 2.4.1 to 2.6.0     Apache Hadoop 2.4 운영     Apache Hadoop 2.2 운영     Memcache 개념과 설치 / 운영     "
@@ -326,7 +326,7 @@
 	"title": "Development and Life Blog",
 	"tags": [],
 	"description": "",
-	"content": " Development and Life Blog  Bigdata    Presto 설치, PrestoDB, PrestoSQL   할아버지 클러스터의 엉망진창 HBase 문제해결   클러스터 네트워크 일시 장애로 인한 Kafka/Zookeeper 문제해결   IntelliJ maven scala 프로젝트 설정   Apache Pig Latin   고급 분석과 머신러닝 개요   Cloudera CDH Configuration   Apache Zeppelin Project Build   Apache Zeppelin on CDH, Yarn   FFMPEG를 이용해 음악 플레이리스트 동영상 만들기   Apache Zeppelin Upgrade from 0.8.1 to 0.8.2   Cloudera CDH 6.1.1 설치하기   Kafka Manager 설치   Apache Zeppelin Interpreter, Hive, Impala   Apache Zeppelin Usage   Apache Zeppelin 설치, QuickStart   Oozie Workflow Email 알림 설정   AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집   Cloudera Manager 알람 설정, Gmail SMPT 서버 사용   Python 개발환경, Pyenv, Anaconda3   Hive Java UDF, 유니코드   Kafka Broker 디스크 증설, RAID구성, OS 재설치   Git   Apache Hadoop 롤링 업그레이드 2.4.1 to 2.6.0   Apache Hadoop 2.4 운영   Apache Hadoop 2.2 운영   Memcache 개념과 설치 / 운영    HowTo    휴고 설치 및 설정, Learn 테마, Hugo Website   Markdown 작성법   Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그    Book    보도섀퍼의돈   이웃집백만장자 변하지않는부의법칙   스파크 완벽 가이드   하이브 핵심 정리, Apache Hive Essentials   카프카, 데이터 플랫폼의 최강자   모든 주식을 소유하라   하둡 애플리케이션 아키텍처    Life    필리핀 세부 마리바고 블루워터 여름휴가    "
+	"content": " Development and Life Blog  Development    Presto 설치, PrestoDB, PrestoSQL   할아버지 클러스터의 엉망진창 HBase 문제해결   클러스터 네트워크 일시 장애로 인한 Kafka/Zookeeper 문제해결   IntelliJ maven scala 프로젝트 설정   Apache Pig Latin   고급 분석과 머신러닝 개요   Cloudera CDH Configuration   Apache Zeppelin Project Build   Apache Zeppelin on CDH, Yarn   FFMPEG를 이용해 음악 플레이리스트 동영상 만들기   Apache Zeppelin Upgrade from 0.8.1 to 0.8.2   Cloudera CDH 6.1.1 설치하기   Kafka Manager 설치   Apache Zeppelin Interpreter, Hive, Impala   Apache Zeppelin Usage   Apache Zeppelin 설치, QuickStart   Oozie Workflow Email 알림 설정   AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집   Cloudera Manager 알람 설정, Gmail SMPT 서버 사용   Python 개발환경, Pyenv, Anaconda3   Hive Java UDF, 유니코드   Kafka Broker 디스크 증설, RAID구성, OS 재설치   Git   Apache Hadoop 롤링 업그레이드 2.4.1 to 2.6.0   Apache Hadoop 2.4 운영   Apache Hadoop 2.2 운영   Memcache 개념과 설치 / 운영    HowTo    휴고 설치 및 설정, Learn 테마, Hugo Website   Markdown 작성법   Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그    Book    보도섀퍼의돈   이웃집백만장자 변하지않는부의법칙   스파크 완벽 가이드   하이브 핵심 정리, Apache Hive Essentials   카프카, 데이터 플랫폼의 최강자   모든 주식을 소유하라   하둡 애플리케이션 아키텍처    Life    필리핀 세부 마리바고 블루워터 여름휴가    "
 },
 {
 	"uri": "https://hahafamilia.github.io/tags/hugo-staticgen/",

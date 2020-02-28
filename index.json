@@ -4,7 +4,7 @@
 	"title": "Development",
 	"tags": [],
 	"description": "",
-	"content": "  Presto 설치, PrestoDB, PrestoSQL     할아버지 클러스터의 엉망진창 HBase 문제해결     클러스터 네트워크 일시 장애로 인한 Kafka/Zookeeper 문제해결     IntelliJ maven scala 프로젝트 설정     Apache Pig Latin     고급 분석과 머신러닝 개요     Cloudera CDH Configuration     Apache Zeppelin Project Build     Apache Zeppelin on CDH, Yarn     FFMPEG를 이용해 음악 플레이리스트 동영상 만들기     Apache Zeppelin Upgrade from 0.8.1 to 0.8.2     Cloudera CDH 6.1.1 설치하기     Kafka Manager 설치     Apache Zeppelin Interpreter, Hive, Impala     Apache Zeppelin Usage     Apache Zeppelin 설치, QuickStart     Oozie Workflow Email 알림 설정     AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집     Cloudera Manager 알람 설정, Gmail SMPT 서버 사용     Python 개발환경, Pyenv, Anaconda3     Hive Java UDF, 유니코드     Kafka Broker 디스크 증설, RAID구성, OS 재설치     Git     Apache Hadoop 롤링 업그레이드 2.4.1 to 2.6.0     Apache Hadoop 2.4 운영     Apache Hadoop 2.2 운영     Memcache 개념과 설치 / 운영     "
+	"content": "  Presto 설치, PrestoDB, PrestoSQL     할아버지 클러스터의 엉망진창 HBase 문제해결     클러스터 네트워크 일시 장애로 인한 Kafka/Zookeeper 문제해결     IntelliJ maven scala 프로젝트 설정     Apache Pig Latin     고급 분석과 머신러닝 개요     Cloudera CDH Configuration     Apache Zeppelin Project Build     Apache Zeppelin on CDH, Yarn     FFMPEG를 이용해 음악 플레이리스트 동영상 만들기     Apache Zeppelin Upgrade from 0.8.1 to 0.8.2     Cloudera CDH 6.1.1 설치하기     Kafka Manager 설치     Apache Zeppelin Interpreter, Hive, Impala     Apache Zeppelin Usage     Apache Zeppelin 설치, QuickStart     Oozie Workflow Email 알림 설정     AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집     Cloudera Manager 알람 설정, Gmail SMPT 서버 사용     Python 개발환경, Pyenv, Anaconda3     Hive Java UDF, 유니코드     Kafka Broker 디스크 증설, RAID구성, OS 재설치     Git     Zabbix 모니터링 메모     Apache Hadoop 롤링 업그레이드 2.4.1 to 2.6.0     Apache Hadoop 2.4 운영     Apache Hadoop 2.2 운영     Memcache 개념과 설치 / 운영     "
 },
 {
 	"uri": "https://hahafamilia.github.io/howto/",
@@ -326,7 +326,7 @@
 	"title": "Development and Life Blog",
 	"tags": [],
 	"description": "",
-	"content": " Development and Life Blog  Development    Presto 설치, PrestoDB, PrestoSQL   할아버지 클러스터의 엉망진창 HBase 문제해결   클러스터 네트워크 일시 장애로 인한 Kafka/Zookeeper 문제해결   IntelliJ maven scala 프로젝트 설정   Apache Pig Latin   고급 분석과 머신러닝 개요   Cloudera CDH Configuration   Apache Zeppelin Project Build   Apache Zeppelin on CDH, Yarn   FFMPEG를 이용해 음악 플레이리스트 동영상 만들기   Apache Zeppelin Upgrade from 0.8.1 to 0.8.2   Cloudera CDH 6.1.1 설치하기   Kafka Manager 설치   Apache Zeppelin Interpreter, Hive, Impala   Apache Zeppelin Usage   Apache Zeppelin 설치, QuickStart   Oozie Workflow Email 알림 설정   AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집   Cloudera Manager 알람 설정, Gmail SMPT 서버 사용   Python 개발환경, Pyenv, Anaconda3   Hive Java UDF, 유니코드   Kafka Broker 디스크 증설, RAID구성, OS 재설치   Git   Apache Hadoop 롤링 업그레이드 2.4.1 to 2.6.0   Apache Hadoop 2.4 운영   Apache Hadoop 2.2 운영   Memcache 개념과 설치 / 운영    HowTo    휴고 설치 및 설정, Learn 테마, Hugo Website   Markdown 작성법   Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그    Book    보도섀퍼의돈   이웃집백만장자 변하지않는부의법칙   스파크 완벽 가이드   하이브 핵심 정리, Apache Hive Essentials   카프카, 데이터 플랫폼의 최강자   모든 주식을 소유하라   하둡 애플리케이션 아키텍처    Life    필리핀 세부 마리바고 블루워터 여름휴가    "
+	"content": " Development and Life Blog  Development    Presto 설치, PrestoDB, PrestoSQL   할아버지 클러스터의 엉망진창 HBase 문제해결   클러스터 네트워크 일시 장애로 인한 Kafka/Zookeeper 문제해결   IntelliJ maven scala 프로젝트 설정   Apache Pig Latin   고급 분석과 머신러닝 개요   Cloudera CDH Configuration   Apache Zeppelin Project Build   Apache Zeppelin on CDH, Yarn   FFMPEG를 이용해 음악 플레이리스트 동영상 만들기   Apache Zeppelin Upgrade from 0.8.1 to 0.8.2   Cloudera CDH 6.1.1 설치하기   Kafka Manager 설치   Apache Zeppelin Interpreter, Hive, Impala   Apache Zeppelin Usage   Apache Zeppelin 설치, QuickStart   Oozie Workflow Email 알림 설정   AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집   Cloudera Manager 알람 설정, Gmail SMPT 서버 사용   Python 개발환경, Pyenv, Anaconda3   Hive Java UDF, 유니코드   Kafka Broker 디스크 증설, RAID구성, OS 재설치   Git   Zabbix 모니터링 메모   Apache Hadoop 롤링 업그레이드 2.4.1 to 2.6.0   Apache Hadoop 2.4 운영   Apache Hadoop 2.2 운영   Memcache 개념과 설치 / 운영    HowTo    휴고 설치 및 설정, Learn 테마, Hugo Website   Markdown 작성법   Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그    Book    보도섀퍼의돈   이웃집백만장자 변하지않는부의법칙   스파크 완벽 가이드   하이브 핵심 정리, Apache Hive Essentials   카프카, 데이터 플랫폼의 최강자   모든 주식을 소유하라   하둡 애플리케이션 아키텍처    Life    필리핀 세부 마리바고 블루워터 여름휴가    "
 },
 {
 	"uri": "https://hahafamilia.github.io/tags/hugo-staticgen/",
@@ -544,6 +544,20 @@
 	"tags": ["book"],
 	"description": "",
 	"content": " 하둡 에코시스템을 활용한 빅데이터 처리 라는 부제을 가지고 있는 이 책에서는 HDFS/HBASE 스키마 디자인, 데이터 파이프라인, 맵리듀스, 스파크, 피크, 크런치, 하이브, ETL, 스트리밍, 근접 실시간, 데이터 웨어하우스, 사례연구 등 데이터의 수집에서 분석까지의 빅데이터 아키텍처에 대해 설명하고 있어요.\n교보문고 링크\n출간  저자 : 마크 그로버, 테드 멀래스커, 조나단 사이드먼, 그웬 사피라 옮김 : 정동식, 홍다경, 우지현 출판사 : 비제이퍼블릭 출간일 : 2016.05.30  목차  1부. 하둡 애플리케이션의 아키텍처 고려사항  1장. 하둡 데이터 모델링 2장. 데이터 이동 3장. 하둡 데이터 프로세싱 4장. 하둡의 일반적인 프로세싱 패턴들 5장. 하둡 그래프 프로세싱 6장. 오케스트레이션 7장. 하둡을 활용한 근접 실시간 프로세싱  2부. 사례 연구  8장. 클릭스트림 분석 9장. 부정거래 탐지 10장. 데이터 웨어하우스   개인평 이 책에는 하둡을 기반으로 하는 빅데이터 플랫폼 아키텍처에 대해 설명하고 있어요. 아키텍처에 대한 책이다보니 각 어플리케이션의 설치 방법 등의 내용은 포함하고 있지 않아요.\n데이터의 수집, 이동, 분석, 시각화까지 플랫폼을 구축하는데 있어서 하둡 에코 시스템내의 어플리케이션들이 어떤 것들이 있고, 어떻게 배치 할 것인가? 각각의 경우에 어떠한 어플리케이션을 선택해야 하는가? 등의 아키텍처에 대해 설명하고 있어요.\n아쉬운 점이라면 2016년 출간 이후 하둡 에코 시스템은 계속 변화 하였고, 새로운 어플리케이션들이 다양하게 있는데, 이러한 부분은 담고 있지 않아요. 책을 통해서 아키텍처를 흐름을 이해하고, 구축하려는 플랫폼에 맞게 재구성할 필요가 있어요.\n큰 주제를 다루다보니 뜬 구름 일 수도 있어 보이는 내용은 하둡 에코시스템에 대한 지식이 부족하고, 하둡 아키테처 설계에 대한 기초 지식을 쌓아야 하는 분에게 이 책을 추천합니다.\n"
+},
+{
+	"uri": "https://hahafamilia.github.io/tags/2018/",
+	"title": "2018",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://hahafamilia.github.io/development/zabbix-install-memo/",
+	"title": "Zabbix 모니터링 메모",
+	"tags": ["2018"],
+	"description": "",
+	"content": " Version  zibbix 3.4 Ubuntu 16.0 Centos 6  Server Install Install Zabbix Server EC2 설치시 Ubuntu로 설치 관련 글에 AGent, WEB 설정 등이 상세함.\nsudo apt-get install libapach2-mod-php /usr/share/zabbix/conf/zabbix.conf.php   server port 10051\n Agent Install Install Zabbix Agent\nrpm -Uvh http://repo.zabbix.com/zabbix/3.4/rhel/6/x86_64/zabbix-release-3.4-2.el6.noarch.rpm rpm -Uvh http://repo.zabbix.com/zabbix/3.4/rhel/6/x86_64/zabbix-release-3.4-1.el6.noarch.rpm yum install zabbix-agent  Language\nAdd Agent to Server\nManual\nTomcat jmx monitoring wget http://apache.mirror.cdnetworks.com/tomcat/tomcat-8/v8.0.49/bin/extras/catalina-jmx-remote.jar  JAVA_OPTS=\u0026quot;$JAVA_OPTS -Dcom.sun.management.jmxremote -Djava.rmi.server.hostname=HOST_SERVER_IP \\ -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false\u0026quot; JAVA_OPTIONS=\u0026quot;$JAVA_OPTIONS -Dcom.sun.management.jmxremote\u0026quot; JAVA_OPTIONS=\u0026quot;$JAVA_OPTIONS -Dcom.sun.management.jmxremote.port=8420\u0026quot; JAVA_OPTIONS=\u0026quot;$JAVA_OPTIONS -Dcom.sun.management.jmxremote.ssl=false\u0026quot; JAVA_OPTIONS=\u0026quot;$JAVA_OPTIONS -Dcom.sun.management.jmxremote.authenticate=false\u0026quot;  Nginx monitoring https://github.com/oscm/zabbix/tree/master/nginx\nZabbix Template oscm/zabbix share/zabbix\n"
 },
 {
 	"uri": "https://hahafamilia.github.io/development/apache-hadoop-rollingupgrade-2.4-2.6/",

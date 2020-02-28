@@ -471,6 +471,18 @@
   </url>
   
   <url>
+    <loc>https://hahafamilia.github.io/tags/2018/</loc>
+    <lastmod>2018-04-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://hahafamilia.github.io/development/zabbix-install-memo/</loc>
+    <lastmod>2018-04-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
     <loc>https://hahafamilia.github.io/development/apache-hadoop-rollingupgrade-2.4-2.6/</loc>
     <lastmod>2015-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>

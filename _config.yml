@@ -55,7 +55,7 @@ plugins:
 #   - vendor/ruby/
 
 # hahafamilia
-#remote_theme: hahafamilia/just-the-docs
+remote_theme: hahafamilia/just-the-docs
 theme: just-the-docs
 
 ##################################################

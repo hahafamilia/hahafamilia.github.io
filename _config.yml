@@ -56,7 +56,7 @@ plugins:
 
 # hahafamilia
 remote_theme: hahafamilia/just-the-docs
-theme: just-the-docs
+# theme: just-the-docs
 
 ##################################################
 # SEARCH

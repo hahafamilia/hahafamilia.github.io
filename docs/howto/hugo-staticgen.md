@@ -1,6 +1,5 @@
 ---
 layout: default
-
 parent: howto
 title : 휴고 설치 및 설정, Learn 테마, Hugo Website
 tags: 
@@ -28,13 +27,13 @@ Mac 에서 [Hugo Install Doc](https://gohugo.io/getting-started/quick-start/)
 
 > Mac이 아닐경우 [Hugo Install](https://gohugo.io/getting-started/installing/)
 
-```shell
+```
 brew install hugo
 hugo version
 ```
 
 Directory Structure
-```md
+```
 .
 ├── archetypes
 ├── config.toml
@@ -47,7 +46,7 @@ Directory Structure
 몇 개만 살펴보면 `content` 작성한 글, `layouts` Custom html 파일, `static` 는 css, image 등이 저장되요.
 
 ### 웹사이트 생성
-```shell
+```
 # Site 생성
 hugo new site <site directory>
 # Website server 실행
@@ -58,7 +57,7 @@ hugo server -D
 어떠한 명령어들은 Root 디렉토리가 아닐경우 정상 동작하지 않아요.
 
 ### 설정, config.toml
-```toml
+```
 baseURL = "https://hahafamilia.github.io/"
 languageCode = "ko-kr"
 title = "haha family's happy blog"
@@ -67,7 +66,7 @@ theme = "learn"
 
 ### 글 작성
 컨텐츠 추가 
-```shell
+```
 hugo new content/posts/my-first-post.md
 ```
 > `hugo new` 명령어로 생성되는 파일은 `archetypes/default.md` 파일에 템플릿화 되어 있어요. 
@@ -87,7 +86,7 @@ Git [submodule](https://git-scm.com/book/ko/v1/Git-%EB%8F%84%EA%B5%AC-%EC%84%9C%
 로 등록하는 것을 추천합니다. 테마는 언제든지 바뀔 수 있고, 업데이트 될 수 있으니까요.
 
 테마추가
-```shell
+```
 cd <site directory>
 git init
 git submodule add https://github.com/matcornic/hugo-theme-learn.git themes/learn
@@ -113,7 +112,7 @@ echo 'theme = "learn"' >> config.toml
 필드를 사용해 보세요.
 
 메뉴에 별도의 Link 를 연결하길 원할 경우(Git 주소등) `config.toml` 파일에 `menu.shortcuts` 을 사용하면되요.
-```toml
+```
 # config.toml
 [[menu.shortcuts]]
 name = "<i class='fas fa-tags'></i> Tags"
@@ -125,11 +124,14 @@ url = "/tags"
 
 ### logo
 `layouts/partials/logo.html` 편집
-```html
+
+{% raw %}
+```
 <a id="logo" href="{{ .Site.BaseURL }}">
 <img src="/images/logo.png" alt="logo.png">
 </a>
 ```
+{% endraw %}
 ### Menu Footer
 `layouts/partials/menu-footer.html` 편집
 
@@ -144,14 +146,14 @@ Hugo 에서 font-familiy 를 변경할 수 있는 설정은 없어요. 엄밀히
 
 `static/css/theme-custom.css` 파일을 생성하고 기본 Style 값을 복사 해주세요.
 
-```toml
+```
 [params]
 themeVariant = "custom"
 ```
 > 파일명의 `theme-` 는 고정이고, `custom` 은 변수명 처럼 사용가능해요.
 
 font-family 변경은 더 좋은 방법이 있을 것으로 보이지만, 우선 포스트 영역만 변경 했어요.
-```style
+```
 
 @import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap');
 body {
@@ -179,18 +181,21 @@ Disqus, Google Analystics, Google Search, 네이버 웹마스터 의 계정이 �
 연동에 필요한 것들을 구성하는 방법 이예요.
 
 ### Google Analystics
-```toml
+```
 # config.toml
 googleAnalytics = "<your tracking id>"
 ```
 
 `layouts/partials/custom-header.thml` Google Analystics `Internal Template` 삽입
+
+{% raw %}
 ```
 {{ template "_internal/google_analytics.html" . }}
 ```
+{% endraw %}
 
 ### Disqus 댓글
-```toml
+```
 # config.toml
 disqusShortname = "<disqus shortname>"
 ```
@@ -199,32 +204,35 @@ disqusShortname = "<disqus shortname>"
 에 Disqus 댓글을 조건에 따라 설정하는 방법이 나와있어요.
 `layouts/partials/disqus.html` 에 문서에서 제공하는 스크립트를 추가해주세요.
 예를 들어 _index.md 파일에서는 Disqus 댓글을 안보이게 할 수도 있겠어요.
-```js
+
+{% raw %}
+```
 var logicalName = '{{ .File.LogicalName }}';
 if (logicalName == "_index.md")
     return;
 ```
+{% endraw %}
 
 ### 검색노출
 정적 HTML 생성기로 만들어진 블로그는 검색 사이트에 노출되지 않기에 노출될 수 있도록 설정해줘야 되요.
 Google Search, 네이버 웹마스터 등록에 필요한 것은 robots, sitemap, rss feed 링크에요.
 
 다른 설정을 하기 전에 우선 config.toml 에 outputs 설정을 해줘야 해요.
-```toml
+```
 # config.toml
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 ```
 
 어서오세요. 로봇님. robots.txt
-```toml
+```
 # config.toml
 enableRobotsTXT = true
 ```
 [http://localhost:1313/robots.txt](http://localhost:1313/robots.txt)
 
 sitemap.xml
-```toml
+```
 # config.toml
 [sitemap]
 changefreq = "weekly"
@@ -270,7 +278,7 @@ git push -u origin master
     > 루트에서 `hugo` 명령어를 수행하면 `public` 디렉토리가 생성되고 정적파일들이 생성되요.
 
 1.  submodule 로 `public` 디렉토리를 Github Repository 에 등록
-```shell
+```
 git submodule add -b master <Username Repository> public
 ```
 
@@ -302,11 +310,11 @@ Config 관리 방식이 나와있어요.
 1. 지금까지의 설정이 저장된 `config.toml`파일을 `config/_default/config.toml` 로 옮겨주세요.
 
 1. `config/draft/config.toml` 빈 파일을 생성하고 `contentDir` 디렉토리를 초안작업 디렉토리로 설정하세요.
-```toml
+```
 contentDir = "draft"
 ```
 1. draft 환경으로 hugo 서버를 시작하세요.
-```shell
+```
 hugo server -e draft
 ```
 

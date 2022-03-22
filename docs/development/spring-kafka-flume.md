@@ -1,6 +1,5 @@
 ---
 layout: default
-nav_exclude: true
 parent: development
 title: "AvroFlumeEvent, 이벤트 데이터의 발생 시각에 따른 데이터 수집"
 tags: 

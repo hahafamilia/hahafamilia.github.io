@@ -1,6 +1,6 @@
 ---
 layout: default
-nav_exclude: true
+
 parent: life
 title: 필리핀 세부 마리바고 블루워터 여름휴가
 tags: ['travel']

@@ -1,6 +1,5 @@
 ---
 layout: default
-nav_exclude: true
 parent: development
 title: Presto 설치, PrestoDB, PrestoSQL
 tags: 

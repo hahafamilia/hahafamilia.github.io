@@ -1,6 +1,5 @@
 ---
 layout: default
-nav_exclude: true
 parent: development
 title: "Kafka Broker 디스크 증설, RAID구성, OS 재설치"
 tags: 

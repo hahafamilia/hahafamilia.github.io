@@ -1,6 +1,5 @@
 ---
 layout: default
-nav_exclude: true
 parent: development
 title: 고급 분석과 머신러닝 개요
 ---

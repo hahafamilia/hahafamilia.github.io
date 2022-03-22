@@ -1,6 +1,6 @@
 ---
 layout: default
-nav_exclude: true
+
 parent: howto
 title : 휴고 설치 및 설정, Learn 테마, Hugo Website
 tags: 
@@ -311,9 +311,9 @@ hugo server -e draft
 ```
 
 **Draft**
-![Draft](/images/howto/2019-09-20-16-00-10.png# mk-threefourths)
+![Draft](/assets/images/2019-09-20-16-00-10.png# mk-threefourths)
 **Production**
-![Production](/images/howto/2019-09-20-16-00-51.png# mk-threefourths)
+![Production](/assets/images/2019-09-20-16-00-51.png# mk-threefourths)
 
 ## 마치며 
 Jekyll 과 Hugo 를 잠깐씩 써본 경험상 성능의 이슈는 제외하고 Hugo 가 셋팅하기에 아주 약간 수월했어요.

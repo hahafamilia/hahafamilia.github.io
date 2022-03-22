@@ -1,6 +1,5 @@
 ---
 layout: default
-nav_exclude: true
 parent: development
 title: Python 개발환경, Pyenv, Anaconda3
 tags: [python]

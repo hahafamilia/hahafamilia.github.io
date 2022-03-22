@@ -1,6 +1,5 @@
 ---
 layout: default
-nav_exclude: true
 parent: development
 title: 클러스터 네트워크 일시 장애로 인한 Kafka/Zookeeper 문제해결
 tags: 
@@ -27,11 +26,11 @@ Cloudra Manager 의 서비스 리스트에는 Kafka 서비스에서 `Lagging Rep
 먼저 시스템팀에 서버 및 네트워크 이슈가 있었는지 문의했어요. 돌아오는 답변은 항상 같죠.
 
 현상을 정리하면 클러스터는 장애를 극복하고 정상동작하였고, 문제발생한 시간대에 Cloudera Agent 의 로그 수집이 정상적이지 않아 차트의 이빨이 빠졌네요.
-![ClouderaManager Kafka Alert](/images/bigdata/2020-01-13.kafka_alert_chart.png)
+![ClouderaManager Kafka Alert](/assets/images/2020-01-13.kafka_alert_chart.png)
 
 #### Kafka Manager 확인
 Kafka Manger 의 Topics 에서는 `Broker Leader Skew`, `Under Replicated` 가 확인되요. 추가로 `Brokers Spread` 가 150 이라는 거예요.
-![Kafka Manager Topics](/images/bigdata/2020-01-13.kafka_manager_topics.png)
+![Kafka Manager Topics](/assets/images/2020-01-13.kafka_manager_topics.png)
 
 * `Broker Leader Skew` : 리더가 브로커에 균등하게 분산되어 있는지의 퍼센트
 * `Under Replicated` : 파티션별로 리플리케이션 상태 정보 퍼센트
@@ -44,15 +43,15 @@ Kafka Manger 의 Topics 에서는 `Broker Leader Skew`, `Under Replicated` 가 �
 
 현상을 정리하면 클러스터에서 Kafka 서비스의 Broker 03을 클러스터에서 제거했고, Kafka Manager 는 Skew, Under Replication 을 보고 했어요.
 
-![ClouderaManager Zookeeper Alert](/images/bigdata/2020-01-13.zookeeper_agent_failed.png)
+![ClouderaManager Zookeeper Alert](/assets/images/2020-01-13.zookeeper_agent_failed.png)
 
 #### Kafka Broker 가 제거된 이유
 Kafka Broker 03 서버 로그를 확인해요. *Cached zkVersion...* 라는 로그가 보여요. Zookeeper 관련 문제로 파악되죠.
-![Kafka broker log](/images/bigdata/2020-01-13.kafka_broker03_log.png#)
+![Kafka broker log](/assets/images/2020-01-13.kafka_broker03_log.png#)
 
 Cloudera Manager Zooker 서비스의 이력을 확인하니 Zookeeper 서버들의 호스트에 불량상태 이력이 보이네요.
-![Zookeeper Agent Failed chart](/images/bigdata/2020-01-13.zookeeper_agent_failed.png# mk-half)
-![Zookeeper Agent Failed](/images/bigdata/2020-01-13.zookeeper_failed.png# mk-half)
+![Zookeeper Agent Failed chart](/assets/images/2020-01-13.zookeeper_agent_failed.png# mk-half)
+![Zookeeper Agent Failed](/assets/images/2020-01-13.zookeeper_failed.png# mk-half)
 
 이때 Zookeeper 3대 서버중 2대의 서버에 5분사이에 네트워크 단절이 다수 발생했다는 보고를 받았어요.
 
@@ -71,4 +70,4 @@ Cloudera Manager Zooker 서비스의 이력을 확인하니 Zookeeper 서버들�
 동일한 증상을 경험한 글들을 확인할 수 있어요. Cloudera Manager 에서 Broker03 재시작 했어요. 
 Shutdown 과정에서 Broker 를 사용할 수 없다는 보그를 보이면서 재시작은 정상적으로 진행되요.
 Kafka Manager 에서 새로 추가된 Broker 를 확인할 수 있고 각 토픽의 ISR 또한 정상으로 전환되었어요.
-![Broker Shutdown](/images/bigdata/2020-01-13.kafka_broker03_restart.png)
+![Broker Shutdown](/assets/images/2020-01-13.kafka_broker03_restart.png)

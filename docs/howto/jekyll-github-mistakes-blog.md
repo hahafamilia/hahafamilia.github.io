@@ -1,6 +1,6 @@
 ---
 layout: default
-nav_exclude: true
+
 parent: howto
 title: "Jekyll, Github.io, Minimal mistakes 블로그 만들기, 목차 한글링크 버그"
 tags: 

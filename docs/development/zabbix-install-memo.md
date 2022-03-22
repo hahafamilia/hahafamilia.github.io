@@ -1,6 +1,6 @@
 ---
 layout: default
-nav_exclude: true
+
 parent: development
 title: Zabbix 모니터링 메모
 tags: 

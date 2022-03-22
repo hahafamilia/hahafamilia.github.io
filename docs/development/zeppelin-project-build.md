@@ -1,6 +1,6 @@
 ---
 layout: default
-nav_exclude: true
+
 parent: development
 title: Apache Zeppelin Project Build
 tags:

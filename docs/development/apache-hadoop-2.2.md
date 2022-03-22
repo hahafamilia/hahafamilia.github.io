@@ -1,6 +1,5 @@
 ---
 layout: default
-nav_exclude: true
 parent: development
 title: Apache Hadoop 2.2 운영
 tags: 

@@ -1,6 +1,5 @@
 ---
 layout: default
-nav_exclude: true
 parent: development
 title: "Cloudera Manager 알람 설정, Gmail SMPT 서버 사용"
 tags: 

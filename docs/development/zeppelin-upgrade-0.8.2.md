@@ -1,6 +1,6 @@
 ---
 layout: default
-nav_exclude: true
+
 parent: development
 title: Apache Zeppelin Upgrade from 0.8.1 to 0.8.2
 tags: 

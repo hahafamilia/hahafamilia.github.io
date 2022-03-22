@@ -1,6 +1,5 @@
 ---
 layout: default
-nav_exclude: true
 parent: development
 title: Apache Hadoop 롤링 업그레이드 2.4.1 to 2.6.0
 tags: 

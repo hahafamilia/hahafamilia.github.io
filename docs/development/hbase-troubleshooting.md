@@ -1,6 +1,5 @@
 ---
 layout: default
-nav_exclude: true
 parent: development
 title: 할아버지 클러스터의 엉망진창 HBase 문제해결
 tags: 

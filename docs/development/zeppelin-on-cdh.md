@@ -1,6 +1,6 @@
 ---
 layout: default
-nav_exclude: true
+
 parent: development
 title: Apache Zeppelin on CDH, Yarn
 tags: 

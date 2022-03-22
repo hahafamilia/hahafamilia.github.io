@@ -1,6 +1,5 @@
 ---
 layout: default
-nav_exclude: true
 parent: development
 title: IntelliJ maven scala 프로젝트 설정
 tags: 

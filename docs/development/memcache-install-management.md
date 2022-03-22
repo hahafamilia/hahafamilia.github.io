@@ -1,6 +1,5 @@
 ---
 layout: default
-nav_exclude: true
 parent: development
 title: Memcache 개념과 설치 / 운영
 tags: 

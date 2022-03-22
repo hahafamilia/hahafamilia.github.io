@@ -1,6 +1,5 @@
 ---
 layout: default
-nav_exclude: true
 parent: development
 title: Cloudera CDH 6.1.1 설치하기
 tags: 

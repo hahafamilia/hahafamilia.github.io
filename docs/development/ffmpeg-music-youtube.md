@@ -1,6 +1,5 @@
 ---
 layout: default
-nav_exclude: true
 parent: development
 title: FFMPEG를 이용해 음악 플레이리스트 동영상 만들기
 tags: 

@@ -1,6 +1,5 @@
 ---
 layout: default
-nav_exclude: true
 parent: development
 title: "Oozie Workflow Email 알림 설정"
 tags: 

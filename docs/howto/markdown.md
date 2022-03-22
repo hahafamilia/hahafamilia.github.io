@@ -1,6 +1,6 @@
 ---
 layout: default
-nav_exclude: true
+
 parent: howto
 title: "Markdown 작성법"
 tags: 

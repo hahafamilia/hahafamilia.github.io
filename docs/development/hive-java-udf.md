@@ -1,6 +1,5 @@
 ---
 layout: default
-nav_exclude: true
 parent: development
 title: "Hive Java UDF, 유니코드"
 tags: 

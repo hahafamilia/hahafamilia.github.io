@@ -1,6 +1,6 @@
 ---
 layout: default
-nav_exclude: true
+
 parent: development
 title: Apache Zeppelin 설치, QuickStart
 tags: 
